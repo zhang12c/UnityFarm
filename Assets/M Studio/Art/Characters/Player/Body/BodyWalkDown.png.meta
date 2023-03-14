@@ -3,7 +3,7 @@ guid: afd1fa5148882459aad3d22f4460047c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -24,6 +24,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -62,6 +63,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -118,7 +120,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: d88c47cf145dc48db8f440456d19a52e
-      internalID: 114716977
+      internalID: -5117500751540634359
       vertices: []
       indices: 
       edges: []
@@ -139,7 +141,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 5955b6e91e3654975bb9f2816176bd9c
-      internalID: -905653929
+      internalID: -5754073681748205712
       vertices: []
       indices: 
       edges: []
@@ -160,7 +162,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 8f13313530a9945b2a6c86b89b6f2a46
-      internalID: -248780832
+      internalID: -4259478982474056721
       vertices: []
       indices: 
       edges: []
@@ -181,7 +183,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 9533023ca03af41d5a8775916ff8b5c8
-      internalID: -737339816
+      internalID: 4692094841887097897
       vertices: []
       indices: 
       edges: []
@@ -202,7 +204,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: eff8a6b60fd784f51859b99f7a466fb4
-      internalID: 1830722612
+      internalID: 3492528995737152008
       vertices: []
       indices: 
       edges: []
@@ -223,7 +225,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: db78cb18843be4e729c62163ab150f56
-      internalID: -765853959
+      internalID: 1451187651425798518
       vertices: []
       indices: 
       edges: []
@@ -244,7 +246,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 650211f3160d04fdbb3e6d4ca43452de
-      internalID: 570608162
+      internalID: 4447266818935021904
       vertices: []
       indices: 
       edges: []
@@ -265,7 +267,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: dccdec41003824fbc84561723eb7612a
-      internalID: 876812390
+      internalID: -6390459269850656112
       vertices: []
       indices: 
       edges: []
@@ -280,6 +282,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      BodyWalkDown_0: -5117500751540634359
+      BodyWalkDown_1: -5754073681748205712
+      BodyWalkDown_2: -4259478982474056721
+      BodyWalkDown_3: 4692094841887097897
+      BodyWalkDown_4: 3492528995737152008
+      BodyWalkDown_5: 1451187651425798518
+      BodyWalkDown_6: 4447266818935021904
+      BodyWalkDown_7: -6390459269850656112
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

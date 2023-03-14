@@ -3,7 +3,7 @@ guid: 03eb17ead73d541d59f490143232c52a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -24,6 +24,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -62,6 +63,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -142,7 +144,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 97a2503a752f5455caf3df097459f0e2
-      internalID: 1381601513
+      internalID: -1596687735316726854
       vertices: []
       indices: 
       edges: []
@@ -163,7 +165,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 4fe31046e50124520869832f6ba37baa
-      internalID: 1492957564
+      internalID: -5421673931420695831
       vertices: []
       indices: 
       edges: []
@@ -184,7 +186,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 1329d88fbb28b4ac2af1abb0a69361c6
-      internalID: 678557014
+      internalID: 1417828086593977459
       vertices: []
       indices: 
       edges: []
@@ -205,7 +207,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 0294c8eb0de6244efb8fd4be5e75e87c
-      internalID: 656865190
+      internalID: -6087708171026041886
       vertices: []
       indices: 
       edges: []
@@ -226,7 +228,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: e17274b8c105a497196decba0d6f7426
-      internalID: 679222839
+      internalID: -1294344965452193541
       vertices: []
       indices: 
       edges: []
@@ -247,7 +249,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 1c3f851d5cb284a1e825ea3e50ac6c93
-      internalID: -1753742037
+      internalID: 8047016393832512506
       vertices: []
       indices: 
       edges: []
@@ -268,7 +270,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 6dc2ed977103d4280a98725ef7d561d3
-      internalID: -798625042
+      internalID: -1675824465803373624
       vertices: []
       indices: 
       edges: []
@@ -289,7 +291,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 3faab9056c3e8442c8da37fc9a48e503
-      internalID: -1377949004
+      internalID: -7817806749313163547
       vertices: []
       indices: 
       edges: []
@@ -304,6 +306,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      ArmHoldRunDown_0: -1596687735316726854
+      ArmHoldRunDown_1: -5421673931420695831
+      ArmHoldRunDown_2: 1417828086593977459
+      ArmHoldRunDown_3: -6087708171026041886
+      ArmHoldRunDown_4: -1294344965452193541
+      ArmHoldRunDown_5: 8047016393832512506
+      ArmHoldRunDown_6: -1675824465803373624
+      ArmHoldRunDown_7: -7817806749313163547
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
