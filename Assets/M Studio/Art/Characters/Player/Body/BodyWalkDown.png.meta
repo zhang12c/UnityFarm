@@ -24,7 +24,6 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -281,15 +280,6 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      BodyWalkDown_7: 876812390
-      BodyWalkDown_0: 114716977
-      BodyWalkDown_1: -905653929
-      BodyWalkDown_3: -737339816
-      BodyWalkDown_6: 570608162
-      BodyWalkDown_5: -765853959
-      BodyWalkDown_2: -248780832
-      BodyWalkDown_4: 1830722612
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
