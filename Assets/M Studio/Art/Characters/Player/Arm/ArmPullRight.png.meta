@@ -24,7 +24,6 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -78,10 +77,10 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -112,11 +111,23 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ArmPullRight_0
+      name: ArmHoldRunDown_0
       rect:
         serializedVersion: 2
         x: 0
@@ -130,14 +141,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c474ab245690d4830972455e2b59e8dc
-      internalID: -25183037
+      spriteID: 97a2503a752f5455caf3df097459f0e2
+      internalID: 1381601513
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ArmPullRight_1
+      name: ArmHoldRunDown_1
       rect:
         serializedVersion: 2
         x: 40
@@ -151,14 +162,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1480cd89504a4363a0e98d2072a0abb
-      internalID: 2027693597
+      spriteID: 4fe31046e50124520869832f6ba37baa
+      internalID: 1492957564
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ArmPullRight_2
+      name: ArmHoldRunDown_2
       rect:
         serializedVersion: 2
         x: 80
@@ -172,14 +183,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8cdb7185eaea46d783333a0938e94a0
-      internalID: 385421094
+      spriteID: 1329d88fbb28b4ac2af1abb0a69361c6
+      internalID: 678557014
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ArmPullRight_3
+      name: ArmHoldRunDown_3
       rect:
         serializedVersion: 2
         x: 120
@@ -193,14 +204,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2bdd905927967402083ac81b82072b32
-      internalID: -1307229040
+      spriteID: 0294c8eb0de6244efb8fd4be5e75e87c
+      internalID: 656865190
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ArmPullRight_4
+      name: ArmHoldRunDown_4
       rect:
         serializedVersion: 2
         x: 160
@@ -214,14 +225,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 16e0ff5368cf148c58d3bcdca46ffcd9
-      internalID: -912580184
+      spriteID: e17274b8c105a497196decba0d6f7426
+      internalID: 679222839
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ArmPullRight_5
+      name: ArmHoldRunDown_5
       rect:
         serializedVersion: 2
         x: 200
@@ -235,14 +246,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 075ba21766ab347198cff6bde5ef5bbc
-      internalID: -747490379
+      spriteID: 1c3f851d5cb284a1e825ea3e50ac6c93
+      internalID: -1753742037
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ArmPullRight_6
+      name: ArmHoldRunDown_6
       rect:
         serializedVersion: 2
         x: 240
@@ -256,14 +267,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ccc528497690748919d0678f70db7dbc
-      internalID: -1065693423
+      spriteID: 6dc2ed977103d4280a98725ef7d561d3
+      internalID: -798625042
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ArmPullRight_7
+      name: ArmHoldRunDown_7
       rect:
         serializedVersion: 2
         x: 280
@@ -277,8 +288,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 460a7e23fd0084c5a85bcc801ce4311f
-      internalID: -1187198528
+      spriteID: 3faab9056c3e8442c8da37fc9a48e503
+      internalID: -1377949004
       vertices: []
       indices: 
       edges: []
@@ -293,15 +304,6 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      ArmPullRight_3: -1307229040
-      ArmPullRight_6: -1065693423
-      ArmPullRight_1: 2027693597
-      ArmPullRight_5: -747490379
-      ArmPullRight_7: -1187198528
-      ArmPullRight_0: -25183037
-      ArmPullRight_2: 385421094
-      ArmPullRight_4: -912580184
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

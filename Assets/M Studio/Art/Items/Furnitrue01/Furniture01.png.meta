@@ -24,7 +24,6 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -818,40 +817,6 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Furniture01_1: -260874087
-      Furniture01_16: 736208478
-      Furniture01_18: 2073843765
-      Furniture01_12: 516266039
-      Furniture01_2: 1343035480
-      Furniture01_17: 1312298733
-      Furniture01_10: 1773071897
-      Furniture01_13: 933862899
-      Furniture01_6: -1230223651
-      Furniture01_25: 1108585578
-      Furniture01_15: 2049373829
-      Furniture01_30: -1525409565
-      Furniture01_22: 1533917915
-      Furniture01_23: -1182628468
-      Furniture01_14: -1695829619
-      Furniture01_19 paper: -1215904961
-      Furniture01_7: -1158972474
-      Furniture01_29: -1355830706
-      Furniture01_4: 292292571
-      Furniture01_11: -188292766
-      Furniture01_24: -713011586
-      Furniture01_3: -102332372
-      Furniture01_20: -1986908761
-      Furniture01_21: 279616883
-      Furniture01_5: -1483819821
-      Furniture01_26: -2086446633
-      Furniture01_0: -777794417
-      Furniture01_27: -1921769496
-      Furniture01_28: -736595796
-      Furniture01_31: -872109812
-      Furniture01_9: -1033199947
-      Furniture01_32 chair: 697528162
-      Furniture01_8: -1653881358
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
