@@ -862,6 +862,12 @@
      <Reference Include="Unity.2D.Tilemap.Extras.Editor">
      <HintPath>/Users/beile/RiderProjects/HappyProject/Library/ScriptAssemblies/Unity.2D.Tilemap.Extras.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="com.unity.cinemachine.editor">
+     <HintPath>/Users/beile/RiderProjects/HappyProject/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Cinemachine">
+     <HintPath>/Users/beile/RiderProjects/HappyProject/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+     </Reference>
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
