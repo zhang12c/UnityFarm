@@ -450,12 +450,12 @@ TextureImporter:
       name: BaseMap2@20_12
       rect:
         serializedVersion: 2
-        x: 300
-        y: 180
-        width: 240
-        height: 79
+        x: 20
+        y: 400
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -870,12 +870,12 @@ TextureImporter:
       name: BaseMap2@20_32
       rect:
         serializedVersion: 2
-        x: 417
-        y: 340
-        width: 88
-        height: 87
+        x: 420
+        y: 400
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -996,12 +996,12 @@ TextureImporter:
       name: BaseMap2@20_38
       rect:
         serializedVersion: 2
-        x: 536
-        y: 340
-        width: 90
-        height: 86
+        x: 540
+        y: 400
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3582,9 +3582,9 @@ TextureImporter:
         x: 420
         y: 300
         width: 20
-        height: 27
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3603,9 +3603,9 @@ TextureImporter:
         x: 480
         y: 300
         width: 20
-        height: 27
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3623,10 +3623,10 @@ TextureImporter:
         serializedVersion: 2
         x: 540
         y: 300
-        width: 80
-        height: 26
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3975,111 +3975,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BaseMap2@ground1
-      rect:
-        serializedVersion: 2
-        x: 300
-        y: 280
-        width: 20
-        height: 20
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fc52ae3829eac4390afb92eb50e3aaf2
-      internalID: 7533667152568706145
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BaseMap2@ground2
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 280
-        width: 20
-        height: 20
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2d59a1689e76f4c6986e45fc6c9fc6a4
-      internalID: 1182373845261010138
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BaseMap2@ground3
-      rect:
-        serializedVersion: 2
-        x: 340
-        y: 280
-        width: 20
-        height: 20
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6c546db0df07f40f781107e81cf58b29
-      internalID: 540508615733675311
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BaseMap2@ground9
-      rect:
-        serializedVersion: 2
-        x: 360
-        y: 280
-        width: 20
-        height: 20
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8c714803d6e13482d906f96e76c49272
-      internalID: -4179986969396577260
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BaseMap2@ground10
-      rect:
-        serializedVersion: 2
-        x: 380
-        y: 280
-        width: 20
-        height: 20
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 364006e91ae5b4dbe9aadfc72a6185fe
-      internalID: -6024178899281416843
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: BaseMap2@20_185
       rect:
         serializedVersion: 2
@@ -4395,99 +4290,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BaseMap2@ground4
-      rect:
-        serializedVersion: 2
-        x: 300
-        y: 260
-        width: 20
-        height: 20
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 422945423c6ad4f648526c852ff3a7d5
-      internalID: -7483196456795933618
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BaseMap2@ground5
-      rect:
-        serializedVersion: 2
-        x: 340
-        y: 260
-        width: 20
-        height: 20
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9f968416221664440ad8573271aeef49
-      internalID: -6531866222394435892
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BaseMap2@ground11
-      rect:
-        serializedVersion: 2
-        x: 360
-        y: 261
-        width: 20
-        height: 20
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3aff28621b6a24ecc88536b8e0147055
-      internalID: -8223699539138496555
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BaseMap2@ground12
-      rect:
-        serializedVersion: 2
-        x: 380
-        y: 260
-        width: 20
-        height: 20
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: eecfbd9b153c94450a89da711920e931
-      internalID: 7581456086242241743
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: BaseMap2@20_204
       rect:
         serializedVersion: 2
         x: 540
-        y: 241
-        width: 23
-        height: 45
+        y: 260
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4545,12 +4356,12 @@ TextureImporter:
       name: BaseMap2@20_207
       rect:
         serializedVersion: 2
-        x: 597
-        y: 241
-        width: 23
-        height: 45
+        x: 600
+        y: 260
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4747,69 +4558,6 @@ TextureImporter:
       bones: []
       spriteID: c74f691c4380a4bd8848953bf07ced7d
       internalID: 8190046666264147515
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BaseMap2@ground6
-      rect:
-        serializedVersion: 2
-        x: 300
-        y: 240
-        width: 20
-        height: 20
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a3f5ab27a630043b79200996394fd63f
-      internalID: 400341520231013973
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BaseMap2@ground7
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 240
-        width: 20
-        height: 20
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1c1142f54ff084f31902601ebcb0a1f4
-      internalID: -3955820516565686388
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BaseMap2@ground8
-      rect:
-        serializedVersion: 2
-        x: 340
-        y: 240
-        width: 20
-        height: 20
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 502585e4bce8b4f17acc8453519edf99
-      internalID: 2300905883699594485
       vertices: []
       indices: 
       edges: []
@@ -5428,11 +5176,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 60
-        y: 160
-        width: 40
-        height: 69
+        y: 200
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5470,11 +5218,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 100
-        y: 160
-        width: 40
-        height: 69
+        y: 200
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5911,11 +5659,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 560
-        y: 120
-        width: 60
-        height: 100
+        y: 200
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6540,12 +6288,12 @@ TextureImporter:
       name: BaseMap2@20_302
       rect:
         serializedVersion: 2
-        x: 21
-        y: 173
-        width: 39
-        height: 56
+        x: 20
+        y: 160
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6729,12 +6477,12 @@ TextureImporter:
       name: BaseMap2@20_311
       rect:
         serializedVersion: 2
-        x: 21
-        y: 142
-        width: 19
-        height: 12
+        x: 20
+        y: 140
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6750,12 +6498,12 @@ TextureImporter:
       name: BaseMap2@20_312
       rect:
         serializedVersion: 2
-        x: 41
-        y: 142
-        width: 18
-        height: 12
+        x: 40
+        y: 140
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6772,11 +6520,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 60
-        y: 128
-        width: 39
-        height: 24
+        y: 140
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6855,12 +6603,12 @@ TextureImporter:
       name: BaseMap2@20_317
       rect:
         serializedVersion: 2
-        x: 240
-        y: 100
-        width: 60
-        height: 11
+        x: 220
+        y: 140
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6919,11 +6667,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 380
-        y: 18
-        width: 140
-        height: 142
+        y: 140
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7170,12 +6918,12 @@ TextureImporter:
       name: BaseMap2@20_332
       rect:
         serializedVersion: 2
-        x: 102
-        y: 127
-        width: 36
-        height: 25
+        x: 100
+        y: 120
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7443,12 +7191,12 @@ TextureImporter:
       name: BaseMap2@20_345
       rect:
         serializedVersion: 2
-        x: 45
-        y: 104
-        width: 6
-        height: 13
+        x: 40
+        y: 100
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7464,12 +7212,12 @@ TextureImporter:
       name: BaseMap2@20_346
       rect:
         serializedVersion: 2
-        x: 61
-        y: 103
-        width: 9
-        height: 14
+        x: 60
+        y: 100
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7485,12 +7233,12 @@ TextureImporter:
       name: BaseMap2@20_347
       rect:
         serializedVersion: 2
-        x: 90
-        y: 104
-        width: 6
-        height: 13
+        x: 80
+        y: 100
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7821,12 +7569,12 @@ TextureImporter:
       name: BaseMap2@20_363
       rect:
         serializedVersion: 2
-        x: 27
-        y: 92
-        width: 4
-        height: 6
+        x: 20
+        y: 80
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7842,12 +7590,12 @@ TextureImporter:
       name: BaseMap2@20_364
       rect:
         serializedVersion: 2
-        x: 37
-        y: 94
-        width: 6
-        height: 9
+        x: 40
+        y: 80
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7864,11 +7612,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 60
-        y: 86
-        width: 12
-        height: 12
+        y: 80
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7884,12 +7632,12 @@ TextureImporter:
       name: BaseMap2@20_366
       rect:
         serializedVersion: 2
-        x: 77
-        y: 93
-        width: 12
-        height: 13
+        x: 80
+        y: 80
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7970,10 +7718,10 @@ TextureImporter:
         serializedVersion: 2
         x: 240
         y: 80
-        width: 60
-        height: 11
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8032,11 +7780,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 320
-        y: 40
+        y: 80
         width: 20
-        height: 60
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8200,11 +7948,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 580
-        y: 60
-        width: 40
-        height: 42
+        y: 80
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8220,12 +7968,12 @@ TextureImporter:
       name: BaseMap2@20_382
       rect:
         serializedVersion: 2
-        x: 32
-        y: 61
-        width: 6
-        height: 7
+        x: 20
+        y: 60
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8241,12 +7989,12 @@ TextureImporter:
       name: BaseMap2@20_383
       rect:
         serializedVersion: 2
-        x: 54
-        y: 74
-        width: 5
-        height: 10
+        x: 40
+        y: 60
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8262,12 +8010,12 @@ TextureImporter:
       name: BaseMap2@20_384
       rect:
         serializedVersion: 2
-        x: 61
-        y: 73
-        width: 5
-        height: 5
+        x: 60
+        y: 60
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8283,12 +8031,12 @@ TextureImporter:
       name: BaseMap2@20_385
       rect:
         serializedVersion: 2
-        x: 81
-        y: 64
-        width: 6
-        height: 7
+        x: 80
+        y: 60
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8304,12 +8052,12 @@ TextureImporter:
       name: BaseMap2@20_386
       rect:
         serializedVersion: 2
-        x: 101
+        x: 100
         y: 60
-        width: 6
-        height: 6
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8325,12 +8073,12 @@ TextureImporter:
       name: BaseMap2@20_387
       rect:
         serializedVersion: 2
-        x: 121
-        y: 70
-        width: 6
-        height: 7
+        x: 120
+        y: 60
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8599,11 +8347,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 20
-        y: 53
-        width: 6
-        height: 6
+        y: 40
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8619,12 +8367,12 @@ TextureImporter:
       name: BaseMap2@20_401
       rect:
         serializedVersion: 2
-        x: 41
-        y: 50
-        width: 9
-        height: 9
+        x: 40
+        y: 40
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8640,12 +8388,12 @@ TextureImporter:
       name: BaseMap2@20_402
       rect:
         serializedVersion: 2
-        x: 62
-        y: 51
-        width: 7
-        height: 8
+        x: 60
+        y: 40
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8661,12 +8409,12 @@ TextureImporter:
       name: BaseMap2@20_403
       rect:
         serializedVersion: 2
-        x: 85
-        y: 41
-        width: 11
-        height: 10
+        x: 80
+        y: 40
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8682,12 +8430,12 @@ TextureImporter:
       name: BaseMap2@20_404
       rect:
         serializedVersion: 2
-        x: 101
-        y: 51
-        width: 6
-        height: 7
+        x: 100
+        y: 40
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8703,12 +8451,12 @@ TextureImporter:
       name: BaseMap2@20_405
       rect:
         serializedVersion: 2
-        x: 121
-        y: 51
-        width: 9
-        height: 9
+        x: 120
+        y: 40
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8724,12 +8472,12 @@ TextureImporter:
       name: BaseMap2@20_406
       rect:
         serializedVersion: 2
-        x: 180
+        x: 200
         y: 40
-        width: 40
-        height: 31
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8748,9 +8496,9 @@ TextureImporter:
         x: 240
         y: 40
         width: 20
-        height: 31
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8771,7 +8519,7 @@ TextureImporter:
         width: 20
         height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9207,12 +8955,12 @@ TextureImporter:
       name: BaseMap2@20_180
       rect:
         serializedVersion: 2
-        x: 54
-        y: 101
-        width: 6
-        height: 5
+        x: 300
+        y: 280
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9228,12 +8976,12 @@ TextureImporter:
       name: BaseMap2@20_181
       rect:
         serializedVersion: 2
-        x: 71
-        y: 102
-        width: 8
-        height: 13
+        x: 320
+        y: 280
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9249,12 +8997,12 @@ TextureImporter:
       name: BaseMap2@20_182
       rect:
         serializedVersion: 2
-        x: 43
-        y: 86
-        width: 10
-        height: 10
+        x: 340
+        y: 280
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9270,12 +9018,12 @@ TextureImporter:
       name: BaseMap2@20_183
       rect:
         serializedVersion: 2
-        x: 93
-        y: 86
-        width: 7
-        height: 11
+        x: 360
+        y: 280
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9291,12 +9039,12 @@ TextureImporter:
       name: BaseMap2@20_184
       rect:
         serializedVersion: 2
-        x: 75
-        y: 81
-        width: 10
-        height: 4
+        x: 380
+        y: 280
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9312,12 +9060,12 @@ TextureImporter:
       name: BaseMap2@20_200
       rect:
         serializedVersion: 2
-        x: 41
-        y: 61
-        width: 12
-        height: 16
+        x: 300
+        y: 260
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9333,12 +9081,12 @@ TextureImporter:
       name: BaseMap2@20_201
       rect:
         serializedVersion: 2
-        x: 67
-        y: 66
-        width: 11
-        height: 13
+        x: 340
+        y: 260
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9354,12 +9102,12 @@ TextureImporter:
       name: BaseMap2@20_202
       rect:
         serializedVersion: 2
-        x: 128
-        y: 65
-        width: 12
-        height: 15
+        x: 360
+        y: 260
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9375,12 +9123,12 @@ TextureImporter:
       name: BaseMap2@20_203
       rect:
         serializedVersion: 2
-        x: 54
-        y: 62
-        width: 5
-        height: 7
+        x: 380
+        y: 260
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9396,12 +9144,12 @@ TextureImporter:
       name: BaseMap2@20_217
       rect:
         serializedVersion: 2
-        x: 61
-        y: 61
-        width: 7
-        height: 8
+        x: 300
+        y: 240
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9417,12 +9165,12 @@ TextureImporter:
       name: BaseMap2@20_218
       rect:
         serializedVersion: 2
-        x: 125
-        y: 61
-        width: 5
-        height: 5
+        x: 320
+        y: 240
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9438,12 +9186,12 @@ TextureImporter:
       name: BaseMap2@20_219
       rect:
         serializedVersion: 2
-        x: 28
-        y: 51
-        width: 7
-        height: 9
+        x: 340
+        y: 240
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9459,10 +9207,10 @@ TextureImporter:
       name: BaseMap2@20_429
       rect:
         serializedVersion: 2
-        x: 51
-        y: 52
-        width: 8
-        height: 8
+        x: 0
+        y: 100
+        width: 640
+        height: 340
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -9470,281 +9218,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 36a02bffa29452f30800000000000000
-      internalID: 4550123447555066467
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BaseMap2@20_430
-      rect:
-        serializedVersion: 2
-        x: 71
-        y: 50
-        width: 8
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fc98e44d3e29b0aa0800000000000000
-      internalID: -6193695355300836913
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BaseMap2@20_431
-      rect:
-        serializedVersion: 2
-        x: 93
-        y: 52
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ae7891301e15b19d0800000000000000
-      internalID: -2802556316246505494
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BaseMap2@20_432
-      rect:
-        serializedVersion: 2
-        x: 108
-        y: 48
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d625dd61f2e2a7c90800000000000000
-      internalID: -7171368676852149651
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BaseMap2@20_433
-      rect:
-        serializedVersion: 2
-        x: 132
-        y: 49
-        width: 8
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a1c5e86eb6bad19c0800000000000000
-      internalID: -3954816417843487718
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BaseMap2@20_434
-      rect:
-        serializedVersion: 2
-        x: 21
-        y: 40
-        width: 11
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 813e2f679a3370ca0800000000000000
-      internalID: -6050810771410853096
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BaseMap2@20_435
-      rect:
-        serializedVersion: 2
-        x: 35
-        y: 48
-        width: 5
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e1a493a4fd04a7600800000000000000
-      internalID: 466756839153420830
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BaseMap2@20_436
-      rect:
-        serializedVersion: 2
-        x: 42
-        y: 41
-        width: 17
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: acb50ae3300eacd80800000000000000
-      internalID: -8229519064525939766
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BaseMap2@20_437
-      rect:
-        serializedVersion: 2
-        x: 60
-        y: 40
-        width: 14
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 88f2fd95cdc377840800000000000000
-      internalID: 5221709210057650056
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BaseMap2@20_438
-      rect:
-        serializedVersion: 2
-        x: 120
-        y: 40
-        width: 16
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a59730948b4ececf0800000000000000
-      internalID: -221550801497917094
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BaseMap2@20_439
-      rect:
-        serializedVersion: 2
-        x: 33
-        y: 42
-        width: 6
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c65c0ed125ce3d760800000000000000
-      internalID: 7481583243425269100
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BaseMap2@20_440
-      rect:
-        serializedVersion: 2
-        x: 75
-        y: 43
-        width: 5
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: be8b3c8ca23b2fd00800000000000000
-      internalID: 1005062663195310315
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BaseMap2@20_441
-      rect:
-        serializedVersion: 2
-        x: 101
-        y: 41
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6450ab28190fc1c50800000000000000
-      internalID: 6637444458591421766
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BaseMap2@20_442
-      rect:
-        serializedVersion: 2
-        x: 110
-        y: 41
-        width: 7
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 651710cd969b73640800000000000000
-      internalID: 5059716570687828310
+      spriteID: 4e7e32ebef9aa4153a03a97798553b7f
+      internalID: -1274865212
       vertices: []
       indices: 
       edges: []
@@ -10127,22 +9602,9 @@ TextureImporter:
       BaseMap2@20_426: 738637119115240423
       BaseMap2@20_427: -8560308564043136833
       BaseMap2@20_428: -4163691694408745455
-      BaseMap2@20_429: 4550123447555066467
+      BaseMap2@20_429: -1274865212
       BaseMap2@20_43: -358080421166024216
-      BaseMap2@20_430: -6193695355300836913
-      BaseMap2@20_431: -2802556316246505494
-      BaseMap2@20_432: -7171368676852149651
-      BaseMap2@20_433: -3954816417843487718
-      BaseMap2@20_434: -6050810771410853096
-      BaseMap2@20_435: 466756839153420830
-      BaseMap2@20_436: -8229519064525939766
-      BaseMap2@20_437: 5221709210057650056
-      BaseMap2@20_438: -221550801497917094
-      BaseMap2@20_439: 7481583243425269100
       BaseMap2@20_44: -8871553671256603409
-      BaseMap2@20_440: 1005062663195310315
-      BaseMap2@20_441: 6637444458591421766
-      BaseMap2@20_442: 5059716570687828310
       BaseMap2@20_45: 4953278724489333793
       BaseMap2@20_46: 8733830758130422883
       BaseMap2@20_47: -1622121542641446317
@@ -10203,18 +9665,6 @@ TextureImporter:
       BaseMap2@20_97: -4170279179415867539
       BaseMap2@20_98: -4366607289315665825
       BaseMap2@20_99: 1656996917724076160
-      BaseMap2@ground1: 7533667152568706145
-      BaseMap2@ground10: -6024178899281416843
-      BaseMap2@ground11: -8223699539138496555
-      BaseMap2@ground12: 7581456086242241743
-      BaseMap2@ground2: 1182373845261010138
-      BaseMap2@ground3: 540508615733675311
-      BaseMap2@ground4: -7483196456795933618
-      BaseMap2@ground5: -6531866222394435892
-      BaseMap2@ground6: 400341520231013973
-      BaseMap2@ground7: -3955820516565686388
-      BaseMap2@ground8: 2300905883699594485
-      BaseMap2@ground9: -4179986969396577260
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

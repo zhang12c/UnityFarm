@@ -130,6 +130,7 @@
      <Folder Include="Assets/M Studio/Art/Characters/Player/Tools/Hoe" />
      <Folder Include="Assets/M Studio/Tilemap/Tiles" />
      <Folder Include="Assets/M Studio/Art/Characters/M" />
+     <Folder Include="Assets/TileMaps/RuleTile" />
      <Folder Include="Assets/M Studio/Animations/Item/Fire" />
      <Folder Include="Assets/Scripts/Player" />
      <Folder Include="Assets/M Studio/Animations/Tool/ReapTool" />
@@ -774,9 +775,6 @@
      <Reference Include="Unity.InternalAPIEngineBridge.001">
      <HintPath>/Users/beile/RiderProjects/HappyProject/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.VSCode.Editor">
-     <HintPath>/Users/beile/RiderProjects/HappyProject/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.2D.PixelPerfect">
      <HintPath>/Users/beile/RiderProjects/HappyProject/Library/ScriptAssemblies/Unity.2D.PixelPerfect.dll</HintPath>
      </Reference>
@@ -788,9 +786,6 @@
      </Reference>
      <Reference Include="Unity.TextMeshPro.Editor">
      <HintPath>/Users/beile/RiderProjects/HappyProject/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualStudio.Editor">
-     <HintPath>/Users/beile/RiderProjects/HappyProject/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Timeline">
      <HintPath>/Users/beile/RiderProjects/HappyProject/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
@@ -860,6 +855,12 @@
      </Reference>
      <Reference Include="Unity.2D.SpriteShape.Runtime">
      <HintPath>/Users/beile/RiderProjects/HappyProject/Library/ScriptAssemblies/Unity.2D.SpriteShape.Runtime.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.2D.Tilemap.Extras">
+     <HintPath>/Users/beile/RiderProjects/HappyProject/Library/ScriptAssemblies/Unity.2D.Tilemap.Extras.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.2D.Tilemap.Extras.Editor">
+     <HintPath>/Users/beile/RiderProjects/HappyProject/Library/ScriptAssemblies/Unity.2D.Tilemap.Extras.Editor.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>
