@@ -42,6 +42,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets/Scripts/Player/Player.cs" />
+     <Compile Include="Assets/Scripts/Until/SwitchBounds.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/M Studio/Art/Intro/Sign" />
      <Folder Include="Assets/M Studio/Tilemap/Tiles/Base" />
@@ -60,6 +61,7 @@
      <Folder Include="Assets/M Studio/Art/Maps" />
      <Folder Include="Assets/M Studio/Art/Buildings/HouseTile" />
      <Folder Include="Assets/M Studio/Art/Characters/Girl07" />
+     <Folder Include="Assets/M Studio/Sprite Alt" />
      <Folder Include="Assets/M Studio/Art/Trees/yellow" />
      <Folder Include="Assets/M Studio/Art/UI" />
      <Folder Include="Assets/M Studio/Art/Intro/Background" />
@@ -73,11 +75,13 @@
      <Folder Include="Assets/M Studio/Art/Characters/Girl03" />
      <Folder Include="Assets/M Studio/Art/Characters/BlacksWing" />
      <Folder Include="Assets/M Studio/Animations/NPC/Gril02" />
+     <Folder Include="Assets/Animator/Animation" />
      <Folder Include="Assets/Scripts" />
      <Folder Include="Assets/M Studio/Animations/UI" />
      <Folder Include="Assets/M Studio/Tilemap/Palettes" />
      <Folder Include="Assets/M Studio/Art/Characters/Girl02" />
      <Folder Include="Assets/M Studio/Art/Items/Environments" />
+     <Folder Include="Assets/Animator" />
      <Folder Include="Assets/M Studio/Art/Characters/Girl05" />
      <Folder Include="Assets/M Studio/Art/Items/Tree02" />
      <Folder Include="Assets/M Studio/Art/Trees/green" />
@@ -90,6 +94,7 @@
      <Folder Include="Assets/M Studio/Art/Items/Icons" />
      <Folder Include="Assets/M Studio/Art/Trees/pink" />
      <Folder Include="Assets/TileMaps/Palettes" />
+     <Folder Include="Assets/Animator/SceneTree" />
      <Folder Include="Assets/M Studio/Art/Characters/Player/Tools" />
      <Folder Include="Assets/M Studio/Animations/Tool/Water" />
      <Folder Include="Assets/M Studio/Art/Buildings/House01" />
@@ -126,6 +131,7 @@
      <Folder Include="Assets/TileMaps" />
      <Folder Include="Assets/M Studio/Art/Characters" />
      <Folder Include="Assets/Tool" />
+     <Folder Include="Assets/Perfab" />
      <Folder Include="Assets/M Studio/Art/Characters/Shadow" />
      <Folder Include="Assets/M Studio/Art/Characters/Player/Tools/Hoe" />
      <Folder Include="Assets/M Studio/Tilemap/Tiles" />
@@ -134,6 +140,7 @@
      <Folder Include="Assets/M Studio/Animations/Item/Fire" />
      <Folder Include="Assets/Scripts/Player" />
      <Folder Include="Assets/M Studio/Animations/Tool/ReapTool" />
+     <Folder Include="Assets/Scripts/Until" />
      <Folder Include="Assets/M Studio/Art/Characters/Player/Tools/Pickaxe" />
      <Folder Include="Assets/M Studio/Animations/NPC/Gril01" />
      <Reference Include="UnityEngine">
