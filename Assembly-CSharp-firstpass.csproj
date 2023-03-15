@@ -12,11 +12,11 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{198d01db-0cc3-f97e-f86f-cefdf85641a6}</ProjectGuid>
+    <ProjectGuid>{6801c84e-2b60-225e-d240-08d7aeea6eac}</ProjectGuid>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <AssemblyName>Assembly-CSharp-firstpass</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -25,7 +25,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>Temp\Bin\Debug\Assembly-CSharp\</OutputPath>
+    <OutputPath>Temp\Bin\Debug\Assembly-CSharp-firstpass\</OutputPath>
     <DefineConstants>UNITY_2021_3_20;UNITY_2021_3;UNITY_2021;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;PLATFORM_STANDALONE;TEXTCORE_1_0_OR_NEWER;PLATFORM_STANDALONE_OSX;UNITY_STANDALONE_OSX;UNITY_STANDALONE;ENABLE_GAMECENTER;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_SPATIALTRACKING;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_STANDARD_2_0;NET_STANDARD;NET_STANDARD_2_1;NETSTANDARD;NETSTANDARD2_1;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_IG;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -41,120 +41,19 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets/Scripts/Until/SwitchBounds.cs" />
-     <Compile Include="Assets/Scripts/Player/Player.cs" />
-     <Compile Include="Assets/Scripts/Inventory/Data_SO/ItemDataList_SO.cs" />
-     <Compile Include="Assets/Scripts/Player/TiggerItemFader.cs" />
-     <Compile Include="Assets/Scripts/Until/DataCollection.cs" />
-     <Compile Include="Assets/Scripts/Until/Settings.cs" />
-     <Compile Include="Assets/Scripts/Inventory/Item/ItemFader.cs" />
-     <Compile Include="Assets/Scripts/Until/Enums.cs" />
-     <Folder Include="Assets" />
-     <Folder Include="Assets/M Studio/Art/Intro/Sign" />
-     <Folder Include="Assets/M Studio/Tilemap/Tiles/Base" />
-     <Folder Include="Assets/M Studio/Animations/Player/Hair" />
-     <Folder Include="Assets/M Studio/Art/Lights" />
-     <Folder Include="Assets/M Studio/Animations/SceneryTrees" />
-     <Folder Include="Assets/M Studio/Art/Intro/Sea" />
-     <Folder Include="Assets/M Studio/Art/Buildings" />
-     <Folder Include="Assets/M Studio/Art/Characters/Player/Tools/Water" />
-     <Folder Include="Assets/M Studio/Art/Buildings/Stall" />
-     <Folder Include="Assets/M Studio/Animations/Tool" />
-     <Folder Include="Assets/M Studio/Art/Items/Woods" />
-     <Folder Include="Assets/M Studio/Animations/Item" />
-     <Folder Include="Assets/M Studio/Animations/Player" />
-     <Folder Include="Assets/M Studio/Animations/Player/Arm" />
-     <Folder Include="Assets/M Studio/Art/Maps" />
-     <Folder Include="Assets/M Studio/Art/Buildings/HouseTile" />
-     <Folder Include="Assets/M Studio/Art/Characters/Girl07" />
-     <Folder Include="Assets/M Studio/Sprite Alt" />
-     <Folder Include="Assets/M Studio/Art/Trees/yellow" />
-     <Folder Include="Assets/M Studio/Art/UI" />
-     <Folder Include="Assets/M Studio/Art/Intro/Background" />
-     <Folder Include="Assets/Scenes" />
-     <Folder Include="Assets/M Studio/Art/Buildings/Hotel" />
-     <Folder Include="Assets/M Studio/Art/Items/Furnitrue01" />
-     <Folder Include="Assets/M Studio/Art/Items/Furniture02" />
-     <Folder Include="Assets/M Studio/Art/Characters/Girl01" />
-     <Folder Include="Assets/M Studio/Animations/Tool/Hoe" />
-     <Folder Include="Assets/M Studio/Art/Buildings/House02" />
-     <Folder Include="Assets/Scripts/Inventory/Item" />
-     <Folder Include="Assets/M Studio/Art/Characters/Girl03" />
-     <Folder Include="Assets/M Studio/Art/Characters/BlacksWing" />
-     <Folder Include="Assets/M Studio/Animations/NPC/Gril02" />
-     <Folder Include="Assets/Animator/Animation" />
-     <Folder Include="Assets/Scripts" />
-     <Folder Include="Assets/M Studio/Animations/UI" />
-     <Folder Include="Assets/M Studio/Tilemap/Palettes" />
-     <Folder Include="Assets/M Studio/Art/Characters/Girl02" />
-     <Folder Include="Assets/M Studio/Art/Items/Environments" />
-     <Folder Include="Assets/Animator" />
-     <Folder Include="Assets/M Studio/Art/Characters/Girl05" />
-     <Folder Include="Assets/M Studio/Art/Items/Tree02" />
-     <Folder Include="Assets/M Studio/Art/Trees/green" />
-     <Folder Include="Assets/M Studio/Art" />
-     <Folder Include="Assets/M Studio/Animations/NPC/OldMan" />
-     <Folder Include="Assets/M Studio/Art/Buildings/House03" />
-     <Folder Include="Assets/M Studio/Art/Items/Rocks" />
-     <Folder Include="Assets/M Studio/Animations/Tool/Pickaxe" />
-     <Folder Include="Assets/M Studio/Animations/Basic Empty Clips" />
-     <Folder Include="Assets/M Studio/Art/Items/Icons" />
-     <Folder Include="Assets/M Studio/Art/Trees/pink" />
-     <Folder Include="Assets/TileMaps/Palettes" />
-     <Folder Include="Assets/Animator/SceneTree" />
-     <Folder Include="Assets/M Studio/Art/Characters/Player/Tools" />
-     <Folder Include="Assets/GameData/Inventory" />
-     <Folder Include="Assets/M Studio/Animations/Tool/Water" />
-     <Folder Include="Assets/M Studio/Art/Buildings/House01" />
-     <Folder Include="Assets/M Studio/Animations" />
-     <Folder Include="Assets/M Studio/Art/Characters/Player/Body" />
-     <Folder Include="Assets/M Studio/Art/Items/New Plant" />
-     <Folder Include="Assets/M Studio/Art/Items/Plants" />
-     <Folder Include="Assets/M Studio/Art/Characters/Player/Hair" />
-     <Folder Include="Assets/M Studio/Art/Intro" />
-     <Folder Include="Assets/Scripts/Inventory" />
-     <Folder Include="Assets/M Studio/Art/Characters/Player/Arm" />
-     <Folder Include="Assets/M Studio/Art/Intro/Character" />
-     <Folder Include="Assets/M Studio/Art/Items/Bushes" />
-     <Folder Include="Assets/TileMaps/Tiles" />
-     <Folder Include="Assets/M Studio/Art/Characters/Player" />
-     <Folder Include="Assets/M Studio/Tilemap" />
-     <Folder Include="Assets/M Studio/Art/Faces" />
-     <Folder Include="Assets/Resources" />
-     <Folder Include="Assets/Scripts/Inventory/Data_SO" />
-     <Folder Include="Assets/M Studio/Art/Characters/UI Animation" />
-     <Folder Include="Assets/M Studio/Art/Characters/Girl04" />
-     <Folder Include="Assets/M Studio/Art/Characters/Player/Tools/Axe" />
-     <Folder Include="Assets/M Studio/Art/Characters/Old Man" />
-     <Folder Include="Assets/M Studio/Animations/NPC/Boy" />
-     <Folder Include="Assets/M Studio/Art/Items/Tree01" />
-     <Folder Include="Assets/M Studio/Animations/Tool/Axe" />
-     <Folder Include="Assets/M Studio/Animations/Player/Body" />
-     <Folder Include="Assets/M Studio/Art/Trees" />
-     <Folder Include="Assets/M Studio/Art/Characters/Girl06" />
-     <Folder Include="Assets/M Studio/Art/Characters/Player/Tools/Reap" />
-     <Folder Include="Assets/GameData" />
-     <Folder Include="Assets/M Studio/Art/Items/Grass" />
-     <Folder Include="Assets/M Studio/Animations/Tree" />
-     <Folder Include="Assets/M Studio/Art/Characters/Boy01" />
-     <Folder Include="Assets/M Studio/Art/Items" />
-     <Folder Include="Assets/M Studio/Animations/NPC" />
-     <Folder Include="Assets/M Studio" />
-     <Folder Include="Assets/TileMaps" />
-     <Folder Include="Assets/M Studio/Art/Characters" />
-     <Folder Include="Assets/Tool" />
-     <Folder Include="Assets/Perfab" />
-     <Folder Include="Assets/M Studio/Art/Characters/Shadow" />
-     <Folder Include="Assets/M Studio/Art/Characters/Player/Tools/Hoe" />
-     <Folder Include="Assets/M Studio/Tilemap/Tiles" />
-     <Folder Include="Assets/M Studio/Art/Characters/M" />
-     <Folder Include="Assets/TileMaps/RuleTile" />
-     <Folder Include="Assets/M Studio/Animations/Item/Fire" />
-     <Folder Include="Assets/Scripts/Player" />
-     <Folder Include="Assets/M Studio/Animations/Tool/ReapTool" />
-     <Folder Include="Assets/Scripts/Until" />
-     <Folder Include="Assets/M Studio/Art/Characters/Player/Tools/Pickaxe" />
-     <Folder Include="Assets/M Studio/Animations/NPC/Gril01" />
+     <Compile Include="Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModulePhysics2D.cs" />
+     <Compile Include="Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModulePhysics.cs" />
+     <Compile Include="Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUnityVersion.cs" />
+     <Compile Include="Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleEPOOutline.cs" />
+     <Compile Include="Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleSprite.cs" />
+     <Compile Include="Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUtils.cs" />
+     <Compile Include="Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUI.cs" />
+     <Compile Include="Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleAudio.cs" />
+     <Folder Include="Assets/Plugins/Demigiant" />
+     <Folder Include="Assets/Plugins" />
+     <Folder Include="Assets/Plugins/Demigiant/DOTween/Modules" />
+     <Folder Include="Assets/Plugins/Demigiant/DOTween" />
+     <None Include="Assets/Plugins/Demigiant/DOTween/readme.txt" />
      <Reference Include="UnityEngine">
      <HintPath>/Applications/Unity/Hub/Editor/2021.3.20f1c1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>
@@ -892,10 +791,6 @@
      </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{6801c84e-2b60-225e-d240-08d7aeea6eac}</Project>
-      <Name>Assembly-CSharp-firstpass</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

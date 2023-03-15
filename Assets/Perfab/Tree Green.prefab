@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5389995955991030243}
   - component: {fileID: 5389995955991030242}
+  - component: {fileID: 2342404095043657872}
+  - component: {fileID: 1658249708529873631}
   m_Layer: 0
   m_Name: Tree_Trunk
   m_TagString: Untagged
@@ -84,6 +86,34 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!70 &2342404095043657872
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5389995955991030240}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.097046375, y: 0.361027}
+  m_Size: {x: 1.2529664, y: 1.5812783}
+  m_Direction: 0
+--- !u!114 &1658249708529873631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5389995955991030240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 555acd3cc858941ad91d1ef5f1e519be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5389995956327003365
 GameObject:
   m_ObjectHideFlags: 0
@@ -95,6 +125,7 @@ GameObject:
   - component: {fileID: 5389995956327003364}
   - component: {fileID: 5389995956327003367}
   - component: {fileID: 5389995956327003366}
+  - component: {fileID: 4511408117058390742}
   m_Layer: 0
   m_Name: Top
   m_TagString: Untagged
@@ -190,6 +221,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4511408117058390742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5389995956327003365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 555acd3cc858941ad91d1ef5f1e519be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5389995956352958704
 GameObject:
   m_ObjectHideFlags: 0
@@ -199,6 +242,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5389995956352958707}
+  - component: {fileID: 4013756491615995805}
   m_Layer: 0
   m_Name: Tree Green
   m_TagString: Untagged
@@ -223,3 +267,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!70 &4013756491615995805
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5389995956352958704}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.10666275, y: 3.0398793}
+  m_Size: {x: 8.073032, y: 8.073032}
+  m_Direction: 0
