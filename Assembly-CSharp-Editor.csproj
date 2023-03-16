@@ -44,7 +44,6 @@
      <Compile Include="Assets/Editor/UI Builder/ItemEditor.cs" />
      <None Include="Assets/Editor/UI Builder/ItemEditor.uxml" />
      <None Include="Assets/Editor/UI Builder/ItemEditor.uss" />
-     <None Include="Assets/Editor/UI Builder/ItemRowTemplate.uxml" />
      <Folder Include="Assets/Editor" />
      <Folder Include="Assets/Editor/UI Builder" />
      <Reference Include="UnityEngine">
