@@ -7,7 +7,7 @@ public class ItemDetails
 {
     // BItem
     public int itemID;
-    public string name;
+    public string itemName;
     public ItemType itemType;
     public Sprite itemIcon;
     /// <summary>
@@ -24,7 +24,7 @@ public class ItemDetails
     /// <summary>
     /// 拿起
     /// </summary>
-    public bool canPickup;
+    public bool canPickedup;
     /// <summary>
     /// 可丢弃
     /// </summary>
