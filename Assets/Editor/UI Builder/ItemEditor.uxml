@@ -5,7 +5,7 @@
                 <ui:Button text="ADD" display-tooltip-when-elided="true" enable-rich-text="false" name="AddButton" style="-unity-font-style: bold; font-size: 20px;" />
                 <ui:Label text="Label" display-tooltip-when-elided="true" style="font-size: 20px; -unity-font-style: bold; -unity-text-align: upper-center;" />
             </ui:VisualElement>
-            <ui:ListView focusable="true" show-border="true" show-add-remove-footer="true" reorderable="true" horizontal-scrolling="true" />
+            <ui:ListView focusable="true" show-border="true" show-add-remove-footer="true" reorderable="true" horizontal-scrolling="true" name="ListView" />
         </ui:VisualElement>
         <ui:ScrollView name="ScrollView" mode="Vertical" focusable="false" style="width: 100%; height: 100%; flex-grow: 1;">
             <ui:VisualElement name="Header" style="flex-direction: row-reverse; justify-content: space-between; align-items: center; flex-grow: 1; width: 100%;">
@@ -35,15 +35,15 @@
                 <ui:VisualElement name="Row3" style="border-left-color: rgb(135, 140, 131); border-right-color: rgb(135, 140, 131); border-top-color: rgb(135, 140, 131); border-bottom-color: rgb(135, 140, 131); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; flex-direction: row; align-items: stretch; justify-content: flex-start;">
                     <ui:VisualElement name="Left" style="flex-direction: column; justify-content: space-between; width: 50%; border-left-color: rgb(135, 140, 131); border-right-color: rgb(135, 140, 131); border-top-color: rgb(135, 140, 131); border-bottom-color: rgb(135, 140, 131); flex-grow: 1; border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-top-left-radius: 3px; border-bottom-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px;">
                         <ui:Label text="属性" display-tooltip-when-elided="true" style="border-left-color: rgb(255, 255, 255); border-right-color: rgb(255, 255, 255); border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; background-color: rgb(108, 97, 97); -unity-font-style: bold;" />
-                        <uie:IntegerField label="Use Radius" value="0" name="ItemUseRedius" style="flex-shrink: 1; flex-grow: 1; margin-top: 3px; margin-bottom: 3px;" />
-                        <ui:Toggle label="Can Pickedup" name="CanPickedup" style="margin-top: 3px;" />
-                        <ui:Toggle label="Can Dropped" name="CanDropped" style="margin-top: 3px;" />
-                        <ui:Toggle label="Can Carried" name="CanCarried" style="margin-top: 3px;" />
+                        <uie:IntegerField label="Use Radius" value="0" name="ItemUseRedius" style="flex-shrink: 1; flex-grow: 1; margin-top: 3px; margin-bottom: 3px; -unity-font-style: bold;" />
+                        <ui:Toggle label="Can Pickedup" name="CanPickedup" style="margin-top: 3px; -unity-font-style: bold;" />
+                        <ui:Toggle label="Can Dropped" name="CanDropped" style="margin-top: 3px; -unity-font-style: bold;" />
+                        <ui:Toggle label="Can Carried" name="CanCarried" style="margin-top: 3px; -unity-font-style: bold;" />
                     </ui:VisualElement>
                     <ui:VisualElement name="Right" style="width: 50%; justify-content: flex-start; align-items: stretch; margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px; border-left-color: rgb(135, 140, 131); border-right-color: rgb(135, 140, 131); border-top-color: rgb(135, 140, 131); border-bottom-color: rgb(135, 140, 131); border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px;">
                         <ui:Label text="其他" display-tooltip-when-elided="true" style="border-left-color: rgb(255, 255, 255); border-right-color: rgb(255, 255, 255); border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; background-color: rgb(108, 97, 97); -unity-font-style: bold; height: 19px;" />
-                        <uie:IntegerField label="Price" value="42" name="Price" style="margin-right: 3px; margin-top: 3px; margin-bottom: 3px;" />
-                        <ui:Slider picking-mode="Ignore" label="Sell Percentage" value="0.5" high-value="1" show-input-field="true" page-size="0" name="SellPercentage" style="opacity: 1; margin-top: 3px; margin-bottom: 3px; align-items: stretch; justify-content: space-between;" />
+                        <uie:IntegerField label="Price" value="42" name="Price" style="margin-right: 3px; margin-top: 3px; margin-bottom: 3px; -unity-font-style: bold;" />
+                        <ui:Slider picking-mode="Ignore" label="Sell Percentage" value="0.5" high-value="1" show-input-field="true" page-size="0" name="SellPercentage" style="opacity: 1; margin-top: 3px; margin-bottom: 3px; align-items: stretch; justify-content: space-between; -unity-font-style: bold;" />
                     </ui:VisualElement>
                 </ui:VisualElement>
             </ui:VisualElement>
