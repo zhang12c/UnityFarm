@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor;
+using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -14,9 +16,15 @@ public class ItemEditor : EditorWindow
     private VisualTreeAsset _makeItemObj;
     // ListView 组件
     private ListView _listView;
+    // 右侧 scrollView
+    private ScrollView _scrollView;
+    // 左侧选中的item
+    private ItemDetails _itemDetailSection;
+    // 默认的Icon
+    private Sprite _defaultIcon;
     
     
-    [MenuItem("Window/UI Toolkit/ItemEditor")]
+    [MenuItem("ItemDataTool/ItemEditor")]
     public static void ShowExample()
     {
         ItemEditor wnd = GetWindow<ItemEditor>();
@@ -25,19 +33,25 @@ public class ItemEditor : EditorWindow
 
     public void CreateGUI()
     {
-        _makeItemObj = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Assets/Editor/UI Builder/ItemRowTemplate.uxml");
+        // 默认Icon
+        _defaultIcon = AssetDatabase.LoadAssetAtPath<Sprite>(Settings.DEFAULT_ICON_PATH);
+        
+        _makeItemObj = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>(Settings.MAKE_ITEM_PATH);
 
         // Each editor window contains a root VisualElement object
         VisualElement root = rootVisualElement;
 
         // Import UXML
-        var visualTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Assets/Editor/UI Builder/ItemEditor.uxml");
+        var visualTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>(Settings.ITEM_EDITOR_PATH);
         VisualElement labelFromUXML = visualTree.Instantiate();
         root.Add(labelFromUXML);
         
         // 获取ListView
         var root2 = root.Q<VisualElement>("ItemList");
         _listView = root2.Q<ListView>("ListView");
+        
+        // Get ScrollView 
+        _scrollView = root.Q<ScrollView>("ItemDetails");
         
         LoadDataBase();
         GenerateListView();
@@ -81,6 +95,21 @@ public class ItemEditor : EditorWindow
         _listView.makeItem = makeItem;
         _listView.bindItem = bindItem;
 
+        // 初次默认不可见
+        _scrollView.visible = false;
+        // 添加一个item Click 的方法回调
+        _listView.onSelectionChange += OnListSectionChange;
+
+    }
+    private void OnListSectionChange(IEnumerable<object> obj)
+    {
+        _itemDetailSection = obj.First() as ItemDetails;
+        GetItemDetails();
+        
+        if (!_scrollView.visible)
+        {
+            _scrollView.visible = true;
+        }
     }
 
     private void InitBindItem(VisualElement e, int i)
@@ -97,5 +126,54 @@ public class ItemEditor : EditorWindow
             itemName.text = "No Item";
         }
         
+    }
+
+    private void GetItemDetails()
+    {
+        // 每次都会刷新数据
+        _scrollView.MarkDirtyRepaint();
+
+        IntegerField itemId = _scrollView.Q<IntegerField>("ItemID");
+        itemId.value = _itemDetailSection.itemID;
+        // 如果数据更新了，就修改数据值
+        itemId.RegisterValueChangedCallback(evt => { _itemDetailSection.itemID = evt.newValue; });
+
+        TextField itemName = _scrollView.Q<TextField>("ItemName");
+        itemName.value = _itemDetailSection.itemName;
+        itemName.RegisterValueChangedCallback(evt => { 
+            _itemDetailSection.itemName = evt.newValue; 
+            // 刷新一下左侧的内容
+            _listView.Rebuild(); 
+        });
+
+        EnumField itemType = _scrollView.Q<EnumField>("ItemType");
+        itemType.Init(_itemDetailSection.itemType);
+        itemType.RegisterValueChangedCallback(evt => { _itemDetailSection.itemType = (ItemType)evt.newValue; });
+        
+        // 通用里的Icon 主显示内容
+        VisualElement itemShowIcon = _scrollView.Q<VisualElement>("Icon");
+        if (_itemDetailSection.itemIcon)
+        {
+            itemShowIcon.style.backgroundImage = _itemDetailSection.itemIcon.texture;
+        }
+        else
+        {
+            itemShowIcon.style.backgroundImage = _defaultIcon.texture;
+        }
+        
+        // 物品的图片
+        ObjectField itemIcon = _scrollView.Q<ObjectField>("ItemIcon");
+        itemIcon.value = _itemDetailSection.itemIcon == null ? _defaultIcon : _itemDetailSection.itemIcon;
+        
+        itemIcon.RegisterValueChangedCallback(evt =>
+        {
+            Sprite newIcon = (Sprite)evt.newValue;
+            _itemDetailSection.itemIcon = newIcon;
+            // 更改主显示icon
+            itemShowIcon.style.backgroundImage = newIcon == null ? _defaultIcon.texture : newIcon.texture;
+            
+            _listView.Rebuild();
+        });
+
     }
 }

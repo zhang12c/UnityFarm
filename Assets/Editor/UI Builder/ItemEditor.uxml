@@ -5,9 +5,9 @@
                 <ui:Button text="ADD" display-tooltip-when-elided="true" enable-rich-text="false" name="AddButton" style="-unity-font-style: bold; font-size: 20px;" />
                 <ui:Label text="Label" display-tooltip-when-elided="true" style="font-size: 20px; -unity-font-style: bold; -unity-text-align: upper-center;" />
             </ui:VisualElement>
-            <ui:ListView focusable="true" show-border="true" show-add-remove-footer="true" reorderable="true" horizontal-scrolling="true" name="ListView" />
+            <ui:ListView focusable="true" show-border="true" show-add-remove-footer="false" reorderable="true" horizontal-scrolling="true" name="ListView" style="margin-left: 0; margin-right: 15px; margin-top: 0; margin-bottom: 0;" />
         </ui:VisualElement>
-        <ui:ScrollView name="ScrollView" mode="Vertical" focusable="false" style="width: 100%; height: 100%; flex-grow: 1;">
+        <ui:ScrollView name="ItemDetails" mode="Vertical" focusable="false" style="width: 100%; height: 100%; flex-grow: 1;">
             <ui:VisualElement name="Header" style="flex-direction: row-reverse; justify-content: space-between; align-items: center; flex-grow: 1; width: 100%;">
                 <ui:Button text="DELETE" display-tooltip-when-elided="true" enable-rich-text="false" name="DeleteButton" style="-unity-font-style: bold; font-size: 20px;" />
                 <ui:Label text="Label" display-tooltip-when-elided="true" style="font-size: 20px; -unity-font-style: bold; -unity-text-align: upper-center;" />

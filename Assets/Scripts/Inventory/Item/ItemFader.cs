@@ -16,13 +16,13 @@ public class ItemFader : MonoBehaviour
     public void FadeIn()
     {
         //Debug.Log("Item FadeIn");
-        Color targetColor = new Color(1, 1, 1, Settings.targetFadeAlpha);
-        _spriteRenderer.DOColor(targetColor, Settings.fadeInTime);
+        Color targetColor = new Color(1, 1, 1, Settings.TARGET_FADE_ALPHA);
+        _spriteRenderer.DOColor(targetColor, Settings.FADEIN_TIME);
     }
     public void FadeOut()
     {
         //Debug.Log("Item FadeOut");
         Color targetColor = new Color(1, 1, 1, 1);
-        _spriteRenderer.DOColor(targetColor, Settings.fadeInTime);
+        _spriteRenderer.DOColor(targetColor, Settings.FADEIN_TIME);
     }
 }
