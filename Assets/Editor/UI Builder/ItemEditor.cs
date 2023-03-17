@@ -22,6 +22,10 @@ public class ItemEditor : EditorWindow
     private ItemDetails _itemDetailSection;
     // 默认的Icon
     private Sprite _defaultIcon;
+    // add Button
+    private Button _addButton;
+    // delete Button 
+    private Button _deleteButton;
     
     
     [MenuItem("ItemDataTool/ItemEditor")]
@@ -53,8 +57,35 @@ public class ItemEditor : EditorWindow
         // Get ScrollView 
         _scrollView = root.Q<ScrollView>("ItemDetails");
         
+        // get Add Button
+        _addButton = root.Q<Button>("AddButton");
+        // add Event
+        _addButton.clicked += OnAddButtonClick;
+        // get delete Button
+        _deleteButton = root.Q<Button>("DeleteButton");
+        _deleteButton.clicked += OnDeleteButtonClick;
+        
+        
         LoadDataBase();
         GenerateListView();
+    }
+    private void OnAddButtonClick()
+    {
+        ItemDetails newItem = new ItemDetails
+        {
+            itemName = "New Item",
+            itemID = 1001 + _itemList.Count
+        };
+        
+        _itemList.Add(newItem);
+        _listView.Rebuild();
+    }
+    
+    private void OnDeleteButtonClick()
+    {
+        _itemList.Remove(_itemDetailSection);
+        _listView.Rebuild();
+        _scrollView.visible = false;
     }
 
     /// <summary>
