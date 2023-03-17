@@ -33,7 +33,7 @@ public enum ItemType
     /// </summary>
     WaterTool,
     /// <summary>
-    /// 贩卖商品的桶
+    /// 收集篮
     /// </summary>
     CollectTool,
     /// <summary>

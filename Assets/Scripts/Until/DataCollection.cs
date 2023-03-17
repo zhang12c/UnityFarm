@@ -23,7 +23,7 @@ public class ItemDetails
 
     // 道具的状态
     /// <summary>
-    /// 拿起
+    /// 捡起
     /// </summary>
     public bool canPickedup;
     /// <summary>

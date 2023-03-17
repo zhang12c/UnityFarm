@@ -205,6 +205,45 @@ public class ItemEditor : EditorWindow
             
             _listView.Rebuild();
         });
+        
+        // 物品的图片
+        ObjectField onWorldSprite = _scrollView.Q<ObjectField>("ItemSprite");
+        onWorldSprite.value = _itemDetailSection.itemOnWorldSprite == null ? _defaultIcon : _itemDetailSection.itemOnWorldSprite;
+        
+        onWorldSprite.RegisterValueChangedCallback(evt =>
+        {
+            Sprite newIcon = (Sprite)evt.newValue;
+            _itemDetailSection.itemOnWorldSprite = newIcon;
+        });
+        
+        
 
+        TextField description = _scrollView.Q<TextField>("Description");
+        description.value = _itemDetailSection.itemDescription;
+        description.RegisterValueChangedCallback(evt => _itemDetailSection.itemDescription = evt.newValue);
+        
+        IntegerField itemUseR = _scrollView.Q<IntegerField>("ItemUseRedius");
+        itemUseR.value = _itemDetailSection.itemUseRadius;
+        itemUseR.RegisterValueChangedCallback(evt => _itemDetailSection.itemUseRadius = evt.newValue);
+
+        Toggle canPickedup = _scrollView.Q<Toggle>("CanPickedup");
+        canPickedup.value = _itemDetailSection.canPickedup;
+        canPickedup.RegisterValueChangedCallback(evt => _itemDetailSection.canPickedup = evt.newValue);
+        
+        Toggle canDropped = _scrollView.Q<Toggle>("CanDropped");
+        canDropped.value = _itemDetailSection.canDropped;
+        canDropped.RegisterValueChangedCallback(evt => _itemDetailSection.canDropped = evt.newValue);
+        
+        Toggle canCarried = _scrollView.Q<Toggle>("CanCarried");
+        canCarried.value = _itemDetailSection.canCarried;
+        canCarried.RegisterValueChangedCallback(evt => _itemDetailSection.canCarried = evt.newValue);
+        
+        IntegerField price = _scrollView.Q<IntegerField>("Price");
+        price.value = _itemDetailSection.itemPrice;
+        price.RegisterValueChangedCallback(evt => _itemDetailSection.itemPrice = evt.newValue);
+
+        Slider sellPercentage = _scrollView.Q<Slider>("SellPercentage");
+        sellPercentage.value = _itemDetailSection.sellPercentage;
+        sellPercentage.RegisterValueChangedCallback(evt => _itemDetailSection.sellPercentage = evt.newValue);
     }
 }
