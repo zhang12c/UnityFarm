@@ -45,3 +45,9 @@ public class ItemDetails
     [Range(0, 1)]
     public float sellPercentage;
 }
+[System.Serializable]
+public struct InventoryItem
+{
+    public int itemID;
+    public int itemAmount;
+}

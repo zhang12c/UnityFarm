@@ -53,6 +53,7 @@
      <Compile Include="Assets/Scripts/Utility/Singleton.cs" />
      <Compile Include="Assets/Scripts/Inventory/Item/ItemOnWorld.cs" />
      <Compile Include="Assets/Scripts/Inventory/Item/ItemPickup.cs" />
+     <Compile Include="Assets/Scripts/Inventory/Data_SO/InventoryBag_SO.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/M Studio/Art/Intro/Sign" />
      <Folder Include="Assets/M Studio/Tilemap/Tiles/Base" />
@@ -63,6 +64,7 @@
      <Folder Include="Assets/M Studio/Art/Buildings" />
      <Folder Include="Assets/M Studio/Art/Characters/Player/Tools/Water" />
      <Folder Include="Assets/M Studio/Art/Buildings/Stall" />
+     <Folder Include="Assets/GameData/Bag" />
      <Folder Include="Assets/M Studio/Animations/Tool" />
      <Folder Include="Assets/M Studio/Art/Items/Woods" />
      <Folder Include="Assets/M Studio/Animations/Item" />

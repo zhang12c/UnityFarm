@@ -1,3 +1,4 @@
+using Inventory.Data_SO;
 using Inventory.Item;
 using UnityEngine;
 
@@ -5,8 +6,11 @@ namespace Inventory.Logic
 {
     public class InventoryManager : Singleton<InventoryManager>
     {
-        // 所有的存储的数据
+        [Header("所有的存储的数据")]
         public ItemDataList_SO _ItemDataListSo;
+
+        [Header("背包的数据")]
+        public InventoryBag_SO _PlayerBag;
         
         // itemID => itemDetails
         public ItemDetails GetItemDetails(int ID)
@@ -16,16 +20,15 @@ namespace Inventory.Logic
 
         public void AddItem(ItemOnWorld item, bool DoDestory)
         {
-            ItemDetails _itemDetails = GetItemDetails(item.itemID);
-            if (_itemDetails != null)
+            // 背包是否有空位
+            InventoryItem inventoryItem = new InventoryItem()
             {
-                // 背包里面有道具，递增
-                
-            }
-            else
-            {
-                // 背包里没有道具，添加
-            }
+                itemID = item.itemID,
+                itemAmount = 1,
+            };
+
+            _PlayerBag.itemInventoryItems[0] = inventoryItem;
+            // 是否已经有物品
             
             
             if (DoDestory)
@@ -33,5 +36,12 @@ namespace Inventory.Logic
                 Destroy(item.gameObject);
             }
         }
+
+        public bool CheckBagCapacity()
+        {
+            
+            return false;
+        }
+        
     }
 }

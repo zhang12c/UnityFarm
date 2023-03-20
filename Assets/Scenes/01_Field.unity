@@ -133714,9 +133714,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1359914061305052467, guid: 0f691942f59374fd1ba87eed43b503d0, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1359914061305052467, guid: 0f691942f59374fd1ba87eed43b503d0, type: 3}
+      propertyPath: m_AutoTiling
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1359914061305052469, guid: 0f691942f59374fd1ba87eed43b503d0, type: 3}
       propertyPath: m_Name
       value: ItemBase
+      objectReference: {fileID: 0}
+    - target: {fileID: 1359914062467351426, guid: 0f691942f59374fd1ba87eed43b503d0, type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f691942f59374fd1ba87eed43b503d0, type: 3}
