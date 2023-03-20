@@ -52,6 +52,7 @@
      <Compile Include="Assets/Scripts/Inventory/Logic/InventoryManager.cs" />
      <Compile Include="Assets/Scripts/Utility/Singleton.cs" />
      <Compile Include="Assets/Scripts/Inventory/Item/ItemOnWorld.cs" />
+     <Compile Include="Assets/Scripts/Inventory/Item/ItemPickup.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/M Studio/Art/Intro/Sign" />
      <Folder Include="Assets/M Studio/Tilemap/Tiles/Base" />
@@ -76,6 +77,7 @@
      <Folder Include="Assets/M Studio/Art/Intro/Background" />
      <Folder Include="Assets/Scenes" />
      <Folder Include="Assets/M Studio/Art/Buildings/Hotel" />
+     <Folder Include="Assets/Perfab/Item" />
      <Folder Include="Assets/M Studio/Art/Items/Furnitrue01" />
      <Folder Include="Assets/M Studio/Art/Items/Furniture02" />
      <Folder Include="Assets/M Studio/Art/Characters/Girl01" />
@@ -115,6 +117,7 @@
      <Folder Include="Assets/M Studio/Art/Items/Plants" />
      <Folder Include="Assets/M Studio/Art/Characters/Player/Hair" />
      <Folder Include="Assets/M Studio/Art/Intro" />
+     <Folder Include="Assets/Perfab/Trees" />
      <Folder Include="Assets/Scripts/Inventory" />
      <Folder Include="Assets/M Studio/Art/Characters/Player/Arm" />
      <Folder Include="Assets/M Studio/Art/Intro/Character" />

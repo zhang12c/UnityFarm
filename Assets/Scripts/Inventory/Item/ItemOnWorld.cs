@@ -7,7 +7,7 @@ namespace Inventory.Item
     {
         public int itemID;
         private SpriteRenderer itemSpriteRenderer;
-        private ItemDetails _itemDetails;
+        public ItemDetails _itemDetails;
 
         // 图片锚点在底部，而item的碰撞体中心在图片底部，这里需要设置offset将碰撞体包裹住
         private BoxCollider2D _boxCollider2D;
