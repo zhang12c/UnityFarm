@@ -41,3 +41,10 @@ public enum ItemType
     /// </summary>
     ReapableScenery,
 }
+
+public enum SlotType
+{
+    Bag,
+    Box,
+    Shop,
+}

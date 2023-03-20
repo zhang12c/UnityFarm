@@ -54,6 +54,7 @@
      <Compile Include="Assets/Scripts/Inventory/Item/ItemOnWorld.cs" />
      <Compile Include="Assets/Scripts/Inventory/Item/ItemPickup.cs" />
      <Compile Include="Assets/Scripts/Inventory/Data_SO/InventoryBag_SO.cs" />
+     <Compile Include="Assets/Scripts/Inventory/UI/SlotUI.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/M Studio/Art/Intro/Sign" />
      <Folder Include="Assets/M Studio/Tilemap/Tiles/Base" />
@@ -87,6 +88,7 @@
      <Folder Include="Assets/M Studio/Art/Buildings/Hotel" />
      <Folder Include="Assets/TextMesh Pro/Resources/Fonts &amp; Materials" />
      <Folder Include="Assets/Perfab/Item" />
+     <Folder Include="Assets/Scripts/Inventory/UI" />
      <Folder Include="Assets/M Studio/Art/Items/Furnitrue01" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc" />
      <Folder Include="Assets/M Studio/Art/Items/Furniture02" />
