@@ -3,7 +3,7 @@ guid: ba7082f9767c44dc390115a2980c6ed0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -63,6 +63,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -282,14 +283,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      HairPullRight_1: 1908232467
-      HairPullRight_4: 1371130227
-      HairPullRight_3: -690500103
-      HairPullRight_5: 1411679302
       HairPullRight_0: 294877457
+      HairPullRight_1: 1908232467
       HairPullRight_2: -1538419278
-      HairPullRight_7: -1203177693
+      HairPullRight_3: -690500103
+      HairPullRight_4: 1371130227
+      HairPullRight_5: 1411679302
       HairPullRight_6: 490845028
+      HairPullRight_7: -1203177693
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

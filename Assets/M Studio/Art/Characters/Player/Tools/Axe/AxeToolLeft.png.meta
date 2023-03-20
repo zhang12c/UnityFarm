@@ -3,7 +3,7 @@ guid: e127854af1dae46f5960578efb42a646
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -63,6 +63,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -282,13 +283,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      AxeToolLeft_4: 1114952091
-      AxeToolLeft_3: 1253451501
       AxeToolLeft_0: 358999450
-      AxeToolLeft_6: 168876821
       AxeToolLeft_1: 1491815220
       AxeToolLeft_2: -1063537324
+      AxeToolLeft_3: 1253451501
+      AxeToolLeft_4: 1114952091
       AxeToolLeft_5: 1451299432
+      AxeToolLeft_6: 168876821
       AxeToolLeft_7: -1204012096
   spritePackingTag: 
   pSDRemoveMatte: 0

@@ -3,7 +3,7 @@ guid: a6fe5c25d581b4fb0894b1c86b12c8c3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -63,6 +63,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -462,22 +463,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Boy_001_1: 966857305
-      Boy_001_8: -1829748415
-      Boy_001_7: 759672225
-      Boy_001_11: -1830734680
-      Boy_001_3: -1300714665
-      Boy_001_13: 1421993880
-      Boy_001_9: -2075157460
-      Boy_001_15: -901862835
-      Boy_001_14: 818738920
-      Boy_001_6: 480081147
-      Boy_001_4: 1456026348
-      Boy_001_12: -455911319
-      Boy_001_2: 1793525268
-      Boy_001_5: 1410786145
       Boy_001_0: 1040835568
+      Boy_001_1: 966857305
       Boy_001_10: 205805143
+      Boy_001_11: -1830734680
+      Boy_001_12: -455911319
+      Boy_001_13: 1421993880
+      Boy_001_14: 818738920
+      Boy_001_15: -901862835
+      Boy_001_2: 1793525268
+      Boy_001_3: -1300714665
+      Boy_001_4: 1456026348
+      Boy_001_5: 1410786145
+      Boy_001_6: 480081147
+      Boy_001_7: 759672225
+      Boy_001_8: -1829748415
+      Boy_001_9: -2075157460
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

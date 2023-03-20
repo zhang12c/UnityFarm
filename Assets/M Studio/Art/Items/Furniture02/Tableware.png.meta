@@ -3,7 +3,7 @@ guid: eb4015f4917924911bf72cf91241cde7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -63,6 +63,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -693,33 +694,33 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Tableware_14: 1735161751
-      Tableware_2: -413615897
-      Tableware_3: 1560820721
-      Tableware_11: -1142777726
-      Tableware_4: 1921273694
-      Tableware_20: 1909126398
-      Tableware_9: 142444346
-      Tableware_13: -706784435
-      Tableware_6: -736415902
-      Tableware_16: -1112534430
-      Tableware_19: 1624235038
-      Tableware_18: 591716613
-      Tableware_21: -1441601721
-      Tableware_1: 1628788174
-      Tableware_17: 1677329357
       Tableware_0: 1307932398
-      Tableware_5: 193833096
+      Tableware_1: 1628788174
+      Tableware_10: -2019993552
+      Tableware_11: -1142777726
+      Tableware_12: -1418686139
+      Tableware_13: -706784435
+      Tableware_14: 1735161751
+      Tableware_15: -562368158
+      Tableware_16: -1112534430
+      Tableware_17: 1677329357
+      Tableware_18: 591716613
+      Tableware_19: 1624235038
+      Tableware_2: -413615897
+      Tableware_20: 1909126398
+      Tableware_21: -1441601721
+      Tableware_22: -899601641
+      Tableware_23: -1437120103
+      Tableware_24: 782508032
+      Tableware_25: -124530910
       Tableware_26: -1732690033
+      Tableware_3: 1560820721
+      Tableware_4: 1921273694
+      Tableware_5: 193833096
+      Tableware_6: -736415902
       Tableware_7: -1563460654
       Tableware_8: 1211481591
-      Tableware_12: -1418686139
-      Tableware_24: 782508032
-      Tableware_23: -1437120103
-      Tableware_22: -899601641
-      Tableware_10: -2019993552
-      Tableware_15: -562368158
-      Tableware_25: -124530910
+      Tableware_9: 142444346
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

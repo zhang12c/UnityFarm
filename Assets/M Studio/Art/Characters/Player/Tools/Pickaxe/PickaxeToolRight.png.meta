@@ -3,7 +3,7 @@ guid: ea115e848d5b341b895fc9b496eb83d5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -63,6 +63,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -282,14 +283,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      PickaxeToolRight_7: -905233135
-      PickaxeToolRight_3: 2121620713
+      PickaxeToolRight_0: 167148380
       PickaxeToolRight_1: -160913751
+      PickaxeToolRight_2: 847664850
+      PickaxeToolRight_3: 2121620713
+      PickaxeToolRight_4: 825079667
       PickaxeToolRight_5: -1810952769
       PickaxeToolRight_6: -1757750591
-      PickaxeToolRight_0: 167148380
-      PickaxeToolRight_4: 825079667
-      PickaxeToolRight_2: 847664850
+      PickaxeToolRight_7: -905233135
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

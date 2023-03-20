@@ -3,7 +3,7 @@ guid: 95e7e06c6bf4644f3a4bc7b164e261bf
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -63,6 +63,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -231,11 +232,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      blueberry_growth_2: -1817254309
-      blueberry_growth_4: -173135368
-      blueberry_growth_1: 1885931999
-      blueberry_growth_3: 816233219
       blueberry_growth_0: -1270250029
+      blueberry_growth_1: 1885931999
+      blueberry_growth_2: -1817254309
+      blueberry_growth_3: 816233219
+      blueberry_growth_4: -173135368
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

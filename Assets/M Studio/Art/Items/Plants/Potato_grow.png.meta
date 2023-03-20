@@ -3,7 +3,7 @@ guid: bd1655396b777431e85369611fc36aed
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -63,6 +63,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -252,12 +253,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Potato_grow_1: 1098745238
-      Potato_grow_4: -1080373613
-      Potato_grow_3: -1730499155
       Potato_grow_0: -2058122700
-      Potato_grow_5: -302366086
+      Potato_grow_1: 1098745238
       Potato_grow_2: -1012976577
+      Potato_grow_3: -1730499155
+      Potato_grow_4: -1080373613
+      Potato_grow_5: -302366086
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

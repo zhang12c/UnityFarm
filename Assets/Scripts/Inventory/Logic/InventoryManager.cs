@@ -108,10 +108,5 @@ namespace Inventory.Logic
             _playerBag.itemInventoryItems[index] = itemOnWorld;
         }
 
-        private void Start()
-        {
-            Debug.Log(_playerBag.itemInventoryItems.Count);
-        }
-
     }
 }

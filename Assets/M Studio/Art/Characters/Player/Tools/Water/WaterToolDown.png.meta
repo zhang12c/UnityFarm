@@ -3,7 +3,7 @@ guid: 38c35677e8fb94f6db76682dd9bfd0fd
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -63,6 +63,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -282,13 +283,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      WaterToolDown_4: -492343035
-      WaterToolDown_6: 894153560
-      WaterToolDown_5: 1032056381
-      WaterToolDown_3: 109928855
-      WaterToolDown_1: -60530571
       WaterToolDown_0: -439279485
+      WaterToolDown_1: -60530571
       WaterToolDown_2: -1681535375
+      WaterToolDown_3: 109928855
+      WaterToolDown_4: -492343035
+      WaterToolDown_5: 1032056381
+      WaterToolDown_6: 894153560
       WaterToolDown_7: 2132047032
   spritePackingTag: 
   pSDRemoveMatte: 0

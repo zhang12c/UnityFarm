@@ -3,7 +3,7 @@ guid: 7d9d71e0d8f72449fa71187f75a87efb
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -63,6 +63,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -1638,78 +1639,78 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      StoneMap2@20_6: 459813282
-      StoneMap2@20_36: 1337517426
-      StoneMap2@20_60: -1667238062
-      StoneMap2@20_48: -1857092739
-      StoneMap2@20_62: 16068157
-      StoneMap2@20_43: -528489012
-      StoneMap2@20_68: -549775230
-      StoneMap2@20_16: -834518223
-      StoneMap2@20_69: -274222340
-      StoneMap2@20_50: -1056658997
-      StoneMap2@20_4: 2030202787
+      StoneMap2@20_0: -1102632105
+      StoneMap2@20_1: -1266501507
       StoneMap2@20_10: 1555602299
-      StoneMap2@20_59: -1472803765
-      StoneMap2@20_57: 897846127
-      StoneMap2@20_3: -1456595922
       StoneMap2@20_11: 610700238
+      StoneMap2@20_12: -8064708
+      StoneMap2@20_13: -822344781
+      StoneMap2@20_14: 761186640
+      StoneMap2@20_15: 944050356
+      StoneMap2@20_16: -834518223
+      StoneMap2@20_17: 671212024
+      StoneMap2@20_18: -1192529040
+      StoneMap2@20_19: 1389498776
+      StoneMap2@20_2: -1550192926
+      StoneMap2@20_20: -2140123574
+      StoneMap2@20_21: -340649027
+      StoneMap2@20_22: -1224111404
+      StoneMap2@20_23: 372889299
+      StoneMap2@20_24: 1821153052
+      StoneMap2@20_25: -1417125612
+      StoneMap2@20_26: -597601843
       StoneMap2@20_27: 1425701423
+      StoneMap2@20_28: 767799796
+      StoneMap2@20_29: 2121034818
+      StoneMap2@20_3: -1456595922
+      StoneMap2@20_30: -1492391850
+      StoneMap2@20_31: 1508219249
+      StoneMap2@20_32: -656521099
+      StoneMap2@20_33: -1634182831
+      StoneMap2@20_34: 1974295858
+      StoneMap2@20_35: -505361369
+      StoneMap2@20_36: 1337517426
+      StoneMap2@20_37: 1505182262
+      StoneMap2@20_38: -1711966489
+      StoneMap2@20_39: -756546085
+      StoneMap2@20_4: 2030202787
       StoneMap2@20_40: 1648797877
       StoneMap2@20_41: -1311920222
-      StoneMap2@20_18: -1192529040
-      StoneMap2@20_63: -164661673
-      StoneMap2@20_25: -1417125612
-      StoneMap2@20_29: 2121034818
-      StoneMap2@20_35: -505361369
-      StoneMap2@20_38: -1711966489
-      StoneMap2@20_46: -1384708754
-      StoneMap2@20_65: 1608386384
-      StoneMap2@20_31: 1508219249
-      StoneMap2@20_28: 767799796
-      StoneMap2@20_51: -1489862426
-      StoneMap2@20_58: 1001878239
-      StoneMap2@20_17: 671212024
-      StoneMap2@20_14: 761186640
-      StoneMap2@20_39: -756546085
-      StoneMap2@20_12: -8064708
-      StoneMap2@20_64: -672165732
-      StoneMap2@20_13: -822344781
-      StoneMap2@20_34: 1974295858
-      StoneMap2@20_67: -495438177
-      StoneMap2@20_71: 1757845069
-      StoneMap2@20_21: -340649027
-      StoneMap2@20_26: -597601843
-      StoneMap2@20_32: -656521099
-      StoneMap2@20_45: -957296815
-      StoneMap2@20_70: 1039435636
-      StoneMap2@20_22: -1224111404
-      StoneMap2@20_0: -1102632105
-      StoneMap2@20_15: 944050356
-      StoneMap2@20_55: 1837773812
-      StoneMap2@20_37: 1505182262
-      StoneMap2@20_61: 1755779737
-      StoneMap2@20_52: -618044502
-      StoneMap2@20_20: -2140123574
       StoneMap2@20_42: -749070642
-      StoneMap2@20_47: 2112331437
-      StoneMap2@20_66: -1785297857
-      StoneMap2@20_54: -812214593
-      StoneMap2@20_49: -1300597031
-      StoneMap2@20_53: 1554529488
-      StoneMap2@20_9: 2080678552
-      StoneMap2@20_19: 1389498776
-      StoneMap2@20_7: 1574306454
-      StoneMap2@20_56: -1759088577
-      StoneMap2@20_5: 1397855932
-      StoneMap2@20_1: -1266501507
-      StoneMap2@20_2: -1550192926
-      StoneMap2@20_33: -1634182831
-      StoneMap2@20_23: 372889299
-      StoneMap2@20_8: -1479177803
-      StoneMap2@20_24: 1821153052
+      StoneMap2@20_43: -528489012
       StoneMap2@20_44: -657150129
-      StoneMap2@20_30: -1492391850
+      StoneMap2@20_45: -957296815
+      StoneMap2@20_46: -1384708754
+      StoneMap2@20_47: 2112331437
+      StoneMap2@20_48: -1857092739
+      StoneMap2@20_49: -1300597031
+      StoneMap2@20_5: 1397855932
+      StoneMap2@20_50: -1056658997
+      StoneMap2@20_51: -1489862426
+      StoneMap2@20_52: -618044502
+      StoneMap2@20_53: 1554529488
+      StoneMap2@20_54: -812214593
+      StoneMap2@20_55: 1837773812
+      StoneMap2@20_56: -1759088577
+      StoneMap2@20_57: 897846127
+      StoneMap2@20_58: 1001878239
+      StoneMap2@20_59: -1472803765
+      StoneMap2@20_6: 459813282
+      StoneMap2@20_60: -1667238062
+      StoneMap2@20_61: 1755779737
+      StoneMap2@20_62: 16068157
+      StoneMap2@20_63: -164661673
+      StoneMap2@20_64: -672165732
+      StoneMap2@20_65: 1608386384
+      StoneMap2@20_66: -1785297857
+      StoneMap2@20_67: -495438177
+      StoneMap2@20_68: -549775230
+      StoneMap2@20_69: -274222340
+      StoneMap2@20_7: 1574306454
+      StoneMap2@20_70: 1039435636
+      StoneMap2@20_71: 1757845069
+      StoneMap2@20_8: -1479177803
+      StoneMap2@20_9: 2080678552
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

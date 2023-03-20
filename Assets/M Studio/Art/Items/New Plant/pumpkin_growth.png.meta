@@ -3,7 +3,7 @@ guid: 0f8fa26bd67a74039b2bfcc93554e8a2
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -63,6 +63,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -231,11 +232,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      pumpkin_growth_0: -171679066
       pumpkin_growth_1: 2025822110
       pumpkin_growth_2: 1261225977
-      pumpkin_growth_0: -171679066
-      pumpkin_growth_4: 1454489578
       pumpkin_growth_3: 1188135482
+      pumpkin_growth_4: 1454489578
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

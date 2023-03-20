@@ -3,7 +3,7 @@ guid: 4e149b0e767fc42668e738ecf9b4fa7c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -63,6 +63,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -283,12 +284,12 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       HairWalkDown_0: -1665453071
-      HairWalkDown_6: -674683731
-      HairWalkDown_5: -1181874197
-      HairWalkDown_3: -1200340361
       HairWalkDown_1: -362691326
-      HairWalkDown_4: -408915231
       HairWalkDown_2: -2085366913
+      HairWalkDown_3: -1200340361
+      HairWalkDown_4: -408915231
+      HairWalkDown_5: -1181874197
+      HairWalkDown_6: -674683731
       HairWalkDown_7: 1719379632
   spritePackingTag: 
   pSDRemoveMatte: 0

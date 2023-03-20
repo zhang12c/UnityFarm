@@ -3,7 +3,7 @@ guid: 8f2e8097fb3aa4be68e23bead3addf6e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -63,6 +63,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -232,10 +233,10 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       watermelon_growth_0: -1903213204
-      watermelon_growth_4: 2095958316
-      watermelon_growth_2: 2066509890
       watermelon_growth_1: 1433627235
+      watermelon_growth_2: 2066509890
       watermelon_growth_3: 47405303
+      watermelon_growth_4: 2095958316
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

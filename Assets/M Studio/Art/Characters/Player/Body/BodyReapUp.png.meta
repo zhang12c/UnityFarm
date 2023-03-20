@@ -3,7 +3,7 @@ guid: 84d56754f6c0c4c43a8a646b2c048493
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -63,6 +63,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -282,12 +283,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      BodyReapUp_1: -1232717922
-      BodyReapUp_4: -1070527914
-      BodyReapUp_2: -1978067392
-      BodyReapUp_5: 1771309568
-      BodyReapUp_3: 2071927005
       BodyReapUp_0: -400389173
+      BodyReapUp_1: -1232717922
+      BodyReapUp_2: -1978067392
+      BodyReapUp_3: 2071927005
+      BodyReapUp_4: -1070527914
+      BodyReapUp_5: 1771309568
       BodyReapUp_6: 795690104
       BodyReapUp_7: 1039088470
   spritePackingTag: 

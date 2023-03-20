@@ -3,7 +3,7 @@ guid: 5d77c9f9c4a4a45358ae2b37b4929b53
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -63,6 +63,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -336,16 +337,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Bench_9: -1665564095
-      Bench_8: -1780923260
-      Bench_3: 877101850
-      Bench_2: 2015528929
-      Bench_7: -2136199745
       Bench_0: -2127406970
-      Bench_5: -1627814166
-      Bench_4: -333913040
-      Bench_6: -267194139
       Bench_1: -1945934164
+      Bench_2: 2015528929
+      Bench_3: 877101850
+      Bench_4: -333913040
+      Bench_5: -1627814166
+      Bench_6: -267194139
+      Bench_7: -2136199745
+      Bench_8: -1780923260
+      Bench_9: -1665564095
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

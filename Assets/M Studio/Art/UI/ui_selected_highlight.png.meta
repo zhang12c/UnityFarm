@@ -3,7 +3,7 @@ guid: b3bb2a207e48b4fbf96a56d88c369a4c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -63,6 +63,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -231,10 +232,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ui_selected_highlight_3: -1046284312
-      ui_selected_highlight_1: -1631472563
       ui_selected_highlight_0: -1525843246
+      ui_selected_highlight_1: -1631472563
       ui_selected_highlight_2: -1908794038
+      ui_selected_highlight_3: -1046284312
       ui_selected_highlight_4: 1374997791
   spritePackingTag: 
   pSDRemoveMatte: 0

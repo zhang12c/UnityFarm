@@ -3,7 +3,7 @@ guid: 87430ba1a26c4408191e4027950e7133
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -63,6 +63,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -252,12 +253,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Turnip_grow_3: -1201955594
       Turnip_grow_0: -605721469
-      Turnip_grow_5: -2109362084
       Turnip_grow_1: -1805732352
       Turnip_grow_2: -331841672
+      Turnip_grow_3: -1201955594
       Turnip_grow_4: 22577986
+      Turnip_grow_5: -2109362084
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

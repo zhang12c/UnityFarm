@@ -3,7 +3,7 @@ guid: c44807a4111dc43248353acf5e058a39
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -63,6 +63,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -462,21 +463,21 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Old Man_13: -1489404909
-      Old Man_15: -1310670454
-      Old Man_14: 2113505985
-      Old Man_1: 120366065
-      Old Man_4: -1254805804
-      Old Man_10: -1588113011
-      Old Man_3: -1933444366
-      Old Man_5: -1683301480
-      Old Man_8: 1279283620
-      Old Man_6: -1607788929
-      Old Man_11: 1808527878
-      Old Man_7: -2103626486
-      Old Man_12: -1415779400
-      Old Man_2: 1671684052
       Old Man_0: 338383346
+      Old Man_1: 120366065
+      Old Man_10: -1588113011
+      Old Man_11: 1808527878
+      Old Man_12: -1415779400
+      Old Man_13: -1489404909
+      Old Man_14: 2113505985
+      Old Man_15: -1310670454
+      Old Man_2: 1671684052
+      Old Man_3: -1933444366
+      Old Man_4: -1254805804
+      Old Man_5: -1683301480
+      Old Man_6: -1607788929
+      Old Man_7: -2103626486
+      Old Man_8: 1279283620
       Old Man_9: 1863079180
   spritePackingTag: 
   pSDRemoveMatte: 0

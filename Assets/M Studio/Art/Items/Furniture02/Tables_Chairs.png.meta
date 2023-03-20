@@ -3,7 +3,7 @@ guid: 3bdb6f1370acd4062a47227630afb05d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -63,6 +63,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -714,34 +715,34 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Tables_Chairs_2: -57889899
-      Tables_Chairs_18: -1795763153
-      Tables_Chairs_20: -1132305038
       Tables_Chairs_0: 1952738962
       Tables_Chairs_1: -397025518
-      Tables_Chairs_23: 90928998
-      Tables_Chairs_15: -317450184
-      Tables_Chairs_9: -173705236
-      Tables_Chairs_17: -1041813832
-      Tables_Chairs_11: 159369774
-      Tables_Chairs_19: 1670151085
-      Tables_Chairs_24: -1271049873
-      Tables_Chairs_27: -1910364885
-      Tables_Chairs_16: -2143000643
-      Tables_Chairs_7: 619672017
       Tables_Chairs_10: -623269687
-      Tables_Chairs_14: 1800661467
-      Tables_Chairs_4: 2099324415
-      Tables_Chairs_21: -1828970828
-      Tables_Chairs_6: -2024677974
-      Tables_Chairs_3: 229897102
-      Tables_Chairs_22: 1655139237
-      Tables_Chairs_26: 141317939
-      Tables_Chairs_5: -1550420288
-      Tables_Chairs_13: 1104433395
-      Tables_Chairs_8: -472479351
-      Tables_Chairs_25: 1333266330
+      Tables_Chairs_11: 159369774
       Tables_Chairs_12: 1736530187
+      Tables_Chairs_13: 1104433395
+      Tables_Chairs_14: 1800661467
+      Tables_Chairs_15: -317450184
+      Tables_Chairs_16: -2143000643
+      Tables_Chairs_17: -1041813832
+      Tables_Chairs_18: -1795763153
+      Tables_Chairs_19: 1670151085
+      Tables_Chairs_2: -57889899
+      Tables_Chairs_20: -1132305038
+      Tables_Chairs_21: -1828970828
+      Tables_Chairs_22: 1655139237
+      Tables_Chairs_23: 90928998
+      Tables_Chairs_24: -1271049873
+      Tables_Chairs_25: 1333266330
+      Tables_Chairs_26: 141317939
+      Tables_Chairs_27: -1910364885
+      Tables_Chairs_3: 229897102
+      Tables_Chairs_4: 2099324415
+      Tables_Chairs_5: -1550420288
+      Tables_Chairs_6: -2024677974
+      Tables_Chairs_7: 619672017
+      Tables_Chairs_8: -472479351
+      Tables_Chairs_9: -173705236
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

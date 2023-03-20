@@ -3,7 +3,7 @@ guid: 9af9d31693f634f3b97cd720161dc38d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -63,6 +63,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -283,13 +284,13 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       BodyArmWalkRight_0: -1257884513
-      BodyArmWalkRight_4: 1975909653
-      BodyArmWalkRight_7: -1508032697
       BodyArmWalkRight_1: 1141591438
-      BodyArmWalkRight_3: -1852808699
       BodyArmWalkRight_2: -36758926
+      BodyArmWalkRight_3: -1852808699
+      BodyArmWalkRight_4: 1975909653
       BodyArmWalkRight_5: 1448150094
       BodyArmWalkRight_6: -1938335926
+      BodyArmWalkRight_7: -1508032697
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

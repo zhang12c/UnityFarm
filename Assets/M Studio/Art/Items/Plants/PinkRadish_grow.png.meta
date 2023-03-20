@@ -3,7 +3,7 @@ guid: ba8cb7102384d418883ef909ed3befd5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -63,6 +63,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -253,11 +254,11 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       PinkRadish_grow_0: -1489595994
-      PinkRadish_grow_4: -455393919
-      PinkRadish_grow_5: 504974383
-      PinkRadish_grow_3: -1256380199
       PinkRadish_grow_1: 718811943
       PinkRadish_grow_2: 1774969089
+      PinkRadish_grow_3: -1256380199
+      PinkRadish_grow_4: -455393919
+      PinkRadish_grow_5: 504974383
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

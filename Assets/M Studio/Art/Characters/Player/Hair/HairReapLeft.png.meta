@@ -3,7 +3,7 @@ guid: 549bd39fed6d141a9965676c2b4557d5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -63,6 +63,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -282,14 +283,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      HairReapLeft_7: 1587105587
       HairReapLeft_0: 2107138999
-      HairReapLeft_2: -4922855
-      HairReapLeft_5: -721429045
-      HairReapLeft_6: -1138561818
       HairReapLeft_1: -1885354815
+      HairReapLeft_2: -4922855
       HairReapLeft_3: 11127
       HairReapLeft_4: -2029859057
+      HairReapLeft_5: -721429045
+      HairReapLeft_6: -1138561818
+      HairReapLeft_7: 1587105587
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

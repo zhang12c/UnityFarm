@@ -3,7 +3,7 @@ guid: 7f1ec8314d44949f29dbb2b0651eccf3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -63,6 +63,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -373,16 +374,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Collisions@20_9: 1480794293
-      Collisions@20_6: -2142550502
       Collisions@20_0: 656204086
-      Collisions@20_5: 1907921350
+      Collisions@20_1: 17745525
       Collisions@20_2: 817383395
       Collisions@20_3: 833349317
-      Collisions@20_8: 888000788
-      Collisions@20_7: 1336789450
-      Collisions@20_1: 17745525
       Collisions@20_4: -1631512107
+      Collisions@20_5: 1907921350
+      Collisions@20_6: -2142550502
+      Collisions@20_7: 1336789450
+      Collisions@20_8: 888000788
+      Collisions@20_9: 1480794293
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

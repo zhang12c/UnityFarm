@@ -3,7 +3,7 @@ guid: 2b0c5c1eee2894378970aaf259f98e14
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -63,6 +63,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -1470,70 +1471,70 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Inside01_tiles@20_54: 987968217
-      Inside01_tiles@20_57: -578372586
-      Inside01_tiles@20_34: -1923350415
-      Inside01_tiles@20_42: 979789075
-      Inside01_tiles@20_4: 264226270
-      Inside01_tiles@20_62: 1924862081
-      Inside01_tiles@20_19: 1816176148
-      Inside01_tiles@20_14: 1008098851
-      Inside01_tiles@20_50: -1798239958
-      Inside01_tiles@20_12: -598781645
-      Inside01_tiles@20_22: 902488368
-      Inside01_tiles@20_10: 696709416
-      Inside01_tiles@20_56: -129227114
-      Inside01_tiles@20_32: -753582273
-      Inside01_tiles@20_45: -741093922
-      Inside01_tiles@20_8: -1538295247
-      Inside01_tiles@20_20: -2050285611
-      Inside01_tiles@20_33: 1559905400
-      Inside01_tiles@20_48: -1772792166
-      Inside01_tiles@20_36: -1437254778
-      Inside01_tiles@20_41: 883763864
-      Inside01_tiles@20_52: -94560010
-      Inside01_tiles@20_39: 869422534
-      Inside01_tiles@20_25: 742565076
-      Inside01_tiles@20_49: 1178900548
-      Inside01_tiles@20_51: -1131836349
-      Inside01_tiles@20_30: 1285295674
-      Inside01_tiles@20_53: 1182990280
-      Inside01_tiles@20_11: -609569216
-      Inside01_tiles@20_5: -335725832
       Inside01_tiles@20_0: -1264191862
-      Inside01_tiles@20_21: -688227866
-      Inside01_tiles@20_44: -600272350
-      Inside01_tiles@20_26: 811771201
-      Inside01_tiles@20_31: -1076344140
-      Inside01_tiles@20_60: -446302928
-      Inside01_tiles@20_59: -378405953
-      Inside01_tiles@20_27: -749944062
-      Inside01_tiles@20_24: -1594687694
-      Inside01_tiles@20_7: 150303176
-      Inside01_tiles@20_29: -299241754
       Inside01_tiles@20_1: 1769414761
-      Inside01_tiles@20_46: -923557933
-      Inside01_tiles@20_61: 1099208962
-      Inside01_tiles@20_38: 1141883069
-      Inside01_tiles@20_18: -1284018307
-      Inside01_tiles@20_55: -1218757667
-      Inside01_tiles@20_23: -772139979
-      Inside01_tiles@20_43: -326791698
-      Inside01_tiles@20_47: 1815483792
-      Inside01_tiles@20_17: 507469727
-      Inside01_tiles@20_6: -1720653455
-      Inside01_tiles@20_3: 1913237501
-      Inside01_tiles@20_9: 303152103
-      Inside01_tiles@20_63: -153840507
-      Inside01_tiles@20_28: 10487647
-      Inside01_tiles@20_15: -1919647835
-      Inside01_tiles@20_2: -1369112465
+      Inside01_tiles@20_10: 696709416
+      Inside01_tiles@20_11: -609569216
+      Inside01_tiles@20_12: -598781645
       Inside01_tiles@20_13: -17380633
-      Inside01_tiles@20_40: -1197998832
+      Inside01_tiles@20_14: 1008098851
+      Inside01_tiles@20_15: -1919647835
       Inside01_tiles@20_16: 4055163
+      Inside01_tiles@20_17: 507469727
+      Inside01_tiles@20_18: -1284018307
+      Inside01_tiles@20_19: 1816176148
+      Inside01_tiles@20_2: -1369112465
+      Inside01_tiles@20_20: -2050285611
+      Inside01_tiles@20_21: -688227866
+      Inside01_tiles@20_22: 902488368
+      Inside01_tiles@20_23: -772139979
+      Inside01_tiles@20_24: -1594687694
+      Inside01_tiles@20_25: 742565076
+      Inside01_tiles@20_26: 811771201
+      Inside01_tiles@20_27: -749944062
+      Inside01_tiles@20_28: 10487647
+      Inside01_tiles@20_29: -299241754
+      Inside01_tiles@20_3: 1913237501
+      Inside01_tiles@20_30: 1285295674
+      Inside01_tiles@20_31: -1076344140
+      Inside01_tiles@20_32: -753582273
+      Inside01_tiles@20_33: 1559905400
+      Inside01_tiles@20_34: -1923350415
       Inside01_tiles@20_35: -538558333
+      Inside01_tiles@20_36: -1437254778
       Inside01_tiles@20_37: -848912603
+      Inside01_tiles@20_38: 1141883069
+      Inside01_tiles@20_39: 869422534
+      Inside01_tiles@20_4: 264226270
+      Inside01_tiles@20_40: -1197998832
+      Inside01_tiles@20_41: 883763864
+      Inside01_tiles@20_42: 979789075
+      Inside01_tiles@20_43: -326791698
+      Inside01_tiles@20_44: -600272350
+      Inside01_tiles@20_45: -741093922
+      Inside01_tiles@20_46: -923557933
+      Inside01_tiles@20_47: 1815483792
+      Inside01_tiles@20_48: -1772792166
+      Inside01_tiles@20_49: 1178900548
+      Inside01_tiles@20_5: -335725832
+      Inside01_tiles@20_50: -1798239958
+      Inside01_tiles@20_51: -1131836349
+      Inside01_tiles@20_52: -94560010
+      Inside01_tiles@20_53: 1182990280
+      Inside01_tiles@20_54: 987968217
+      Inside01_tiles@20_55: -1218757667
+      Inside01_tiles@20_56: -129227114
+      Inside01_tiles@20_57: -578372586
       Inside01_tiles@20_58: -30402587
+      Inside01_tiles@20_59: -378405953
+      Inside01_tiles@20_6: -1720653455
+      Inside01_tiles@20_60: -446302928
+      Inside01_tiles@20_61: 1099208962
+      Inside01_tiles@20_62: 1924862081
+      Inside01_tiles@20_63: -153840507
+      Inside01_tiles@20_7: 150303176
+      Inside01_tiles@20_8: -1538295247
+      Inside01_tiles@20_9: 303152103
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

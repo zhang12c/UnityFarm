@@ -3,7 +3,7 @@ guid: 6dfc33e40ac404b3e8087af1575db1b8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -63,6 +63,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -282,14 +283,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      HoeToolRight_0: -1116000305
+      HoeToolRight_1: -1172037328
+      HoeToolRight_2: 2094532635
+      HoeToolRight_3: -1341075827
+      HoeToolRight_4: -357542029
       HoeToolRight_5: -2064290303
       HoeToolRight_6: -1439678994
       HoeToolRight_7: -1634433153
-      HoeToolRight_1: -1172037328
-      HoeToolRight_3: -1341075827
-      HoeToolRight_4: -357542029
-      HoeToolRight_2: 2094532635
-      HoeToolRight_0: -1116000305
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

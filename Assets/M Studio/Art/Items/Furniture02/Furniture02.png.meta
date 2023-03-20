@@ -3,7 +3,7 @@ guid: 67d720451a8544975b5ef02b7e84f232
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -63,6 +63,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -735,35 +736,35 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Furniture02_25: 1854307736
-      Furniture02_18: -552294025
-      Furniture02_17: -871916020
-      Furniture02_20: 322593589
-      Furniture02_28: -1038099562
-      Furniture02_3: 1315025887
+      Furniture02_0: 1171044231
+      Furniture02_1: 121647192
+      Furniture02_10: -338354517
+      Furniture02_11: 753277335
       Furniture02_12: -700445786
       Furniture02_13: 1191665575
       Furniture02_14: 1702692875
-      Furniture02_19: -1280577076
-      Furniture02_26: 362852710
-      Furniture02_27: 1526853941
+      Furniture02_15: -1376084101
       Furniture02_16: 1297605818
-      Furniture02_5: -591230758
+      Furniture02_17: -871916020
+      Furniture02_18: -552294025
+      Furniture02_19: -1280577076
+      Furniture02_2: -1188011327
+      Furniture02_20: 322593589
+      Furniture02_21: 609764206
+      Furniture02_22: 1823068336
       Furniture02_23: -1389596996
       Furniture02_24: -1396479496
-      Furniture02_1: 121647192
+      Furniture02_25: 1854307736
+      Furniture02_26: 362852710
+      Furniture02_27: 1526853941
+      Furniture02_28: -1038099562
+      Furniture02_3: 1315025887
       Furniture02_4: -1897430550
+      Furniture02_5: -591230758
       Furniture02_6: 1574302539
-      Furniture02_11: 753277335
-      Furniture02_15: -1376084101
-      Furniture02_22: 1823068336
       Furniture02_7: 1946073990
-      Furniture02_2: -1188011327
-      Furniture02_0: 1171044231
       Furniture02_8: -1436728085
       Furniture02_9: -2056079967
-      Furniture02_21: 609764206
-      Furniture02_10: -338354517
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

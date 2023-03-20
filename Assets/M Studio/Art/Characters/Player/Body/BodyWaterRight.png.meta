@@ -3,7 +3,7 @@ guid: 33c77af8f580f4f0b8d052fc20e6701c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -63,6 +63,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -282,14 +283,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      BodyWaterRight_7: 1840091518
-      BodyWaterRight_2: -1021313564
-      BodyWaterRight_4: 871325144
-      BodyWaterRight_3: -1099753642
+      BodyWaterRight_0: -1650935423
       BodyWaterRight_1: 1823889313
+      BodyWaterRight_2: -1021313564
+      BodyWaterRight_3: -1099753642
+      BodyWaterRight_4: 871325144
       BodyWaterRight_5: -1149908588
       BodyWaterRight_6: -845008850
-      BodyWaterRight_0: -1650935423
+      BodyWaterRight_7: 1840091518
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

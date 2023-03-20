@@ -3,7 +3,7 @@ guid: 8753d8fb0e5c8455990d4eb571eb0bb1
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -63,6 +63,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -483,22 +484,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Fireplace_4: -924903693
-      Fireplace_14: 1921345159
-      Fireplace_16: 1331424480
+      Fireplace_0: -652781602
+      Fireplace_1: 1653816757
+      Fireplace_10: 771608012
       Fireplace_11: 1497592818
+      Fireplace_12: 1648387056
+      Fireplace_13: -786886731
+      Fireplace_14: 1921345159
+      Fireplace_15: 1979793092
+      Fireplace_16: 1331424480
+      Fireplace_2: -861152653
+      Fireplace_3: -114462534
+      Fireplace_4: -924903693
+      Fireplace_5: 856617382
       Fireplace_6: 1135427335
       Fireplace_7: 1865120517
       Fireplace_8: -2009156852
-      Fireplace_13: -786886731
-      Fireplace_15: 1979793092
-      Fireplace_12: 1648387056
-      Fireplace_10: 771608012
-      Fireplace_2: -861152653
-      Fireplace_1: 1653816757
-      Fireplace_5: 856617382
-      Fireplace_0: -652781602
-      Fireplace_3: -114462534
       Fireplace_9: 1441773043
   spritePackingTag: 
   pSDRemoveMatte: 0

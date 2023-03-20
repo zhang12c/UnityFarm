@@ -3,7 +3,7 @@ guid: 85f3f75b0912741b0bc48e7f38554cd2
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -63,6 +63,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -462,22 +463,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Girl_001_14: -1829236567
-      Girl_001_13: -1411387095
-      Girl_001_1: -407585293
-      Girl_001_4: -2141946191
-      Girl_001_2: 1573246429
-      Girl_001_9: -1394078472
-      Girl_001_3: 1896451290
-      Girl_001_12: 986173550
-      Girl_001_7: 1071542
-      Girl_001_15: -815451948
-      Girl_001_5: 718556187
-      Girl_001_11: -766679144
       Girl_001_0: 14502509
+      Girl_001_1: -407585293
       Girl_001_10: -1389430150
-      Girl_001_8: -1092409755
+      Girl_001_11: -766679144
+      Girl_001_12: 986173550
+      Girl_001_13: -1411387095
+      Girl_001_14: -1829236567
+      Girl_001_15: -815451948
+      Girl_001_2: 1573246429
+      Girl_001_3: 1896451290
+      Girl_001_4: -2141946191
+      Girl_001_5: 718556187
       Girl_001_6: 1985754863
+      Girl_001_7: 1071542
+      Girl_001_8: -1092409755
+      Girl_001_9: -1394078472
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

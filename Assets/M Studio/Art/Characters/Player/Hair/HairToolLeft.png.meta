@@ -3,7 +3,7 @@ guid: b24adec5ed6584b90a1e7dd43c77b1d3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -63,6 +63,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -282,14 +283,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      HairToolLeft_5: 627749154
-      HairToolLeft_7: 103601529
-      HairToolLeft_2: -1790537371
       HairToolLeft_0: 1009912252
-      HairToolLeft_4: -113547709
-      HairToolLeft_6: 1901855421
       HairToolLeft_1: 1346574696
+      HairToolLeft_2: -1790537371
       HairToolLeft_3: 1449737563
+      HairToolLeft_4: -113547709
+      HairToolLeft_5: 627749154
+      HairToolLeft_6: 1901855421
+      HairToolLeft_7: 103601529
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

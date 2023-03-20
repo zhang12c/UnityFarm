@@ -3,7 +3,7 @@ guid: 670560cfe816e420cabb53b24dfaad36
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -63,6 +63,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -282,14 +283,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      HairWaterUp_7: -42096946
-      HairWaterUp_5: -1459634720
-      HairWaterUp_1: 811080962
       HairWaterUp_0: -695714838
+      HairWaterUp_1: 811080962
       HairWaterUp_2: -432076887
       HairWaterUp_3: -2112039661
-      HairWaterUp_6: 1123133116
       HairWaterUp_4: 295399687
+      HairWaterUp_5: -1459634720
+      HairWaterUp_6: 1123133116
+      HairWaterUp_7: -42096946
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

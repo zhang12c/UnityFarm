@@ -3,7 +3,7 @@ guid: 4826b20f384ee4fbbaddd9dad2dfb940
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -63,6 +63,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -283,13 +284,13 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       HairReapUp_0: -2095000084
+      HairReapUp_1: 445107739
+      HairReapUp_2: -1332635943
+      HairReapUp_3: 1185355492
       HairReapUp_4: -1033415301
       HairReapUp_5: -2015462631
       HairReapUp_6: -936171461
-      HairReapUp_2: -1332635943
       HairReapUp_7: 239640980
-      HairReapUp_3: 1185355492
-      HairReapUp_1: 445107739
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
