@@ -16,6 +16,7 @@ public class SlotUI : MonoBehaviour
 
     public ItemDetails _itemDetails;
     public int _itemAmount;
+    public int slotIndex;
 
     // 是否被选中了
     public bool isSelected;

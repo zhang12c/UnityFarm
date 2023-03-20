@@ -15,7 +15,10 @@ namespace Inventory.Logic
         [FormerlySerializedAs("_PlayerBag")]
         [Header("背包的数据")]
         public InventoryBag_SO _playerBag;
-        
+        private void Start()
+        {
+            EvnetHandler.CallUpdateInventoryUI(InventoryLocation.Player,_playerBag.itemInventoryItems);
+        }
         // itemID => itemDetails
         public ItemDetails GetItemDetails(int ID)
         {
@@ -40,6 +43,9 @@ namespace Inventory.Logic
             {
                 Destroy(item.gameObject);
             }
+            
+            // 更新UI 数据变化了
+            EvnetHandler.CallUpdateInventoryUI(InventoryLocation.Player,_playerBag.itemInventoryItems);
         }
 
         /// <summary>

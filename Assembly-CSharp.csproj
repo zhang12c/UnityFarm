@@ -55,6 +55,8 @@
      <Compile Include="Assets/Scripts/Inventory/Item/ItemPickup.cs" />
      <Compile Include="Assets/Scripts/Inventory/Data_SO/InventoryBag_SO.cs" />
      <Compile Include="Assets/Scripts/Inventory/UI/SlotUI.cs" />
+     <Compile Include="Assets/Scripts/Inventory/UI/InventoryUI.cs" />
+     <Compile Include="Assets/Scripts/Utility/EvnetHandler.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/M Studio/Art/Intro/Sign" />
      <Folder Include="Assets/M Studio/Tilemap/Tiles/Base" />
