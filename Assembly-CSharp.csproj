@@ -50,6 +50,7 @@
      <Compile Include="Assets/Scripts/Utility/DataCollection.cs" />
      <Compile Include="Assets/Scripts/Utility/Settings.cs" />
      <Compile Include="Assets/Scripts/Inventory/Item/ItemFader.cs" />
+     <Compile Include="Assets/Scripts/Inventory/Logic/ItemManager.cs" />
      <Compile Include="Assets/Scripts/Inventory/Data_SO/InventoryBag_SO.cs" />
      <Compile Include="Assets/Scripts/Utility/Enums.cs" />
      <Compile Include="Assets/Scripts/Utility/Singleton.cs" />

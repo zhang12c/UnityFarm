@@ -28,11 +28,20 @@ namespace Inventory.Item
 
         private void CreateItem(int ID)
         {
-            //itemID = ID;
+            itemID = ID;
             _itemDetails = Inventory.Logic.InventoryManager.Instance.GetItemDetails(itemID);
             if (_itemDetails != null)
             {
                 itemSpriteRenderer.sprite = _itemDetails.itemOnWorldSprite != null ? _itemDetails.itemOnWorldSprite : _itemDetails.itemIcon;
+            }
+        }
+
+        public void CloneItem(int ID)
+        {
+            if (ID > 0)
+            {
+                CreateItem(ID);
+                OffsetBoxCollider();
             }
         }
 

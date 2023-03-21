@@ -114,5 +114,22 @@ namespace Inventory.Logic
             _playerBag.itemInventoryItems[index] = itemOnWorld;
         }
 
+        public void SwapItem(int from, int to)
+        {
+            var currentItem = _playerBag.itemInventoryItems[from];
+            var targetItem = _playerBag.itemInventoryItems[to];
+            if (targetItem.itemID != 0)
+            {
+                (_playerBag.itemInventoryItems[from], _playerBag.itemInventoryItems[to]) = (targetItem, currentItem);
+            }
+            else
+            {
+                _playerBag.itemInventoryItems[to] = currentItem;
+                _playerBag.itemInventoryItems[from] = new InventoryItem();
+            }
+            
+            EvnetHandler.CallUpdateInventoryUI(InventoryLocation.Player,_playerBag.itemInventoryItems);
+        }
+
     }
 }
