@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Inventory.Logic;
 using UnityEngine;
+using UnityEngine.UI;
 namespace Inventory
 {
     /// <summary>
@@ -9,6 +10,11 @@ namespace Inventory
     /// </summary>
     public class InventoryUI : MonoBehaviour
     {
+        [Header("背包UI按钮逻辑")]
+        [SerializeField] private GameObject _bagUI;
+        [SerializeField] private Button _bagBtn;
+        private bool bagIsOpen;
+        
         /// <summary>
         /// ui上显示的格子GameObject
         /// </summary>
@@ -20,6 +26,8 @@ namespace Inventory
             {
                 _slotUis[i].slotIndex = i; 
             }
+            // 判断背包UI是否是被激活的状态
+            bagIsOpen = _bagUI.activeInHierarchy;
         }
 
         private void OnEnable()
@@ -52,6 +60,20 @@ namespace Inventory
         private void OnDisable()
         {
             EvnetHandler.UpdateInventoryUI -= OnUpdateInventoryUI;
+        }
+
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.B))
+            {
+                OpenBagUI();
+            }
+        }
+
+        public void OpenBagUI()
+        {
+            bagIsOpen = !bagIsOpen;
+            _bagUI.SetActive(bagIsOpen);
         }
     }
 }
