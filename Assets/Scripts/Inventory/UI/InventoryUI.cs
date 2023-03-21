@@ -19,7 +19,7 @@ namespace Inventory
         /// ui上显示的格子GameObject
         /// </summary>
         [SerializeField] private SlotUI[] _slotUis;
-
+        
         private void Start()
         {
             for (int i = 0; i < _slotUis.Length; i++)
@@ -62,6 +62,9 @@ namespace Inventory
             EvnetHandler.UpdateInventoryUI -= OnUpdateInventoryUI;
         }
 
+        /// <summary>
+        /// 通过按b来打开背包UI
+        /// </summary>
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.B))
@@ -70,10 +73,32 @@ namespace Inventory
             }
         }
 
+        /// <summary>
+        /// 打开UI背包
+        /// </summary>
         public void OpenBagUI()
         {
             bagIsOpen = !bagIsOpen;
             _bagUI.SetActive(bagIsOpen);
+        }
+        /// <summary>
+        /// 选中唯一 单选效果
+        /// </summary>
+        /// <param name="slotIndex"></param>
+        public void UpdateSlotSelected(int slotIndex)
+        {
+            for (int i = 0; i < _slotUis.Length; i++)
+            {
+                if (i == slotIndex && _slotUis[i].isSelected)
+                {
+                    _slotUis[i].itemSelectImage.gameObject.SetActive(true);
+                }
+                else
+                {
+                    _slotUis[i].itemSelectImage.gameObject.SetActive(false);
+                    _slotUis[i].isSelected = false;
+                }
+            }
         }
     }
 }
