@@ -20,6 +20,9 @@ namespace Inventory
         /// </summary>
         [SerializeField] private SlotUI[] _slotUis;
         
+        [Header("拖拽Slot图片")]
+        public Image dragImage;
+        
         private void Start()
         {
             for (int i = 0; i < _slotUis.Length; i++)

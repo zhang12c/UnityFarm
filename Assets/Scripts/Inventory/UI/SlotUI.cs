@@ -2,14 +2,16 @@ using Inventory;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Serialization;
 using Button = UnityEngine.UI.Button;
 using Image = UnityEngine.UI.Image;
 
-public class SlotUI : MonoBehaviour,IPointerClickHandler
+public class SlotUI : MonoBehaviour,IPointerClickHandler,IBeginDragHandler,IDragHandler,IEndDragHandler
 {
     [Header("组件获取")]
     [SerializeField]private Image itemImage;
-    [SerializeField]private TextMeshProUGUI itemAmount;
+    [FormerlySerializedAs("itemAmount")]
+    [SerializeField]private TextMeshProUGUI itemAmountTxt;
     [SerializeField]public Image itemSelectImage;
     [SerializeField]private Button _button;
 
@@ -54,7 +56,7 @@ public class SlotUI : MonoBehaviour,IPointerClickHandler
             isSelected = false;
         }
         itemImage.enabled = false;
-        itemAmount.text = "";
+        itemAmountTxt.text = "";
         _button.interactable = false;
     }
 
@@ -62,7 +64,7 @@ public class SlotUI : MonoBehaviour,IPointerClickHandler
     {
         itemImage.sprite = item.itemIcon;
         _itemAmount = amount;
-        itemAmount.text = _itemAmount.ToString();
+        itemAmountTxt.text = _itemAmount.ToString();
 
         _button.interactable = true;
         itemImage.enabled = true;
@@ -81,5 +83,41 @@ public class SlotUI : MonoBehaviour,IPointerClickHandler
         itemSelectImage.gameObject.SetActive(isSelected);
 
         _inventoryUI.UpdateSlotSelected(slotIndex);
+    }
+    /// <summary>
+    /// 开始拖拽
+    /// </summary>
+    /// <param name="eventData"></param>
+    /// <exception cref="NotImplementedException"></exception>
+    public void OnBeginDrag(PointerEventData eventData)
+    {
+        if (_itemAmount != 0)
+        {
+            _inventoryUI.dragImage.enabled = true;
+            _inventoryUI.dragImage.sprite = itemImage.sprite;
+            _inventoryUI.dragImage.SetNativeSize();
+            
+            isSelected = true;
+            _inventoryUI.UpdateSlotSelected(slotIndex);
+        }
+    }
+    /// <summary>
+    /// 结束拖拽
+    /// </summary>
+    /// <param name="eventData"></param>
+    /// <exception cref="NotImplementedException"></exception>
+    public void OnEndDrag(PointerEventData eventData)
+    {
+        _inventoryUI.dragImage.enabled = false;
+    }
+    /// <summary>
+    /// 拖拽中
+    /// </summary>
+    /// <param name="eventData"></param>
+    public void OnDrag(PointerEventData eventData)
+    {
+        _inventoryUI.dragImage.transform.position = Input.mousePosition;
+
+        var target = eventData.pointerCurrentRaycast.gameObject;
     }
 }
