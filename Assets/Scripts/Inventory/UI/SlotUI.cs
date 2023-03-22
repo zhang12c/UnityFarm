@@ -141,14 +141,14 @@ public class SlotUI : MonoBehaviour,IPointerClickHandler,IBeginDragHandler,IDrag
         }
         else
         {
-            Debug.Log(_itemDetails.itemID);
-            if (_itemDetails.canDropped)
-            {
-                // 这时候是丢弃到地上的
-                // 地上的坐标
-                var pos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Camera.main.transform.position.z));
-                EvnetHandler.CallCloneCloneSlotInWorld(_itemDetails.itemID, pos);
-            }
+            // Debug.Log(_itemDetails.itemID);
+            // if (_itemDetails.canDropped)
+            // {
+            //     // 这时候是丢弃到地上的
+            //     // 地上的坐标
+            //     var pos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Camera.main.transform.position.z));
+            //     EvnetHandler.CallCloneCloneSlotInWorld(_itemDetails.itemID, pos);
+            // }
         }
     }
 }
