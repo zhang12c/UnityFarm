@@ -150,6 +150,7 @@
      <Folder Include="Assets/M Studio/Art/Characters/Player/Arm" />
      <Folder Include="Assets/M Studio/Art/Intro/Character" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc" />
+     <Folder Include="Assets/M Studio/Fonts" />
      <Folder Include="Assets/TextMesh Pro/Shaders" />
      <Folder Include="Assets/M Studio/Art/Items/Bushes" />
      <Folder Include="Assets/TileMaps/Tiles" />
