@@ -23,44 +23,44 @@ MonoBehaviour:
     canPickedup: 1
     canDropped: 0
     canCarried: 1
-    itemPrice: 0
-    sellPercentage: 0
+    itemPrice: 10
+    sellPercentage: 0.8
   - itemID: 1003
     itemName: "\u767D\u841D\u535C"
     itemType: 0
     itemIcon: {fileID: 21300000, guid: 0689ebc0f067f41fa98586e5b574896f, type: 3}
     itemOnWorldSprite: {fileID: 21300000, guid: 58c6799e544ae49a48186335b7f16ba0, type: 3}
-    itemDescription: 
+    itemDescription: "\u98DF\u7269"
     itemUseRadius: 1
     canPickedup: 1
     canDropped: 0
     canCarried: 1
-    itemPrice: 0
-    sellPercentage: 0
+    itemPrice: 10
+    sellPercentage: 0.8
   - itemID: 1004
     itemName: "\u7D2B\u841D\u535C"
     itemType: 0
     itemIcon: {fileID: 21300000, guid: 2597146da57814c789a59eda5740c9bf, type: 3}
     itemOnWorldSprite: {fileID: 21300000, guid: 0f5a527a6777043739c58b084887ec12, type: 3}
-    itemDescription: 
+    itemDescription: "\u98DF\u7269"
     itemUseRadius: 1
     canPickedup: 1
     canDropped: 0
     canCarried: 1
-    itemPrice: 0
-    sellPercentage: 0
+    itemPrice: 10
+    sellPercentage: 0.8
   - itemID: 1005
     itemName: "\u8461\u8404"
     itemType: 0
     itemIcon: {fileID: 21300000, guid: 13fd782ac3661413abe57fc16343e499, type: 3}
     itemOnWorldSprite: {fileID: 21300000, guid: eff80b331cf5c4ca49471d8604c3b52e, type: 3}
-    itemDescription: 
+    itemDescription: "\u917F\u9152\u7B2C\u4E00\u540D"
     itemUseRadius: 1
     canPickedup: 1
     canDropped: 0
     canCarried: 1
-    itemPrice: 0
-    sellPercentage: 0
+    itemPrice: 500
+    sellPercentage: 0.8
   - itemID: 1013
     itemName: "\u897F\u74DC"
     itemType: 0
@@ -126,13 +126,13 @@ MonoBehaviour:
     itemType: 1
     itemIcon: {fileID: 21300000, guid: 5809980803ddf45a1aa8df14dbc00394, type: 3}
     itemOnWorldSprite: {fileID: 21300000, guid: 0d5f887d0ba144b7180f3e33336beac5, type: 3}
-    itemDescription: 
+    itemDescription: "\u5EFA\u7B51\u6750\u6599"
     itemUseRadius: 2
     canPickedup: 1
     canDropped: 1
     canCarried: 1
     itemPrice: 100
-    sellPercentage: 0
+    sellPercentage: 0.8
   - itemID: 1017
     itemName: "\u8304\u5B50"
     itemType: 1

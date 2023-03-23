@@ -17,7 +17,7 @@ public class SlotUI : MonoBehaviour,IPointerClickHandler,IBeginDragHandler,IDrag
     [SerializeField]private Button _button;
 
     [Header("格子类型")]
-    [SerializeField] private SlotType _slotType;
+    [SerializeField] public SlotType _slotType;
 
     /// <summary>
     /// 道具的详细信息

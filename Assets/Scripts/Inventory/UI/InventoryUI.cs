@@ -10,6 +10,8 @@ namespace Inventory
     /// </summary>
     public class InventoryUI : MonoBehaviour
     {
+        [Header("道具ToolTip")]
+        public ItemToolTip itemToolTip;
         [Header("背包UI按钮逻辑")]
         [SerializeField] private GameObject _bagUI;
         [SerializeField] private Button _bagBtn;
