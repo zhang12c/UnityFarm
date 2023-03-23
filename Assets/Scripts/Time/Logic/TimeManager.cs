@@ -30,6 +30,13 @@ public class TimeManager : MonoBehaviour
         InitGameTime();
     }
 
+    private void Start()
+    {
+        // 第一次登陆的时候需要初始化一下时间
+        MyEvnetHandler.CallGameDateEvent(gameHour,gameDay,gameMonth,gameYear,gameSeason);
+        MyEvnetHandler.CallGameMinuteEvent(gameMinute,gameHour);
+    }
+
     private void Update()
     {
         if (!gameClockPause)
@@ -39,6 +46,13 @@ public class TimeManager : MonoBehaviour
             if (tikTime >= Settings.secondThreshould)
             {
                 tikTime = 0;
+                UpdateGameTime();
+            }
+        }
+        if (Input.GetKey(KeyCode.T))
+        {
+            for (int i = 0; i < 60; i++)
+            {
                 UpdateGameTime();
             }
         }
@@ -93,6 +107,17 @@ public class TimeManager : MonoBehaviour
                         }
                     }
                 }
+                // 避免冲突调用2次的话，可以启用else
+                MyEvnetHandler.CallGameDateEvent(gameHour,gameDay,gameMonth,gameYear,gameSeason);
+                //else
+                {
+                    //MyEvnetHandler.CallGameDateEvent(gameHour,gameDay,gameMonth,gameYear,gameSeason);
+                }
+            }
+            MyEvnetHandler.CallGameMinuteEvent(gameMinute,gameHour);
+            //else
+            {
+                //MyEvnetHandler.CallGameMinuteEvent(gameMinute,gameHour);
             }
         }
         
@@ -109,7 +134,7 @@ public class TimeManager : MonoBehaviour
         gameHour = 7;
         gameDay = 1;
         gameMonth = 1;
-        gameYear = 2022;
+        gameYear = 2023;
         gameSeason = Season.Spring;
     }
 }

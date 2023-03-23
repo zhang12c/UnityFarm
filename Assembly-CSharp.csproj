@@ -62,6 +62,7 @@
      <Compile Include="Assets/Scripts/Inventory/Logic/InventoryManager.cs" />
      <Compile Include="Assets/Scripts/Player/AnimatorOveride.cs" />
      <Compile Include="Assets/Scripts/Time/Logic/TimeManager.cs" />
+     <Compile Include="Assets/Scripts/Time/UI/TimeUI.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/M Studio/Art/Intro/Sign" />
      <Folder Include="Assets/M Studio/Tilemap/Tiles/Base" />
@@ -196,6 +197,7 @@
      <None Include="Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt" />
      <Folder Include="Assets/Perfab" />
      <Folder Include="Assets/TextMesh Pro/Documentation" />
+     <Folder Include="Assets/Scripts/Time/UI" />
      <Folder Include="Assets/M Studio/Art/Characters/Shadow" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader" />
      <Folder Include="Assets/M Studio/Art/Characters/Player/Tools/Hoe" />

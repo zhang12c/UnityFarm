@@ -17,7 +17,7 @@ public class Settings
     public const float secondThreshould = 0.05f;
     public const int secondHold = 59;
     public const int minutedHold = 59;
-    public const int hourHold = 59;
+    public const int hourHold = 23;
     public const int dayHold = 30;
     /// <summary>
     /// 季

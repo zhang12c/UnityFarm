@@ -38,5 +38,16 @@ public static class MyEvnetHandler
     {
         ItemSelectedEvent?.Invoke(itemDetails,isHold);
     }
-    
+
+    public static event Action<int, int> GameMinuteEvent;
+    public static void CallGameMinuteEvent(int m, int h)
+    {
+        GameMinuteEvent?.Invoke(m,h);
+    }
+    public static event Action<int, int,int,int,Season> GameDateEvent;
+    public static void CallGameDateEvent(int h, int d, int m,int y,Season season)
+    {
+        GameDateEvent?.Invoke(h,d,m,y,season);
+    }
+
 }
