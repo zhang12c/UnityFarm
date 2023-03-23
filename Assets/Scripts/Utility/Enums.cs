@@ -53,3 +53,29 @@ public enum InventoryLocation
 {
     Player,Box
 }
+
+// 我要做什么？
+// 不同部位有不同的animation
+// 用一个字典装
+
+/// <summary>
+/// 状态
+/// </summary>
+public enum PartType
+{
+    None,
+    Carry,
+    Hoe,
+    Break
+}
+
+/// <summary>
+/// 部位
+/// </summary>
+public enum PartName
+{
+    Body,
+    Hair,
+    Arm,
+    Tool
+}

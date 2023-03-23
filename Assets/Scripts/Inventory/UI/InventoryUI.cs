@@ -37,7 +37,7 @@ namespace Inventory
 
         private void OnEnable()
         {
-            EvnetHandler.UpdateInventoryUI += OnUpdateInventoryUI;
+            MyEvnetHandler.UpdateInventoryUI += OnUpdateInventoryUI;
         }
         private void OnUpdateInventoryUI(InventoryLocation inventoryType, List<InventoryItem> bagItems)
         {
@@ -64,7 +64,7 @@ namespace Inventory
 
         private void OnDisable()
         {
-            EvnetHandler.UpdateInventoryUI -= OnUpdateInventoryUI;
+            MyEvnetHandler.UpdateInventoryUI -= OnUpdateInventoryUI;
         }
 
         /// <summary>

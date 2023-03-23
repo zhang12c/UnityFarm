@@ -84,6 +84,14 @@ public class SlotUI : MonoBehaviour,IPointerClickHandler,IBeginDragHandler,IDrag
         itemSelectImage.gameObject.SetActive(isSelected);
 
         _inventoryUI.UpdateSlotSelected(slotIndex);
+        
+        // 举起的事件逻辑
+        // 
+        if (_slotType == SlotType.Bag)
+        {
+            // 触发举起的事件
+            MyEvnetHandler.CallItemSelectedEvent(_itemDetails,isSelected);
+        }
     }
     /// <summary>
     /// 开始拖拽
@@ -151,4 +159,5 @@ public class SlotUI : MonoBehaviour,IPointerClickHandler,IBeginDragHandler,IDrag
             // }
         }
     }
+    
 }

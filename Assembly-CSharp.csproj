@@ -45,7 +45,7 @@
      <Compile Include="Assets/Scripts/Player/Player.cs" />
      <Compile Include="Assets/Scripts/Inventory/Data_SO/ItemDataList_SO.cs" />
      <Compile Include="Assets/Scripts/Player/TiggerItemFader.cs" />
-     <Compile Include="Assets/Scripts/Utility/EvnetHandler.cs" />
+     <Compile Include="Assets/Scripts/Utility/MyEvnetHandler.cs" />
      <Compile Include="Assets/Scripts/Inventory/Item/ItemPickup.cs" />
      <Compile Include="Assets/Scripts/Utility/DataCollection.cs" />
      <Compile Include="Assets/Scripts/Utility/Settings.cs" />
@@ -60,6 +60,7 @@
      <Compile Include="Assets/Scripts/Inventory/Item/ItemOnWorld.cs" />
      <Compile Include="Assets/Scripts/Inventory/UI/ItemToolTip.cs" />
      <Compile Include="Assets/Scripts/Inventory/Logic/InventoryManager.cs" />
+     <Compile Include="Assets/Scripts/Player/AnimatorOveride.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/M Studio/Art/Intro/Sign" />
      <Folder Include="Assets/M Studio/Tilemap/Tiles/Base" />

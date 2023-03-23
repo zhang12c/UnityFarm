@@ -49,6 +49,7 @@ public class Player : MonoBehaviour
             inputY *= 0.6f;
         }
 
+        // 按下shift 的时候慢走
         if (Input.GetKey(KeyCode.LeftShift))
         {
             inputX *= 0.5f;

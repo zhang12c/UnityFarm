@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class EvnetHandler
+public static class MyEvnetHandler
 {
     public static event Action<InventoryLocation, List<InventoryItem>> UpdateInventoryUI;
     /// <summary>
@@ -28,4 +28,15 @@ public static class EvnetHandler
     {
         CloneSlotInWorld?.Invoke(itemId,pos);
     }
+
+    /// <summary>
+    /// 点击slotUI的时候
+    /// 触发的举起事件
+    /// </summary>
+    public static event Action<ItemDetails, bool> ItemSelectedEvent;
+    public static void CallItemSelectedEvent(ItemDetails itemDetails, bool isHold)
+    {
+        ItemSelectedEvent?.Invoke(itemDetails,isHold);
+    }
+    
 }

@@ -17,7 +17,7 @@ namespace Inventory.Logic
         public InventoryBag_SO _playerBag;
         private void Start()
         {
-            EvnetHandler.CallUpdateInventoryUI(InventoryLocation.Player,_playerBag.itemInventoryItems);
+            MyEvnetHandler.CallUpdateInventoryUI(InventoryLocation.Player,_playerBag.itemInventoryItems);
         }
         // itemID => itemDetails
         public ItemDetails GetItemDetails(int ID)
@@ -45,7 +45,7 @@ namespace Inventory.Logic
             }
             
             // 更新UI 数据变化了
-            EvnetHandler.CallUpdateInventoryUI(InventoryLocation.Player,_playerBag.itemInventoryItems);
+            MyEvnetHandler.CallUpdateInventoryUI(InventoryLocation.Player,_playerBag.itemInventoryItems);
         }
 
         /// <summary>
@@ -128,7 +128,7 @@ namespace Inventory.Logic
                 _playerBag.itemInventoryItems[from] = new InventoryItem();
             }
             
-            EvnetHandler.CallUpdateInventoryUI(InventoryLocation.Player,_playerBag.itemInventoryItems);
+            MyEvnetHandler.CallUpdateInventoryUI(InventoryLocation.Player,_playerBag.itemInventoryItems);
         }
 
     }

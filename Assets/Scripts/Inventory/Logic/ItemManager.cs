@@ -15,11 +15,11 @@ namespace Inventory.Logic
 
         private void OnEnable()
         {
-            EvnetHandler.CloneSlotInWorld += CloneSlotByItemPerfab;
+            MyEvnetHandler.CloneSlotInWorld += CloneSlotByItemPerfab;
         }
         private void OnDisable()
         {
-            EvnetHandler.CloneSlotInWorld -= CloneSlotByItemPerfab;
+            MyEvnetHandler.CloneSlotInWorld -= CloneSlotByItemPerfab;
         }
         private void CloneSlotByItemPerfab(int itemID, Vector3 Pos)
         {
