@@ -9,17 +9,23 @@ public class Player : MonoBehaviour
     public float speed;
     private float inputX;
     private float inputY;
+    // 是否移动了
+    private bool isMoving;
     // xy 合成的一个向量，人物朝向
     private Vector2 movementInput;
+
+    private Animator[] _animators;
     
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        _animators = GetComponentsInChildren<Animator>();
     }
 
     private void Update()
     {
         PlayerInput();
+        SwitchAnimator();
     }
     
     // 物理行为都在这个函数中执行
@@ -42,8 +48,16 @@ public class Player : MonoBehaviour
             inputX *= 0.6f;
             inputY *= 0.6f;
         }
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            inputX *= 0.5f;
+            inputY *= 0.5f;
+        }
         
         movementInput = new Vector2(inputX , inputY);
+
+        isMoving = movementInput != Vector2.zero;
     }
 
     /// <summary>
@@ -52,6 +66,21 @@ public class Player : MonoBehaviour
     void Movement()
     {
         rb.MovePosition(rb.position + movementInput * speed * Time.deltaTime);
+    }
+
+    void SwitchAnimator()
+    {
+        foreach (var animator in _animators)
+        {
+            if (isMoving)
+            {
+                animator.SetFloat("InputX",inputX);
+                animator.SetFloat("InputY",inputY);
+            }
+            
+            animator.SetBool("isMoving",isMoving);
+
+        }
     }
 
 }
