@@ -61,6 +61,7 @@
      <Compile Include="Assets/Scripts/Inventory/UI/ItemToolTip.cs" />
      <Compile Include="Assets/Scripts/Inventory/Logic/InventoryManager.cs" />
      <Compile Include="Assets/Scripts/Player/AnimatorOveride.cs" />
+     <Compile Include="Assets/Scripts/Time/Logic/TimeManager.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/M Studio/Art/Intro/Sign" />
      <Folder Include="Assets/M Studio/Tilemap/Tiles/Base" />
@@ -73,6 +74,7 @@
      <Folder Include="Assets/M Studio/Art/Buildings" />
      <Folder Include="Assets/TextMesh Pro/Sprites" />
      <Folder Include="Assets/M Studio/Art/Characters/Player/Tools/Water" />
+     <Folder Include="Assets/Scripts/Time/Logic" />
      <Folder Include="Assets/M Studio/Art/Buildings/Stall" />
      <Folder Include="Assets/Perfab/UI/Inventory" />
      <Folder Include="Assets/TextMesh Pro/Resources/Sprite Assets" />
@@ -99,6 +101,7 @@
      <None Include="Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc" />
      <Folder Include="Assets/M Studio/Art/Items/Furniture02" />
      <Folder Include="Assets/M Studio/Art/Characters/Girl01" />
+     <Folder Include="Assets/Scripts/Time" />
      <Folder Include="Assets/M Studio/Animations/Tool/Hoe" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader" />
      <Folder Include="Assets/M Studio/Art/Buildings/House02" />

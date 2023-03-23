@@ -9,5 +9,19 @@ public class Settings
     public const string DEFAULT_ICON_PATH = "Assets/M Studio/Art/Items/Icons/icon_Game.png";
     public const string ITEM_EDITOR_PATH = "Assets/Editor/UI Builder/ItemEditor.uxml";
     public static string MAKE_ITEM_PATH = "Assets/Editor/UI Builder/ItemRowTemplate.uxml";
+    
+    //  -----  时间 ----- //
+    /// <summary>
+    /// 秒间隙
+    /// </summary>
+    public const float secondThreshould = 0.05f;
+    public const int secondHold = 59;
+    public const int minutedHold = 59;
+    public const int hourHold = 59;
+    public const int dayHold = 30;
+    /// <summary>
+    /// 季
+    /// </summary>
+    public const int seasonHold = 3;
 
 }

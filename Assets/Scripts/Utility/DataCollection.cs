@@ -59,3 +59,11 @@ public class AnimatorType
     public PartName partName;
     public AnimatorOverrideController animatorOverrideController;
 }
+
+public enum Season
+{
+    /// <summary>
+    /// 春夏秋冬
+    /// </summary>
+    Spring,Summer,Autumn,Winter
+}
