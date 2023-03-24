@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using DG.Tweening;
@@ -75,7 +73,6 @@ public class TimeUI : MonoBehaviour
     private void SwitchHourImage(int hour)
     {
         var currentIndex = hour / 4;
-        Debug.Log(currentIndex);
         if (currentIndex == 0 )
         {
             foreach (var clock in clockBlocks)

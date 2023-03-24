@@ -39,15 +39,31 @@ public static class MyEvnetHandler
         ItemSelectedEvent?.Invoke(itemDetails,isHold);
     }
 
+    /// <summary>
+    /// 每一分钟执行一次
+    /// </summary>
     public static event Action<int, int> GameMinuteEvent;
     public static void CallGameMinuteEvent(int m, int h)
     {
         GameMinuteEvent?.Invoke(m,h);
     }
+    /// <summary>
+    /// 每小时执行一次
+    /// </summary>
     public static event Action<int, int,int,int,Season> GameDateEvent;
     public static void CallGameDateEvent(int h, int d, int m,int y,Season season)
     {
         GameDateEvent?.Invoke(h,d,m,y,season);
     }
+    /// <summary>
+    /// 场景切换
+    /// </summary>
+    public static event Action<string,Vector3> SceneTransitionEvent;
+    public static void CallSceneTransitionEvent(string sceneName,Vector3 toPos)
+    {
+        SceneTransitionEvent?.Invoke(sceneName,toPos);
+    }
+    
+    
 
 }

@@ -1,4 +1,3 @@
-using System;
 using Inventory.Item;
 using UnityEngine;
 namespace Inventory.Logic

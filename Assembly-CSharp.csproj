@@ -63,6 +63,8 @@
      <Compile Include="Assets/Scripts/Inventory/Item/ItemOnWorld.cs" />
      <Compile Include="Assets/Scripts/Inventory/UI/ItemToolTip.cs" />
      <Compile Include="Assets/Scripts/Inventory/Logic/InventoryManager.cs" />
+     <Compile Include="Assets/Scripts/Transition/TransitionManager.cs" />
+     <Compile Include="Assets/Scripts/Transition/Teleport.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/M Studio/Art/Intro/Sign" />
      <Folder Include="Assets/M Studio/Tilemap/Tiles/Base" />
@@ -81,6 +83,7 @@
      <Folder Include="Assets/TextMesh Pro/Resources/Sprite Assets" />
      <Folder Include="Assets/GameData/Bag" />
      <Folder Include="Assets/M Studio/Animations/Tool" />
+     <Folder Include="Assets/Scripts/Transition" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader" />
      <Folder Include="Assets/M Studio/Art/Items/Woods" />
      <Folder Include="Assets/M Studio/Animations/Item" />
