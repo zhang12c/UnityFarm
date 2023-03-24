@@ -67,7 +67,9 @@
      <Compile Include="Assets/Scripts/Inventory/Item/ItemOnWorld.cs" />
      <Compile Include="Assets/Scripts/Inventory/UI/ItemToolTip.cs" />
      <Compile Include="Assets/Scripts/Inventory/Logic/InventoryManager.cs" />
+     <Compile Include="Assets/Scripts/Cursor/CursorManager.cs" />
      <Folder Include="Assets" />
+     <Folder Include="Assets/Scripts/Cursor" />
      <Folder Include="Assets/M Studio/Art/Intro/Sign" />
      <Folder Include="Assets/M Studio/Tilemap/Tiles/Base" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
@@ -87,6 +89,7 @@
      <Folder Include="Assets/M Studio/Animations/Tool" />
      <Folder Include="Assets/Scripts/Transition" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader" />
+     <Folder Include="Assets/Fantasy Cursor Pack" />
      <Folder Include="Assets/M Studio/Art/Items/Woods" />
      <Folder Include="Assets/M Studio/Animations/Item" />
      <Folder Include="Assets/M Studio/Animations/Player" />
