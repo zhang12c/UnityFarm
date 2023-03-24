@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class Teleport : MonoBehaviour
 {
+    [SceneName]
     public string transitionScene;
     public Vector3 posToGo;
 

@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 /// </summary>
 public class TransitionManager : MonoBehaviour
 {
+    [SceneName]
     public string startSceneName = String.Empty;
 
     private void Start()

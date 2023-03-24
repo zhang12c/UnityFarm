@@ -6506,7 +6506,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transitionScene: 01_Field
-  posToGo: {x: 17.3, y: 24.9, z: 0}
+  posToGo: {x: 17.25, y: 24, z: 0}
 --- !u!1 &837498972
 GameObject:
   m_ObjectHideFlags: 0
