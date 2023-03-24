@@ -10,7 +10,7 @@ namespace Inventory.Logic
         private Transform itemParent;
         private void Start()
         {
-            itemParent = GameObject.FindWithTag("ItemOnWorldParent").transform;
+            itemParent = GameObject.FindWithTag("ItemOnWorldParent")?.transform;
         }
 
         private void OnEnable()
