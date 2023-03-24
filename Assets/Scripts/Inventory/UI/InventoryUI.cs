@@ -38,7 +38,30 @@ namespace Inventory
         private void OnEnable()
         {
             MyEvnetHandler.UpdateInventoryUI += OnUpdateInventoryUI;
+            MyEvnetHandler.AfterSceneLoadEvent += OnAfterSceneLoadEvent;
         }
+
+        /// <summary>
+        /// 通过按b来打开背包UI
+        /// </summary>
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.B))
+            {
+                OpenBagUI();
+            }
+        }
+        private void OnDisable()
+        {
+            MyEvnetHandler.UpdateInventoryUI -= OnUpdateInventoryUI;
+            MyEvnetHandler.AfterSceneLoadEvent -= OnAfterSceneLoadEvent;
+        }
+        
+        private void OnAfterSceneLoadEvent()
+        {
+            UpdateSlotSelected(-1 );
+        }
+        
         private void OnUpdateInventoryUI(InventoryLocation inventoryType, List<InventoryItem> bagItems)
         {
             switch (inventoryType)
@@ -62,21 +85,6 @@ namespace Inventory
             }
         }
 
-        private void OnDisable()
-        {
-            MyEvnetHandler.UpdateInventoryUI -= OnUpdateInventoryUI;
-        }
-
-        /// <summary>
-        /// 通过按b来打开背包UI
-        /// </summary>
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.B))
-            {
-                OpenBagUI();
-            }
-        }
 
         /// <summary>
         /// 打开UI背包

@@ -37,10 +37,21 @@ public class AnimatorOveride : MonoBehaviour
     private void OnEnable()
     {
         MyEvnetHandler.ItemSelectedEvent += OnItemSelectedEvent;
+        MyEvnetHandler.AfterSceneLoadEvent += OnAfterSceneLoadEvent;
     }
     private void OnDisable()
     {
         MyEvnetHandler.ItemSelectedEvent -= OnItemSelectedEvent;
+        MyEvnetHandler.AfterSceneLoadEvent -= OnAfterSceneLoadEvent;
+    }
+    
+    /// <summary>
+    ///  切换场景后将举起的状态回复回去
+    /// </summary>
+    private void OnAfterSceneLoadEvent()
+    {
+        holdItemImage.enabled = false;
+        SwitchAnimator(PartType.None);
     }
     private void OnItemSelectedEvent(ItemDetails itemDetails, bool isSelected)
     {
