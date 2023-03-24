@@ -66,3 +66,40 @@ public enum Season
     /// </summary>
     Spring,Summer,Autumn,Winter
 }
+
+/// <summary>
+/// 用来存场景物品的位置
+/// 序列化 为了保存
+/// </summary>
+[System.Serializable]
+public class SerializableVector3
+{
+    public float x, y, z;
+    public SerializableVector3(Vector3 pos)
+    {
+        this.x = pos.x;
+        this.y = pos.y;
+        this.z = pos.z;
+    }
+    public Vector3 ToVector3()
+    {
+        return new Vector3(x, y, z);
+    }
+
+    public Vector2Int ToVector2Int()
+    {
+        return new Vector2Int((int)x, (int)y);
+    }
+    
+}
+
+/// <summary>
+/// 场景需要保留的
+/// 用这两个结构来保存
+/// </summary>
+[System.Serializable]
+public class SceneItemSave
+{
+    public int itemID;
+    public SerializableVector3 itemSerializableVector3;
+}

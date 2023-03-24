@@ -73,10 +73,10 @@ public class TransitionManager : MonoBehaviour
         yield return StartCoroutine(LoadSceneSetActive(sceneName));
         
         MyEvnetHandler.CallMoveToPos(targetPos);
-        // 退出渐入
-        yield return DoFade(0);
         // 场景切换成功后的事件
         MyEvnetHandler.CallAfterSceneUnloadEvent();
+        // 退出渐入
+        yield return DoFade(0);
 
     }
     private void SceneTransitionEven(string sceneName, Vector3 toPos)
