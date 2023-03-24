@@ -32,14 +32,24 @@ public class Player : MonoBehaviour
         if (!inputDisable)
         {
             PlayerInput();
-            SwitchAnimator();
         }
+        else
+        {
+            // 不可输入的时候就不要跑步了
+            isMoving = false;
+        }
+        SwitchAnimator();
     }
     
     // 物理行为都在这个函数中执行
+    // 修复一个Bug
+    // 切换场景的时候不可以输入的时候，人物一直往下跑
     private void FixedUpdate()
     {
-        Movement();
+        if (!inputDisable)
+        {
+            Movement();
+        }
     }
     private void OnEnable()
     {

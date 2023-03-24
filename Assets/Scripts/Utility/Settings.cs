@@ -24,4 +24,9 @@ public class Settings
     /// </summary>
     public const int seasonHold = 3;
 
+    /// <summary>
+    /// 渐入UI的色变间隔
+    /// </summary>
+    public const float FADE_DURATION = 1.5f;
+
 }

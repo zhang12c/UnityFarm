@@ -11,11 +11,29 @@ public class TransitionManager : MonoBehaviour
     [SceneName]
     public string startSceneName = String.Empty;
 
+    /// <summary>
+    /// 切换场景时候的渐入渐出UI
+    /// </summary>
+    private CanvasGroup fadeCanvasGroup;
+
+    private bool isFading = false; 
+
     private void Start()
     {
         StartCoroutine(LoadSceneSetActive(startSceneName));
+        fadeCanvasGroup = FindObjectOfType<CanvasGroup>();
     }
 
+    private void OnEnable()
+    {
+        MyEvnetHandler.SceneTransitionEvent += SceneTransitionEven;
+    }
+
+    private void OnDisable()
+    {
+        MyEvnetHandler.SceneTransitionEvent -= SceneTransitionEven;
+    }
+    
     private IEnumerator LoadSceneSetActive(string sceneName)
     {
         /// load sceneName 的场景进入当前的场景
@@ -46,27 +64,47 @@ public class TransitionManager : MonoBehaviour
     private IEnumerator SceneTransition(string sceneName,Vector3 targetPos)
     {
         MyEvnetHandler.CallBeforeSceneUnloadEvent();
+        // 开始渐入
+        yield return DoFade(1);
+        
         // 这个项目是全部场景都在的场景中，激活的就是当前的地图
         yield return SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
 
         yield return StartCoroutine(LoadSceneSetActive(sceneName));
-        // 场景切换成功后的事件
-        MyEvnetHandler.CallAfterSceneUnloadEvent();
         
         MyEvnetHandler.CallMoveToPos(targetPos);
+        // 退出渐入
+        yield return DoFade(0);
+        // 场景切换成功后的事件
+        MyEvnetHandler.CallAfterSceneUnloadEvent();
+
+    }
+    private void SceneTransitionEven(string sceneName, Vector3 toPos)
+    {
+        if (!isFading)
+        {
+            StartCoroutine(SceneTransition(sceneName, toPos));
+        }
     }
 
-    private void OnEnable()
+    /// <summary>
+    /// 做一个渐入渐出的协程
+    /// </summary>
+    /// <param name="targetAlpha"> 1 切换 0 未 </param>
+    /// <returns></returns>
+    private IEnumerator DoFade(float targetAlpha)
     {
-        MyEvnetHandler.SceneTransitionEvent += SceneTransiTionEven;
-    }
+        isFading = true;
+        fadeCanvasGroup.blocksRaycasts = true;
 
-    private void OnDisable()
-    {
-        MyEvnetHandler.SceneTransitionEvent -= SceneTransiTionEven;
-    }
-    private void SceneTransiTionEven(string sceneName, Vector3 toPos)
-    {
-        StartCoroutine(SceneTransition(sceneName, toPos));
+        float speed = Mathf.Abs(fadeCanvasGroup.alpha - targetAlpha) / Settings.FADE_DURATION;
+        while (!Mathf.Approximately(targetAlpha,fadeCanvasGroup.alpha))
+        {
+            fadeCanvasGroup.alpha = Mathf.MoveTowards(fadeCanvasGroup.alpha, targetAlpha, speed * Time.deltaTime);
+            yield return null;
+        }
+
+        fadeCanvasGroup.blocksRaycasts = false;
+        isFading = false;
     }
 }
