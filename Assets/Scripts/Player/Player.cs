@@ -15,6 +15,11 @@ public class Player : MonoBehaviour
     private Vector2 movementInput;
 
     private Animator[] _animators;
+
+    /// <summary>
+    /// 切换场景的时候，不允许移动
+    /// </summary>
+    private bool inputDisable;
     
     private void Awake()
     {
@@ -24,14 +29,42 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        PlayerInput();
-        SwitchAnimator();
+        if (!inputDisable)
+        {
+            PlayerInput();
+            SwitchAnimator();
+        }
     }
     
     // 物理行为都在这个函数中执行
     private void FixedUpdate()
     {
         Movement();
+    }
+    private void OnEnable()
+    {
+        MyEvnetHandler.AfterSceneLoadEvent += OnSceneLoad;
+        MyEvnetHandler.BeforeSceneUnloadEvent += OnBeforeSceneUnload;
+        MyEvnetHandler.MoveToPos += OnMoveToPos;
+    }
+    private void OnDisable()
+    {
+        MyEvnetHandler.AfterSceneLoadEvent -= OnSceneLoad;
+        MyEvnetHandler.BeforeSceneUnloadEvent -= OnBeforeSceneUnload;
+        MyEvnetHandler.MoveToPos -= OnMoveToPos;
+    }
+    
+    private void OnMoveToPos(Vector3 obj)
+    {
+        transform.position = obj;
+    }
+    private void OnBeforeSceneUnload()
+    {
+        inputDisable = true;
+    }
+    private void OnSceneLoad()
+    {
+        inputDisable = false;
     }
 
     /// <summary>

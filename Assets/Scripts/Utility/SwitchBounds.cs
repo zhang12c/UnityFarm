@@ -1,3 +1,4 @@
+using System;
 using Cinemachine;
 using UnityEngine;
 
@@ -9,11 +10,6 @@ public class SwitchBounds : MonoBehaviour
     private void Awake()
     {
         ccr = GetComponent<CinemachineConfiner>();
-    }
-    // TODO : 应该在切换场景的时候调用
-    private void Start()
-    {
-        SwitchConfinerShape();
     }
 
     private void SwitchConfinerShape()
@@ -30,4 +26,18 @@ public class SwitchBounds : MonoBehaviour
              Debug.LogError("获得边界Bounds失败了");
          }
      }
+
+    private void OnEnable()
+    {
+        MyEvnetHandler.AfterSceneLoadEvent += OnSceneLoad;
+    }
+    private void OnDisable()
+    {
+        MyEvnetHandler.AfterSceneLoadEvent -= OnSceneLoad;
+    }
+    
+    private void OnSceneLoad()
+    {
+        SwitchConfinerShape();
+    }
 }

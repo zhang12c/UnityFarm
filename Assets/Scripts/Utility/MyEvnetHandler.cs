@@ -63,7 +63,32 @@ public static class MyEvnetHandler
     {
         SceneTransitionEvent?.Invoke(sceneName,toPos);
     }
+
+    /// <summary>
+    /// 场景卸载之前需要做的事件
+    /// </summary>
+    public static event Action BeforeSceneUnloadEvent;
+    public static void CallBeforeSceneUnloadEvent()
+    {
+        BeforeSceneUnloadEvent?.Invoke();
+    }
     
+    /// <summary>
+    /// 场景卸载之后需要做的事件
+    /// </summary>
+    public static event Action AfterSceneLoadEvent;
+    public static void CallAfterSceneUnloadEvent()
+    {
+        AfterSceneLoadEvent?.Invoke();
+    }
     
+    /// <summary>
+    /// 瞬移
+    /// </summary>
+    public static event Action<Vector3> MoveToPos;
+    public static void CallMoveToPos(Vector3 pos)
+    {
+        MoveToPos?.Invoke(pos);
+    }
 
 }

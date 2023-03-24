@@ -44,10 +44,15 @@ public class TransitionManager : MonoBehaviour
     /// <returns></returns>
     private IEnumerator SceneTransition(string sceneName,Vector3 targetPos)
     {
+        MyEvnetHandler.CallBeforeSceneUnloadEvent();
         // 这个项目是全部场景都在的场景中，激活的就是当前的地图
         yield return SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
+
+        yield return StartCoroutine(LoadSceneSetActive(sceneName));
+        // 场景切换成功后的事件
+        MyEvnetHandler.CallAfterSceneUnloadEvent();
         
-        yield return SceneManager.LoadSceneAsync(sceneName,LoadSceneMode.Additive);
+        MyEvnetHandler.CallMoveToPos(targetPos);
     }
 
     private void OnEnable()
