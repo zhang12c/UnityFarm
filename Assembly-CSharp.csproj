@@ -65,9 +65,11 @@
      <Compile Include="Assets/Scripts/Inventory/UI/SlotUI.cs" />
      <Compile Include="Assets/Scripts/Inventory/UI/InventoryUI.cs" />
      <Compile Include="Assets/Scripts/Inventory/Item/ItemOnWorld.cs" />
+     <Compile Include="Assets/Scripts/Cursor/CursorManager.cs" />
      <Compile Include="Assets/Scripts/Inventory/UI/ItemToolTip.cs" />
      <Compile Include="Assets/Scripts/Inventory/Logic/InventoryManager.cs" />
-     <Compile Include="Assets/Scripts/Cursor/CursorManager.cs" />
+     <Compile Include="Assets/Scripts/Map/Data/MapData_SO.cs" />
+     <Compile Include="Assets/Scripts/Map/Logic/GridMap.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/Scripts/Cursor" />
      <Folder Include="Assets/M Studio/Art/Intro/Sign" />
@@ -122,6 +124,7 @@
      <Folder Include="Assets/Animator/Animation" />
      <Folder Include="Assets/Scripts" />
      <Folder Include="Assets/M Studio/Animations/UI" />
+     <Folder Include="Assets/Scripts/Map/Data" />
      <Folder Include="Assets/M Studio/Tilemap/Palettes" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" />
      <Folder Include="Assets/M Studio/Art/Characters/Girl02" />
@@ -151,6 +154,7 @@
      <Folder Include="Assets/GameData/Inventory" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader" />
      <Folder Include="Assets/M Studio/Animations/Tool/Water" />
+     <Folder Include="Assets/Scripts/Map" />
      <None Include="Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt" />
      <Folder Include="Assets/M Studio/Art/Buildings/House01" />
      <Folder Include="Assets/M Studio/Animations" />
@@ -206,6 +210,7 @@
      <None Include="Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt" />
      <Folder Include="Assets/Perfab" />
      <Folder Include="Assets/TextMesh Pro/Documentation" />
+     <Folder Include="Assets/Scripts/Map/Logic" />
      <Folder Include="Assets/Scripts/Time/UI" />
      <Folder Include="Assets/M Studio/Art/Characters/Shadow" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader" />
@@ -216,6 +221,7 @@
      <Folder Include="Assets/M Studio/Animations/Item/Fire" />
      <Folder Include="Assets/Scripts/Player" />
      <None Include="Assets/TextMesh Pro/Sprites/EmojiOne.json" />
+     <Folder Include="Assets/GameData/Map" />
      <Folder Include="Assets/M Studio/Animations/Tool/ReapTool" />
      <Folder Include="Assets/Scripts/Utility" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Sprite.shader" />

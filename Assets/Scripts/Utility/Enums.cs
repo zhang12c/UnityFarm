@@ -79,3 +79,26 @@ public enum PartName
     Arm,
     Tool
 }
+
+/// <summary>
+/// 格子的地图类型
+/// </summary>
+public enum GridType
+{
+    /// <summary>
+    /// 可以挖洞
+    /// </summary>
+    Dig,
+    /// <summary>
+    /// 掉落物品
+    /// </summary>
+    DropItem,
+    /// <summary>
+    /// 放置家具
+    /// </summary>
+    PlaceFurniture,
+    /// <summary>
+    /// 障碍物
+    /// </summary>
+    NPCObstacle
+}

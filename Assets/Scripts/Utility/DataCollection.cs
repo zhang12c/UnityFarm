@@ -103,3 +103,22 @@ public class SceneItemSave
     public int itemID;
     public SerializableVector3 itemSerializableVector3;
 }
+
+/// <summary>
+/// 单独瓦片类型
+/// 基本信息
+/// </summary>
+[System.Serializable]
+public class TileProperty
+{
+    /// <summary>
+    /// 地图格子的坐标
+    /// </summary>
+    public Vector2Int titleCoordinate;
+    /// <summary>
+    /// 格子类型
+    /// </summary>
+    public GridType gridType;
+    public bool BoolTypeValue;
+
+}
