@@ -68,7 +68,8 @@ namespace Utility
         None,
         Carry,
         Hoe,
-        Break
+        Break,
+        Water,
     }
 
     /// <summary>

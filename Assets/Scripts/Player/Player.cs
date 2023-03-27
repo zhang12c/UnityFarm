@@ -6,14 +6,20 @@ using Utility;
 
 public class Player : MonoBehaviour
 {
-    private Rigidbody2D rb;
+    private Rigidbody2D _rb;
     public float speed;
-    private float inputX;
-    private float inputY;
+    private float _inputX;
+    private float _inputY;
     // 是否移动了
-    private bool isMoving;
+    private bool _isMoving;
+    // 动画参数
+    private float _mouseX;
+    private float _mouseY;
+    // 是否在使用工具的状态下
+    private bool _useTool;
+    
     // xy 合成的一个向量，人物朝向
-    private Vector2 movementInput;
+    private Vector2 _movementInput;
 
     private Animator[] _animators;
 
@@ -24,7 +30,7 @@ public class Player : MonoBehaviour
     
     private void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
+        _rb = GetComponent<Rigidbody2D>();
         _animators = GetComponentsInChildren<Animator>();
     }
 
@@ -37,7 +43,7 @@ public class Player : MonoBehaviour
         else
         {
             // 不可输入的时候就不要跑步了
-            isMoving = false;
+            _isMoving = false;
         }
         SwitchAnimator();
     }
@@ -86,26 +92,26 @@ public class Player : MonoBehaviour
     /// </summary>
     private void PlayerInput()
     {
-        inputX = Input.GetAxisRaw("Horizontal");
-        inputY = Input.GetAxisRaw("Vertical");
+        _inputX = Input.GetAxisRaw("Horizontal");
+        _inputY = Input.GetAxisRaw("Vertical");
         
         // 正常情况这个对象移动方向要慢一些，不能是原来的1
-        if (inputY != 0 && inputX != 0)
+        if (_inputY != 0 && _inputX != 0)
         {
-            inputX *= 0.6f;
-            inputY *= 0.6f;
+            _inputX *= 0.6f;
+            _inputY *= 0.6f;
         }
 
         // 按下shift 的时候慢走
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            inputX *= 0.5f;
-            inputY *= 0.5f;
+            _inputX *= 0.5f;
+            _inputY *= 0.5f;
         }
         
-        movementInput = new Vector2(inputX , inputY);
+        _movementInput = new Vector2(_inputX , _inputY);
 
-        isMoving = movementInput != Vector2.zero;
+        _isMoving = _movementInput != Vector2.zero;
     }
 
     /// <summary>
@@ -113,29 +119,74 @@ public class Player : MonoBehaviour
     /// </summary>
     void Movement()
     {
-        rb.MovePosition(rb.position + movementInput * speed * Time.deltaTime);
+        _rb.MovePosition(_rb.position + _movementInput * speed * Time.deltaTime);
     }
 
     void SwitchAnimator()
     {
         foreach (var animator in _animators)
         {
-            if (isMoving)
+            if (_isMoving)
             {
-                animator.SetFloat("InputX",inputX);
-                animator.SetFloat("InputY",inputY);
+                animator.SetFloat("InputX",_inputX);
+                animator.SetFloat("InputY",_inputY);
             }
+            animator.SetBool("isMoving",_isMoving);
             
-            animator.SetBool("isMoving",isMoving);
+            animator.SetFloat("mouseX",_mouseX);
+            animator.SetFloat("mouseY",_mouseY);
 
         }
     }
     
-    private void OnMouseClickedEvent(Vector3 pos, ItemDetails itemDetails)
+    private void OnMouseClickedEvent(Vector3 mouseWorldPos, ItemDetails itemDetails)
     {
-        // TODO 切换玩家的动作
-        // 播放动画之后
-        MyEventHandler.CallExecuteActionAfterAnimation(pos, itemDetails);
+        // 切换玩家的动作
+        if (itemDetails.itemType != ItemType.seed && itemDetails.itemType != ItemType.Commodity && itemDetails.itemType != ItemType.Furniture)
+        {
+            var position = transform.position;
+            _mouseX = mouseWorldPos.x - position.x;
+            _mouseY = mouseWorldPos.y - position.y;
+            
+            // 斜方向上的优先选择
+            // 如果 比较偏x 那就按x 左右选择
+            if (Mathf.Abs(_mouseX) > Mathf.Abs(_mouseY))
+            {
+                _mouseY = 0;
+            }
+            else
+            {
+                _mouseX = 0;
+            }
+            StartCoroutine(UseToolRoutine(mouseWorldPos, itemDetails));
+        }
+        else
+        {
+            // 播放动画之后
+            MyEventHandler.CallExecuteActionAfterAnimation(mouseWorldPos, itemDetails);
+        }
+        
+    }
+    public IEnumerator UseToolRoutine(Vector3 mouseWorldPos, ItemDetails itemDetails)
+    {
+        _useTool = true;
+        inputDisable = true;
+        yield return null;
+        foreach (var ai in _animators)
+        {
+            ai.SetTrigger("useTool");
+            // 使人物也能面向动作的方向去
+            ai.SetFloat("InputX",_mouseX);
+            ai.SetFloat("InputY",_mouseY);
+        }
+        // TODO:优化 这里可以改成帧事件
+        yield return new WaitForSeconds(0.5f);
+        MyEventHandler.CallExecuteActionAfterAnimation(mouseWorldPos, itemDetails);
+        yield return new WaitForSeconds(0.2f);
+        // 动画结束之后
+        _useTool = false;
+        inputDisable = false;
+
     }
 
 }
