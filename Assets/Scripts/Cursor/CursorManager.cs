@@ -20,12 +20,27 @@ public class CursorManager : MonoBehaviour
     private Camera mainCamera;
     private Grid currentGrid;
     private Vector3 mouseWorldPos;
-    private Vector3 mouseGirdPos;
+    private Vector3Int mouseGirdPos;
     /// <summary>
     /// 鼠标的可用性
     /// </summary>
     private bool cursorEnable = false;
-    
+    /// <summary>
+    /// 鼠标在这个位置上是否是可用的
+    /// </summary>
+    private bool cursorPositionValid = false;
+    /// <summary>
+    /// 当前选中的道具
+    /// </summary>
+    private ItemDetails currentItem;
+
+    private Transform playerTransform
+    {
+        get
+        {
+            return FindObjectOfType<Player>().transform;
+        }
+    }
     private void OnEnable()
     {
         MyEvnetHandler.ItemSelectedEvent += OnItemSelectedEvent;
@@ -66,7 +81,6 @@ public class CursorManager : MonoBehaviour
     private void OnAfterSceneLoadEvent()
     {
         currentGrid = FindObjectOfType<Grid>();
-        cursorEnable = true;
     }
     
     private void OnBeforeSceneUnloadEvent()
@@ -79,6 +93,8 @@ public class CursorManager : MonoBehaviour
         if (!isSelected)
         {
             currentSprite = normal;
+            currentItem = null;
+            cursorEnable = false;
             return;
         }
         currentSprite = itemDetails.itemType switch
@@ -95,6 +111,9 @@ public class CursorManager : MonoBehaviour
             _ => normal,
         };
 
+        currentItem = itemDetails;
+        cursorEnable = true;
+
     }
 
     private void SetCursorImage(Sprite sprite)
@@ -102,6 +121,26 @@ public class CursorManager : MonoBehaviour
         cursorImage.sprite = sprite;
         cursorImage.color = new Color(1, 1, 1);
     }
+
+    #region 鼠标的样式设置
+    /// <summary>
+    /// 鼠标的可用
+    /// </summary>
+    private void SetCursorValid()
+    {
+        cursorImage.color = new Color(1, 1, 1, 1);
+        cursorPositionValid = true;
+    }
+    
+    /// <summary>
+    /// 鼠标不可用
+    /// </summary>
+    private void SetCursorInvalid()
+    {
+        cursorImage.color = new Color(1, 0, 0, 0.5f);
+        cursorPositionValid = false;
+    }
+  #endregion
 
     /// <summary>
     /// 是否与UI有互动的 true 是的
@@ -125,6 +164,36 @@ public class CursorManager : MonoBehaviour
     {
         mouseWorldPos = mainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,Input.mousePosition.y,0));
         mouseGirdPos = currentGrid.WorldToCell(mouseWorldPos);
-        Debug.Log($"{mouseWorldPos} : {mouseGirdPos}");
+        
+        // 道具范围逻辑
+        var playerPos = currentGrid.WorldToCell(playerTransform.position);
+        // 如果鼠标超出了道具的使用范围，就直接不可用了
+        if (Mathf.Abs(mouseGirdPos.x - playerPos.x) > currentItem.itemUseRadius || Mathf.Abs(mouseGirdPos.y - playerPos.y) > currentItem.itemUseRadius)
+        {
+            SetCursorInvalid();
+            return;
+        }
+
+        var currentTile = GridMapManager.Instance.GetTileDetailsOnMousePosition(mouseGirdPos);
+        if (currentTile != null)
+        {
+            switch (currentItem.itemType)
+            {
+                case ItemType.Commodity :
+                    if (currentTile.canDropItem && currentItem.canDropped)
+                    {
+                        SetCursorValid();
+                    }
+                    else
+                    {
+                        SetCursorInvalid();
+                    }
+                    break;
+            }
+        }
+        else
+        {
+            SetCursorInvalid();
+        }
     }
 }

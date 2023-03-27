@@ -1,10 +1,9 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class GridMapManager : MonoBehaviour
+public class GridMapManager :  Singleton<GridMapManager>
 {
     [Header("地图瓦片信息List")]
     public List<MapData_SO> mapDataList;
@@ -37,7 +36,7 @@ public class GridMapManager : MonoBehaviour
             };
             // 字典的Key
             StringBuilder st = new StringBuilder();
-            st.Append(tileDetails.pos.x + tileDetails.pos.y + mapDataSo.sceneName);
+            st.Append(tileDetails.pos.x + "x" + tileDetails.pos.y + "y" + mapDataSo.sceneName);
 
             if (GetTileDetails(st.ToString()) != null)
             {
@@ -87,5 +86,16 @@ public class GridMapManager : MonoBehaviour
         {
             return null;
         }
+    }
+
+    /// <summary>
+    /// 根据网格坐标获得网格信息
+    /// </summary>
+    /// <param name="mouseGridPos"></param>
+    /// <returns></returns>
+    public TileDetails GetTileDetailsOnMousePosition(Vector3Int mouseGridPos)
+    {
+        string key = mouseGridPos.x + "x" + mouseGridPos.y + "y" + SceneManager.GetActiveScene().name;
+        return GetTileDetails(key);
     }
 }
