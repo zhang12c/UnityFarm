@@ -3,12 +3,19 @@ using Inventory.Item;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 namespace Inventory.Logic
 {
     public class ItemManager : MonoBehaviour
     {
-        public GameObject itemPerfab;
-        
+        [FormerlySerializedAs("掉落物预制体")]
+        public GameObject itemPrefab;
+
+        [FormerlySerializedAs("丢出道具预制体")]
+        public GameObject boundPrefab;
+
+        private Transform _playerTransform => FindObjectOfType<Player>().transform;
+
         private Transform itemParent;
 
         /// <summary>
@@ -38,16 +45,19 @@ namespace Inventory.Logic
         }
         private void CloneSlotByItemPerfab(int itemID, Vector3 Pos)
         {
-            var item = Instantiate(itemPerfab, Pos, Quaternion.identity,itemParent);
+            var item = Instantiate(itemPrefab, Pos, Quaternion.identity,itemParent);
             ItemOnWorld itemOnWorld = item.GetComponent<ItemOnWorld>();
             itemOnWorld.CloneItem(itemID);
         }
         
-        private void OnDropItemEvent(int itemID, Vector3 Pos)
+        private void OnDropItemEvent(int itemId, Vector3 mousePos)
         {
-            var item = Instantiate(itemPerfab, Pos, Quaternion.identity,itemParent);
+            var item = Instantiate(boundPrefab, _playerTransform.position, Quaternion.identity,itemParent);
             ItemOnWorld itemOnWorld = item.GetComponent<ItemOnWorld>();
-            itemOnWorld.CloneItem(itemID);
+            itemOnWorld.CloneItem(itemId);
+            
+            var dir = (mousePos - _playerTransform.position).normalized;
+            item.GetComponent<ItemBounce>().InitBounceItem(mousePos, dir);
         }
 
         private void OnSceneLoad()
@@ -110,7 +120,7 @@ namespace Inventory.Logic
                     }
                     foreach (var item in currentSceneItemSaves)
                     {
-                        var obj = Instantiate(itemPerfab, item.itemSerializableVector3.ToVector3(),quaternion.identity);
+                        var obj = Instantiate(itemPrefab, item.itemSerializableVector3.ToVector3(),quaternion.identity);
                         ItemOnWorld itemOnWorld = obj.GetComponent<ItemOnWorld>();
                         itemOnWorld.CloneItem(item.itemID);
                     }

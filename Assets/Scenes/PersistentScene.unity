@@ -729,7 +729,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c6b861b20ba4200beb1af81d1364992, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemPerfab: {fileID: 1359914061305052469, guid: 0f691942f59374fd1ba87eed43b503d0, type: 3}
+  itemPrefab: {fileID: 1359914061305052469, guid: 0f691942f59374fd1ba87eed43b503d0, type: 3}
+  boundPrefab: {fileID: 8332836452680189027, guid: bc86c6aca278d46e09adcb19e58adbf2, type: 3}
 --- !u!4 &1840157992
 Transform:
   m_ObjectHideFlags: 0

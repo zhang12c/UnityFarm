@@ -71,6 +71,8 @@
      <Compile Include="Assets/Scripts/Inventory/UI/ItemToolTip.cs" />
      <Compile Include="Assets/Scripts/Map/Logic/GridMap.cs" />
      <Compile Include="Assets/Scripts/Inventory/Logic/InventoryManager.cs" />
+     <Compile Include="Assets/Scripts/Inventory/Item/ItemShadow.cs" />
+     <Compile Include="Assets/Scripts/Inventory/Item/ItemBounce.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/Scripts/Cursor" />
      <Folder Include="Assets/M Studio/Art/Intro/Sign" />
