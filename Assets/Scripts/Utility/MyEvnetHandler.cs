@@ -28,6 +28,22 @@ public static class MyEvnetHandler
     {
         CloneSlotInWorld?.Invoke(itemId,pos);
     }
+    
+    /// <summary>
+    /// 将物体克隆到场景中
+    /// </summary>
+    public static event Action<int, Vector3> DropItemEvent;
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="itemId">道具Id</param>
+    /// <param name="pos">坐标位置</param>
+    public static void CallDropItemEvent(int itemId, Vector3 pos)
+    {
+        DropItemEvent?.Invoke(itemId,pos);
+    }
+    
+    
 
     /// <summary>
     /// 点击slotUI的时候

@@ -19,7 +19,7 @@ public class SlotToolTip : MonoBehaviour,IPointerEnterHandler,IPointerExitHandle
     public void OnPointerEnter(PointerEventData eventData)
     {
         var itemDetails = _slotUI._itemDetails;
-        if (_slotUI._itemAmount > 0)
+        if (_slotUI._itemDetails != null)
         {
             _inventoryUI.itemToolTip.gameObject.SetActive(true);
             _inventoryUI.itemToolTip.SetupToolTip(itemDetails,_slotUI._slotType);

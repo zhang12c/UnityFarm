@@ -38,14 +38,14 @@ public class SlotUI : MonoBehaviour,IPointerClickHandler,IBeginDragHandler,IDrag
     private InventoryUI _inventoryUI => GetComponentInParent<InventoryUI>();
 
 
-    // private void Start()
-    // {
-    //     isSelected = false;
-    //     if (_itemDetails.itemID == 0)
-    //     {
-    //         UpdateEmptySlot();
-    //     }
-    // }
+    private void Start()
+    {
+        isSelected = false;
+        if (_itemDetails == null)
+        {
+            UpdateEmptySlot();
+        }
+    }
 
     /// <summary>
     /// 初始化slot 为空格子
@@ -55,7 +55,10 @@ public class SlotUI : MonoBehaviour,IPointerClickHandler,IBeginDragHandler,IDrag
         if (isSelected)
         {
             isSelected = false;
+            _inventoryUI.UpdateSlotSelected(-1);
+            MyEvnetHandler.CallItemSelectedEvent(_itemDetails, isSelected);
         }
+        _itemDetails = null;
         itemImage.enabled = false;
         itemAmountTxt.text = "";
         _button.interactable = false;
@@ -75,7 +78,7 @@ public class SlotUI : MonoBehaviour,IPointerClickHandler,IBeginDragHandler,IDrag
     public void OnPointerClick(PointerEventData eventData)
     {
         // 如果格子没有道具就不要被选中啦
-        if (_itemAmount == 0)
+        if (_itemDetails == null)
         {
             return;
         }

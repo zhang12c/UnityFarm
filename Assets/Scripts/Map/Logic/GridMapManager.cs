@@ -135,7 +135,7 @@ public class GridMapManager :  Singleton<GridMapManager>
             switch (itemdetails.itemType)
             {
                 case ItemType.Commodity:
-                    MyEvnetHandler.CallCloneCloneSlotInWorld(itemdetails.itemID,mouseWorldPos);
+                    MyEvnetHandler.CallDropItemEvent(itemdetails.itemID,mouseWorldPos);
                     break;
             }
         }

@@ -15,6 +15,17 @@ namespace Inventory.Logic
         [FormerlySerializedAs("_PlayerBag")]
         [Header("背包的数据")]
         public InventoryBag_SO _playerBag;
+
+        private void OnEnable()
+        {
+            MyEvnetHandler.DropItemEvent += OnDropItemEvent;
+        }
+
+        private void OnDisable()
+        {
+            MyEvnetHandler.DropItemEvent += OnDropItemEvent;
+
+        }
         private void Start()
         {
             MyEvnetHandler.CallUpdateInventoryUI(InventoryLocation.Player,_playerBag.itemInventoryItems);
@@ -129,6 +140,36 @@ namespace Inventory.Logic
             }
             
             MyEvnetHandler.CallUpdateInventoryUI(InventoryLocation.Player,_playerBag.itemInventoryItems);
+        }
+
+        private void RemoveItem(int ID, int removeAmount)
+        {
+            var index = CheckItemInBag(ID);
+            if (_playerBag.itemInventoryItems[index].itemAmount > removeAmount)
+            {
+                var amount = _playerBag.itemInventoryItems[index].itemAmount - removeAmount;
+                var item = new InventoryItem()
+                {
+                    itemID = ID,
+                    itemAmount = amount
+                };
+                _playerBag.itemInventoryItems[index] = item;
+            }else if (_playerBag.itemInventoryItems[index].itemAmount == removeAmount)
+            {
+                _playerBag.itemInventoryItems[index] = new InventoryItem();
+            }
+            
+            // 刷新一下界面
+            MyEvnetHandler.CallUpdateInventoryUI(InventoryLocation.Player,_playerBag.itemInventoryItems);
+        }
+        /// <summary>
+        /// 道具丢弃出去，就需要在数据库中 -= 这个道具
+        /// </summary>
+        /// <param name="itemId">道具ID</param>
+        /// <param name="pos">世界坐标</param>
+        private void OnDropItemEvent(int itemId, Vector3 pos)
+        {
+            RemoveItem(itemId, 1);
         }
 
     }

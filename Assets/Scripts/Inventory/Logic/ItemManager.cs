@@ -23,6 +23,7 @@ namespace Inventory.Logic
         private void OnEnable()
         {
             MyEvnetHandler.CloneSlotInWorld += CloneSlotByItemPerfab;
+            MyEvnetHandler.DropItemEvent += OnDropItemEvent;
             MyEvnetHandler.AfterSceneLoadEvent += OnSceneLoad;
             MyEvnetHandler.BeforeSceneUnloadEvent += OnBeforeSceneUnloadEvent;
 
@@ -30,11 +31,19 @@ namespace Inventory.Logic
         private void OnDisable()
         {
             MyEvnetHandler.CloneSlotInWorld -= CloneSlotByItemPerfab;
+            MyEvnetHandler.DropItemEvent += OnDropItemEvent;
             MyEvnetHandler.AfterSceneLoadEvent -= OnSceneLoad;
             MyEvnetHandler.BeforeSceneUnloadEvent -= OnBeforeSceneUnloadEvent;
 
         }
         private void CloneSlotByItemPerfab(int itemID, Vector3 Pos)
+        {
+            var item = Instantiate(itemPerfab, Pos, Quaternion.identity,itemParent);
+            ItemOnWorld itemOnWorld = item.GetComponent<ItemOnWorld>();
+            itemOnWorld.CloneItem(itemID);
+        }
+        
+        private void OnDropItemEvent(int itemID, Vector3 Pos)
         {
             var item = Instantiate(itemPerfab, Pos, Quaternion.identity,itemParent);
             ItemOnWorld itemOnWorld = item.GetComponent<ItemOnWorld>();
