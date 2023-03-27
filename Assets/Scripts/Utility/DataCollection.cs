@@ -122,3 +122,54 @@ public class TileProperty
     public bool BoolTypeValue;
 
 }
+
+/// <summary>
+/// 对每一个瓦片信息做一个汇总
+/// 用一个数据就可以保存我们需要的所有信息
+/// 类似itemDetails
+/// </summary>
+[System.Serializable]
+public class TileDetails
+{
+    /// <summary>
+    /// 位置坐标
+    /// </summary>
+    public Vector2Int pos;
+    /// <summary>
+    /// 可以挖
+    /// </summary>
+    public bool canDig;
+    /// <summary>
+    /// 可以丢道具
+    /// </summary>
+    public bool canDropItem;
+    /// <summary>
+    /// 可以放家具的
+    /// </summary>
+    public bool canPlaceFurniture;
+    /// <summary>
+    /// 是否是障碍物
+    /// </summary>
+    public bool isNPCObstacle;
+    /// <summary>
+    /// 被开垦了多久时间
+    /// </summary>
+    public int daySinceDug = -1;
+    /// <summary>
+    /// 被水浇灌了多久
+    /// </summary>
+    public int daySinceWatered = -1;
+    /// <summary>
+    /// 种下的种子是什么
+    /// </summary>
+    public int seedItemId = -1;
+    /// <summary>
+    /// 在地里成长了多少天
+    /// </summary>
+    public int growthDays = -1;
+    /// <summary>
+    /// 距离上一次收割过去了多久时间
+    /// 可以多次收割的作物类型使用
+    /// </summary>
+    public int daysSinceLastHarvest = -1;
+}

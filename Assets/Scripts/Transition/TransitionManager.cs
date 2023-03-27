@@ -18,10 +18,11 @@ public class TransitionManager : MonoBehaviour
 
     private bool isFading = false; 
 
-    private void Start()
+    private IEnumerator Start()
     {
-        StartCoroutine(LoadSceneSetActive(startSceneName));
         fadeCanvasGroup = FindObjectOfType<CanvasGroup>();
+        yield return LoadSceneSetActive(startSceneName);
+        MyEvnetHandler.CallAfterSceneUnloadEvent();
     }
 
     private void OnEnable()

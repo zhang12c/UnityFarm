@@ -48,6 +48,7 @@
      <Compile Include="Assets/Scripts/Player/TiggerItemFader.cs" />
      <Compile Include="Assets/Scripts/Utility/MyEvnetHandler.cs" />
      <Compile Include="Assets/Scripts/Utility/Attribute/SceneNameDrawer.cs" />
+     <Compile Include="Assets/Scripts/Map/Logic/GridMapManager.cs" />
      <Compile Include="Assets/Scripts/Inventory/Item/ItemPickup.cs" />
      <Compile Include="Assets/Scripts/Player/AnimatorOveride.cs" />
      <Compile Include="Assets/Scripts/Transition/Teleport.cs" />
@@ -64,12 +65,12 @@
      <Compile Include="Assets/Scripts/Utility/Singleton.cs" />
      <Compile Include="Assets/Scripts/Inventory/UI/SlotUI.cs" />
      <Compile Include="Assets/Scripts/Inventory/UI/InventoryUI.cs" />
+     <Compile Include="Assets/Scripts/Map/Data/MapData_SO.cs" />
      <Compile Include="Assets/Scripts/Inventory/Item/ItemOnWorld.cs" />
      <Compile Include="Assets/Scripts/Cursor/CursorManager.cs" />
      <Compile Include="Assets/Scripts/Inventory/UI/ItemToolTip.cs" />
-     <Compile Include="Assets/Scripts/Inventory/Logic/InventoryManager.cs" />
-     <Compile Include="Assets/Scripts/Map/Data/MapData_SO.cs" />
      <Compile Include="Assets/Scripts/Map/Logic/GridMap.cs" />
+     <Compile Include="Assets/Scripts/Inventory/Logic/InventoryManager.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/Scripts/Cursor" />
      <Folder Include="Assets/M Studio/Art/Intro/Sign" />
