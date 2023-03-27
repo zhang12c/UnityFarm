@@ -58,15 +58,6 @@ public class AnimatorOveride : MonoBehaviour
     /// <param name="isSelected"></param>
     private void OnItemSelectedEvent(ItemDetails itemDetails, bool isSelected)
     {
-        if (!isSelected)
-        {
-            SwitchAnimator(PartType.None);
-            holdItemImage.enabled = false;
-            return;
-        }
-        holdItemImage.sprite = itemDetails.itemIcon;
-        holdItemImage.enabled = true;
-        // 又是一个无语的语法糖
         //---//
         // 道具的type 与 PartType 对比
         // 种子，商品，等可以被举起
@@ -77,6 +68,20 @@ public class AnimatorOveride : MonoBehaviour
             ItemType.Commodity => PartType.Carry,
             _ => PartType.None
         };
+        if (!isSelected)
+        {
+            SwitchAnimator(PartType.None);
+            holdItemImage.enabled = false;
+        }
+        else
+        {
+            if (partType == PartType.Carry)
+            {
+                holdItemImage.sprite = itemDetails.itemIcon;
+                holdItemImage.enabled = true;
+            }
+        }
+        
         SwitchAnimator(partType);
     }
     

@@ -388,6 +388,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20adebbe4d78f4b7dabf607f8dd4dcd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  digTile: {fileID: 11400000, guid: cd43435a9acf94329878be75f3e5f23f, type: 2}
+  waterTile: {fileID: 11400000, guid: 6578162f404b34d369b2436005d12ce1, type: 2}
   mapDataList:
   - {fileID: 11400000, guid: bf5d61ecf421b4c6ca6e4b1b2174257e, type: 2}
 --- !u!4 &863896806
@@ -729,7 +731,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c6b861b20ba4200beb1af81d1364992, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemPrefab: {fileID: 1359914061305052469, guid: 0f691942f59374fd1ba87eed43b503d0, type: 3}
+  prefab: {fileID: 1359914061305052469, guid: 0f691942f59374fd1ba87eed43b503d0, type: 3}
   boundPrefab: {fileID: 8332836452680189027, guid: bc86c6aca278d46e09adcb19e58adbf2, type: 3}
 --- !u!4 &1840157992
 Transform:

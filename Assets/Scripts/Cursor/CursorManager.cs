@@ -202,10 +202,31 @@ namespace Cursor
             var currentTile = GridMapManager.Instance.GetTileDetailsOnMousePosition(_mouseGirdPos);
             if (currentTile != null)
             {
+                //TODO: 补充物品类型
                 switch (_currentItem.itemType)
                 {
                     case ItemType.Commodity :
                         if (currentTile.canDropItem && _currentItem.canDropped)
+                        {
+                            SetCursorValid();
+                        }
+                        else
+                        {
+                            SetCursorInvalid();
+                        }
+                        break;
+                    case ItemType.HoeTool: // 锄头
+                        if (currentTile.canDig)
+                        {
+                            SetCursorValid();
+                        }
+                        else
+                        {
+                            SetCursorInvalid();
+                        }
+                        break;
+                    case ItemType.WaterTool: // 
+                        if (currentTile.daySinceDug > -1 && currentTile.daySinceWatered == -1 )
                         {
                             SetCursorValid();
                         }

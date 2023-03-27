@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Tilemaps;
 using Utility;
 using Grid = UnityEngine.Grid;
 
@@ -9,6 +10,14 @@ namespace Map.Logic
 {
     public class GridMapManager :  Singleton<GridMapManager>
     {
+        [Header("种地瓦片")]
+        public RuleTile digTile;
+        public RuleTile waterTile;
+
+        private Tilemap _digTileMap;
+        private Tilemap _waterTileMap;
+        
+        
         [Header("地图瓦片信息List")]
         public List<MapData_SO> mapDataList;
 
@@ -16,9 +25,9 @@ namespace Map.Logic
         /// 不同地图不通坐标下的瓦片信息是什么呢
         /// key: mapName+坐标 value: TitleDetails
         /// </summary>
-        private Dictionary<string, TileDetails> tileDetailsMap = new Dictionary<string, TileDetails>();
+        private Dictionary<string, TileDetails> _tileDetailsMap = new Dictionary<string, TileDetails>();
 
-        private Grid currentGrid;
+        private Grid _currentGrid;
 
         private void Start()
         {
@@ -78,11 +87,11 @@ namespace Map.Logic
                 }
                 if (GetTileDetails(st.ToString()) != null)
                 {
-                    tileDetailsMap[st.ToString()] = tileDetails;
+                    _tileDetailsMap[st.ToString()] = tileDetails;
                 }
                 else
                 {
-                    tileDetailsMap.Add(st.ToString(), tileDetails);
+                    _tileDetailsMap.Add(st.ToString(), tileDetails);
                 }
             
             
@@ -96,9 +105,9 @@ namespace Map.Logic
         /// <returns></returns>
         private TileDetails GetTileDetails(string key)
         {
-            if (tileDetailsMap.ContainsKey(key))
+            if (_tileDetailsMap.ContainsKey(key))
             {
-                return tileDetailsMap[key];
+                return _tileDetailsMap[key];
             }
             else
             {
@@ -119,7 +128,9 @@ namespace Map.Logic
     
         private void OnAfterSceneLoadEvent()
         {
-            currentGrid = FindObjectOfType<Grid>();
+            _currentGrid = FindObjectOfType<Grid>();
+            _digTileMap = GameObject.FindWithTag("Dig")?.GetComponent<Tilemap>();
+            _waterTileMap = GameObject.FindWithTag("Water")?.GetComponent<Tilemap>();
         }
     
         /// <summary>
@@ -130,7 +141,7 @@ namespace Map.Logic
         /// <param name="itemdetails">选中的道具ItemDetails</param>
         private void OnExecuteActionAfterAnimation(Vector3 mouseWorldPos, ItemDetails itemdetails)
         {
-            Vector3Int mouseGridPos = currentGrid.WorldToCell(mouseWorldPos);
+            Vector3Int mouseGridPos = _currentGrid.WorldToCell(mouseWorldPos);
             TileDetails currentTile = GetTileDetailsOnMousePosition(mouseGridPos);
             if (currentTile != null)
             {
@@ -139,7 +150,41 @@ namespace Map.Logic
                     case ItemType.Commodity:
                         MyEventHandler.CallDropItemEvent(itemdetails.itemID,mouseWorldPos);
                         break;
+                    case ItemType.HoeTool:
+                        SetDigGround(currentTile);
+                        currentTile.daySinceDug = 0;
+                        currentTile.canDig = false;
+                        currentTile.canDropItem = false;
+                        // TODO: 翻土音效
+                        break;
+                    case ItemType.WaterTool:
+                        SetWaterGround(currentTile);
+                        currentTile.daySinceWatered = 0;
+                        // TODO: 浇水音效
+                        break;
                 }
+            }
+        }
+        /// <summary>
+        /// 挖土的位置绘制泥土 RuleTile
+        /// 显示挖土瓦片
+        /// </summary>
+        /// <param name="tileDetails"></param>
+        private void SetDigGround(TileDetails tileDetails)
+        {
+            Vector3Int pos = new Vector3Int(tileDetails.pos.x, tileDetails.pos.y,0);
+            if (_digTileMap != null)
+            {
+                _digTileMap.SetTile(pos,digTile);
+            }
+        }
+
+        private void SetWaterGround(TileDetails tileDetails)
+        {
+            Vector3Int pos = new Vector3Int(tileDetails.pos.x, tileDetails.pos.y,0);
+            if (_waterTileMap != null)
+            {
+                _waterTileMap.SetTile(pos,waterTile);
             }
         }
     }
