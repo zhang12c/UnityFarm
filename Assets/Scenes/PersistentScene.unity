@@ -343,7 +343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46fe3f8222a6842d7b555aff19c4075b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startSceneName: 02_Home
+  startSceneName: 01_Field
 --- !u!4 &761468279
 Transform:
   m_ObjectHideFlags: 0

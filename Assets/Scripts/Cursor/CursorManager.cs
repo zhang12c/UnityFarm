@@ -63,11 +63,23 @@ public class CursorManager : MonoBehaviour
             {
                 SetCursorImage(currentSprite);
                 CheckCursorValid();
+                CheckPlayerInput();
             }
             else
             {
                 SetCursorImage(normal);
             }
+        }
+    }
+    /// <summary>
+    /// 检测点击左键还是右键
+    /// </summary>
+    private void CheckPlayerInput()
+    {
+        if (Input.GetMouseButtonDown(0) && cursorPositionValid)
+        {
+            // 执行什么
+            MyEvnetHandler.CallMouseClickedEvent(mouseWorldPos,currentItem);
         }
     }
 
@@ -162,7 +174,7 @@ public class CursorManager : MonoBehaviour
     /// </summary>
     private void CheckCursorValid()
     {
-        mouseWorldPos = mainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,Input.mousePosition.y,0));
+        mouseWorldPos = mainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,Input.mousePosition.y,-mainCamera.transform.position.z));
         mouseGirdPos = currentGrid.WorldToCell(mouseWorldPos);
         
         // 道具范围逻辑

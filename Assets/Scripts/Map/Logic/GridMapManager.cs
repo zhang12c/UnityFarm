@@ -1,7 +1,9 @@
+using System;
 using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Grid = UnityEngine.Grid;
 
 public class GridMapManager :  Singleton<GridMapManager>
 {
@@ -14,6 +16,8 @@ public class GridMapManager :  Singleton<GridMapManager>
     /// </summary>
     private Dictionary<string, TileDetails> tileDetailsMap = new Dictionary<string, TileDetails>();
 
+    private Grid currentGrid;
+
     private void Start()
     {
         /// 构建一下数据
@@ -21,6 +25,18 @@ public class GridMapManager :  Singleton<GridMapManager>
         {
             InitTileDetailsDict(mapData);
         }
+    }
+
+    private void OnEnable()
+    {
+        MyEvnetHandler.ExecuteActionAfterAnimation += OnExecuteActionAfterAnimation;
+        MyEvnetHandler.AfterSceneLoadEvent += OnAfterSceneLoadEvent;
+    }
+
+    private void OnDisable()
+    {
+        MyEvnetHandler.ExecuteActionAfterAnimation -= OnExecuteActionAfterAnimation;
+        MyEvnetHandler.AfterSceneLoadEvent += OnAfterSceneLoadEvent;
     }
     /// <summary>
     /// 初始化tile瓦片字典
@@ -97,5 +113,31 @@ public class GridMapManager :  Singleton<GridMapManager>
     {
         string key = mouseGridPos.x + "x" + mouseGridPos.y + "y" + SceneManager.GetActiveScene().name;
         return GetTileDetails(key);
+    }
+    
+    private void OnAfterSceneLoadEvent()
+    {
+        currentGrid = FindObjectOfType<Grid>();
+    }
+    
+    /// <summary>
+    /// 在玩家播放完动画之后
+    /// 需要对数据做修改了
+    /// </summary>
+    /// <param name="mouseWorldPos">鼠标世界坐标</param>
+    /// <param name="itemdetails">选中的道具ItemDetails</param>
+    private void OnExecuteActionAfterAnimation(Vector3 mouseWorldPos, ItemDetails itemdetails)
+    {
+        Vector3Int mouseGridPos = currentGrid.WorldToCell(mouseWorldPos);
+        TileDetails currentTile = GetTileDetailsOnMousePosition(mouseGridPos);
+        if (currentTile != null)
+        {
+            switch (itemdetails.itemType)
+            {
+                case ItemType.Commodity:
+                    MyEvnetHandler.CallCloneCloneSlotInWorld(itemdetails.itemID,mouseWorldPos);
+                    break;
+            }
+        }
     }
 }

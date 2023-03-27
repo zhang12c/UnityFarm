@@ -56,12 +56,15 @@ public class Player : MonoBehaviour
         MyEvnetHandler.AfterSceneLoadEvent += OnSceneLoad;
         MyEvnetHandler.BeforeSceneUnloadEvent += OnBeforeSceneUnload;
         MyEvnetHandler.MoveToPos += OnMoveToPos;
+        MyEvnetHandler.MouseClickedEvent += OnMouseClickedEvent;
     }
     private void OnDisable()
     {
         MyEvnetHandler.AfterSceneLoadEvent -= OnSceneLoad;
         MyEvnetHandler.BeforeSceneUnloadEvent -= OnBeforeSceneUnload;
         MyEvnetHandler.MoveToPos -= OnMoveToPos;
+        MyEvnetHandler.MouseClickedEvent -= OnMouseClickedEvent;
+
     }
     
     private void OnMoveToPos(Vector3 obj)
@@ -125,6 +128,13 @@ public class Player : MonoBehaviour
             animator.SetBool("isMoving",isMoving);
 
         }
+    }
+    
+    private void OnMouseClickedEvent(Vector3 pos, ItemDetails itemDetails)
+    {
+        // TODO 切换玩家的动作
+        // 播放动画之后
+        MyEvnetHandler.CallExecuteActionAfterAnimation(pos, itemDetails);
     }
 
 }

@@ -91,4 +91,21 @@ public static class MyEvnetHandler
         MoveToPos?.Invoke(pos);
     }
 
+    /// <summary>
+    /// 鼠标左键或者右键点击的事件
+    /// </summary>
+    public static event Action<Vector3, ItemDetails> MouseClickedEvent;
+    public static void CallMouseClickedEvent(Vector3 pos, ItemDetails itemDetails)
+    {
+        MouseClickedEvent?.Invoke(pos,itemDetails);
+    }
+    /// <summary>
+    /// 播放动画之后
+    /// </summary>
+    public static event Action<Vector3, ItemDetails> ExecuteActionAfterAnimation;
+    public static void CallExecuteActionAfterAnimation(Vector3 pos, ItemDetails itemDetails)
+    {
+        ExecuteActionAfterAnimation?.Invoke(pos,itemDetails);
+    }
+
 }
