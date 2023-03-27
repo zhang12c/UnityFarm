@@ -4,6 +4,7 @@ using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Utility;
 
 public class TimeUI : MonoBehaviour
 {
@@ -48,13 +49,13 @@ public class TimeUI : MonoBehaviour
 
     private void OnEnable()
     {
-        MyEvnetHandler.GameMinuteEvent += OnMinuteEvent;
-        MyEvnetHandler.GameDateEvent += OnGameDateEvent;
+        MyEventHandler.GameMinuteEvent += OnMinuteEvent;
+        MyEventHandler.GameDateEvent += OnGameDateEvent;
     }
     private void OnDisable()
     {
-        MyEvnetHandler.GameMinuteEvent -= OnMinuteEvent;
-        MyEvnetHandler.GameDateEvent -= OnGameDateEvent;
+        MyEventHandler.GameMinuteEvent -= OnMinuteEvent;
+        MyEventHandler.GameDateEvent -= OnGameDateEvent;
     }
     private void OnMinuteEvent(int m, int h)
     {

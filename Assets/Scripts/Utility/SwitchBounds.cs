@@ -1,6 +1,7 @@
 using System;
 using Cinemachine;
 using UnityEngine;
+using Utility;
 
 public class SwitchBounds : MonoBehaviour
 {
@@ -29,11 +30,11 @@ public class SwitchBounds : MonoBehaviour
 
     private void OnEnable()
     {
-        MyEvnetHandler.AfterSceneLoadEvent += OnSceneLoad;
+        MyEventHandler.AfterSceneLoadEvent += OnSceneLoad;
     }
     private void OnDisable()
     {
-        MyEvnetHandler.AfterSceneLoadEvent -= OnSceneLoad;
+        MyEventHandler.AfterSceneLoadEvent -= OnSceneLoad;
     }
     
     private void OnSceneLoad()

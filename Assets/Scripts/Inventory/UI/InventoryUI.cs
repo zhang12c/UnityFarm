@@ -1,8 +1,10 @@
 using System;
 using System.Collections.Generic;
 using Inventory.Logic;
+using Inventory.UI;
 using UnityEngine;
 using UnityEngine.UI;
+using Utility;
 namespace Inventory
 {
     /// <summary>
@@ -37,8 +39,8 @@ namespace Inventory
 
         private void OnEnable()
         {
-            MyEvnetHandler.UpdateInventoryUI += OnUpdateInventoryUI;
-            MyEvnetHandler.AfterSceneLoadEvent += OnAfterSceneLoadEvent;
+            MyEventHandler.UpdateInventoryUI += OnUpdateInventoryUI;
+            MyEventHandler.AfterSceneLoadEvent += OnAfterSceneLoadEvent;
         }
 
         /// <summary>
@@ -53,8 +55,8 @@ namespace Inventory
         }
         private void OnDisable()
         {
-            MyEvnetHandler.UpdateInventoryUI -= OnUpdateInventoryUI;
-            MyEvnetHandler.AfterSceneLoadEvent -= OnAfterSceneLoadEvent;
+            MyEventHandler.UpdateInventoryUI -= OnUpdateInventoryUI;
+            MyEventHandler.AfterSceneLoadEvent -= OnAfterSceneLoadEvent;
         }
         
         private void OnAfterSceneLoadEvent()
@@ -104,11 +106,11 @@ namespace Inventory
             {
                 if (i == slotIndex && _slotUis[i].isSelected)
                 {
-                    _slotUis[i].itemSelectImage.gameObject.SetActive(true);
+                    _slotUis[i].selectImage.gameObject.SetActive(true);
                 }
                 else
                 {
-                    _slotUis[i].itemSelectImage.gameObject.SetActive(false);
+                    _slotUis[i].selectImage.gameObject.SetActive(false);
                     _slotUis[i].isSelected = false;
                 }
             }

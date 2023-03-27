@@ -1,7 +1,8 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-namespace Inventory
+using Utility;
+namespace Inventory.UI
 {
     public class ItemToolTip : MonoBehaviour
     {

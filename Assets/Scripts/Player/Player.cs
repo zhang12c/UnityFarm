@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Utility;
 
 public class Player : MonoBehaviour
 {
@@ -53,17 +54,17 @@ public class Player : MonoBehaviour
     }
     private void OnEnable()
     {
-        MyEvnetHandler.AfterSceneLoadEvent += OnSceneLoad;
-        MyEvnetHandler.BeforeSceneUnloadEvent += OnBeforeSceneUnload;
-        MyEvnetHandler.MoveToPos += OnMoveToPos;
-        MyEvnetHandler.MouseClickedEvent += OnMouseClickedEvent;
+        MyEventHandler.AfterSceneLoadEvent += OnSceneLoad;
+        MyEventHandler.BeforeSceneUnloadEvent += OnBeforeSceneUnload;
+        MyEventHandler.MoveToPos += OnMoveToPos;
+        MyEventHandler.MouseClickedEvent += OnMouseClickedEvent;
     }
     private void OnDisable()
     {
-        MyEvnetHandler.AfterSceneLoadEvent -= OnSceneLoad;
-        MyEvnetHandler.BeforeSceneUnloadEvent -= OnBeforeSceneUnload;
-        MyEvnetHandler.MoveToPos -= OnMoveToPos;
-        MyEvnetHandler.MouseClickedEvent -= OnMouseClickedEvent;
+        MyEventHandler.AfterSceneLoadEvent -= OnSceneLoad;
+        MyEventHandler.BeforeSceneUnloadEvent -= OnBeforeSceneUnload;
+        MyEventHandler.MoveToPos -= OnMoveToPos;
+        MyEventHandler.MouseClickedEvent -= OnMouseClickedEvent;
 
     }
     
@@ -134,7 +135,7 @@ public class Player : MonoBehaviour
     {
         // TODO 切换玩家的动作
         // 播放动画之后
-        MyEvnetHandler.CallExecuteActionAfterAnimation(pos, itemDetails);
+        MyEventHandler.CallExecuteActionAfterAnimation(pos, itemDetails);
     }
 
 }

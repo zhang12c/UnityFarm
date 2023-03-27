@@ -19,7 +19,7 @@ namespace Inventory.Item
         /// <summary>
         /// 飞行的G值
         /// </summary>
-        public float gravity = 0.3f;
+        public float gravity;
         /// <summary>
         /// 是否到达地面
         /// </summary>

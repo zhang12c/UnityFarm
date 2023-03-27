@@ -4,6 +4,7 @@ using Inventory.Data_SO;
 using Inventory.Item;
 using UnityEngine;
 using UnityEngine.Serialization;
+using Utility;
 
 namespace Inventory.Logic
 {
@@ -18,17 +19,17 @@ namespace Inventory.Logic
 
         private void OnEnable()
         {
-            MyEvnetHandler.DropItemEvent += OnDropItemEvent;
+            MyEventHandler.DropItemEvent += OnDropItemEvent;
         }
 
         private void OnDisable()
         {
-            MyEvnetHandler.DropItemEvent += OnDropItemEvent;
+            MyEventHandler.DropItemEvent += OnDropItemEvent;
 
         }
         private void Start()
         {
-            MyEvnetHandler.CallUpdateInventoryUI(InventoryLocation.Player,_playerBag.itemInventoryItems);
+            MyEventHandler.CallUpdateInventoryUI(InventoryLocation.Player,_playerBag.itemInventoryItems);
         }
         // itemID => itemDetails
         public ItemDetails GetItemDetails(int ID)
@@ -56,7 +57,7 @@ namespace Inventory.Logic
             }
             
             // 更新UI 数据变化了
-            MyEvnetHandler.CallUpdateInventoryUI(InventoryLocation.Player,_playerBag.itemInventoryItems);
+            MyEventHandler.CallUpdateInventoryUI(InventoryLocation.Player,_playerBag.itemInventoryItems);
         }
 
         /// <summary>
@@ -139,7 +140,7 @@ namespace Inventory.Logic
                 _playerBag.itemInventoryItems[from] = new InventoryItem();
             }
             
-            MyEvnetHandler.CallUpdateInventoryUI(InventoryLocation.Player,_playerBag.itemInventoryItems);
+            MyEventHandler.CallUpdateInventoryUI(InventoryLocation.Player,_playerBag.itemInventoryItems);
         }
 
         private void RemoveItem(int ID, int removeAmount)
@@ -160,7 +161,7 @@ namespace Inventory.Logic
             }
             
             // 刷新一下界面
-            MyEvnetHandler.CallUpdateInventoryUI(InventoryLocation.Player,_playerBag.itemInventoryItems);
+            MyEventHandler.CallUpdateInventoryUI(InventoryLocation.Player,_playerBag.itemInventoryItems);
         }
         /// <summary>
         /// 道具丢弃出去，就需要在数据库中 -= 这个道具

@@ -4,17 +4,24 @@ using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
+using Utility;
 namespace Inventory.Logic
 {
     public class ItemManager : MonoBehaviour
     {
-        [FormerlySerializedAs("掉落物预制体")]
-        public GameObject itemPrefab;
+        [FormerlySerializedAs("itemPrefab")]
+        public GameObject prefab;
 
         [FormerlySerializedAs("丢出道具预制体")]
         public GameObject boundPrefab;
 
-        private Transform _playerTransform => FindObjectOfType<Player>().transform;
+        private Transform _playerTransform
+        {
+            get
+            {
+                return FindObjectOfType<Player>().transform;
+            }
+        }
 
         private Transform itemParent;
 
@@ -29,23 +36,23 @@ namespace Inventory.Logic
 
         private void OnEnable()
         {
-            MyEvnetHandler.CloneSlotInWorld += CloneSlotByItemPerfab;
-            MyEvnetHandler.DropItemEvent += OnDropItemEvent;
-            MyEvnetHandler.AfterSceneLoadEvent += OnSceneLoad;
-            MyEvnetHandler.BeforeSceneUnloadEvent += OnBeforeSceneUnloadEvent;
+            MyEventHandler.CloneSlotInWorld += CloneSlotByItemPerfab;
+            MyEventHandler.DropItemEvent += OnDropItemEvent;
+            MyEventHandler.AfterSceneLoadEvent += OnSceneLoad;
+            MyEventHandler.BeforeSceneUnloadEvent += OnBeforeSceneUnloadEvent;
 
         }
         private void OnDisable()
         {
-            MyEvnetHandler.CloneSlotInWorld -= CloneSlotByItemPerfab;
-            MyEvnetHandler.DropItemEvent += OnDropItemEvent;
-            MyEvnetHandler.AfterSceneLoadEvent -= OnSceneLoad;
-            MyEvnetHandler.BeforeSceneUnloadEvent -= OnBeforeSceneUnloadEvent;
+            MyEventHandler.CloneSlotInWorld -= CloneSlotByItemPerfab;
+            MyEventHandler.DropItemEvent += OnDropItemEvent;
+            MyEventHandler.AfterSceneLoadEvent -= OnSceneLoad;
+            MyEventHandler.BeforeSceneUnloadEvent -= OnBeforeSceneUnloadEvent;
 
         }
         private void CloneSlotByItemPerfab(int itemID, Vector3 Pos)
         {
-            var item = Instantiate(itemPrefab, Pos, Quaternion.identity,itemParent);
+            var item = Instantiate(prefab, Pos, Quaternion.identity,itemParent);
             ItemOnWorld itemOnWorld = item.GetComponent<ItemOnWorld>();
             itemOnWorld.CloneItem(itemID);
         }
@@ -120,7 +127,7 @@ namespace Inventory.Logic
                     }
                     foreach (var item in currentSceneItemSaves)
                     {
-                        var obj = Instantiate(itemPrefab, item.itemSerializableVector3.ToVector3(),quaternion.identity);
+                        var obj = Instantiate(prefab, item.itemSerializableVector3.ToVector3(),quaternion.identity);
                         ItemOnWorld itemOnWorld = obj.GetComponent<ItemOnWorld>();
                         itemOnWorld.CloneItem(item.itemID);
                     }

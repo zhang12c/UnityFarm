@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using Utility;
 
 public class Teleport : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class Teleport : MonoBehaviour
     {
         if (col.CompareTag("Player"))
         {
-            MyEvnetHandler.CallSceneTransitionEvent(transitionScene,posToGo);
+            MyEventHandler.CallSceneTransitionEvent(transitionScene,posToGo);
         }
     }
 }

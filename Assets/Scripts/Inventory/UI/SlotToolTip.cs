@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Inventory;
+using Inventory.UI;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -18,11 +19,11 @@ public class SlotToolTip : MonoBehaviour,IPointerEnterHandler,IPointerExitHandle
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        var itemDetails = _slotUI._itemDetails;
-        if (_slotUI._itemDetails != null)
+        var itemDetails = _slotUI.itemDetails;
+        if (_slotUI.itemDetails != null)
         {
             _inventoryUI.itemToolTip.gameObject.SetActive(true);
-            _inventoryUI.itemToolTip.SetupToolTip(itemDetails,_slotUI._slotType);
+            _inventoryUI.itemToolTip.SetupToolTip(itemDetails,_slotUI.slotType);
             var slotRect = _slotUI.GetComponent<RectTransform>();
             _inventoryUI.itemToolTip.transform.position = new Vector3(transform.position.x,transform.position.y + slotRect.rect.height / 2,transform.position.z);
         }

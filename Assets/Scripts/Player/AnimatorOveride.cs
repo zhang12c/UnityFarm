@@ -1,8 +1,6 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using Utility;
 
 public class AnimatorOveride : MonoBehaviour
 {
@@ -36,13 +34,13 @@ public class AnimatorOveride : MonoBehaviour
     }
     private void OnEnable()
     {
-        MyEvnetHandler.ItemSelectedEvent += OnItemSelectedEvent;
-        MyEvnetHandler.AfterSceneLoadEvent += OnAfterSceneLoadEvent;
+        MyEventHandler.ItemSelectedEvent += OnItemSelectedEvent;
+        MyEventHandler.AfterSceneLoadEvent += OnAfterSceneLoadEvent;
     }
     private void OnDisable()
     {
-        MyEvnetHandler.ItemSelectedEvent -= OnItemSelectedEvent;
-        MyEvnetHandler.AfterSceneLoadEvent -= OnAfterSceneLoadEvent;
+        MyEventHandler.ItemSelectedEvent -= OnItemSelectedEvent;
+        MyEventHandler.AfterSceneLoadEvent -= OnAfterSceneLoadEvent;
     }
     
     /// <summary>

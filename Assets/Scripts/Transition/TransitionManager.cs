@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Utility;
 
 /// <summary>
 /// 控制场景的切换
@@ -22,17 +23,17 @@ public class TransitionManager : MonoBehaviour
     {
         fadeCanvasGroup = FindObjectOfType<CanvasGroup>();
         yield return LoadSceneSetActive(startSceneName);
-        MyEvnetHandler.CallAfterSceneUnloadEvent();
+        MyEventHandler.CallAfterSceneUnloadEvent();
     }
 
     private void OnEnable()
     {
-        MyEvnetHandler.SceneTransitionEvent += SceneTransitionEven;
+        MyEventHandler.SceneTransitionEvent += SceneTransitionEven;
     }
 
     private void OnDisable()
     {
-        MyEvnetHandler.SceneTransitionEvent -= SceneTransitionEven;
+        MyEventHandler.SceneTransitionEvent -= SceneTransitionEven;
     }
     
     private IEnumerator LoadSceneSetActive(string sceneName)
@@ -64,7 +65,7 @@ public class TransitionManager : MonoBehaviour
     /// <returns></returns>
     private IEnumerator SceneTransition(string sceneName,Vector3 targetPos)
     {
-        MyEvnetHandler.CallBeforeSceneUnloadEvent();
+        MyEventHandler.CallBeforeSceneUnloadEvent();
         // 开始渐入
         yield return DoFade(1);
         
@@ -73,9 +74,9 @@ public class TransitionManager : MonoBehaviour
 
         yield return StartCoroutine(LoadSceneSetActive(sceneName));
         
-        MyEvnetHandler.CallMoveToPos(targetPos);
+        MyEventHandler.CallMoveToPos(targetPos);
         // 场景切换成功后的事件
-        MyEvnetHandler.CallAfterSceneUnloadEvent();
+        MyEventHandler.CallAfterSceneUnloadEvent();
         // 退出渐入
         yield return DoFade(0);
 

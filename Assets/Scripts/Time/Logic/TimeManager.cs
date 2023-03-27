@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Utility;
 
 public class TimeManager : MonoBehaviour
 {
@@ -33,8 +34,8 @@ public class TimeManager : MonoBehaviour
     private void Start()
     {
         // 第一次登陆的时候需要初始化一下时间
-        MyEvnetHandler.CallGameDateEvent(gameHour,gameDay,gameMonth,gameYear,gameSeason);
-        MyEvnetHandler.CallGameMinuteEvent(gameMinute,gameHour);
+        MyEventHandler.CallGameDateEvent(gameHour,gameDay,gameMonth,gameYear,gameSeason);
+        MyEventHandler.CallGameMinuteEvent(gameMinute,gameHour);
     }
 
     private void Update()
@@ -108,13 +109,13 @@ public class TimeManager : MonoBehaviour
                     }
                 }
                 // 避免冲突调用2次的话，可以启用else
-                MyEvnetHandler.CallGameDateEvent(gameHour,gameDay,gameMonth,gameYear,gameSeason);
+                MyEventHandler.CallGameDateEvent(gameHour,gameDay,gameMonth,gameYear,gameSeason);
                 //else
                 {
                     //MyEvnetHandler.CallGameDateEvent(gameHour,gameDay,gameMonth,gameYear,gameSeason);
                 }
             }
-            MyEvnetHandler.CallGameMinuteEvent(gameMinute,gameHour);
+            MyEventHandler.CallGameMinuteEvent(gameMinute,gameHour);
             //else
             {
                 //MyEvnetHandler.CallGameMinuteEvent(gameMinute,gameHour);
