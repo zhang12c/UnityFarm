@@ -53,6 +53,11 @@ public class AnimatorOveride : MonoBehaviour
         holdItemImage.enabled = false;
         SwitchAnimator(PartType.None);
     }
+    /// <summary>
+    /// 选中了什么道具，播放举起动作，设置举起图片
+    /// </summary>
+    /// <param name="itemDetails"></param>
+    /// <param name="isSelected"></param>
     private void OnItemSelectedEvent(ItemDetails itemDetails, bool isSelected)
     {
         if (!isSelected)

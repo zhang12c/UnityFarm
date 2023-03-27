@@ -100,6 +100,11 @@ public class CursorManager : MonoBehaviour
         cursorEnable = false;
     }
 
+    /// <summary>
+    /// 设置鼠标的样式
+    /// </summary>
+    /// <param name="itemDetails"></param>
+    /// <param name="isSelected"></param>
     private void OnItemSelectedEvent(ItemDetails itemDetails, bool isSelected)
     {
         if (!isSelected)
@@ -128,6 +133,10 @@ public class CursorManager : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// 设置鼠标的图标
+    /// </summary>
+    /// <param name="sprite"></param>
     private void SetCursorImage(Sprite sprite)
     {
         cursorImage.sprite = sprite;
@@ -137,6 +146,7 @@ public class CursorManager : MonoBehaviour
     #region 鼠标的样式设置
     /// <summary>
     /// 鼠标的可用
+    /// 正常显示
     /// </summary>
     private void SetCursorValid()
     {
@@ -146,6 +156,7 @@ public class CursorManager : MonoBehaviour
     
     /// <summary>
     /// 鼠标不可用
+    /// 变红色，变半透明
     /// </summary>
     private void SetCursorInvalid()
     {
