@@ -131,6 +131,7 @@ namespace Map.Logic
             _currentGrid = FindObjectOfType<Grid>();
             _digTileMap = GameObject.FindWithTag("Dig")?.GetComponent<Tilemap>();
             _waterTileMap = GameObject.FindWithTag("Water")?.GetComponent<Tilemap>();
+            ShowTileMap(SceneManager.GetActiveScene().name);
         }
     
         /// <summary>
@@ -163,6 +164,8 @@ namespace Map.Logic
                         // TODO: 浇水音效
                         break;
                 }
+
+                UpdateTileDetails(currentTile);
             }
         }
         /// <summary>
@@ -185,6 +188,43 @@ namespace Map.Logic
             if (_waterTileMap != null)
             {
                 _waterTileMap.SetTile(pos,waterTile);
+            }
+        }
+        /// <summary>
+        /// 更新瓦片信息
+        /// </summary>
+        /// <param name="tileDetails"></param>
+        private void UpdateTileDetails(TileDetails tileDetails)
+        {
+            string key = tileDetails.pos.x + "x" + tileDetails.pos.y + "y" + SceneManager.GetActiveScene().name;
+            if (_tileDetailsMap.ContainsKey(key))
+            {
+                _tileDetailsMap[key] = tileDetails;
+            }
+        }
+        /// <summary>
+        /// 显示tile信息
+        /// 主要在切换场景的时候执行
+        /// </summary>
+        /// <param name="sceneName"></param>
+        private void ShowTileMap(string sceneName)
+        {
+            foreach (var tile in _tileDetailsMap)
+            {
+                var key = tile.Key;
+                var tileDetails = tile.Value;
+                if (key.Contains(sceneName))
+                {
+                    if (tileDetails.daySinceDug > -1)
+                    {
+                        SetDigGround(tileDetails);
+                    }
+                    if (tileDetails.daySinceWatered > -1)
+                    {
+                        SetWaterGround(tileDetails);
+                    }
+                    // 种子
+                }
             }
         }
     }

@@ -147,6 +147,7 @@
      <Folder Include="Assets/M Studio/Animations/Basic Empty Clips" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader" />
      <Folder Include="Assets/M Studio/Art/Items/Icons" />
+     <Folder Include="Assets/M Studio/Animators/Player" />
      <None Include="Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader" />
      <Folder Include="Assets/M Studio/Art/Trees/pink" />
@@ -207,6 +208,7 @@
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader" />
      <Folder Include="Assets/M Studio" />
      <Folder Include="Assets/TileMaps" />
+     <Folder Include="Assets/M Studio/Animators/Tool" />
      <Folder Include="Assets/M Studio/Art/Characters" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader" />
      <Folder Include="Assets/Tool" />
@@ -215,6 +217,7 @@
      <Folder Include="Assets/TextMesh Pro/Documentation" />
      <Folder Include="Assets/Scripts/Map/Logic" />
      <Folder Include="Assets/Scripts/Time/UI" />
+     <Folder Include="Assets/M Studio/Animators/UI" />
      <Folder Include="Assets/M Studio/Art/Characters/Shadow" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader" />
      <Folder Include="Assets/M Studio/Art/Characters/Player/Tools/Hoe" />
