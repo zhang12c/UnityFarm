@@ -6,6 +6,5 @@ namespace Inventory.Data_SO
     public class InventoryBag_SO : ScriptableObject
     {
         public List<InventoryItem> itemInventoryItems;
-        
     }
 }
