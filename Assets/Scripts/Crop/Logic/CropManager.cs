@@ -5,7 +5,7 @@ using UnityEngine;
 using Utility;
 namespace Crop.Logic
 {
-    public class CropManager : MonoBehaviour
+    public class CropManager : Singleton<CropManager>
     {
         public CropDataListSo cropDataListSo;
         /// <summary>
@@ -96,7 +96,7 @@ namespace Crop.Logic
 
         }
 
-        private CropDetails GetCropDetails(int id)
+        public CropDetails GetCropDetails(int id)
         {
             return cropDataListSo.cropDataList.Find(details => id == details.seedItemID );
         }

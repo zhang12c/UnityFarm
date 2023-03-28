@@ -68,6 +68,7 @@ public class AnimatorOveride : MonoBehaviour
             ItemType.Commodity => PartType.Carry,
             ItemType.HoeTool => PartType.Hoe,
             ItemType.WaterTool => PartType.Water,
+            ItemType.CollectTool => PartType.Collect,
             _ => PartType.None
         };
         if (!isSelected)

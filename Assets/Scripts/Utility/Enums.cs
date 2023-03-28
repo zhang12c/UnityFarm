@@ -70,6 +70,7 @@ namespace Utility
         Hoe,
         Break,
         Water,
+        Collect,
     }
 
     /// <summary>
