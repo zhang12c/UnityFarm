@@ -20,11 +20,13 @@ namespace Inventory.Logic
         private void OnEnable()
         {
             MyEventHandler.DropItemEvent += OnDropItemEvent;
+            MyEventHandler.NewAtPlayerPositionEvent += OnNewAtPlayerPositionEvent;
         }
 
         private void OnDisable()
         {
             MyEventHandler.DropItemEvent += OnDropItemEvent;
+            MyEventHandler.NewAtPlayerPositionEvent -= OnNewAtPlayerPositionEvent;
 
         }
         private void Start()
@@ -55,6 +57,24 @@ namespace Inventory.Logic
             {
                 Destroy(item.gameObject);
             }
+            
+            // 更新UI 数据变化了
+            MyEventHandler.CallUpdateInventoryUI(InventoryLocation.Player,_playerBag.itemInventoryItems);
+        }
+
+        public void AddItem(int id)
+        {
+            // 是否已经有物品
+            int hasInBagIndex = CheckItemInBag(id);
+            
+            // 背包是否有空位
+            if (!CheckBagCapacity())
+            {
+                return;
+            }
+            // 有容量背包里也没有
+            // 那就添加一个
+            AddItemAtIndex(id, hasInBagIndex, 1);
             
             // 更新UI 数据变化了
             MyEventHandler.CallUpdateInventoryUI(InventoryLocation.Player,_playerBag.itemInventoryItems);
@@ -171,6 +191,15 @@ namespace Inventory.Logic
         private void OnDropItemEvent(int itemId, Vector3 pos,ItemType type)
         {
             RemoveItem(itemId, 1);
+        }
+        
+        /// <summary>
+        /// 生成收获道具
+        /// </summary>
+        /// <param name="itemID">收获id</param>
+        private void OnNewAtPlayerPositionEvent(int itemID)
+        {
+            AddItem(itemID);
         }
 
     }

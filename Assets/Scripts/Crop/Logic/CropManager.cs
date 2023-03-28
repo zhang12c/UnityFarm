@@ -94,6 +94,10 @@ namespace Crop.Logic
 
             cropInstance.GetComponentInChildren<SpriteRenderer>().sprite = currentSprite;
 
+            // 种子的详情赋值
+            CropItem cropItem = cropInstance.GetComponent<CropItem>();
+            cropItem.cropDetails = cropDetails;
+
         }
 
         public CropDetails GetCropDetails(int id)

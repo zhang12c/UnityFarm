@@ -64,6 +64,39 @@ namespace Crop.Data
         /// </summary>
         public bool hasParticalEffect;
 
+        /// <summary>
+        /// 检验tool是否可以当收割道具用
+        /// </summary>
+        /// <param name="toolID">道具ID</param>
+        /// <returns></returns>
+        public bool CheckToolAvailable(int toolID)
+        {
+            foreach (var toolId in harvestToolItemID)
+            {
+                if (toolId == toolID)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
 
+        /// <summary>
+        /// 使用道具几次，才能收割
+        /// </summary>
+        /// <param name="toolId">道具ID</param>
+        /// <returns></returns>
+        public int GetTotalRequireCount(int toolId)
+        {
+            for (int i = 0; i < harvestToolItemID.Length; i++)
+            {
+                if (harvestToolItemID[i] == toolId)
+                {
+                    // 潜规则：可使用的道具和可使用的次数一一对应的
+                    return requireActionCount[i];
+                }
+            }
+            return -1;
+        }
     }
 }

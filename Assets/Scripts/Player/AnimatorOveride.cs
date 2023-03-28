@@ -1,4 +1,6 @@
+using System.Collections;
 using System.Collections.Generic;
+using Inventory.Logic;
 using UnityEngine;
 using Utility;
 
@@ -36,11 +38,13 @@ public class AnimatorOveride : MonoBehaviour
     {
         MyEventHandler.ItemSelectedEvent += OnItemSelectedEvent;
         MyEventHandler.AfterSceneLoadEvent += OnAfterSceneLoadEvent;
+        MyEventHandler.NewAtPlayerPositionEvent += OnNewAtPlayerPositionEvent;
     }
     private void OnDisable()
     {
         MyEventHandler.ItemSelectedEvent -= OnItemSelectedEvent;
         MyEventHandler.AfterSceneLoadEvent -= OnAfterSceneLoadEvent;
+        MyEventHandler.NewAtPlayerPositionEvent -= OnNewAtPlayerPositionEvent;
     }
     
     /// <summary>
@@ -103,5 +107,31 @@ public class AnimatorOveride : MonoBehaviour
                 animatorNameDict[animatorType.partName.ToString()].runtimeAnimatorController = animatorType.animatorOverrideController;
             }
         }
+    }
+    
+    /// <summary>
+    /// 收获时举起道具显示
+    /// </summary>
+    /// <param name="id"></param>
+    private void OnNewAtPlayerPositionEvent(int id)
+    {
+        Sprite sprite = InventoryManager.Instance.GetItemDetails(id).itemOnWorldSprite;
+        if (holdItemImage.enabled == false)
+        {
+            StartCoroutine(ShowItem(sprite));
+        }
+    }
+
+    /// <summary>
+    /// 短暂显示一下举着的道具
+    /// </summary>
+    /// <param name="sprite"></param>
+    /// <returns></returns>
+    private IEnumerator ShowItem(Sprite sprite)
+    {
+        holdItemImage.sprite = sprite;
+        holdItemImage.enabled = true;
+        yield return new WaitForSeconds(1f);
+        holdItemImage.enabled = false;
     }
 }

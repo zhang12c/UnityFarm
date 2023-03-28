@@ -234,7 +234,7 @@ namespace Cursor
                         break;
                     case ItemType.CollectTool: // 收割
                         if (cropDetails != null)
-                            if (currentTile.growthDays >= cropDetails.TotalGrowthDays)
+                            if (currentTile.growthDays >= cropDetails.TotalGrowthDays && cropDetails.CheckToolAvailable(_currentItem.itemID))
                                 SetCursorValid();
                             else
                                 SetCursorInvalid();

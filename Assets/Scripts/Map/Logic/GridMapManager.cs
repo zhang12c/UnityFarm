@@ -195,7 +195,6 @@ namespace Map.Logic
                     case ItemType.seed:
                         MyEventHandler.CallPlantSeedEvent(itemdetails.itemID, currentTile);
                         MyEventHandler.CallDropItemEvent(itemdetails.itemID,mouseWorldPos,itemdetails.itemType);
-
                         break;
                     case ItemType.Commodity:
                         MyEventHandler.CallDropItemEvent(itemdetails.itemID,mouseWorldPos,itemdetails.itemType);
@@ -211,6 +210,14 @@ namespace Map.Logic
                         SetWaterGround(currentTile);
                         currentTile.daySinceWatered = 0;
                         // TODO: 浇水音效
+                        break;
+                    case ItemType.CollectTool:
+                        CropItem cropItem = GetCropObject(mouseWorldPos);
+                        if (cropItem != null)
+                        {
+                            // 收割逻辑写在cropItem里面
+                            cropItem.ProcessToolAction(itemdetails);
+                        }
                         break;
                 }
 
@@ -302,6 +309,20 @@ namespace Map.Logic
                     }
                 }
             }
+        }
+
+        private CropItem GetCropObject(Vector3 mouseWorldPos)
+        {
+            Collider2D[] collider2Ds = Physics2D.OverlapPointAll(mouseWorldPos);
+            CropItem cropItem = null;
+            for (int i = 0; i < collider2Ds.Length; i++)
+            {
+                if (collider2Ds[i].GetComponent<CropItem>() != null)
+                {
+                    cropItem = collider2Ds[i].GetComponent<CropItem>();
+                }
+            }
+            return cropItem;
         }
     }
 }

@@ -139,5 +139,15 @@ namespace Utility
         {
             PlantSeedEvent?.Invoke(id, tileDetails);
         }
+        
+        /// <summary>
+        /// 在玩家位置生成物品
+        /// </summary>
+        public static event Action<int> NewAtPlayerPositionEvent;
+        public static void CallNewAtPlayerPosition(int id)
+        {
+            NewAtPlayerPositionEvent?.Invoke(id);
+        }
+        
     }
 }
