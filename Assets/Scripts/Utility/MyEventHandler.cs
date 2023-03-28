@@ -134,5 +134,10 @@ namespace Utility
             ExecuteActionAfterAnimation?.Invoke(pos,itemDetails);
         }
 
+        public static event Action<int, TileDetails> PlantSeedEvent;
+        public static void CallPlantSeedEvent(int id, TileDetails tileDetails)
+        {
+            PlantSeedEvent?.Invoke(id, tileDetails);
+        }
     }
 }

@@ -205,6 +205,16 @@ namespace Cursor
                 //TODO: 补充物品类型
                 switch (_currentItem.itemType)
                 {
+                    case ItemType.seed:
+                        if (currentTile.daySinceDug > -1 && currentTile.seedItemId == -1)
+                        {
+                            SetCursorValid();
+                        }
+                        else
+                        {
+                            SetCursorInvalid();
+                        }
+                        break;
                     case ItemType.Commodity :
                         if (currentTile.canDropItem && _currentItem.canDropped)
                         {

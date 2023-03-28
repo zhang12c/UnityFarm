@@ -185,6 +185,10 @@ namespace Map.Logic
             {
                 switch (itemdetails.itemType)
                 {
+                    // 绘Tile
+                    case ItemType.seed:
+                        MyEventHandler.CallPlantSeedEvent(itemdetails.itemID, currentTile);
+                        break;
                     case ItemType.Commodity:
                         MyEventHandler.CallDropItemEvent(itemdetails.itemID,mouseWorldPos);
                         break;

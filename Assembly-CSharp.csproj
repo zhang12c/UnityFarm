@@ -42,6 +42,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets/Scripts/Utility/SwitchBounds.cs" />
+     <Compile Include="Assets/Scripts/Crop/Logic/CropManager.cs" />
      <Compile Include="Assets/Scripts/Transition/TransitionManager.cs" />
      <Compile Include="Assets/Scripts/Player/Player.cs" />
      <Compile Include="Assets/Scripts/Inventory/Data_SO/ItemDataList_SO.cs" />
@@ -65,16 +66,16 @@
      <Compile Include="Assets/Scripts/Utility/Singleton.cs" />
      <Compile Include="Assets/Scripts/Inventory/UI/SlotUI.cs" />
      <Compile Include="Assets/Scripts/Inventory/UI/InventoryUI.cs" />
+     <Compile Include="Assets/Scripts/Crop/Data/CropDataListSo.cs" />
      <Compile Include="Assets/Scripts/Map/Data/MapData_SO.cs" />
      <Compile Include="Assets/Scripts/Inventory/Item/ItemOnWorld.cs" />
      <Compile Include="Assets/Scripts/Cursor/CursorManager.cs" />
      <Compile Include="Assets/Scripts/Inventory/Item/ItemBounce.cs" />
      <Compile Include="Assets/Scripts/Inventory/UI/ItemToolTip.cs" />
      <Compile Include="Assets/Scripts/Map/Logic/GridMap.cs" />
+     <Compile Include="Assets/Scripts/Crop/Data/CropDetails.cs" />
      <Compile Include="Assets/Scripts/Inventory/Logic/InventoryManager.cs" />
      <Compile Include="Assets/Scripts/Inventory/Item/ItemShadow.cs" />
-     <Compile Include="Assets/Scripts/Crop/Data/CropDetails.cs" />
-     <Compile Include="Assets/Scripts/Crop/CropDataListSo.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/Scripts/Cursor" />
      <Folder Include="Assets/GameARTRes/Art/Intro/Sign" />
@@ -138,6 +139,7 @@
      <Folder Include="Assets/Animator" />
      <Folder Include="Assets/GameARTRes/Art/Characters/Girl05" />
      <Folder Include="Assets/GameARTRes/Art/Items/Tree02" />
+     <Folder Include="Assets/Scripts/Crop/Logic" />
      <Folder Include="Assets/GameARTRes/Art/Trees/green" />
      <Folder Include="Assets/Perfab/UI" />
      <Folder Include="Assets/GameARTRes/Art" />
@@ -217,6 +219,7 @@
      <Folder Include="Assets/Tool" />
      <None Include="Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt" />
      <Folder Include="Assets/Perfab" />
+     <Folder Include="Assets/GameData/Crop" />
      <Folder Include="Assets/TextMesh Pro/Documentation" />
      <Folder Include="Assets/Scripts/Map/Logic" />
      <Folder Include="Assets/Scripts/Time/UI" />

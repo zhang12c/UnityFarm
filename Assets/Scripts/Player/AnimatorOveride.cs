@@ -82,9 +82,16 @@ public class AnimatorOveride : MonoBehaviour
                 holdItemImage.sprite = itemDetails.itemIcon;
                 holdItemImage.enabled = true;
             }
+            else
+            {
+                holdItemImage.sprite = null;
+                holdItemImage.enabled = false;
+                // 把手放下，不然他arm 的不改变
+                SwitchAnimator(PartType.None);
+            }
+            SwitchAnimator(partType);
+
         }
-        
-        SwitchAnimator(partType);
     }
     
     // 由 partType 得到 对应的animator
