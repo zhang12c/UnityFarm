@@ -57,13 +57,18 @@ namespace Inventory.Logic
             itemOnWorld.CloneItem(itemID);
         }
         
-        private void OnDropItemEvent(int itemId, Vector3 mousePos)
+        private void OnDropItemEvent(int itemId, Vector3 mousePos,ItemType type)
         {
-            var item = Instantiate(boundPrefab, _playerTransform.position, Quaternion.identity,itemParent);
+            if (type == ItemType.seed)
+            {
+                return;
+            }
+            var position = _playerTransform.position;
+            var item = Instantiate(boundPrefab, position, Quaternion.identity,itemParent);
             ItemOnWorld itemOnWorld = item.GetComponent<ItemOnWorld>();
             itemOnWorld.CloneItem(itemId);
             
-            var dir = (mousePos - _playerTransform.position).normalized;
+            var dir = (mousePos - position).normalized;
             item.GetComponent<ItemBounce>().InitBounceItem(mousePos, dir);
         }
 

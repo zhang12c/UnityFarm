@@ -95,7 +95,7 @@ Animator:
   m_GameObject: {fileID: 2302813936727892543}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 22100000, guid: 4c9a1d078364e44e18d9feaf3b2f4063, type: 2}
+  m_Controller: {fileID: 22100000, guid: ac5e59637976c492baea23f65971e5aa, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -308,7 +308,7 @@ GameObject:
   - component: {fileID: 5929390440102700803}
   - component: {fileID: 5929390440892590397}
   m_Layer: 0
-  m_Name: Boby
+  m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -570,6 +570,24 @@ MonoBehaviour:
   - partType: 4
     partName: 3
     animatorOverrideController: {fileID: 22100000, guid: ac5e59637976c492baea23f65971e5aa, type: 2}
+  - partType: 2
+    partName: 2
+    animatorOverrideController: {fileID: 22100000, guid: dddd0c650b3c84818b0f03988d85a947, type: 2}
+  - partType: 4
+    partName: 2
+    animatorOverrideController: {fileID: 22100000, guid: dddd0c650b3c84818b0f03988d85a947, type: 2}
+  - partType: 2
+    partName: 0
+    animatorOverrideController: {fileID: 22100000, guid: e14b216b59a6d47be84a0e821bffe27b, type: 2}
+  - partType: 4
+    partName: 0
+    animatorOverrideController: {fileID: 22100000, guid: e14b216b59a6d47be84a0e821bffe27b, type: 2}
+  - partType: 2
+    partName: 1
+    animatorOverrideController: {fileID: 22100000, guid: 348026276dd3f4335a9659fb43196352, type: 2}
+  - partType: 4
+    partName: 1
+    animatorOverrideController: {fileID: 22100000, guid: 348026276dd3f4335a9659fb43196352, type: 2}
 --- !u!1 &5929390441309512229
 GameObject:
   m_ObjectHideFlags: 0

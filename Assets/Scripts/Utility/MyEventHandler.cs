@@ -33,15 +33,15 @@ namespace Utility
         /// <summary>
         /// 将物体克隆到场景中
         /// </summary>
-        public static event Action<int, Vector3> DropItemEvent;
+        public static event Action<int, Vector3,ItemType> DropItemEvent;
         /// <summary>
         /// 
         /// </summary>
         /// <param name="itemId">道具Id</param>
         /// <param name="pos">坐标位置</param>
-        public static void CallDropItemEvent(int itemId, Vector3 pos)
+        public static void CallDropItemEvent(int itemId, Vector3 pos,ItemType type)
         {
-            DropItemEvent?.Invoke(itemId,pos);
+            DropItemEvent?.Invoke(itemId,pos,type);
         }
     
     

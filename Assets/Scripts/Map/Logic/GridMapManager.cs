@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Text;
+using Crop.Logic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
@@ -166,6 +167,11 @@ namespace Map.Logic
                 {
                     tile.Value.daySinceDug = -1;
                     tile.Value.canDig = true;
+                    tile.Value.growthDays = -1;
+                }
+                if (tile.Value.seedItemId != -1)
+                {
+                    tile.Value.growthDays++;
                 }
             }
             RefreshMap();
@@ -188,9 +194,11 @@ namespace Map.Logic
                     // 绘Tile
                     case ItemType.seed:
                         MyEventHandler.CallPlantSeedEvent(itemdetails.itemID, currentTile);
+                        MyEventHandler.CallDropItemEvent(itemdetails.itemID,mouseWorldPos,itemdetails.itemType);
+
                         break;
                     case ItemType.Commodity:
-                        MyEventHandler.CallDropItemEvent(itemdetails.itemID,mouseWorldPos);
+                        MyEventHandler.CallDropItemEvent(itemdetails.itemID,mouseWorldPos,itemdetails.itemType);
                         break;
                     case ItemType.HoeTool:
                         SetDigGround(currentTile);
@@ -257,6 +265,14 @@ namespace Map.Logic
             {
                 _waterTileMap.ClearAllTiles();
             }
+            
+            // 清空一下原有的作物
+            foreach (var cropItem in FindObjectsOfType<CropItem>())
+            {
+                Destroy(cropItem);
+            }
+            
+            
             ShowTileMap(SceneManager.GetActiveScene().name);
         }
         /// <summary>
@@ -280,7 +296,10 @@ namespace Map.Logic
                     {
                         SetWaterGround(tileDetails);
                     }
-                    // 种子
+                    if (tileDetails.seedItemId > -1)
+                    {
+                        MyEventHandler.CallPlantSeedEvent(tileDetails.seedItemId,tileDetails);
+                    }
                 }
             }
         }

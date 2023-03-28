@@ -76,6 +76,7 @@
      <Compile Include="Assets/Scripts/Crop/Data/CropDetails.cs" />
      <Compile Include="Assets/Scripts/Inventory/Logic/InventoryManager.cs" />
      <Compile Include="Assets/Scripts/Inventory/Item/ItemShadow.cs" />
+     <Compile Include="Assets/Scripts/Crop/Logic/CropItem.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/Scripts/Cursor" />
      <Folder Include="Assets/GameARTRes/Art/Intro/Sign" />

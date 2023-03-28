@@ -72,26 +72,24 @@ public class AnimatorOveride : MonoBehaviour
         };
         if (!isSelected)
         {
-            SwitchAnimator(PartType.None);
+            partType = PartType.None;
             holdItemImage.enabled = false;
         }
         else
         {
             if (partType == PartType.Carry)
             {
-                holdItemImage.sprite = itemDetails.itemIcon;
+                holdItemImage.sprite = itemDetails.itemOnWorldSprite;
                 holdItemImage.enabled = true;
             }
             else
             {
-                holdItemImage.sprite = null;
                 holdItemImage.enabled = false;
                 // 把手放下，不然他arm 的不改变
-                SwitchAnimator(PartType.None);
+                //SwitchAnimator(PartType.None);
             }
-            SwitchAnimator(partType);
-
         }
+        SwitchAnimator(partType);
     }
     
     // 由 partType 得到 对应的animator

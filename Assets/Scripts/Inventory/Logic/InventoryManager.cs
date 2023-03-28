@@ -168,7 +168,7 @@ namespace Inventory.Logic
         /// </summary>
         /// <param name="itemId">道具ID</param>
         /// <param name="pos">世界坐标</param>
-        private void OnDropItemEvent(int itemId, Vector3 pos)
+        private void OnDropItemEvent(int itemId, Vector3 pos,ItemType type)
         {
             RemoveItem(itemId, 1);
         }
