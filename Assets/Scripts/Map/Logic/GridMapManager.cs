@@ -22,6 +22,12 @@ namespace Map.Logic
         public List<MapData_SO> mapDataList;
 
         /// <summary>
+        /// 当前的季节
+        /// 以后用来判断种子可否种下
+        /// </summary>
+        private Season _season;
+
+        /// <summary>
         /// 不同地图不通坐标下的瓦片信息是什么呢
         /// key: mapName+坐标 value: TitleDetails
         /// </summary>
@@ -42,12 +48,14 @@ namespace Map.Logic
         {
             MyEventHandler.ExecuteActionAfterAnimation += OnExecuteActionAfterAnimation;
             MyEventHandler.AfterSceneLoadEvent += OnAfterSceneLoadEvent;
+            MyEventHandler.GameDayEvent += OnGameDayEvent;
         }
 
         private void OnDisable()
         {
             MyEventHandler.ExecuteActionAfterAnimation -= OnExecuteActionAfterAnimation;
             MyEventHandler.AfterSceneLoadEvent += OnAfterSceneLoadEvent;
+            MyEventHandler.GameDayEvent -= OnGameDayEvent;
         }
         /// <summary>
         /// 初始化tile瓦片字典
@@ -133,6 +141,35 @@ namespace Map.Logic
             _waterTileMap = GameObject.FindWithTag("Water")?.GetComponent<Tilemap>();
             ShowTileMap(SceneManager.GetActiveScene().name);
         }
+        /// <summary>
+        /// 每一天执行一次
+        /// </summary>
+        /// <param name="day"></param>
+        /// <param name="season"></param>
+        private void OnGameDayEvent(int day, Season season)
+        {
+            // 保存一下当前的季节
+            _season = season;
+            
+            // 刷新tile 的日期
+            foreach (var tile in _tileDetailsMap)
+            {
+                if (tile.Value.daySinceWatered > -1)
+                {
+                    tile.Value.daySinceWatered = -1;
+                }
+                if (tile.Value.daySinceDug > -1)
+                {
+                    tile.Value.daySinceDug++;
+                }
+                if (tile.Value.daySinceDug > 3 && tile.Value.seedItemId == -1 && Random.Range(1,5) >= 2)
+                {
+                    tile.Value.daySinceDug = -1;
+                    tile.Value.canDig = true;
+                }
+            }
+            RefreshMap();
+        }
     
         /// <summary>
         /// 在玩家播放完动画之后
@@ -201,6 +238,22 @@ namespace Map.Logic
             {
                 _tileDetailsMap[key] = tileDetails;
             }
+        }
+
+        /// <summary>
+        /// 重新绘制一下地图
+        /// </summary>
+        private void RefreshMap()
+        {
+            if (_digTileMap != null)
+            {
+                _digTileMap.ClearAllTiles();
+            }
+            if (_waterTileMap != null)
+            {
+                _waterTileMap.ClearAllTiles();
+            }
+            ShowTileMap(SceneManager.GetActiveScene().name);
         }
         /// <summary>
         /// 显示tile信息

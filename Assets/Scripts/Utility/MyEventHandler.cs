@@ -72,6 +72,15 @@ namespace Utility
         {
             GameDateEvent?.Invoke(h,d,m,y,season);
         }
+        
+        /// <summary>
+        /// 每天执行一次
+        /// </summary>
+        public static event Action<int,Season> GameDayEvent;
+        public static void CallGameDayEvent(int d,Season season)
+        {
+            GameDayEvent?.Invoke(d,season);
+        }
         /// <summary>
         /// 场景切换
         /// </summary>

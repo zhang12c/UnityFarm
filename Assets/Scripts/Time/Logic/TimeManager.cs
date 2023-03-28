@@ -50,6 +50,7 @@ public class TimeManager : MonoBehaviour
                 UpdateGameTime();
             }
         }
+        #region 作弊代码
         if (Input.GetKey(KeyCode.T))
         {
             for (int i = 0; i < 60; i++)
@@ -57,6 +58,13 @@ public class TimeManager : MonoBehaviour
                 UpdateGameTime();
             }
         }
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            gameDay++;
+            MyEventHandler.CallGameDayEvent(gameDay,gameSeason);
+            MyEventHandler.CallGameDateEvent(gameHour,gameDay,gameMonth,gameYear,gameSeason);
+        }
+        #endregion
     }
 
     /// <summary>
@@ -64,21 +72,26 @@ public class TimeManager : MonoBehaviour
     /// </summary>
     private void UpdateGameTime()
     {
+        // 秒
         gameSecond++;
         if (gameSecond >= Settings.secondHold)
         {
+            // 分
             gameMinute++;
             gameSecond = 0;
             if (gameMinute >= Settings.minutedHold)
             {
+                // 时
                 gameHour++;
                 gameMinute = 0;
                 if (gameHour >= Settings.hourHold)
                 {
+                    // 天
                     gameDay ++;
                     gameHour = 0;
                     if (gameDay >= Settings.dayHold)
                     {
+                        // 月
                         gameMonth++;
                         gameDay = 1;
                         if (gameMonth > 12)
@@ -90,6 +103,7 @@ public class TimeManager : MonoBehaviour
                         mouthInSeason--;
                         if (mouthInSeason <= 0) // 过季节了
                         {
+                            // 季
                             // 1个季节3个月
                             mouthInSeason = 3;
                             
@@ -99,6 +113,7 @@ public class TimeManager : MonoBehaviour
                             // +1 后季节的
                             if (seasonNumber > Settings.seasonHold)
                             {
+                                // 年
                                 seasonNumber = 0;
                                 gameYear++;
                             }
@@ -107,6 +122,9 @@ public class TimeManager : MonoBehaviour
                             
                         }
                     }
+                    
+                    // 每过一天，需要刷新作物的信息
+                    MyEventHandler.CallGameDayEvent(gameDay,gameSeason);
                 }
                 // 避免冲突调用2次的话，可以启用else
                 MyEventHandler.CallGameDateEvent(gameHour,gameDay,gameMonth,gameYear,gameSeason);
