@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - BoundsConfiner
+  - ItemOnWorldParent
+  - CursorCanvas
+  - Water
+  - Dig
+  - CropParent
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Ground Top
+    uniqueID: 1203131931
+    locked: 0
+  - name: Ground Moddle
+    uniqueID: 2243871213
+    locked: 0
+  - name: Ground Bottom
+    uniqueID: 3149169573
+    locked: 0
+  - name: Strff 1
+    uniqueID: 1214296177
+    locked: 0
+  - name: Strff 2
+    uniqueID: 2493033483
+    locked: 0
+  - name: Dig
+    uniqueID: 668344149
+    locked: 0
+  - name: Water
+    uniqueID: 2154274155
+    locked: 0
+  - name: Instance
+    uniqueID: 3327252997
+    locked: 0
+  - name: Front 1
+    uniqueID: 1052674113
+    locked: 0
+  - name: Front 2
+    uniqueID: 1062789783
+    locked: 0
+  - name: Collision
+    uniqueID: 3804448709
+    locked: 0
