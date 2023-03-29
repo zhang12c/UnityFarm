@@ -152,8 +152,8 @@ public class TimeManager : MonoBehaviour
         gameMinute = 0;
         gameHour = 7;
         gameDay = 1;
-        gameMonth = 1;
+        gameMonth = 7;
         gameYear = 2023;
-        gameSeason = Season.Spring;
+        gameSeason = Season.Autumn;
     }
 }

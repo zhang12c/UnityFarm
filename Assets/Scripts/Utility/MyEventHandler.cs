@@ -149,5 +149,14 @@ namespace Utility
             NewAtPlayerPositionEvent?.Invoke(id);
         }
         
+        /// <summary>
+        /// 刷新地图的瓦片信息
+        /// </summary>
+        public static event Action RefreshCurrentMapEven;
+        public static void CallRefreshCurrentMapEven()
+        {
+            RefreshCurrentMapEven?.Invoke();
+        }
+
     }
 }

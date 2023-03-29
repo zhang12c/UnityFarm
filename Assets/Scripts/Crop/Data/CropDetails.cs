@@ -47,7 +47,9 @@ namespace Crop.Data
         public Vector2 spawnRadiuse;
         //
         [Header("再次生长时间")]
+        // 再次生长的事件
         public int daysToRegrow;
+        // 重新生长的次数
         public int regrowTimes;
         //
         /// <summary>

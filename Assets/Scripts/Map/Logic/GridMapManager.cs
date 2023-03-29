@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Text;
 using Crop.Logic;
@@ -6,6 +7,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
 using Utility;
 using Grid = UnityEngine.Grid;
+using Random = UnityEngine.Random;
 
 namespace Map.Logic
 {
@@ -50,6 +52,7 @@ namespace Map.Logic
             MyEventHandler.ExecuteActionAfterAnimation += OnExecuteActionAfterAnimation;
             MyEventHandler.AfterSceneLoadEvent += OnAfterSceneLoadEvent;
             MyEventHandler.GameDayEvent += OnGameDayEvent;
+            MyEventHandler.RefreshCurrentMapEven += RefreshMap;
         }
 
         private void OnDisable()
@@ -57,7 +60,10 @@ namespace Map.Logic
             MyEventHandler.ExecuteActionAfterAnimation -= OnExecuteActionAfterAnimation;
             MyEventHandler.AfterSceneLoadEvent += OnAfterSceneLoadEvent;
             MyEventHandler.GameDayEvent -= OnGameDayEvent;
+            MyEventHandler.RefreshCurrentMapEven -= RefreshMap;
+
         }
+        
         /// <summary>
         /// 初始化tile瓦片字典
         /// </summary>
@@ -216,7 +222,7 @@ namespace Map.Logic
                         if (cropItem != null)
                         {
                             // 收割逻辑写在cropItem里面
-                            cropItem.ProcessToolAction(itemdetails);
+                            cropItem.ProcessToolAction(itemdetails,currentTile);
                         }
                         break;
                 }
@@ -276,7 +282,7 @@ namespace Map.Logic
             // 清空一下原有的作物
             foreach (var cropItem in FindObjectsOfType<CropItem>())
             {
-                Destroy(cropItem);
+                Destroy(cropItem.gameObject);
             }
             
             

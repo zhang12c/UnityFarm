@@ -44,6 +44,7 @@
      <Compile Include="Assets/Scripts/Utility/SwitchBounds.cs" />
      <Compile Include="Assets/Scripts/Crop/Logic/CropManager.cs" />
      <Compile Include="Assets/Scripts/Transition/TransitionManager.cs" />
+     <Compile Include="Assets/Scripts/Crop/Logic/CropItem.cs" />
      <Compile Include="Assets/Scripts/Player/Player.cs" />
      <Compile Include="Assets/Scripts/Inventory/Data_SO/ItemDataList_SO.cs" />
      <Compile Include="Assets/Scripts/Player/TiggerItemFader.cs" />
@@ -76,7 +77,6 @@
      <Compile Include="Assets/Scripts/Crop/Data/CropDetails.cs" />
      <Compile Include="Assets/Scripts/Inventory/Logic/InventoryManager.cs" />
      <Compile Include="Assets/Scripts/Inventory/Item/ItemShadow.cs" />
-     <Compile Include="Assets/Scripts/Crop/Logic/CropItem.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/Scripts/Cursor" />
      <Folder Include="Assets/GameARTRes/Art/Intro/Sign" />
@@ -227,6 +227,7 @@
      <Folder Include="Assets/GameARTRes/Animators/UI" />
      <Folder Include="Assets/GameARTRes/Art/Characters/Shadow" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader" />
+     <Folder Include="Assets/Perfab/Crop" />
      <Folder Include="Assets/GameARTRes/Art/Characters/Player/Tools/Hoe" />
      <Folder Include="Assets/GameARTRes/Tilemap/Tiles" />
      <Folder Include="Assets/GameARTRes/Art/Characters/M" />
