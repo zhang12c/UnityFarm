@@ -45,7 +45,13 @@ namespace Inventory.UI
         // 是否被选中了
         public bool isSelected;
     
-        private InventoryUI _inventoryUI => GetComponentInParent<InventoryUI>();
+        public InventoryUI InventoryUI
+        {
+            get
+            {
+                return GetComponentInParent<InventoryUI>();
+            }
+        }
 
 
         private void Start()
@@ -65,7 +71,7 @@ namespace Inventory.UI
             if (isSelected)
             {
                 isSelected = false;
-                _inventoryUI.UpdateSlotSelected(-1);
+                InventoryUI.UpdateSlotSelected(-1);
                 MyEventHandler.CallItemSelectedEvent(itemDetails, isSelected);
             }
             itemDetails = null;
@@ -96,7 +102,7 @@ namespace Inventory.UI
             isSelected = !isSelected;
             selectImage.gameObject.SetActive(isSelected);
 
-            _inventoryUI.UpdateSlotSelected(slotIndex);
+            InventoryUI.UpdateSlotSelected(slotIndex);
         
             // 举起的事件逻辑
             // 
@@ -115,12 +121,12 @@ namespace Inventory.UI
         {
             if (amount != 0)
             {
-                _inventoryUI.dragImage.gameObject.SetActive(true);
-                _inventoryUI.dragImage.sprite = image.sprite;
-                _inventoryUI.dragImage.SetNativeSize();
+                InventoryUI.dragImage.gameObject.SetActive(true);
+                InventoryUI.dragImage.sprite = image.sprite;
+                InventoryUI.dragImage.SetNativeSize();
             
                 isSelected = true;
-                _inventoryUI.UpdateSlotSelected(slotIndex);
+                InventoryUI.UpdateSlotSelected(slotIndex);
             }
         }
     
@@ -130,7 +136,7 @@ namespace Inventory.UI
         /// <param name="eventData"></param>
         public void OnDrag(PointerEventData eventData)
         {
-            _inventoryUI.dragImage.transform.position = Input.mousePosition;
+            InventoryUI.dragImage.transform.position = Input.mousePosition;
         }
     
         /// <summary>
@@ -139,7 +145,7 @@ namespace Inventory.UI
         /// <param name="eventData"></param>
         public void OnEndDrag(PointerEventData eventData)
         {
-            _inventoryUI.dragImage.gameObject.SetActive(false);
+            InventoryUI.dragImage.gameObject.SetActive(false);
             isSelected = false;
             selectImage.gameObject.SetActive(isSelected);
         
