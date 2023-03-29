@@ -232,6 +232,7 @@ namespace Cursor
                         else
                             SetCursorInvalid();
                         break;
+                    case ItemType.ChopTool: // 斧头 和 收割一致，所以使用相同的
                     case ItemType.CollectTool: // 收割
                         if (cropDetails != null)
                             if (currentTile.growthDays >= cropDetails.TotalGrowthDays && cropDetails.CheckToolAvailable(_currentItem.itemID))

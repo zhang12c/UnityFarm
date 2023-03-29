@@ -217,6 +217,7 @@ namespace Map.Logic
                         currentTile.daySinceWatered = 0;
                         // TODO: 浇水音效
                         break;
+                    case ItemType.ChopTool: // 斧头 收割
                     case ItemType.CollectTool:
                         CropItem cropItem = GetCropObject(mouseWorldPos);
                         if (cropItem != null)

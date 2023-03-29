@@ -71,6 +71,7 @@ namespace Utility
         Break,
         Water,
         Collect,
+        Chop,
     }
 
     /// <summary>

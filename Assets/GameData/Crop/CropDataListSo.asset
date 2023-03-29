@@ -29,7 +29,7 @@ MonoBehaviour:
     - {fileID: -1080373613, guid: bd1655396b777431e85369611fc36aed, type: 3}
     seasons: 0000000001000000
     harvestToolItemID: f4030000
-    requireActionCount: 01000000
+    requireActionCount: 00000000
     transFerItemID: 0
     producedItemID: ee030000
     producedMinAmount: 01000000
@@ -56,14 +56,14 @@ MonoBehaviour:
     - {fileID: -1031843392, guid: 24e3edf5cfa4d468fbdeed1f09a965a8, type: 3}
     seasons: 02000000
     harvestToolItemID: f4030000
-    requireActionCount: 01000000
+    requireActionCount: 00000000
     transFerItemID: 0
     producedItemID: fa030000
     producedMinAmount: 05000000
     producedMaxAmount: 05000000
     spawnRadiuse: {x: 0, y: 0}
-    daysToRegrow: 0
-    regrowTimes: 0
+    daysToRegrow: 2
+    regrowTimes: 3
     generateAtPlayerPosition: 1
     hasAnimation: 0
     hasParticalEffect: 0
@@ -120,4 +120,58 @@ MonoBehaviour:
     regrowTimes: 0
     generateAtPlayerPosition: 1
     hasAnimation: 0
+    hasParticalEffect: 0
+  - seedItemID: 1021
+    growthDays: 0100000002000000020000000200000002000000
+    growthPreFab:
+    - {fileID: 5397569008786518507, guid: 6e32717fe6db8477f9baddb6377e1d08, type: 3}
+    - {fileID: 5397569008786518507, guid: 6e32717fe6db8477f9baddb6377e1d08, type: 3}
+    - {fileID: 5397569008786518507, guid: 6e32717fe6db8477f9baddb6377e1d08, type: 3}
+    - {fileID: 5397569008786518507, guid: 6e32717fe6db8477f9baddb6377e1d08, type: 3}
+    - {fileID: 5430344845085893574, guid: e1770b840dc63401b93100778e1db5b1, type: 3}
+    growthSprites:
+    - {fileID: 21300000, guid: 3979be82862ab4b42be8e0b3222694bc, type: 3}
+    - {fileID: 21300000, guid: b344f2cee7ac54d7ab52e493a1bb4ee7, type: 3}
+    - {fileID: 21300000, guid: c54002cd9727a43329d7f75c50778b57, type: 3}
+    - {fileID: 21300000, guid: 4590cd3fefdd74b22ae749a122189ece, type: 3}
+    - {fileID: 21300000, guid: e12c6f18fb50544fea7f5245a9a2aeff, type: 3}
+    seasons: 000000000100000002000000
+    harvestToolItemID: e9030000
+    requireActionCount: 05000000
+    transFerItemID: 1022
+    producedItemID: fd030000ef030000
+    producedMinAmount: 0200000005000000
+    producedMaxAmount: 0200000005000000
+    spawnRadiuse: {x: 0, y: 0}
+    daysToRegrow: 0
+    regrowTimes: 0
+    generateAtPlayerPosition: 0
+    hasAnimation: 1
+    hasParticalEffect: 0
+  - seedItemID: 1023
+    growthDays: 0100000002000000020000000200000002000000
+    growthPreFab:
+    - {fileID: 5397569008786518507, guid: 6e32717fe6db8477f9baddb6377e1d08, type: 3}
+    - {fileID: 5397569008786518507, guid: 6e32717fe6db8477f9baddb6377e1d08, type: 3}
+    - {fileID: 5397569008786518507, guid: 6e32717fe6db8477f9baddb6377e1d08, type: 3}
+    - {fileID: 5397569008786518507, guid: 6e32717fe6db8477f9baddb6377e1d08, type: 3}
+    - {fileID: 5430344845085893574, guid: cee11f2ebca164802ae286677fbcfa98, type: 3}
+    growthSprites:
+    - {fileID: 21300000, guid: 83539708444bc497b8d9f5bba223cc6f, type: 3}
+    - {fileID: 21300000, guid: 309497be57b084f4da5b2c165ddceca7, type: 3}
+    - {fileID: 21300000, guid: 41bef8696d59f440aa1befb8b23dee5e, type: 3}
+    - {fileID: 21300000, guid: 0a4318b810b0f467fab50a11f472c746, type: 3}
+    - {fileID: 21300000, guid: a21492e2d90cf4f038c4b9ae2600c5ff, type: 3}
+    seasons: 000000000100000002000000
+    harvestToolItemID: e9030000
+    requireActionCount: 05000000
+    transFerItemID: 1024
+    producedItemID: ff030000ef030000
+    producedMinAmount: 0200000005000000
+    producedMaxAmount: 0200000005000000
+    spawnRadiuse: {x: 0, y: 0}
+    daysToRegrow: 0
+    regrowTimes: 0
+    generateAtPlayerPosition: 0
+    hasAnimation: 1
     hasParticalEffect: 0

@@ -11,6 +11,17 @@ namespace Crop.Logic
         private int _doActionCount = 0;
         // 
         private TileDetails _tileDetails;
+        // 收割过程中的动画
+        private Animator _animator;
+        // 实现左右摇晃
+        // 获得人物的坐标 与 种子的坐标
+        private Transform PlayerTransForm
+        {
+            get
+            {
+                return FindObjectOfType<Player>().transform;
+            }
+        }
 
         public void ProcessToolAction(ItemDetails tool,TileDetails tileDetails)
         {
@@ -24,19 +35,35 @@ namespace Crop.Logic
             }
 
             // 是否有动画
-            
+            _animator = GetComponentInChildren<Animator>();
+
             // 计算点击的次数
             if (_doActionCount < requireActionCount)
             {
                 _doActionCount++;
-                // 声音 + 效果
+                // 声音 + 效果 类似 砍树
+                if (_animator != null && cropDetails.hasAnimation)
+                {
+                    if (PlayerTransForm.position.x < transform.position.x) // 在树的左边
+                    {
+                        _animator.SetTrigger("RotateRight");
+                    }
+                    else
+                    {
+                        _animator.SetTrigger("RotateLeft");
+                    }
+                }
             }
             else
             {
-                if (cropDetails.generateAtPlayerPosition)
+                // 收割成功 逻辑
+                if (cropDetails.generateAtPlayerPosition) // 直接加到背包中
                 {
                     // 生成农作物
                     SpawnHarvestItems();
+                }else if (cropDetails.hasAnimation) // 有动画的
+                {
+                    
                 }
             }
 

@@ -1,6 +1,7 @@
 using System;
 using DG.Tweening;
 using UnityEngine;
+using Utility;
 
 // 一定要有这个组件
 [RequireComponent(typeof(SpriteRenderer))]
