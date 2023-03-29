@@ -1,7 +1,10 @@
+using System;
+using System.Collections;
 using Crop.Data;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Utility;
+using Random = UnityEngine.Random;
 namespace Crop.Logic
 {
     public class CropItem : MonoBehaviour
@@ -9,7 +12,7 @@ namespace Crop.Logic
         // 收割的逻辑
         public CropDetails cropDetails;
         // 点击的次数
-        private int _doActionCount = 0;
+        private int _doActionCount = 1;
         // 
         public TileDetails tileDetails;
         // 收割过程中的动画
@@ -35,6 +38,15 @@ namespace Crop.Logic
             }
         }
 
+        private void OnEnable()
+        {
+            MyEventHandler.TreeFallingAnimationOverEven += OnTreeFallingAnimationOverEvent;
+        }
+
+        private void OnDisable()
+        {
+            MyEventHandler.TreeFallingAnimationOverEven -= OnTreeFallingAnimationOverEvent;
+        }
         public void ProcessToolAction(ItemDetails tool,TileDetails tileDetails)
         {
             this.tileDetails = tileDetails;
@@ -69,21 +81,47 @@ namespace Crop.Logic
             }
             else
             {
-                Debug.Log("收割成功 逻辑");
                 // 收割成功 逻辑
-                if (cropDetails.generateAtPlayerPosition) // 直接加到背包中
+                if (cropDetails.generateAtPlayerPosition || !cropDetails.hasAnimation) // 直接加到背包中
                 {
                     // 生成农作物
                     SpawnHarvestItems();
                 }else if (cropDetails.hasAnimation) // 有动画的
                 {
+                    if (PlayerTransForm.position.x < transform.position.x)
+                    {
+                        _animator.SetTrigger("FallingRight");
+                    }
+                    else
+                    {
+                        _animator.SetTrigger("FallingLeft");
+                    }
                     
+                    // 动画播放完了之后，就得去生成掉落物品了
                 }
             }
 
 
         }
+        
+        /// <summary>
+        /// 动画播放完了之后，就得去生成掉落物品了
+        /// </summary>
+        private void OnTreeFallingAnimationOverEvent()
+        {
+            // 生成物品
+            SpawnHarvestItems();
+            //Debug.Log("生成物品啦物品啦");
 
+            if (cropDetails.transFerItemID > 0)
+            {
+                CreateTransferCrop();
+            }
+        }
+
+        /// <summary>
+        /// 生成农作物
+        /// </summary>
         public void SpawnHarvestItems()
         {
             for (int i = 0; i < cropDetails.producedItemID.Length; i++)
@@ -109,7 +147,15 @@ namespace Crop.Logic
                     else
                     {
                         // 生成到地图上的
+                        // 随机一个位置
+                        var dirX = transform.position.x > PlayerTransForm.position.x ? 1 : -1;
+                        var position = transform.position;
+                        var spawPos = new Vector3(position.x + Random.Range(dirX, cropDetails.spawnRadiuse.x * dirX), //x
+                            position.y + Random.Range(Random.Range(-cropDetails.spawnRadiuse.y, cropDetails.spawnRadiuse.y), //y
+                                0) //z
+                        );
                         
+                        MyEventHandler.CallCloneCloneSlotInWorld(cropDetails.producedItemID[i],spawPos);
                     }
                 }
             }
@@ -137,9 +183,17 @@ namespace Crop.Logic
                 Destroy(gameObject);
             }
         }
-        //
-        
-        
-        
+
+        /// <summary>
+        /// 生成树桩
+        /// </summary>
+        private void CreateTransferCrop()
+        {
+            tileDetails.seedItemId = cropDetails.transFerItemID;
+            tileDetails.daysSinceLastHarvest = -1;
+            tileDetails.growthDays = 0;
+            
+            MyEventHandler.CallRefreshCurrentMapEven();
+        }
     }
 }

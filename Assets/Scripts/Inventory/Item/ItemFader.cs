@@ -26,4 +26,12 @@ public class ItemFader : MonoBehaviour
         Color targetColor = new Color(1, 1, 1, 1);
         _spriteRenderer.DOColor(targetColor, Settings.FADEIN_TIME);
     }
+
+    /// <summary>
+    /// 树木被看倒的事件 在动画的结尾
+    /// </summary>
+    public void OnAnimatorDone()
+    {
+        MyEventHandler.CallTreeFallingAnimationOverEven();
+    }
 }

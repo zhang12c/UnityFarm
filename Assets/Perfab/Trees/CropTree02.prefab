@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5430344844913746751}
   - component: {fileID: 5430344844913746750}
   - component: {fileID: 5430344844913746749}
+  - component: {fileID: 2856748706134997439}
   m_Layer: 0
   m_Name: Tree01_Top
   m_TagString: Untagged
@@ -97,6 +98,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 555acd3cc858941ad91d1ef5f1e519be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &2856748706134997439
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5430344844913746736}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e58b881c79d0e4cd6bbf3374be2f07c0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5430344845085893574
 GameObject:
   m_ObjectHideFlags: 0
@@ -109,7 +131,6 @@ GameObject:
   - component: {fileID: 5430344845085893570}
   - component: {fileID: 5430344845085893573}
   - component: {fileID: 6604480159780986566}
-  - component: {fileID: 4975104780179264107}
   m_Layer: 0
   m_Name: CropTree02
   m_TagString: Untagged
@@ -158,7 +179,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.09669781, y: 4.460717}
+  m_Offset: {x: -0.00999999, y: 3.1166096}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -169,7 +190,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.5537834, y: 4.236869}
+  m_Size: {x: 2.7301903, y: 6.925083}
   m_EdgeRadius: 0
 --- !u!114 &6604480159780986566
 MonoBehaviour:
@@ -201,32 +222,17 @@ MonoBehaviour:
     generateAtPlayerPosition: 0
     hasAnimation: 0
     hasParticalEffect: 0
---- !u!61 &4975104780179264107
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5430344845085893574}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.06768918, y: 0.8799554}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.1353784, y: 2.7599108}
-  m_EdgeRadius: 0
+  tileDetails:
+    pos: {x: 0, y: 0}
+    canDig: 0
+    canDropItem: 0
+    canPlaceFurniture: 0
+    isNPCObstacle: 0
+    daySinceDug: -1
+    daySinceWatered: -1
+    seedItemId: -1
+    growthDays: -1
+    daysSinceLastHarvest: -1
 --- !u!1 &5430344846450660697
 GameObject:
   m_ObjectHideFlags: 0

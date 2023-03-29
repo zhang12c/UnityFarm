@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
     private float _mouseX;
     private float _mouseY;
     // 是否在使用工具的状态下
-    private bool _useTool;
+    //private bool _useTool;
     
     // xy 合成的一个向量，人物朝向
     private Vector2 _movementInput;
@@ -169,7 +169,7 @@ public class Player : MonoBehaviour
     }
     public IEnumerator UseToolRoutine(Vector3 mouseWorldPos, ItemDetails itemDetails)
     {
-        _useTool = true;
+        //_useTool = true;
         inputDisable = true;
         yield return null;
         foreach (var ai in _animators)
@@ -184,7 +184,7 @@ public class Player : MonoBehaviour
         MyEventHandler.CallExecuteActionAfterAnimation(mouseWorldPos, itemDetails);
         yield return new WaitForSeconds(0.2f);
         // 动画结束之后
-        _useTool = false;
+        //_useTool = false;
         inputDisable = false;
 
     }

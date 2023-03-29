@@ -142,7 +142,7 @@ MonoBehaviour:
     producedItemID: fd030000ef030000
     producedMinAmount: 0200000005000000
     producedMaxAmount: 0200000005000000
-    spawnRadiuse: {x: 0, y: 0}
+    spawnRadiuse: {x: 2, y: 2}
     daysToRegrow: 0
     regrowTimes: 0
     generateAtPlayerPosition: 0
@@ -169,9 +169,28 @@ MonoBehaviour:
     producedItemID: ff030000ef030000
     producedMinAmount: 0200000005000000
     producedMaxAmount: 0200000005000000
-    spawnRadiuse: {x: 0, y: 0}
+    spawnRadiuse: {x: 2, y: 2}
     daysToRegrow: 0
     regrowTimes: 0
     generateAtPlayerPosition: 0
     hasAnimation: 1
+    hasParticalEffect: 0
+  - seedItemID: 1022
+    growthDays: 00000000
+    growthPreFab:
+    - {fileID: 7613589659410404548, guid: 554161d7bdd51480f98e976269c8a293, type: 3}
+    growthSprites:
+    - {fileID: 21300000, guid: f92caccf9fb8e45bcb3b3b1116dcbf48, type: 3}
+    seasons: 00000000010000000200000003000000
+    harvestToolItemID: e9030000
+    requireActionCount: 03000000
+    transFerItemID: 0
+    producedItemID: ef030000
+    producedMinAmount: 05000000
+    producedMaxAmount: 05000000
+    spawnRadiuse: {x: 0, y: 0}
+    daysToRegrow: 0
+    regrowTimes: 0
+    generateAtPlayerPosition: 0
+    hasAnimation: 0
     hasParticalEffect: 0

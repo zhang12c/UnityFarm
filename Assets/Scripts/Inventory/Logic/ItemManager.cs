@@ -52,9 +52,11 @@ namespace Inventory.Logic
         }
         private void CloneSlotByItemPerfab(int itemID, Vector3 Pos)
         {
-            var item = Instantiate(prefab, Pos, Quaternion.identity,itemParent);
-            ItemOnWorld itemOnWorld = item.GetComponent<ItemOnWorld>();
-            itemOnWorld.CloneItem(itemID);
+            var item = Instantiate(boundPrefab, Pos, Quaternion.identity,itemParent);
+            ItemOnWorld onWorldItem = item.GetComponent<ItemOnWorld>();
+            onWorldItem.CloneItem(itemID);
+            item.GetComponent<ItemBounce>().InitBounceItem(Pos, Vector3.up);
+            
         }
         
         private void OnDropItemEvent(int itemId, Vector3 mousePos,ItemType type)

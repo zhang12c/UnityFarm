@@ -158,5 +158,14 @@ namespace Utility
             RefreshCurrentMapEven?.Invoke();
         }
 
+        /// <summary>
+        /// 树木被砍到的动画结束事件
+        /// </summary>
+        public static event Action TreeFallingAnimationOverEven;
+        public static void CallTreeFallingAnimationOverEven()
+        {
+            TreeFallingAnimationOverEven?.Invoke();
+        }
+
     }
 }

@@ -236,6 +236,7 @@
      <Folder Include="Assets/Scripts/Player" />
      <None Include="Assets/TextMesh Pro/Sprites/EmojiOne.json" />
      <Folder Include="Assets/GameData/Map" />
+     <Folder Include="Assets/GameARTRes/Animators/Tree" />
      <Folder Include="Assets/Scripts/Crop/Data" />
      <Folder Include="Assets/GameARTRes/Animations/Tool/ReapTool" />
      <Folder Include="Assets/Scripts/Utility" />
