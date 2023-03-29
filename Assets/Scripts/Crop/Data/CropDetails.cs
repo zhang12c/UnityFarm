@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.Serialization;
+using Utility;
 namespace Crop.Data
 {
     [System.Serializable]
@@ -64,7 +66,11 @@ namespace Crop.Data
         /// <summary>
         /// 粒子特效
         /// </summary>
-        public bool hasParticalEffect;
+        [FormerlySerializedAs("hasParticalEffect")]
+        public bool hasParticleEffect;
+        
+        // 音效 特效
+        public ParticleEffectType particleEffectType;
 
         /// <summary>
         /// 检验tool是否可以当收割道具用

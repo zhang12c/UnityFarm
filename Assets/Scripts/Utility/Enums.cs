@@ -107,4 +107,13 @@ namespace Utility
         /// </summary>
         NPCObstacle
     }
+
+    public enum ParticleEffectType
+    {
+        None,
+        LeavesFalling01,
+        LeavesFalling02,
+        Rock,
+        ReapableScenery
+    }
 }

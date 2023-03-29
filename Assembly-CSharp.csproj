@@ -78,6 +78,7 @@
      <Compile Include="Assets/Scripts/Inventory/Logic/InventoryManager.cs" />
      <Compile Include="Assets/Scripts/Inventory/Item/ItemShadow.cs" />
      <Compile Include="Assets/Scripts/Inventory/UI/ActionBarButton.cs" />
+     <Compile Include="Assets/Scripts/ObjectPool/ObjectPoolManager.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/Scripts/Cursor" />
      <Folder Include="Assets/GameARTRes/Art/Intro/Sign" />
@@ -141,6 +142,7 @@
      <Folder Include="Assets/Animator" />
      <Folder Include="Assets/GameARTRes/Art/Characters/Girl05" />
      <Folder Include="Assets/GameARTRes/Art/Items/Tree02" />
+     <Folder Include="Assets/Perfab/Effect" />
      <Folder Include="Assets/Scripts/Crop/Logic" />
      <Folder Include="Assets/GameARTRes/Art/Trees/green" />
      <Folder Include="Assets/Perfab/UI" />
@@ -207,6 +209,7 @@
      <Folder Include="Assets/GameARTRes/Art/Characters/Girl06" />
      <Folder Include="Assets/GameARTRes/Art/Characters/Player/Tools/Reap" />
      <Folder Include="Assets/GameData" />
+     <Folder Include="Assets/Scripts/ObjectPool" />
      <Folder Include="Assets/GameARTRes/Art/Items/Grass" />
      <Folder Include="Assets/GameARTRes/Animations/Tree" />
      <Folder Include="Assets/GameARTRes/Art/Characters/Boy01" />
