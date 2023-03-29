@@ -146,7 +146,7 @@ public class Player : MonoBehaviour
         {
             var position = transform.position;
             _mouseX = mouseWorldPos.x - position.x;
-            _mouseY = mouseWorldPos.y - position.y;
+            _mouseY = mouseWorldPos.y - (position.y + Settings.PLAYER_SIZE_HALF) ; // 这里有个Bug ，鼠标的y 值永远是大于 人物脚底的 值。导致人物一直会得出 _mouseY > 0 ，面朝上方。所以加了人物的半身长
             
             // 斜方向上的优先选择
             // 如果 比较偏x 那就按x 左右选择

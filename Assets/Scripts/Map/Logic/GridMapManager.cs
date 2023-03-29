@@ -195,6 +195,7 @@ namespace Map.Logic
             TileDetails currentTile = GetTileDetailsOnMousePosition(mouseGridPos);
             if (currentTile != null)
             {
+                CropItem cropItem;
                 switch (itemdetails.itemType)
                 {
                     // 绘Tile
@@ -218,8 +219,14 @@ namespace Map.Logic
                         // TODO: 浇水音效
                         break;
                     case ItemType.ChopTool: // 斧头 收割
+                        cropItem = GetCropObject(mouseGridPos);
+                        if (cropItem)
+                        {
+                            cropItem.ProcessToolAction(itemdetails,cropItem.tileDetails);
+                        }
+                        break;
                     case ItemType.CollectTool:
-                        CropItem cropItem = GetCropObject(mouseWorldPos);
+                        cropItem = GetCropObject(mouseWorldPos);
                         if (cropItem != null)
                         {
                             // 收割逻辑写在cropItem里面
@@ -318,7 +325,7 @@ namespace Map.Logic
             }
         }
 
-        private CropItem GetCropObject(Vector3 mouseWorldPos)
+        public CropItem GetCropObject(Vector3 mouseWorldPos)
         {
             Collider2D[] collider2Ds = Physics2D.OverlapPointAll(mouseWorldPos);
             CropItem cropItem = null;

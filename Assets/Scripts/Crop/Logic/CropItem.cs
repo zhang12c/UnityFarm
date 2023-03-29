@@ -1,5 +1,6 @@
 using Crop.Data;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Utility;
 namespace Crop.Logic
 {
@@ -10,7 +11,7 @@ namespace Crop.Logic
         // 点击的次数
         private int _doActionCount = 0;
         // 
-        private TileDetails _tileDetails;
+        public TileDetails tileDetails;
         // 收割过程中的动画
         private Animator _animator;
         // 实现左右摇晃
@@ -23,9 +24,20 @@ namespace Crop.Logic
             }
         }
 
+        /// <summary>
+        /// 是否已经成熟了，可以收割的
+        /// </summary>
+        public bool CanHarvest
+        {
+            get
+            {
+                return cropDetails.TotalGrowthDays <= tileDetails.growthDays;
+            }
+        }
+
         public void ProcessToolAction(ItemDetails tool,TileDetails tileDetails)
         {
-            _tileDetails = tileDetails;
+            this.tileDetails = tileDetails;
             // 一共需要使用多少次道具
             int requireActionCount = cropDetails.GetTotalRequireCount(tool.itemID);
             if (requireActionCount == -1)
@@ -41,6 +53,7 @@ namespace Crop.Logic
             if (_doActionCount < requireActionCount)
             {
                 _doActionCount++;
+                Debug.Log($"使用Tool ： {_doActionCount} 次");
                 // 声音 + 效果 类似 砍树
                 if (_animator != null && cropDetails.hasAnimation)
                 {
@@ -56,6 +69,7 @@ namespace Crop.Logic
             }
             else
             {
+                Debug.Log("收割成功 逻辑");
                 // 收割成功 逻辑
                 if (cropDetails.generateAtPlayerPosition) // 直接加到背包中
                 {
@@ -99,16 +113,16 @@ namespace Crop.Logic
                     }
                 }
             }
-            if (_tileDetails != null)
+            if (tileDetails != null)
             {
                 // 收获的次数 ++
-                _tileDetails.daysSinceLastHarvest++;
+                tileDetails.daysSinceLastHarvest++;
                 
                 // 是否重复成长
-                if (cropDetails.daysToRegrow > 0 && _tileDetails.daysSinceLastHarvest < cropDetails.regrowTimes )
+                if (cropDetails.daysToRegrow > 0 && tileDetails.daysSinceLastHarvest < cropDetails.regrowTimes )
                 {
                     // 再次生长将天数降低 当达到TatalGrowthDays的时候又是一次成熟
-                    _tileDetails.growthDays = cropDetails.TotalGrowthDays - cropDetails.daysToRegrow;
+                    tileDetails.growthDays = cropDetails.TotalGrowthDays - cropDetails.daysToRegrow;
                     // 刷新种子的样子
                     MyEventHandler.CallRefreshCurrentMapEven();
                 }
@@ -116,8 +130,8 @@ namespace Crop.Logic
                 {
                     // 不可多次收获的
                     // 那就移除种子 初始化格子信息
-                    _tileDetails.daysSinceLastHarvest = -1;
-                    _tileDetails.seedItemId = -1;
+                    tileDetails.daysSinceLastHarvest = -1;
+                    tileDetails.seedItemId = -1;
                     
                 }
                 Destroy(gameObject);

@@ -27,5 +27,10 @@ namespace Utility
         /// </summary>
         public const float FADE_DURATION = 1.5f;
 
+        /// <summary>
+        /// 人物的一半身高
+        /// </summary>
+        public const float PLAYER_SIZE_HALF = 0.85f;
+
     }
 }

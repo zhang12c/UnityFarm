@@ -98,6 +98,9 @@ namespace Crop.Logic
             CropItem cropItem = cropInstance.GetComponent<CropItem>();
             cropItem.cropDetails = cropDetails;
 
+            // 传入地图信息
+            // 解决后续 鼠标顶级的问题
+            cropItem.tileDetails = tileDetails;
         }
 
         public CropDetails GetCropDetails(int id)

@@ -191,7 +191,7 @@ namespace Cursor
         {
             _mouseWorldPos = _mainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,Input.mousePosition.y,-_mainCamera.transform.position.z));
             _mouseGirdPos = _currentGrid.WorldToCell(_mouseWorldPos);
-        
+
             // 道具范围逻辑
             var playerPos = _currentGrid.WorldToCell(playerTransform.position);
             // 如果鼠标超出了道具的使用范围，就直接不可用了
@@ -205,6 +205,8 @@ namespace Cursor
             if (currentTile != null)
             {
                 CropDetails cropDetails = CropManager.Instance.GetCropDetails(currentTile.seedItemId);
+                CropItem cropItem = GridMapManager.Instance.GetCropObject(_mouseWorldPos);
+                
                 //TODO: 补充物品类型
                 switch (_currentItem.itemType)
                 {
@@ -232,7 +234,20 @@ namespace Cursor
                         else
                             SetCursorInvalid();
                         break;
-                    case ItemType.ChopTool: // 斧头 和 收割一致，所以使用相同的
+                    case ItemType.ChopTool: // 斧头
+                        if (cropItem != null)
+                        {
+                            // 判断是否已经可收获了
+                            if (cropItem.CanHarvest && cropItem.cropDetails.CheckToolAvailable(_currentItem.itemID))
+                            {
+                                SetCursorValid();
+                            }
+                            else
+                            {
+                                SetCursorInvalid();
+                            }
+                        }
+                        break;
                     case ItemType.CollectTool: // 收割
                         if (cropDetails != null)
                             if (currentTile.growthDays >= cropDetails.TotalGrowthDays && cropDetails.CheckToolAvailable(_currentItem.itemID))
