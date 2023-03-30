@@ -161,10 +161,10 @@ namespace Utility
         /// <summary>
         /// 树木被砍到的动画结束事件
         /// </summary>
-        public static event Action TreeFallingAnimationOverEven;
-        public static void CallTreeFallingAnimationOverEven()
+        public static event Action<int> TreeFallingAnimationOverEven;
+        public static void CallTreeFallingAnimationOverEven(int instanceID)
         {
-            TreeFallingAnimationOverEven?.Invoke();
+            TreeFallingAnimationOverEven?.Invoke(instanceID);
         }
         
         /// <summary>
@@ -174,6 +174,15 @@ namespace Utility
         public static void CallParticleEffectEvent(ParticleEffectType type,Vector3 pos)
         {
             ParticleEffectEvent?.Invoke(type,pos);
+        }
+        
+        /// <summary>
+        /// 更新生成物品在地图上的tileDetails
+        /// </summary>
+        public static event Action GeneratorCropEvent;
+        public static void CallGeneratorCropEvent()
+        {
+            GeneratorCropEvent?.Invoke();
         }
         
     }

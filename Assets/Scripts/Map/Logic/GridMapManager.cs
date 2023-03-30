@@ -38,11 +38,20 @@ namespace Map.Logic
 
         private Grid _currentGrid;
 
+        /// <summary>
+        /// 主要用于判断当下场景是不是第一次加载
+        /// string 名称
+        /// bool 
+        /// </summary>
+        private Dictionary<string, bool> _firstLoadDict = new Dictionary<string, bool>();
+
         private void Start()
         {
             // 构建一下数据
             foreach (var mapData in mapDataList)
             {
+                _firstLoadDict.Add(mapData.sceneName,true);
+                //
                 InitTileDetailsDict(mapData);
             }
         }
@@ -146,7 +155,18 @@ namespace Map.Logic
             _currentGrid = FindObjectOfType<Grid>();
             _digTileMap = GameObject.FindWithTag("Dig")?.GetComponent<Tilemap>();
             _waterTileMap = GameObject.FindWithTag("Water")?.GetComponent<Tilemap>();
-            ShowTileMap(SceneManager.GetActiveScene().name);
+
+            // 主要目的是：第一次地图上的手动按的树不会被销毁
+            if (_firstLoadDict[SceneManager.GetActiveScene().name])
+            {
+                // 第一次加载
+                // 更新deteils
+                MyEventHandler.CallGeneratorCropEvent();
+                _firstLoadDict[SceneManager.GetActiveScene().name] = false;
+            }
+            
+            // 刷新地图了
+            RefreshMap();
         }
         /// <summary>
         /// 每一天执行一次
@@ -218,11 +238,16 @@ namespace Map.Logic
                         currentTile.daySinceWatered = 0;
                         // TODO: 浇水音效
                         break;
+                    case ItemType.BreakTool:
                     case ItemType.ChopTool: // 斧头 收割
                         cropItem = GetCropObject(mouseGridPos);
-                        if (cropItem)
+                        if (cropItem != null)
                         {
                             cropItem.ProcessToolAction(itemdetails,cropItem.tileDetails);
+                        }
+                        else
+                        {
+                            Debug.Log("没Tool Do ");
                         }
                         break;
                     case ItemType.CollectTool:
@@ -264,12 +289,16 @@ namespace Map.Logic
         /// 更新瓦片信息
         /// </summary>
         /// <param name="tileDetails"></param>
-        private void UpdateTileDetails(TileDetails tileDetails)
+        public void UpdateTileDetails(TileDetails tileDetails)
         {
             string key = tileDetails.pos.x + "x" + tileDetails.pos.y + "y" + SceneManager.GetActiveScene().name;
             if (_tileDetailsMap.ContainsKey(key))
             {
                 _tileDetailsMap[key] = tileDetails;
+            }
+            else
+            {
+                _tileDetailsMap.Add(key,tileDetails);
             }
         }
 
@@ -328,15 +357,14 @@ namespace Map.Logic
         public CropItem GetCropObject(Vector3 mouseWorldPos)
         {
             Collider2D[] collider2Ds = Physics2D.OverlapPointAll(mouseWorldPos);
-            CropItem cropItem = null;
             for (int i = 0; i < collider2Ds.Length; i++)
             {
                 if (collider2Ds[i].GetComponent<CropItem>() != null)
                 {
-                    cropItem = collider2Ds[i].GetComponent<CropItem>();
+                    return collider2Ds[i].GetComponent<CropItem>();
                 }
             }
-            return cropItem;
+            return null;
         }
     }
 }

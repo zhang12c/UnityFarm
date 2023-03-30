@@ -234,6 +234,7 @@ namespace Cursor
                         else
                             SetCursorInvalid();
                         break;
+                    case ItemType.BreakTool:
                     case ItemType.ChopTool: // 斧头
                         if (cropItem != null)
                         {
@@ -246,6 +247,10 @@ namespace Cursor
                             {
                                 SetCursorInvalid();
                             }
+                        }
+                        else
+                        {
+                            SetCursorInvalid();
                         }
                         break;
                     case ItemType.CollectTool: // 收割

@@ -112,15 +112,18 @@ namespace Crop.Logic
         /// <summary>
         /// 动画播放完了之后，就得去生成掉落物品了
         /// </summary>
-        private void OnTreeFallingAnimationOverEvent()
+        private void OnTreeFallingAnimationOverEvent(int instanceID)
         {
-            // 生成物品
-            SpawnHarvestItems();
-            //Debug.Log("生成物品啦物品啦");
-
-            if (cropDetails.transFerItemID > 0)
+            if (instanceID == transform.GetHashCode())
             {
-                CreateTransferCrop();
+                // 生成物品
+                SpawnHarvestItems();
+                //Debug.Log("生成物品啦物品啦");
+
+                if (cropDetails.transFerItemID > 0)
+                {
+                    CreateTransferCrop();
+                }
             }
         }
 

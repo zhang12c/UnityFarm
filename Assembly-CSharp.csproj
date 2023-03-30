@@ -66,6 +66,7 @@
      <Compile Include="Assets/Scripts/Inventory/Data_SO/InventoryBag_SO.cs" />
      <Compile Include="Assets/Scripts/Utility/Enums.cs" />
      <Compile Include="Assets/Scripts/Utility/Singleton.cs" />
+     <Compile Include="Assets/Scripts/Crop/Logic/CropGenerator.cs" />
      <Compile Include="Assets/Scripts/Inventory/UI/SlotUI.cs" />
      <Compile Include="Assets/Scripts/Inventory/UI/InventoryUI.cs" />
      <Compile Include="Assets/Scripts/Crop/Data/CropDataListSo.cs" />

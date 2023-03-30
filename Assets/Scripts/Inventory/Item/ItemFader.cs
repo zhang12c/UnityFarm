@@ -32,6 +32,8 @@ public class ItemFader : MonoBehaviour
     /// </summary>
     public void OnAnimatorDone()
     {
-        MyEventHandler.CallTreeFallingAnimationOverEven();
+        // 这个脚本挂载在子物体上，需要获得父物体上的Id
+        var id = transform.parent.GetHashCode();
+        MyEventHandler.CallTreeFallingAnimationOverEven(id);
     }
 }

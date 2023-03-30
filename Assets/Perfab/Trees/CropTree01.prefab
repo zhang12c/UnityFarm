@@ -131,13 +131,14 @@ GameObject:
   - component: {fileID: 5430344845085893570}
   - component: {fileID: 5430344845085893573}
   - component: {fileID: 6604480159780986566}
+  - component: {fileID: 586325865}
   m_Layer: 0
   m_Name: CropTree01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5430344845085893569
 Transform:
   m_ObjectHideFlags: 0
@@ -221,7 +222,9 @@ MonoBehaviour:
     regrowTimes: 0
     generateAtPlayerPosition: 0
     hasAnimation: 0
-    hasParticalEffect: 0
+    hasParticleEffect: 0
+    particleEffectType: 0
+    effectPos: {x: 0, y: 0, z: 0}
   tileDetails:
     pos: {x: 0, y: 0}
     canDig: 0
@@ -233,6 +236,20 @@ MonoBehaviour:
     seedItemId: -1
     growthDays: -1
     daysSinceLastHarvest: -1
+--- !u!114 &586325865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5430344845085893574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7891eef6a3be4864841379b43ecd688d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seedItemID: 1021
+  growthDays: 5
 --- !u!1 &5430344846450660697
 GameObject:
   m_ObjectHideFlags: 0
