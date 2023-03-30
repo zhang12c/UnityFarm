@@ -71,6 +71,10 @@ namespace Crop.Data
         
         // 音效 特效
         public ParticleEffectType particleEffectType;
+        /// <summary>
+        /// 特效位置
+        /// </summary>
+        public Vector3 effectPos;
 
         /// <summary>
         /// 检验tool是否可以当收割道具用

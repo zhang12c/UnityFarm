@@ -78,6 +78,11 @@ namespace Crop.Logic
                         _animator.SetTrigger("RotateLeft");
                     }
                 }
+
+                if (cropDetails.hasParticleEffect)
+                {
+                    MyEventHandler.CallParticleEffectEvent(cropDetails.particleEffectType,transform.position + cropDetails.effectPos);
+                }
             }
             else
             {

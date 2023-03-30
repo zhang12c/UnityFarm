@@ -42,6 +42,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets/Scripts/Utility/SwitchBounds.cs" />
+     <Compile Include="Assets/Scripts/ObjectPool/ObjectPoolManager.cs" />
      <Compile Include="Assets/Scripts/Crop/Logic/CropManager.cs" />
      <Compile Include="Assets/Scripts/Transition/TransitionManager.cs" />
      <Compile Include="Assets/Scripts/Crop/Logic/CropItem.cs" />
@@ -73,12 +74,11 @@
      <Compile Include="Assets/Scripts/Cursor/CursorManager.cs" />
      <Compile Include="Assets/Scripts/Inventory/Item/ItemBounce.cs" />
      <Compile Include="Assets/Scripts/Inventory/UI/ItemToolTip.cs" />
+     <Compile Include="Assets/Scripts/Inventory/UI/ActionBarButton.cs" />
      <Compile Include="Assets/Scripts/Map/Logic/GridMap.cs" />
      <Compile Include="Assets/Scripts/Crop/Data/CropDetails.cs" />
      <Compile Include="Assets/Scripts/Inventory/Logic/InventoryManager.cs" />
      <Compile Include="Assets/Scripts/Inventory/Item/ItemShadow.cs" />
-     <Compile Include="Assets/Scripts/Inventory/UI/ActionBarButton.cs" />
-     <Compile Include="Assets/Scripts/ObjectPool/ObjectPoolManager.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/Scripts/Cursor" />
      <Folder Include="Assets/GameARTRes/Art/Intro/Sign" />

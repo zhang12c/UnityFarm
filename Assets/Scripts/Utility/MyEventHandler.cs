@@ -166,6 +166,15 @@ namespace Utility
         {
             TreeFallingAnimationOverEven?.Invoke();
         }
-
+        
+        /// <summary>
+        /// 生成特效
+        /// </summary>
+        public static event Action<ParticleEffectType,Vector3> ParticleEffectEvent;
+        public static void CallParticleEffectEvent(ParticleEffectType type,Vector3 pos)
+        {
+            ParticleEffectEvent?.Invoke(type,pos);
+        }
+        
     }
 }
