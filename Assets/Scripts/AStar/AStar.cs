@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Map.Logic;
 using UnityEngine;
-namespace AStart
+namespace AStar
 {
     public class AStar : MonoBehaviour
     {
@@ -35,7 +35,7 @@ namespace AStart
         /// <param name="sceneName"></param>
         /// <param name="startPos"></param>
         /// <param name="endPos"></param>
-        public void BuildPath(string sceneName, Vector2Int startPos, Vector2Int endPos)
+        public void BuildPath(string sceneName, Vector2Int startPos, Vector2Int endPos,Stack<MovementStep> npcMovementStack)
         {
             _pathFound = false;
             if (GenerateGridNodes(sceneName,startPos,endPos))
@@ -44,13 +44,15 @@ namespace AStart
                 // 查找路径最短的距离
                 if (FindShortestPath())
                 {
-                    
+                    // 构建步骤一步一步走
+                    UpdatePathOnMovementStepStack(sceneName,npcMovementStack);
                 }
                 
             }
             else
             {
                 // 构建地图node失败
+                Debug.Log("构建地图node失败");
             }
         }
         /// <summary>
@@ -80,8 +82,7 @@ namespace AStart
 
             // 从瓦片坐标转到巡路网格坐标 相减
             _startNode = _gridNodes.GetGridNode(startPos.x - _originX, startPos.y - _originY);
-            _endNode = _gridNodes.GetGridNode(endPos.x - _originX, endPos.y - _originY);
-            
+            _endNode = _gridNodes.GetGridNode(endPos.x - _originX, endPos.y - _originY);          
             // 获取Nodes中的阻挡信息
             // 逻辑上获得阻挡
             for (int x = 0; x < _gridWidth; x++)
@@ -120,7 +121,7 @@ namespace AStart
 
                 // 第一个节点是最佳点 
                 // 移出列表
-                Node closeNode = _openNodeList.First();
+                Node closeNode = _openNodeList[0];
                 _openNodeList.RemoveAt(0);
 
                 _closeNodeList.Add(closeNode);
@@ -128,6 +129,7 @@ namespace AStart
                 {
                     // 到了终点了
                     _pathFound = true;
+                    Debug.Log("到了");
                     break;
                 }
                 else
@@ -152,7 +154,7 @@ namespace AStart
 
             for (int x = -1; x <= 1; x++)
             {
-                for (int y = 1; y <= 1; y++)
+                for (int y = -1; y <= 1; y++)
                 {
                     // 如果是原点那就放过它
                     if (y == 0 && x == 0)
@@ -168,6 +170,7 @@ namespace AStart
                             // 需要计算一下 gCost & hCost
                             validNeighbourNode.gCost = currentNode.gCost + GetDistance(currentNode, validNeighbourNode);
                             validNeighbourNode.hCost = GetDistance(validNeighbourNode, _endNode);
+                            //Debug.Log(currentNode.gridPosition);
                             // 链接父节点
                             validNeighbourNode.parentNode = currentNode;
                             _openNodeList.Add(validNeighbourNode);
@@ -226,6 +229,27 @@ namespace AStart
                 return 14 * xDistance + 10 * (yDistance - xDistance);
             }
 
+        }
+
+        /// <summary>
+        /// 更新从终点到起点的步数stack
+        /// </summary>
+        /// <param name="sceneName">地图名称</param>
+        /// <param name="npcMovementStep">保存用的stack</param>
+        private void UpdatePathOnMovementStepStack(string sceneName,Stack<MovementStep> npcMovementStep)
+        {
+            Node nextNode = _endNode;
+            //npcMovementStep = new Stack<MovementStep>();
+
+            while (nextNode != null)
+            {
+                MovementStep newStep = new MovementStep();
+                newStep.sceneName = sceneName;
+                newStep.gridCoordinate = new Vector2Int(nextNode.gridPosition.x + _originX, nextNode.gridPosition.y + _originY);
+                // 压入Stack中
+                npcMovementStep.Push(newStep);
+                nextNode = nextNode.parentNode;
+            }
         }
     }
 }

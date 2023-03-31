@@ -85,6 +85,8 @@
      <Compile Include="Assets/Scripts/AStar/Node.cs" />
      <Compile Include="Assets/Scripts/AStar/GridNodes.cs" />
      <Compile Include="Assets/Scripts/AStar/AStar.cs" />
+     <Compile Include="Assets/Scripts/AStar/MovementStep.cs" />
+     <Compile Include="Assets/Scripts/AStar/AStarTest.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/Scripts/Cursor" />
      <Folder Include="Assets/GameARTRes/Art/Intro/Sign" />

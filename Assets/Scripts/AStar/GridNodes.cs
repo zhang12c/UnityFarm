@@ -1,13 +1,13 @@
 using UnityEngine;
-namespace AStart
+namespace AStar
 {
     /// <summary>
     /// nodes 的集合 一个一个格子绘制成的一个面
     /// </summary>
     public class GridNodes
     {
-        private int _width;
-        private int _height;
+        private readonly int _width;
+        private readonly int _height;
         private Node[,] _gridNodes;
         /// <summary>
         /// 构造函数
@@ -16,15 +16,15 @@ namespace AStart
         /// <param name="height">高</param>
         public GridNodes(int width,int height)
         {
-            this._width = width;
-            this._height = height;
+            _width = width;
+            _height = height;
 
+            _gridNodes = new Node[width, height];
             for (int x = 0; x < _width; x++)
             {
                 for (int y = 0; y < _height; y++)
                 {
-                    Node node = new Node(new Vector2Int(x,y));
-                    _gridNodes[x, y] = node;
+                    _gridNodes[x, y] = new Node(new Vector2Int(x,y));
                 }
             }
         }

@@ -1,6 +1,6 @@
 using System;
 using UnityEngine;
-namespace AStart
+namespace AStar
 {
     /// <summary>
     /// 
@@ -51,14 +51,20 @@ namespace AStart
         /// <returns>小于返回-1，等于返回0，大于则返回1</returns>
         public int CompareTo(Node other)
         {
-            if (ReferenceEquals(this, other))
-                return 0;
-            if (ReferenceEquals(null, other))
-                return 1;
-            int gCostComparison = gCost.CompareTo(other.gCost);
-            if (gCostComparison != 0)
-                return gCostComparison;
-            return hCost.CompareTo(other.hCost);
+            // if (ReferenceEquals(this, other))
+            //     return 0;
+            // if (ReferenceEquals(null, other))
+            //     return 1;
+            // int gCostComparison = gCost.CompareTo(other.gCost);
+            // if (gCostComparison != 0)
+            //     return gCostComparison;
+            // return hCost.CompareTo(other.hCost);
+            int result = FCost.CompareTo(other.FCost);
+            if (result == 0)
+            {
+                result = hCost.CompareTo(other.hCost);
+            }
+            return result;
         }
     }
 }
