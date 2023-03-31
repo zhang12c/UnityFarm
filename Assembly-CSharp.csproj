@@ -43,6 +43,7 @@
   <ItemGroup>
      <Compile Include="Assets/Scripts/Utility/SwitchBounds.cs" />
      <Compile Include="Assets/Scripts/ObjectPool/ObjectPoolManager.cs" />
+     <Compile Include="Assets/Scripts/AStar/MovementStep.cs" />
      <Compile Include="Assets/Scripts/Crop/Logic/CropManager.cs" />
      <Compile Include="Assets/Scripts/Transition/TransitionManager.cs" />
      <Compile Include="Assets/Scripts/Crop/Logic/CropItem.cs" />
@@ -57,10 +58,14 @@
      <Compile Include="Assets/Scripts/Transition/Teleport.cs" />
      <Compile Include="Assets/Scripts/Utility/Attribute/SceneNameAttribute.cs" />
      <Compile Include="Assets/Scripts/Time/Logic/TimeManager.cs" />
+     <Compile Include="Assets/Scripts/AStar/Node.cs" />
+     <Compile Include="Assets/Scripts/AStar/AStar.cs" />
      <Compile Include="Assets/Scripts/Utility/DataCollection.cs" />
      <Compile Include="Assets/Scripts/Utility/Settings.cs" />
      <Compile Include="Assets/Scripts/Inventory/UI/SlotToolTip.cs" />
+     <Compile Include="Assets/Scripts/AStar/AStarTest.cs" />
      <Compile Include="Assets/Scripts/Inventory/Item/ItemFader.cs" />
+     <Compile Include="Assets/Scripts/AStar/GridNodes.cs" />
      <Compile Include="Assets/Scripts/Time/UI/TimeUI.cs" />
      <Compile Include="Assets/Scripts/Inventory/Logic/ItemManager.cs" />
      <Compile Include="Assets/Scripts/Inventory/Data_SO/InventoryBag_SO.cs" />
@@ -73,6 +78,7 @@
      <Compile Include="Assets/Scripts/Map/Data/MapData_SO.cs" />
      <Compile Include="Assets/Scripts/Inventory/Item/ItemOnWorld.cs" />
      <Compile Include="Assets/Scripts/Cursor/CursorManager.cs" />
+     <Compile Include="Assets/Scripts/Inventory/Item/ItemInteractive.cs" />
      <Compile Include="Assets/Scripts/Inventory/Item/ItemBounce.cs" />
      <Compile Include="Assets/Scripts/Inventory/UI/ItemToolTip.cs" />
      <Compile Include="Assets/Scripts/Inventory/UI/ActionBarButton.cs" />
@@ -81,12 +87,8 @@
      <Compile Include="Assets/Scripts/Inventory/Logic/InventoryManager.cs" />
      <Compile Include="Assets/Scripts/Inventory/Item/ItemShadow.cs" />
      <Compile Include="Assets/Scripts/Crop/Logic/ReapItem.cs" />
-     <Compile Include="Assets/Scripts/Inventory/Item/ItemInteractive.cs" />
-     <Compile Include="Assets/Scripts/AStar/Node.cs" />
-     <Compile Include="Assets/Scripts/AStar/GridNodes.cs" />
-     <Compile Include="Assets/Scripts/AStar/AStar.cs" />
-     <Compile Include="Assets/Scripts/AStar/MovementStep.cs" />
-     <Compile Include="Assets/Scripts/AStar/AStarTest.cs" />
+     <Compile Include="Assets/Scripts/NPC/NPCMovement.cs" />
+     <Compile Include="Assets/Scripts/NPC/NPCManager.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/Scripts/Cursor" />
      <Folder Include="Assets/GameARTRes/Art/Intro/Sign" />
@@ -194,6 +196,7 @@
      <Folder Include="Assets/TextMesh Pro/Shaders" />
      <Folder Include="Assets/GameARTRes/Art/Items/Bushes" />
      <Folder Include="Assets/TileMaps/Tiles" />
+     <Folder Include="Assets/GameARTRes/Animators/NPC" />
      <Folder Include="Assets/GameARTRes/Art/Characters/Player" />
      <Folder Include="Assets/GameARTRes/Tilemap" />
      <Folder Include="Assets/TextMesh Pro/Resources/Style Sheets" />
@@ -211,6 +214,7 @@
      <Folder Include="Assets/GameARTRes/Animations/NPC/Boy" />
      <Folder Include="Assets/GameARTRes/Art/Items/Tree01" />
      <Folder Include="Assets/GameARTRes/Animations/Tool/Axe" />
+     <Folder Include="Assets/Scripts/NPC" />
      <Folder Include="Assets/GameARTRes/Animations/Player/Body" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader" />
      <Folder Include="Assets/GameARTRes/Art/Trees" />
