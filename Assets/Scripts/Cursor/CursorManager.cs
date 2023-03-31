@@ -262,6 +262,16 @@ namespace Cursor
                         else 
                             SetCursorInvalid();
                         break;
+                    case ItemType.ReapTool:
+                        if (GridMapManager.Instance.HaveReapItemsInRadius(_currentItem,_mouseWorldPos))
+                        {
+                            SetCursorValid();
+                        }
+                        else
+                        {
+                            SetCursorInvalid();
+                        }
+                        break;
                 }
             }
             else

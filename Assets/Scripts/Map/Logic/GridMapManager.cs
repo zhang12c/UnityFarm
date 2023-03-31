@@ -44,6 +44,11 @@ namespace Map.Logic
         /// bool 
         /// </summary>
         private Dictionary<string, bool> _firstLoadDict = new Dictionary<string, bool>();
+        
+        /// <summary>
+        /// 杂草的list
+        /// </summary>
+        private List<ReapItem> _reapItems; 
 
         private void Start()
         {
@@ -258,6 +263,20 @@ namespace Map.Logic
                             cropItem.ProcessToolAction(itemdetails,currentTile);
                         }
                         break;
+                    case ItemType.ReapTool:
+                        int count = 0;
+                        for (int i = 0; i < _reapItems.Count; i++)
+                        {
+                            MyEventHandler.CallParticleEffectEvent(ParticleEffectType.ReapableScenery,_reapItems[i].transform.position + Vector3.up);
+                            _reapItems[i].SpawnHarvestItems();
+                            Destroy(_reapItems[i].gameObject);
+                            count++;
+                            if (count > Settings.REAP_MAX_COUNT)
+                            {
+                                break;
+                            }
+                        }
+                        break;
                 }
 
                 UpdateTileDetails(currentTile);
@@ -365,6 +384,29 @@ namespace Map.Logic
                 }
             }
             return null;
+        }
+        /// <summary>
+        /// 检测鼠标的范围的ReadItem
+        /// </summary>
+        /// <param name="itemDetails"></param>
+        /// <returns>有数据就true</returns>
+        public bool HaveReapItemsInRadius(ItemDetails itemDetails,Vector3 mouseWorldPos)
+        {
+            _reapItems = new List<ReapItem>();
+            Collider2D[] collider2Ds = new Collider2D[10];
+            Physics2D.OverlapCircleNonAlloc(mouseWorldPos,itemDetails.itemUseRadius, collider2Ds);
+            if (collider2Ds.Length > 0)
+            {
+                for (int i = 0; i < collider2Ds.Length; i++)
+                {
+                    if (collider2Ds[i]?.GetComponent<ReapItem>())
+                    {
+                        var item = collider2Ds[i].GetComponent<ReapItem>();
+                        _reapItems.Add(item);
+                    }
+                }
+            }
+            return _reapItems.Count > 0;
         }
     }
 }

@@ -1,4 +1,6 @@
+using Crop.Logic;
 using UnityEngine;
+using Utility;
 
 namespace Inventory.Item
 {
@@ -32,6 +34,16 @@ namespace Inventory.Item
             if (_itemDetails != null)
             {
                 itemSpriteRenderer.sprite = _itemDetails.itemOnWorldSprite != null ? _itemDetails.itemOnWorldSprite : _itemDetails.itemIcon;
+            }
+
+            if (_itemDetails.itemType == ItemType.ReapableScenery)
+            {
+                gameObject.AddComponent<ReapItem>();
+                gameObject.GetComponent<ReapItem>().InitCropData(_itemDetails.itemID);
+                
+                // 路过杂草可以摇晃
+                gameObject.AddComponent<ItemInteractive>();
+
             }
         }
 

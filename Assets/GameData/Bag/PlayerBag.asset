@@ -13,20 +13,20 @@ MonoBehaviour:
   m_Name: PlayerBag
   m_EditorClassIdentifier: 
   itemInventoryItems:
-  - itemID: 1021
-    itemAmount: 87
-  - itemID: 1008
+  - itemID: 1011
     itemAmount: 1
-  - itemID: 1012
-    itemAmount: 1
-  - itemID: 1001
-    itemAmount: 1
-  - itemID: 1007
-    itemAmount: 45
-  - itemID: 1023
-    itemAmount: 104
-  - itemID: 1009
-    itemAmount: 1
+  - itemID: 0
+    itemAmount: 0
+  - itemID: 0
+    itemAmount: 0
+  - itemID: 0
+    itemAmount: 0
+  - itemID: 0
+    itemAmount: 0
+  - itemID: 0
+    itemAmount: 0
+  - itemID: 0
+    itemAmount: 0
   - itemID: 0
     itemAmount: 0
   - itemID: 0
@@ -37,26 +37,26 @@ MonoBehaviour:
     itemAmount: 1
   - itemID: 1018
     itemAmount: 65
-  - itemID: 0
-    itemAmount: 0
-  - itemID: 0
-    itemAmount: 0
+  - itemID: 1008
+    itemAmount: 1
+  - itemID: 1007
+    itemAmount: 45
   - itemID: 1006
     itemAmount: 7
+  - itemID: 1001
+    itemAmount: 1
+  - itemID: 1009
+    itemAmount: 1
+  - itemID: 1023
+    itemAmount: 104
+  - itemID: 1021
+    itemAmount: 87
   - itemID: 0
     itemAmount: 0
   - itemID: 0
     itemAmount: 0
-  - itemID: 0
-    itemAmount: 0
-  - itemID: 0
-    itemAmount: 0
-  - itemID: 0
-    itemAmount: 0
-  - itemID: 0
-    itemAmount: 0
-  - itemID: 0
-    itemAmount: 0
+  - itemID: 1012
+    itemAmount: 1
   - itemID: 0
     itemAmount: 0
   - itemID: 0

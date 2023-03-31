@@ -32,5 +32,10 @@ namespace Utility
         /// </summary>
         public const float PLAYER_SIZE_HALF = 0.85f;
 
+        /// <summary>
+        /// 杂草最多可以割掉几个
+        /// </summary>
+        public const int REAP_MAX_COUNT = 2;
+
     }
 }
