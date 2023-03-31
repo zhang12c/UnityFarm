@@ -226,9 +226,9 @@ MonoBehaviour:
     regrowTimes: 0
     generateAtPlayerPosition: 0
     hasAnimation: 0
-    hasParticleEffect: 0
-    particleEffectType: 0
-    effectPos: {x: 0, y: 0, z: 0}
+    hasParticleEffect: 1
+    particleEffectType: 3
+    effectPos: {x: 0, y: 0.5, z: 0}
   - seedItemID: 1025
     growthDays: 00000000
     growthPreFab:
@@ -247,9 +247,9 @@ MonoBehaviour:
     regrowTimes: 0
     generateAtPlayerPosition: 0
     hasAnimation: 0
-    hasParticleEffect: 0
-    particleEffectType: 0
-    effectPos: {x: 0, y: 0, z: 0}
+    hasParticleEffect: 1
+    particleEffectType: 3
+    effectPos: {x: 0, y: 0.5, z: 0}
   - seedItemID: 1026
     growthDays: 00000000
     growthPreFab:
@@ -271,3 +271,66 @@ MonoBehaviour:
     hasParticleEffect: 0
     particleEffectType: 0
     effectPos: {x: 0, y: 0, z: 0}
+  - seedItemID: 1028
+    growthDays: 00000000
+    growthPreFab:
+    - {fileID: 4323799672123538787, guid: 81d0ddd3678a8471c8f06d5a1a8396b2, type: 3}
+    growthSprites:
+    - {fileID: 21300000, guid: 9ae5a331348064d73aa91a952b9e1a41, type: 3}
+    seasons: 000000000100000002000000
+    harvestToolItemID: f3030000
+    requireActionCount: 01000000
+    transFerItemID: 0
+    producedItemID: 
+    producedMinAmount: 
+    producedMaxAmount: 
+    spawnRadiuse: {x: 0, y: 0}
+    daysToRegrow: 0
+    regrowTimes: 0
+    generateAtPlayerPosition: 0
+    hasAnimation: 0
+    hasParticleEffect: 1
+    particleEffectType: 4
+    effectPos: {x: 0, y: 1, z: 0}
+  - seedItemID: 1029
+    growthDays: 00000000
+    growthPreFab:
+    - {fileID: 4323799672123538787, guid: af1f88948c52e45cca1f1b08c68333cf, type: 3}
+    growthSprites:
+    - {fileID: 21300000, guid: 0c055f09a64a74805ad18c1f0b134fec, type: 3}
+    seasons: 000000000100000002000000
+    harvestToolItemID: f3030000
+    requireActionCount: 01000000
+    transFerItemID: 0
+    producedItemID: 07040000
+    producedMinAmount: 05000000
+    producedMaxAmount: 05000000
+    spawnRadiuse: {x: 0, y: 1}
+    daysToRegrow: 0
+    regrowTimes: 0
+    generateAtPlayerPosition: 0
+    hasAnimation: 0
+    hasParticleEffect: 1
+    particleEffectType: 4
+    effectPos: {x: 0, y: 1, z: 0}
+  - seedItemID: 1030
+    growthDays: 00000000
+    growthPreFab:
+    - {fileID: 4323799672123538787, guid: af1f88948c52e45cca1f1b08c68333cf, type: 3}
+    growthSprites:
+    - {fileID: 21300000, guid: 0c055f09a64a74805ad18c1f0b134fec, type: 3}
+    seasons: 000000000100000002000000
+    harvestToolItemID: f3030000
+    requireActionCount: 01000000
+    transFerItemID: 0
+    producedItemID: 07040000
+    producedMinAmount: 05000000
+    producedMaxAmount: 05000000
+    spawnRadiuse: {x: 0, y: 1}
+    daysToRegrow: 0
+    regrowTimes: 0
+    generateAtPlayerPosition: 0
+    hasAnimation: 0
+    hasParticleEffect: 1
+    particleEffectType: 4
+    effectPos: {x: 0, y: 1, z: 0}

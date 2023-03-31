@@ -79,8 +79,8 @@ namespace ObjectPool
                 ParticleEffectType.None => null,
                 ParticleEffectType.LeavesFalling01 => _poolEffectList[0],
                 ParticleEffectType.LeavesFalling02 => _poolEffectList[1],
-                ParticleEffectType.Rock => null,
-                ParticleEffectType.ReapableScenery => null,
+                ParticleEffectType.Rock => _poolEffectList[2],
+                ParticleEffectType.ReapableScenery => _poolEffectList[3],
                 _ => null,
             };
 
