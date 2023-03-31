@@ -82,6 +82,8 @@
      <Compile Include="Assets/Scripts/Inventory/Item/ItemShadow.cs" />
      <Compile Include="Assets/Scripts/Crop/Logic/ReapItem.cs" />
      <Compile Include="Assets/Scripts/Inventory/Item/ItemInteractive.cs" />
+     <Compile Include="Assets/Scripts/AStart/Node.cs" />
+     <Compile Include="Assets/Scripts/AStart/GridNodes.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/Scripts/Cursor" />
      <Folder Include="Assets/GameARTRes/Art/Intro/Sign" />
@@ -97,6 +99,7 @@
      <Folder Include="Assets/GameARTRes/Art/Characters/Player/Tools/Water" />
      <Folder Include="Assets/Scripts/Time/Logic" />
      <Folder Include="Assets/GameARTRes/Art/Buildings/Stall" />
+     <Folder Include="Assets/Scripts/AStart" />
      <Folder Include="Assets/Perfab/UI/Inventory" />
      <Folder Include="Assets/TextMesh Pro/Resources/Sprite Assets" />
      <Folder Include="Assets/GameData/Bag" />
