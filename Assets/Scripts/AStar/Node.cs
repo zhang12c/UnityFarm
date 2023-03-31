@@ -8,7 +8,7 @@ namespace AStart
     public class Node : IComparable<Node>
     {
         /// <summary>
-        /// 网格坐标
+        /// 寻路网格坐标
         /// </summary>
         public Vector2Int gridPosition;
         /// <summary>

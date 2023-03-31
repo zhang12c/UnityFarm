@@ -20,7 +20,6 @@ namespace Map.Logic
         private Tilemap _digTileMap;
         private Tilemap _waterTileMap;
         
-        
         [Header("地图瓦片信息List")]
         public List<MapData_SO> mapDataList;
 
@@ -407,6 +406,30 @@ namespace Map.Logic
                 }
             }
             return _reapItems.Count > 0;
+        }
+
+        /// <summary>
+        /// A星算法 获得地图覆盖的范围
+        /// </summary>
+        /// <param name="sceneName"></param>
+        /// <param name="gridDimensions"></param>
+        /// <param name="gridOrigin"></param>
+        /// <returns></returns>
+        public bool GetGridDimensions(string sceneName,out Vector2Int gridDimensions,out Vector2Int gridOrigin)
+        {
+            gridDimensions = Vector2Int.one;
+            gridOrigin = Vector2Int.one;
+            foreach (MapData_SO mapDataSo in mapDataList)
+            {
+                if (mapDataSo.sceneName == sceneName)
+                {
+                    gridDimensions = new Vector2Int(mapDataSo.gridWidth, mapDataSo.gridHeight);
+                    gridOrigin = new Vector2Int(mapDataSo.originX, mapDataSo.originY);
+                    return true;
+                }
+            }
+            Debug.LogError($"{sceneName} 没有找到哦！");
+            return false;
         }
     }
 }
