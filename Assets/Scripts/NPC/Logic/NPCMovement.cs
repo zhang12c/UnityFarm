@@ -58,7 +58,7 @@ namespace NPC
         public SortedSet<ScheduleDetails> _scheduleData;
         private ScheduleDetails _currentScheduleDetails;
 
-        private TimeSpan gameTime = TimeManager.Instance.GameTime;
+        private TimeSpan gameTime ;
 
         private void Awake()
         {
@@ -66,6 +66,7 @@ namespace NPC
             _spriteRenderer = GetComponent<SpriteRenderer>();
             _boxCollider = GetComponent<BoxCollider2D>();
             _animator = GetComponent<Animator>();
+            gameTime = TimeManager.Instance.GameTime;
         }
 
         private void OnEnable()
