@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using NPC;
+using NPC.Data;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
@@ -18,6 +20,13 @@ namespace AStar
 
         private Stack<MovementStep> npcMovementSteps;
 
+        [Header("测试移动NPC")]
+        public NPCMovement npcMovement;
+        public bool moveNPC;
+        [SceneName]public string targetScene;
+        public Vector2Int targetPos;
+        public AnimationClip stopClip;
+        
         private void Awake()
         {
             aStar = GetComponent<AStar>();
@@ -27,6 +36,13 @@ namespace AStar
         private void Update()
         {
             ShowPathOnGridMap();
+
+            if (moveNPC)
+            {
+                moveNPC = false;
+                var schedule = new ScheduleDetails(0, 0, 0, 0, Season.Spring, targetScene, targetPos, stopClip, true);
+                npcMovement.BuildPath(schedule);
+            }
         }
 
         private void ShowPathOnGridMap()

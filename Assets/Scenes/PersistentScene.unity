@@ -578,7 +578,7 @@ GameObject:
   - component: {fileID: 742965138}
   - component: {fileID: 742965142}
   m_Layer: 0
-  m_Name: Old Man_0
+  m_Name: NPC_Mayor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -592,7 +592,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 742965136}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 18, y: 20, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -733,7 +733,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _currentScene: 01_Field
-  normalSpeed: 2
+  normalSpeed: 1
   isMoving: 0
   scheduleData: {fileID: 11400000, guid: 4e0c6003f3f7041a1a11b91339c5b321, type: 2}
 --- !u!1 &761468277
@@ -807,17 +807,22 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 854680069}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4788ab767c04e0fbedf5aa9e838404b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startPos: {x: 55, y: 24}
-  endPos: {x: -28, y: -27}
+  startPos: {x: 18, y: 20}
+  endPos: {x: 24, y: 20}
   displayMap: {fileID: 1595102}
   displayTile: {fileID: 11400000, guid: 8f5b2c41e4c944c9fa0c1aed322c5e97, type: 2}
   displayStartAndFinish: 0
   displayPath: 0
+  npcMovement: {fileID: 742965142}
+  moveNPC: 0
+  targetScene: 01_Field
+  targetPos: {x: 20, y: 20}
+  stopClip: {fileID: 7400000, guid: db32c3897ab64466f86a8993b8e48f9e, type: 2}
 --- !u!114 &854680071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -857,10 +862,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a762596950964c6eb95d8c3c284bd128, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcList:
-  - npc: {fileID: 875728173}
-    startScene: 01_Field
-    position: {x: 17, y: 20, z: 0}
+  npcList: []
 --- !u!1 &863896804
 GameObject:
   m_ObjectHideFlags: 0
@@ -920,7 +922,7 @@ GameObject:
   m_Component:
   - component: {fileID: 875728173}
   m_Layer: 0
-  m_Name: NPC_Mayor
+  m_Name: NPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1073,7 +1075,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!156049354 &1183847466
 Grid:
   m_ObjectHideFlags: 0

@@ -32,7 +32,7 @@ public class TimeManager : Singleton<TimeManager>
         }
     }
 
-    private void Awake()
+    protected override void Awake()
     {
         base.Awake();
         InitGameTime();
@@ -159,8 +159,8 @@ public class TimeManager : Singleton<TimeManager>
         gameMinute = 0;
         gameHour = 7;
         gameDay = 1;
-        gameMonth = 7;
+        gameMonth = 1;
         gameYear = 2023;
-        gameSeason = Season.Autumn;
+        gameSeason = Season.Spring;
     }
 }
