@@ -28,18 +28,7 @@ namespace NPC
         /// <summary>
         /// 目标点
         /// </summary>
-        private Vector3Int _targetGridPosition
-        {
-            get
-            {
-                return t;
-            }
-            set
-            {
-                t = value;
-            }
-        }
-        private Vector3Int t;
+        private Vector3Int _targetGridPosition;
         /// <summary>
         /// 下一个网格的位置
         /// 记录用
@@ -231,7 +220,7 @@ namespace NPC
             if (!_isLoaded)
             {
                 InitNPC();
-                _isLoaded = false;
+                _isLoaded = true;
             }
             _sceneIsLoaded = true;
         }
@@ -282,6 +271,7 @@ namespace NPC
             // 保持npc移动的坐标是网格的中心点
             _currentGridPosition = _grid.WorldToCell(transform.position);
             transform.position = new Vector3(_currentGridPosition.x + Settings.GRID_CELL_DEFAULT_SIZE * 0.5f, _currentGridPosition.y + Settings.GRID_CELL_DEFAULT_SIZE * 0.5f, 0);
+            _targetGridPosition = _currentGridPosition;
         }
 
         /// <summary>
