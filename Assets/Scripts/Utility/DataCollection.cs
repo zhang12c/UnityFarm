@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using Utility;
 /// <summary>
@@ -180,4 +181,41 @@ public class NPCPosition
     public Transform npc;
     public string startScene;
     public Vector3 position;
+}
+
+/// <summary>
+/// 场景路径
+/// </summary>
+[System.Serializable]
+public class ScenePath
+{
+    /// <summary>
+    /// 这个场景的名称
+    /// </summary>
+    public string sceneName;
+    /// <summary>
+    /// 9999 就是离开
+    /// 小于 9999 就是进入
+    /// </summary>
+    public Vector2Int fromGridCell;
+    /// <summary>
+    /// 9999 就是进入
+    /// 小于 9999 就是离开
+    /// </summary>
+    public Vector2Int toGridCell;
+    /*
+     from 9999,9999 to 10 ,1 => 从任何地方离开这个场景要去 10,1 这个地方
+     from 10,1 to 9999,9999 => 从10，1 这个地方进来后，可以去任何地方
+     */
+}
+
+/// <summary>
+/// 跨场景的指引
+/// </summary>
+[System.Serializable]
+public class SceneRoute
+{
+    public string fromSceneName;
+    public string toSceneName;
+    public List<ScenePath> scenePathList;
 }

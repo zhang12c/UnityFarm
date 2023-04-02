@@ -735,7 +735,7 @@ MonoBehaviour:
   _currentScene: 01_Field
   normalSpeed: 1
   isMoving: 0
-  scheduleData: {fileID: 11400000, guid: 4e0c6003f3f7041a1a11b91339c5b321, type: 2}
+  scheduleDataSO: {fileID: 11400000, guid: 4e0c6003f3f7041a1a11b91339c5b321, type: 2}
   _blankAnimationClip: {fileID: 7400000, guid: 500fefed8113b4f7e8f2dc728631a63d, type: 2}
 --- !u!1 &761468277
 GameObject:
@@ -821,8 +821,8 @@ MonoBehaviour:
   displayPath: 0
   npcMovement: {fileID: 742965142}
   moveNPC: 0
-  targetScene: 01_Field
-  targetPos: {x: 20, y: 20}
+  targetScene: 02_Home
+  targetPos: {x: 3, y: 3}
   stopClip: {fileID: 7400000, guid: 54d560542c0284c169c56cddc7145ac6, type: 2}
 --- !u!114 &854680071
 MonoBehaviour:
@@ -864,6 +864,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npcList: []
+  sceneRouteDataListSo: {fileID: 11400000, guid: 89b790db57eef471d9051277fc518377, type: 2}
 --- !u!1 &863896804
 GameObject:
   m_ObjectHideFlags: 0

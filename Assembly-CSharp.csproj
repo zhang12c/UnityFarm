@@ -63,6 +63,7 @@
      <Compile Include="Assets/Scripts/AStar/AStar.cs" />
      <Compile Include="Assets/Scripts/Utility/DataCollection.cs" />
      <Compile Include="Assets/Scripts/Utility/Settings.cs" />
+     <Compile Include="Assets/Scripts/NPC/Data/SceneRouteDataList_SO.cs" />
      <Compile Include="Assets/Scripts/Inventory/UI/SlotToolTip.cs" />
      <Compile Include="Assets/Scripts/AStar/AStarTest.cs" />
      <Compile Include="Assets/Scripts/Inventory/Item/ItemFader.cs" />
@@ -264,6 +265,7 @@
      <Folder Include="Assets/Scripts/Utility" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Sprite.shader" />
      <Folder Include="Assets/GameARTRes/Art/Characters/Player/Tools/Pickaxe" />
+     <Folder Include="Assets/GameData/SceneRoute" />
      <Folder Include="Assets/GameARTRes/Animations/NPC/Gril01" />
      <Reference Include="UnityEngine">
      <HintPath>/Applications/Unity/Hub/Editor/2021.3.20f1c1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>

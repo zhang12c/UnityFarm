@@ -54,10 +54,12 @@ namespace Utility
         /// npc播放动画间隔
         /// </summary>
         public const float NPC_ANIMATON_PIXE = 10f;
-        
-        
-        
-        
+
+        public const int MAX_GRID_SIZE = 9999;
+
+
+
+
 
     }
 }

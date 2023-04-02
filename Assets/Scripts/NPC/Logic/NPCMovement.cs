@@ -28,7 +28,18 @@ namespace NPC
         /// <summary>
         /// 目标点
         /// </summary>
-        private Vector3Int _targetGridPosition;
+        private Vector3Int _targetGridPosition
+        {
+            get
+            {
+                return t;
+            }
+            set
+            {
+                t = value;
+            }
+        }
+        private Vector3Int t;
         /// <summary>
         /// 下一个网格的位置
         /// 记录用
@@ -246,6 +257,8 @@ namespace NPC
         {
             _spriteRenderer.enabled = true;
             _boxCollider.enabled = true;
+            // 影子
+            transform.GetChild(0).gameObject.SetActive(true);
         }
 
         /// <summary>
@@ -256,6 +269,7 @@ namespace NPC
         {
             _spriteRenderer.enabled = false;
             _boxCollider.enabled = false;
+            transform.GetChild(0).gameObject.SetActive(false);
         }
 
         /// <summary>
@@ -263,13 +277,11 @@ namespace NPC
         /// </summary>
         private void InitNPC()
         {
-            _targetScene = _currentScene;
+            //_targetScene = _currentScene;
             
             // 保持npc移动的坐标是网格的中心点
             _currentGridPosition = _grid.WorldToCell(transform.position);
             transform.position = new Vector3(_currentGridPosition.x + Settings.GRID_CELL_DEFAULT_SIZE * 0.5f, _currentGridPosition.y + Settings.GRID_CELL_DEFAULT_SIZE * 0.5f, 0);
-
-            _targetGridPosition = _currentGridPosition;
         }
 
         /// <summary>
@@ -370,12 +382,44 @@ namespace NPC
             _currentScheduleDetails = scheduleDetails;
             _targetGridPosition = (Vector3Int)scheduleDetails.targetGridPosition;
             _stopAnimationClip = scheduleDetails.clipAtStop;
+            _targetScene = scheduleDetails.targetScene;
             if (scheduleDetails.targetScene == _currentScene)
             {
                 /// 获得寻路的路径
                 AStar.AStar.Instance.BuildPath(scheduleDetails.targetScene,(Vector2Int)_currentGridPosition,scheduleDetails.targetGridPosition,_movementSteps);
             }
-            // TODO: 跨场景
+            else if (scheduleDetails.targetScene != _currentScene)
+            {
+                // 跨场景
+                SceneRoute sceneRoute = NPCManager.Instance.GetSceneRoute(_currentScene, _targetScene);
+                if (sceneRoute != null)
+                {
+                    foreach (ScenePath scenePath in sceneRoute.scenePathList)
+                    {
+                        Vector2Int fromPos, toPos;
+                        if (scenePath.fromGridCell.x >= Settings.MAX_GRID_SIZE)
+                        {
+                            // 9999 不管从哪里来
+                            fromPos = (Vector2Int)_currentGridPosition;
+                        }
+                        else
+                        {
+                            // 到这个地方去
+                            fromPos = scenePath.fromGridCell;
+                        }
+                        if (scenePath.toGridCell.x >= Settings.MAX_GRID_SIZE)
+                        {
+                            toPos = (Vector2Int)_targetGridPosition;
+                        }
+                        else
+                        {
+                            toPos = scenePath.toGridCell;
+                        }
+                        
+                        AStar.AStar.Instance.BuildPath(scenePath.sceneName,fromPos,toPos,_movementSteps);
+                    }
+                }
+            }
 
             if (_movementSteps.Count > 1)
             {
