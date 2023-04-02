@@ -736,6 +736,7 @@ MonoBehaviour:
   normalSpeed: 1
   isMoving: 0
   scheduleData: {fileID: 11400000, guid: 4e0c6003f3f7041a1a11b91339c5b321, type: 2}
+  _blankAnimationClip: {fileID: 7400000, guid: 500fefed8113b4f7e8f2dc728631a63d, type: 2}
 --- !u!1 &761468277
 GameObject:
   m_ObjectHideFlags: 0
@@ -822,7 +823,7 @@ MonoBehaviour:
   moveNPC: 0
   targetScene: 01_Field
   targetPos: {x: 20, y: 20}
-  stopClip: {fileID: 7400000, guid: db32c3897ab64466f86a8993b8e48f9e, type: 2}
+  stopClip: {fileID: 7400000, guid: 54d560542c0284c169c56cddc7145ac6, type: 2}
 --- !u!114 &854680071
 MonoBehaviour:
   m_ObjectHideFlags: 0

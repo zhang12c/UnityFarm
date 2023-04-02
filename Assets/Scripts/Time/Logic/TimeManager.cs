@@ -42,7 +42,7 @@ public class TimeManager : Singleton<TimeManager>
     {
         // 第一次登陆的时候需要初始化一下时间
         MyEventHandler.CallGameDateEvent(gameHour,gameDay,gameMonth,gameYear,gameSeason);
-        MyEventHandler.CallGameMinuteEvent(gameMinute,gameHour);
+        MyEventHandler.CallGameMinuteEvent(gameMinute,gameHour,gameDay,gameSeason);
     }
 
     private void Update()
@@ -140,7 +140,7 @@ public class TimeManager : Singleton<TimeManager>
                     //MyEvnetHandler.CallGameDateEvent(gameHour,gameDay,gameMonth,gameYear,gameSeason);
                 }
             }
-            MyEventHandler.CallGameMinuteEvent(gameMinute,gameHour);
+            MyEventHandler.CallGameMinuteEvent(gameMinute,gameHour,gameDay,gameSeason);
             //else
             {
                 //MyEvnetHandler.CallGameMinuteEvent(gameMinute,gameHour);

@@ -53,7 +53,7 @@ namespace Utility
         /// <summary>
         /// npc播放动画间隔
         /// </summary>
-        public const float NPC_ANIMATON_PIXE = 2f; // 图片的像素 20 * 20 占 一个格子 则 1像素占0.05个格子
+        public const float NPC_ANIMATON_PIXE = 10f;
         
         
         

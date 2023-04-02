@@ -5,6 +5,7 @@ using AStar;
 using NPC.Data;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 using Utility;
 namespace NPC
 {
@@ -80,7 +81,8 @@ namespace NPC
         /// <summary>
         /// npc的行为列表
         /// </summary>
-        public ScheduleDataList_SO scheduleData;
+        [FormerlySerializedAs("scheduleData")]
+        public ScheduleDataList_SO scheduleDataSO;
         /// <summary>
         /// 这个结构是默认就会排序的
         /// </summary>
@@ -97,7 +99,7 @@ namespace NPC
             }
         }
 
-        
+        #region 动画的参数
         /// <summary>
         /// 动画可以循环播放的计时间隔
         /// </summary>
@@ -110,11 +112,22 @@ namespace NPC
         /// 停止的时候动作
         /// </summary>
         private AnimationClip _stopAnimationClip;
+        /// <summary>
+        /// Animation
+        /// </summary>
+        public AnimationClip _blankAnimationClip;
+        /// <summary>
+        /// 不通的事件创建不同的animator
+        /// </summary>
+        private AnimatorOverrideController _animatorOverrideController;
+        #endregion
+
 
         private void OnEnable()
         {
             MyEventHandler.AfterSceneLoadEvent += OnAfterSceneLoadEvent;
             MyEventHandler.BeforeSceneUnloadEvent += OnBeforeSceneUnloadEvent;
+            MyEventHandler.GameMinuteEvent += OnGameMinuteEvent;
         }
         private void Awake()
         {
@@ -123,8 +136,15 @@ namespace NPC
             _boxCollider = GetComponent<BoxCollider2D>();
             _animator = GetComponent<Animator>();
             
-            //gameTime = TimeManager.Instance.GameTime;
             _movementSteps = new Stack<MovementStep>();
+            _animatorOverrideController = new AnimatorOverrideController(_animator.runtimeAnimatorController);
+            _animator.runtimeAnimatorController = _animatorOverrideController;
+            
+            _scheduleData = new SortedSet<ScheduleDetails>();
+            foreach (ScheduleDetails scheduleData in scheduleDataSO.scheduleDetailsList)
+            {
+                _scheduleData.Add(scheduleData);
+            }
         }
         
         private void Update()
@@ -156,6 +176,37 @@ namespace NPC
         {
             MyEventHandler.AfterSceneLoadEvent -= OnAfterSceneLoadEvent;
             MyEventHandler.BeforeSceneUnloadEvent -= OnBeforeSceneUnloadEvent;
+            MyEventHandler.GameMinuteEvent -= OnGameMinuteEvent;
+        }
+        private void OnGameMinuteEvent(int m, int h,int day, Season season)
+        {
+            int time = h * 100 + m;
+            ScheduleDetails matchScheduleDetails = null;
+            foreach (ScheduleDetails schedule in _scheduleData)
+            {
+                if (schedule.realTime == time)
+                {
+                    if (schedule.day != day && schedule.day != 0)
+                    {
+                        continue;
+                    }
+                    if (schedule.season != season)
+                    {
+                        continue;
+                    }
+                    matchScheduleDetails = schedule;
+                }else if (schedule.realTime > time)
+                {
+                    // 有序的一个列表，因为他默认第一个为最先触发的行为
+                    break;
+                }
+            }
+
+            if (matchScheduleDetails != null)
+            {
+                // 有符合条件的行为逻辑
+                BuildPath(matchScheduleDetails);
+            }
         }
         private void OnBeforeSceneUnloadEvent()
         {
@@ -435,10 +486,17 @@ namespace NPC
 
             if (_stopAnimationClip != null)
             {
+                _animatorOverrideController[_blankAnimationClip] = _stopAnimationClip;
                 _animator.SetBool("EventAnimation",true);
                 yield return null;
                 _animator.SetBool("EventAnimation",false);
             }
+            else
+            {
+                _animatorOverrideController[_stopAnimationClip] = _blankAnimationClip;
+                _animator.SetBool("EventAnimation",false);
+            }
         }
+        
     }
 }

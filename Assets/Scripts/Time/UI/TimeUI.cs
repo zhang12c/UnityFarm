@@ -57,7 +57,7 @@ public class TimeUI : MonoBehaviour
         MyEventHandler.GameMinuteEvent -= OnMinuteEvent;
         MyEventHandler.GameDateEvent -= OnGameDateEvent;
     }
-    private void OnMinuteEvent(int m, int h)
+    private void OnMinuteEvent(int m, int h,int day, Season season)
     {
         timeText.text = $"{h:00}:{m:00}";
     }

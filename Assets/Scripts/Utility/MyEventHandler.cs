@@ -59,10 +59,10 @@ namespace Utility
         /// <summary>
         /// 每一分钟执行一次
         /// </summary>
-        public static event Action<int, int> GameMinuteEvent;
-        public static void CallGameMinuteEvent(int m, int h)
+        public static event Action<int, int,int,Season> GameMinuteEvent;
+        public static void CallGameMinuteEvent(int m, int h,int day,Season season = Season.Spring)
         {
-            GameMinuteEvent?.Invoke(m,h);
+            GameMinuteEvent?.Invoke(m,h,day,season);
         }
         /// <summary>
         /// 每小时执行一次
