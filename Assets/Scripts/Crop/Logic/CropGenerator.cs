@@ -49,6 +49,7 @@ namespace Crop.Logic
                 if (tile == null)
                 {
                     tile = new TileDetails();
+                    tile.pos = (Vector2Int)cropGridPos;
                 }
 
                 tile.daySinceWatered = -1;

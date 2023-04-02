@@ -131,7 +131,7 @@ namespace Map.Logic
         /// </summary>
         /// <param name="key">x + y + 地图名称</param>
         /// <returns></returns>
-        private TileDetails GetTileDetails(string key)
+        public TileDetails GetTileDetails(string key)
         {
             if (_tileDetailsMap.ContainsKey(key))
             {

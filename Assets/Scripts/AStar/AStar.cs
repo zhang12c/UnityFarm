@@ -89,7 +89,8 @@ namespace AStar
                 for (int y = 0; y < _gridHeight; y++)
                 {
                     Vector3Int tilePos = new Vector3Int(x + _originX, y + _originY);
-                    TileDetails tileDetails = GridMapManager.Instance.GetTileDetailsOnMousePosition(tilePos);
+                    string key = tilePos.x + "x" + tilePos.y + "y" + sceneName;
+                    TileDetails tileDetails = GridMapManager.Instance.GetTileDetails(key);
                     if (tileDetails != null)
                     {
                         Node node = new Node(new Vector2Int(x,y));
@@ -128,7 +129,7 @@ namespace AStar
                 {
                     // 到了终点了
                     _pathFound = true;
-                    Debug.Log("到了");
+                    // Debug.Log("到了");
                     break;
                 }
                 else

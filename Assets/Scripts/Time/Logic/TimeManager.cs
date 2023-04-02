@@ -31,6 +31,27 @@ public class TimeManager : Singleton<TimeManager>
             return new TimeSpan(gameHour, gameMinute, gameSecond);
         }
     }
+    private void OnEnable()
+    {
+        MyEventHandler.AfterSceneLoadEvent += OnAfterSceneLoadEvent;
+        MyEventHandler.BeforeSceneUnloadEvent += OnBeforeSceneUnloadEvent;
+    }
+
+    private void OnDisable()
+    {
+        MyEventHandler.AfterSceneLoadEvent -= OnAfterSceneLoadEvent;
+        MyEventHandler.BeforeSceneUnloadEvent -= OnBeforeSceneUnloadEvent;
+
+    }
+    private void OnAfterSceneLoadEvent()
+    {
+        gameClockPause = false;
+    }
+    private void OnBeforeSceneUnloadEvent()
+    {
+        gameClockPause = true;
+    }
+
 
     protected override void Awake()
     {
