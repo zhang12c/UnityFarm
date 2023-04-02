@@ -55,6 +55,7 @@
      <Compile Include="Assets/Scripts/Map/Logic/GridMapManager.cs" />
      <Compile Include="Assets/Scripts/Inventory/Item/ItemPickup.cs" />
      <Compile Include="Assets/Scripts/Player/AnimatorOveride.cs" />
+     <Compile Include="Assets/Scripts/NPC/Logic/NPCManager.cs" />
      <Compile Include="Assets/Scripts/Transition/Teleport.cs" />
      <Compile Include="Assets/Scripts/Utility/Attribute/SceneNameAttribute.cs" />
      <Compile Include="Assets/Scripts/Time/Logic/TimeManager.cs" />
@@ -68,10 +69,12 @@
      <Compile Include="Assets/Scripts/AStar/GridNodes.cs" />
      <Compile Include="Assets/Scripts/Time/UI/TimeUI.cs" />
      <Compile Include="Assets/Scripts/Inventory/Logic/ItemManager.cs" />
+     <Compile Include="Assets/Scripts/NPC/Data/ScheduleDetails.cs" />
      <Compile Include="Assets/Scripts/Inventory/Data_SO/InventoryBag_SO.cs" />
      <Compile Include="Assets/Scripts/Utility/Enums.cs" />
      <Compile Include="Assets/Scripts/Utility/Singleton.cs" />
      <Compile Include="Assets/Scripts/Crop/Logic/CropGenerator.cs" />
+     <Compile Include="Assets/Scripts/NPC/Logic/NPCMovement.cs" />
      <Compile Include="Assets/Scripts/Inventory/UI/SlotUI.cs" />
      <Compile Include="Assets/Scripts/Inventory/UI/InventoryUI.cs" />
      <Compile Include="Assets/Scripts/Crop/Data/CropDataListSo.cs" />
@@ -81,14 +84,13 @@
      <Compile Include="Assets/Scripts/Inventory/Item/ItemInteractive.cs" />
      <Compile Include="Assets/Scripts/Inventory/Item/ItemBounce.cs" />
      <Compile Include="Assets/Scripts/Inventory/UI/ItemToolTip.cs" />
+     <Compile Include="Assets/Scripts/NPC/Data/ScheduleDataList_SO.cs" />
      <Compile Include="Assets/Scripts/Inventory/UI/ActionBarButton.cs" />
      <Compile Include="Assets/Scripts/Map/Logic/GridMap.cs" />
      <Compile Include="Assets/Scripts/Crop/Data/CropDetails.cs" />
      <Compile Include="Assets/Scripts/Inventory/Logic/InventoryManager.cs" />
      <Compile Include="Assets/Scripts/Inventory/Item/ItemShadow.cs" />
      <Compile Include="Assets/Scripts/Crop/Logic/ReapItem.cs" />
-     <Compile Include="Assets/Scripts/NPC/NPCMovement.cs" />
-     <Compile Include="Assets/Scripts/NPC/NPCManager.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/Scripts/Cursor" />
      <Folder Include="Assets/GameARTRes/Art/Intro/Sign" />
@@ -197,6 +199,7 @@
      <Folder Include="Assets/GameARTRes/Art/Items/Bushes" />
      <Folder Include="Assets/TileMaps/Tiles" />
      <Folder Include="Assets/GameARTRes/Animators/NPC" />
+     <Folder Include="Assets/Scripts/NPC/Data" />
      <Folder Include="Assets/GameARTRes/Art/Characters/Player" />
      <Folder Include="Assets/GameARTRes/Tilemap" />
      <Folder Include="Assets/TextMesh Pro/Resources/Style Sheets" />
@@ -204,6 +207,8 @@
      <Folder Include="Assets/GameARTRes/Art/Faces" />
      <Folder Include="Assets/Scripts/Inventory/Logic" />
      <Folder Include="Assets/TextMesh Pro/Fonts" />
+     <Folder Include="Assets/Scripts/NPC/Logic" />
+     <Folder Include="Assets/GameData/NPC" />
      <None Include="Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt" />
      <Folder Include="Assets/Resources" />
      <Folder Include="Assets/Scripts/Inventory/Data_SO" />

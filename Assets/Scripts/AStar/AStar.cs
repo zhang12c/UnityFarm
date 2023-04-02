@@ -1,10 +1,9 @@
 using System.Collections.Generic;
-using System.Linq;
 using Map.Logic;
 using UnityEngine;
 namespace AStar
 {
-    public class AStar : MonoBehaviour
+    public class AStar : Singleton<AStar>
     {
         /// <summary>
         /// 每一张地图所有的网格点

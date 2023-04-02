@@ -37,5 +37,14 @@ namespace Utility
         /// </summary>
         public const int REAP_MAX_COUNT = 2;
 
+        /// <summary>
+        /// 每一个网格的默认长度
+        /// </summary>
+        public const int GRID_CELL_DEFAULT_SIZE = 1;
+        /// <summary>
+        /// 每一个网格斜方向的默认长度
+        /// </summary>
+        public const float GRID_CELL_DEFAULT_DIAGONAL_SIZE = 1.4f;
+
     }
 }

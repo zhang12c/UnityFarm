@@ -1,10 +1,8 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Utility;
 
-public class TimeManager : MonoBehaviour
+public class TimeManager : Singleton<TimeManager>
 {
     /// <summary>
     /// 基础时间单位
@@ -26,8 +24,17 @@ public class TimeManager : MonoBehaviour
 
     private float tikTime;
 
+    public TimeSpan GameTime
+    {
+        get
+        {
+            return new TimeSpan(gameHour, gameMinute, gameSecond);
+        }
+    }
+
     private void Awake()
     {
+        base.Awake();
         InitGameTime();
     }
 
