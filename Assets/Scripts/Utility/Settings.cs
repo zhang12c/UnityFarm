@@ -46,9 +46,16 @@ namespace Utility
         /// </summary>
         public const float GRID_CELL_DEFAULT_DIAGONAL_SIZE = 1.4f;
         /// <summary>
-        /// mo
+        /// 
         /// </summary>
         public const float DEFAULT_PIXE_SIZE = 0.05f; // 图片的像素 20 * 20 占 一个格子 则 1像素占0.05个格子
+        
+        /// <summary>
+        /// npc播放动画间隔
+        /// </summary>
+        public const float NPC_ANIMATON_PIXE = 2f; // 图片的像素 20 * 20 占 一个格子 则 1像素占0.05个格子
+        
+        
         
         
 

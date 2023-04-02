@@ -12,9 +12,14 @@ namespace NPC
     [RequireComponent(typeof(Animator))]
     public class NPCMovement : MonoBehaviour
     {
+        /// <summary>
+        /// 当前的场景名称
+        /// </summary>
         [SerializeField]private string _currentScene;
+        /// <summary>
+        /// 目标场景名称
+        /// </summary>
         private string _targetScene;
-
         /// <summary>
         /// 起始点
         /// </summary>
@@ -28,7 +33,6 @@ namespace NPC
         /// 记录用
         /// </summary>
         private Vector3Int _nextGridPosition;
-
         public string StartScene
         {
             set
@@ -44,40 +48,74 @@ namespace NPC
         private Vector2 dir;
         public bool isMoving;
 
+        // 身上的一些组件
         private Rigidbody2D _rigidbody2D;
         private SpriteRenderer _spriteRenderer;
         private BoxCollider2D _boxCollider;
         private Animator _animator;
-
+        // 场景中的Grid
         private Grid _grid;
         /// <summary>
-        /// 用于判断是否已经加载过了的
+        /// 用于判断场景是否已经加载过了的
         /// </summary>
         private bool _isLoaded;
-
+        /// <summary>
+        /// npc 是否在移动过程中
+        /// 可能是一个冗余参数
+        /// </summary>
         private bool _npcIsMoving;
-
         /// <summary>
         /// 下一步的临时坐标
         /// </summary>
         private Vector3 _nextstepWorldPosition;
-
         /// <summary>
-        /// 场景每加载就不要动
+        /// 场景是否加载完成了
+        /// 场景没加载就不要动
         /// </summary>
         private bool _sceneIsLoaded;
-
+        /// <summary>
+        /// npc到达目的地的步数队列
+        /// </summary>
         private Stack<MovementStep> _movementSteps;
-        
+        /// <summary>
+        /// npc的行为列表
+        /// </summary>
         public ScheduleDataList_SO scheduleData;
         /// <summary>
         /// 这个结构是默认就会排序的
         /// </summary>
         public SortedSet<ScheduleDetails> _scheduleData;
         private ScheduleDetails _currentScheduleDetails;
+        /// <summary>
+        /// 当前时间
+        /// </summary>
+        private TimeSpan gameTime
+        {
+            get
+            {
+                return TimeManager.Instance.GameTime;
+            }
+        }
 
-        private TimeSpan gameTime => TimeManager.Instance.GameTime ;
+        
+        /// <summary>
+        /// 动画可以循环播放的计时间隔
+        /// </summary>
+        private float _animationBreakTime;
+        /// <summary>
+        /// 可以播放动画
+        /// </summary>
+        private bool _canPlayStopAnimation;
+        /// <summary>
+        /// 停止的时候动作
+        /// </summary>
+        private AnimationClip _stopAnimationClip;
 
+        private void OnEnable()
+        {
+            MyEventHandler.AfterSceneLoadEvent += OnAfterSceneLoadEvent;
+            MyEventHandler.BeforeSceneUnloadEvent += OnBeforeSceneUnloadEvent;
+        }
         private void Awake()
         {
             _rigidbody2D = GetComponent<Rigidbody2D>();
@@ -88,11 +126,30 @@ namespace NPC
             //gameTime = TimeManager.Instance.GameTime;
             _movementSteps = new Stack<MovementStep>();
         }
-
-        private void OnEnable()
+        
+        private void Update()
         {
-            MyEventHandler.AfterSceneLoadEvent += OnAfterSceneLoadEvent;
-            MyEventHandler.BeforeSceneUnloadEvent += OnBeforeSceneUnloadEvent;
+            if (_sceneIsLoaded)
+            {
+                SwitchAnimation();
+            }
+
+            _animationBreakTime -= Time.deltaTime;
+            if (_animationBreakTime <= 0)
+            {
+                _canPlayStopAnimation = true;
+            }
+            else
+            {
+                _canPlayStopAnimation = false;
+            }
+        }
+        private void FixedUpdate()
+        {
+            if (_sceneIsLoaded)
+            {
+                Movement();
+            }
         }
 
         private void OnDisable()
@@ -104,14 +161,7 @@ namespace NPC
         {
             _sceneIsLoaded = false;
         }
-
-        private void FixedUpdate()
-        {
-            if (_sceneIsLoaded)
-            {
-                Movement();
-            }
-        }
+        
         private void OnAfterSceneLoadEvent()
         {
             _grid = FindObjectOfType<Grid>();
@@ -123,7 +173,9 @@ namespace NPC
             }
             _sceneIsLoaded = true;
         }
-
+        /// <summary>
+        /// 判断npc显影逻辑
+        /// </summary>
         private void CheckVisiable()
         {
             if (_currentScene != SceneManager.GetActiveScene().name)
@@ -155,6 +207,9 @@ namespace NPC
             _boxCollider.enabled = false;
         }
 
+        /// <summary>
+        /// 初始化npc
+        /// </summary>
         private void InitNPC()
         {
             _targetScene = _currentScene;
@@ -166,6 +221,9 @@ namespace NPC
             _targetGridPosition = _currentGridPosition;
         }
 
+        /// <summary>
+        /// 最主要的移动函数
+        /// </summary>
         private void Movement()
         {
             if (!_npcIsMoving)
@@ -186,6 +244,11 @@ namespace NPC
                     TimeSpan timeSpan = new TimeSpan(step.hour, step.minute, step.second);
 
                     MoveToGridPosition(_nextGridPosition,timeSpan);
+                }
+                else if (!isMoving && _canPlayStopAnimation)
+                {
+                    // 已经停止了，到达了目标地点
+                    StartCoroutine(FaceToCamera());
                 }
             }
         }
@@ -254,7 +317,8 @@ namespace NPC
         {
             _movementSteps.Clear();
             _currentScheduleDetails = scheduleDetails;
-
+            _targetGridPosition = (Vector3Int)scheduleDetails.targetGridPosition;
+            _stopAnimationClip = scheduleDetails.clipAtStop;
             if (scheduleDetails.targetScene == _currentScene)
             {
                 /// 获得寻路的路径
@@ -325,11 +389,56 @@ namespace NPC
             return (currentStep.gridCoordinate.x != nextStep.gridCoordinate.x && currentStep.gridCoordinate.y != nextStep.gridCoordinate.y);
         }
 
+        /// <summary>
+        /// 偏移0.5
+        /// </summary>
+        /// <param name="gridPos"></param>
+        /// <returns></returns>
         private Vector3 GetWorldPosition(Vector3Int gridPos)
         {
             Vector3 worldPos = _grid.WorldToCell(gridPos);
             float jianGe = Settings.GRID_CELL_DEFAULT_SIZE / 2f;
             return new Vector3(worldPos.x + jianGe, worldPos.y + jianGe, 0);
+        }
+
+        /// <summary>
+        /// 动画状态机的切换
+        /// </summary>
+        private void SwitchAnimation()
+        {
+            isMoving = transform.position != GetWorldPosition(_targetGridPosition);
+            
+            _animator.SetBool("isMoving",isMoving);
+            if (isMoving)
+            {
+                _animator.SetBool("Exit",true);
+                _animator.SetFloat("DirX",dir.x);
+                _animator.SetFloat("DirY",dir.y);
+            }
+            else
+            {
+                _animator.SetBool("Exit",false);
+            }
+        }
+        /// <summary>
+        /// 强制面向下，并且循环播放动作
+        /// 用一个计时的方法
+        /// </summary>
+        /// <returns></returns>
+        private IEnumerator FaceToCamera()
+        {
+            // 强制面向下
+            _animator.SetFloat("DirX",0);
+            _animator.SetFloat("DirY",-1);
+
+            _animationBreakTime = Settings.NPC_ANIMATON_PIXE;
+
+            if (_stopAnimationClip != null)
+            {
+                _animator.SetBool("EventAnimation",true);
+                yield return null;
+                _animator.SetBool("EventAnimation",false);
+            }
         }
     }
 }
