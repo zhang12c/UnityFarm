@@ -53,6 +53,7 @@
      <Compile Include="Assets/Scripts/Utility/MyEventHandler.cs" />
      <Compile Include="Assets/Scripts/Utility/Attribute/SceneNameDrawer.cs" />
      <Compile Include="Assets/Scripts/Map/Logic/GridMapManager.cs" />
+     <Compile Include="Assets/Scripts/Dialogue/Logic/DialogueController.cs" />
      <Compile Include="Assets/Scripts/Inventory/Item/ItemPickup.cs" />
      <Compile Include="Assets/Scripts/Player/AnimatorOveride.cs" />
      <Compile Include="Assets/Scripts/NPC/Logic/NPCManager.cs" />
@@ -64,6 +65,7 @@
      <Compile Include="Assets/Scripts/Utility/DataCollection.cs" />
      <Compile Include="Assets/Scripts/Utility/Settings.cs" />
      <Compile Include="Assets/Scripts/NPC/Data/SceneRouteDataList_SO.cs" />
+     <Compile Include="Assets/Scripts/Dialogue/UI/DialogueUI.cs" />
      <Compile Include="Assets/Scripts/Inventory/UI/SlotToolTip.cs" />
      <Compile Include="Assets/Scripts/AStar/AStarTest.cs" />
      <Compile Include="Assets/Scripts/Inventory/Item/ItemFader.cs" />
@@ -89,10 +91,10 @@
      <Compile Include="Assets/Scripts/Inventory/UI/ActionBarButton.cs" />
      <Compile Include="Assets/Scripts/Map/Logic/GridMap.cs" />
      <Compile Include="Assets/Scripts/Crop/Data/CropDetails.cs" />
+     <Compile Include="Assets/Scripts/Dialogue/Data/DialoguePiece.cs" />
      <Compile Include="Assets/Scripts/Inventory/Logic/InventoryManager.cs" />
      <Compile Include="Assets/Scripts/Inventory/Item/ItemShadow.cs" />
      <Compile Include="Assets/Scripts/Crop/Logic/ReapItem.cs" />
-     <Compile Include="Assets/Scripts/Dialogue/UI/DialogueUI.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/Scripts/Cursor" />
      <Folder Include="Assets/GameARTRes/Art/Intro/Sign" />
@@ -150,6 +152,7 @@
      <Folder Include="Assets/Scripts/Dialogue/UI" />
      <Folder Include="Assets/GameARTRes/Animations/UI" />
      <Folder Include="Assets/Scripts/Map/Data" />
+     <Folder Include="Assets/Scripts/Dialogue/Logic" />
      <Folder Include="Assets/GameARTRes/Tilemap/Palettes" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" />
      <Folder Include="Assets/GameARTRes/Art/Characters/Girl02" />
@@ -248,6 +251,7 @@
      <Folder Include="Assets/Perfab" />
      <Folder Include="Assets/GameData/Crop" />
      <Folder Include="Assets/TextMesh Pro/Documentation" />
+     <Folder Include="Assets/Scripts/Dialogue/Data" />
      <Folder Include="Assets/Scripts/Map/Logic" />
      <Folder Include="Assets/Scripts/Time/UI" />
      <Folder Include="Assets/GameARTRes/Animators/UI" />

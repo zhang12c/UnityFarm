@@ -56,10 +56,7 @@ namespace Utility
         public const float NPC_ANIMATON_PIXE = 10f;
 
         public const int MAX_GRID_SIZE = 9999;
-
-
-
-
-
+        
+        public const string USER_NAME = "JetKeey";
     }
 }

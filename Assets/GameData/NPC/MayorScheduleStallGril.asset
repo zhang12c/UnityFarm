@@ -21,7 +21,7 @@ MonoBehaviour:
     targetScene: 01_Field
     targetGridPosition: {x: 25, y: 20}
     clipAtStop: {fileID: 0}
-    interactable: 0
+    interactable: 1
   - hour: 9
     minute: 0
     day: 0

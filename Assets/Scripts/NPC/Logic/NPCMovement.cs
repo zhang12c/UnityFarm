@@ -122,6 +122,11 @@ namespace NPC
         private AnimatorOverrideController _animatorOverrideController;
         #endregion
 
+        /// <summary>
+        /// 是否是可以互动的
+        /// </summary>
+        internal bool interactable;
+
 
         private void OnEnable()
         {
@@ -376,6 +381,7 @@ namespace NPC
             _targetGridPosition = (Vector3Int)scheduleDetails.targetGridPosition;
             _stopAnimationClip = scheduleDetails.clipAtStop;
             _targetScene = scheduleDetails.targetScene;
+            interactable = scheduleDetails.interactable;
             if (scheduleDetails.targetScene == _currentScene)
             {
                 /// 获得寻路的路径

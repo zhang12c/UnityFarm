@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Dialogue.Data;
 using UnityEngine;
 namespace Utility
 {
@@ -183,6 +184,15 @@ namespace Utility
         public static void CallGeneratorCropEvent()
         {
             GeneratorCropEvent?.Invoke();
+        }
+        
+        /// <summary>
+        /// 对话内容的传入
+        /// </summary>
+        public static event Action<DialoguePiece> ShowDialogueEvent;
+        public static void CallShowDialogueEvent(DialoguePiece dialoguePiece)
+        {
+            ShowDialogueEvent?.Invoke(dialoguePiece);
         }
         
     }
