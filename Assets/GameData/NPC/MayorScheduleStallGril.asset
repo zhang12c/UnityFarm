@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 021e8804f4c64c90a1c42218a95040be, type: 3}
+  m_Name: MayorScheduleStallGril
+  m_EditorClassIdentifier: 
+  scheduleDetailsList:
+  - hour: 8
+    minute: 0
+    day: 0
+    priority: 0
+    season: 0
+    targetScene: 01_Field
+    targetGridPosition: {x: 25, y: 20}
+    clipAtStop: {fileID: 0}
+    interactable: 0
+  - hour: 9
+    minute: 0
+    day: 0
+    priority: 0
+    season: 0
+    targetScene: 03_Stall
+    targetGridPosition: {x: -4, y: 5}
+    clipAtStop: {fileID: 0}
+    interactable: 0

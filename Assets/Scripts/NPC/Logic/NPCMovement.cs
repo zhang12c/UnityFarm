@@ -138,7 +138,10 @@ namespace NPC
             
             _movementSteps = new Stack<MovementStep>();
             _animatorOverrideController = new AnimatorOverrideController(_animator.runtimeAnimatorController);
-            _animator.runtimeAnimatorController = _animatorOverrideController;
+            if (CheckHasStopClip())
+            {
+                _animator.runtimeAnimatorController = _animatorOverrideController;
+            }
             
             _scheduleData = new SortedSet<ScheduleDetails>();
             foreach (ScheduleDetails scheduleData in scheduleDataSO.scheduleDetailsList)
@@ -530,6 +533,22 @@ namespace NPC
                 _animatorOverrideController[_stopAnimationClip] = _blankAnimationClip;
                 _animator.SetBool("EventAnimation",false);
             }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        private bool CheckHasStopClip()
+        {
+            foreach (ScheduleDetails schedule in scheduleDataSO.scheduleDetailsList)
+            {
+                if (schedule.clipAtStop != null)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
         
     }

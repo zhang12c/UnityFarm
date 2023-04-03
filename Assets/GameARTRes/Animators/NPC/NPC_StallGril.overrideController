@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: NPC_StallGril
+  m_Controller: {fileID: 9100000, guid: ec33b34ec8ffa4a84a59e491b34eaefe, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: a036ac7eabc1f4ee89e48be4d1c934e3, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: bf11250c50cd54e0088f71e3578c50ad, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 2a9abeede8693418b93fd9d3caeed10e, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 3b022d96b73b64a01893ed280b488ff3, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 227afea17db8c42bb8540c846534fb25, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 0aa4facc80d874d8488e906e3a2e7b51, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 010242eed350a400ab6ce309a2849d94, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: e5be7c075e74e4462bc322e77f05f4a4, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 6d36821ecfb6f415da61123a25efed3b, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 1ca8e606f090646459d05e8b7ddc3fd4, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 87c8cf9771fb044fa996a4879cc9a6fe, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 9688add1b0d184e3d88b8a60fd280a2f, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 0a3a91367dd43472eb818858c2bfcf65, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 050d60fb9af444c0e9b42ce427bca9d1, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: c8c09870ca0514dac81f8508a9951b81, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 15e44ed3879b24dd9ad02fbe94058162, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 500fefed8113b4f7e8f2dc728631a63d, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 500fefed8113b4f7e8f2dc728631a63d, type: 2}
