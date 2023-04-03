@@ -11,8 +11,9 @@ namespace NPC
 
         private readonly Dictionary<string, SceneRoute> _sceneRouteDict = new Dictionary<string, SceneRoute>();
 
-        private void Awake()
+        protected override void Awake()
         {
+            base.Awake();
             InitSceneRouteDic();
         }
 

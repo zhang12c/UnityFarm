@@ -92,6 +92,7 @@
      <Compile Include="Assets/Scripts/Inventory/Logic/InventoryManager.cs" />
      <Compile Include="Assets/Scripts/Inventory/Item/ItemShadow.cs" />
      <Compile Include="Assets/Scripts/Crop/Logic/ReapItem.cs" />
+     <Compile Include="Assets/Scripts/Dialogue/UI/DialogueUI.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/Scripts/Cursor" />
      <Folder Include="Assets/GameARTRes/Art/Intro/Sign" />
@@ -146,6 +147,7 @@
      <Folder Include="Assets/GameARTRes/Animations/NPC/Gril02" />
      <Folder Include="Assets/Animator/Animation" />
      <Folder Include="Assets/Scripts" />
+     <Folder Include="Assets/Scripts/Dialogue/UI" />
      <Folder Include="Assets/GameARTRes/Animations/UI" />
      <Folder Include="Assets/Scripts/Map/Data" />
      <Folder Include="Assets/GameARTRes/Tilemap/Palettes" />
@@ -216,6 +218,7 @@
      <Folder Include="Assets/GameARTRes/Art/Characters/UI Animation" />
      <Folder Include="Assets/GameARTRes/Art/Characters/Girl04" />
      <Folder Include="Assets/GameARTRes/Art/Characters/Player/Tools/Axe" />
+     <Folder Include="Assets/Scripts/Dialogue" />
      <Folder Include="Assets/GameARTRes/Art/Characters/Old Man" />
      <Folder Include="Assets/GameARTRes/Animations/NPC/Boy" />
      <Folder Include="Assets/GameARTRes/Art/Items/Tree01" />
