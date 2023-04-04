@@ -117,4 +117,9 @@ namespace Utility
         Rock,
         ReapableScenery
     }
+
+    public enum LightShift
+    {
+        Morning,Night
+    }
 }

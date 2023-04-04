@@ -42,11 +42,11 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModulePhysics2D.cs" />
-     <Compile Include="Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModulePhysics.cs" />
      <Compile Include="Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUnityVersion.cs" />
      <Compile Include="Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleEPOOutline.cs" />
-     <Compile Include="Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleSprite.cs" />
      <Compile Include="Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUtils.cs" />
+     <Compile Include="Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModulePhysics.cs" />
+     <Compile Include="Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleSprite.cs" />
      <Compile Include="Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUI.cs" />
      <Compile Include="Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleAudio.cs" />
      <Folder Include="Assets/Plugins/Demigiant" />
@@ -306,23 +306,20 @@
      <Reference Include="UnityEditor.UnityConnectModule">
      <HintPath>/Applications/Unity/Hub/Editor/2021.3.20f1c1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.Burst.Unsafe">
-     <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Library/PackageCache/com.unity.burst@1.6.6/Unity.Burst.Unsafe.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.Burst.Cecil.Mdb">
-     <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Library/PackageCache/com.unity.burst@1.6.6/Unity.Burst.CodeGen/Unity.Burst.Cecil.Mdb.dll</HintPath>
+     <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Library/PackageCache/com.unity.burst@1.8.2/Unity.Burst.CodeGen/Unity.Burst.Cecil.Mdb.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil.Pdb">
-     <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Library/PackageCache/com.unity.burst@1.6.6/Unity.Burst.CodeGen/Unity.Burst.Cecil.Pdb.dll</HintPath>
+     <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Library/PackageCache/com.unity.burst@1.8.2/Unity.Burst.CodeGen/Unity.Burst.Cecil.Pdb.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil">
-     <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Library/PackageCache/com.unity.burst@1.6.6/Unity.Burst.CodeGen/Unity.Burst.Cecil.dll</HintPath>
+     <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Library/PackageCache/com.unity.burst@1.8.2/Unity.Burst.CodeGen/Unity.Burst.Cecil.dll</HintPath>
      </Reference>
      <Reference Include="DOTween">
      <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil.Rocks">
-     <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Library/PackageCache/com.unity.burst@1.6.6/Unity.Burst.CodeGen/Unity.Burst.Cecil.Rocks.dll</HintPath>
+     <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Library/PackageCache/com.unity.burst@1.8.2/Unity.Burst.CodeGen/Unity.Burst.Cecil.Rocks.dll</HintPath>
      </Reference>
      <Reference Include="netstandard">
      <HintPath>/Applications/Unity/Hub/Editor/2021.3.20f1c1/Unity.app/Contents/NetStandard/ref/2.1.0/netstandard.dll</HintPath>
@@ -693,23 +690,32 @@
      <Reference Include="Unity.2D.Tilemap.Extras">
      <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Library/ScriptAssemblies/Unity.2D.Tilemap.Extras.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.2D.Animation.Editor">
-     <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.InternalAPIEngineBridge.001">
      <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.2D.Animation.Editor">
+     <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.PixelPerfect">
      <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Library/ScriptAssemblies/Unity.2D.PixelPerfect.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.2D.Tilemap.Editor">
-     <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+     <Reference Include="Unity.RenderPipelines.Universal.Shaders">
+     <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipelines.Universal.Runtime">
+     <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="PsdPlugin">
      <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Library/ScriptAssemblies/PsdPlugin.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.2D.Tilemap.Editor">
+     <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.TextMeshPro.Editor">
      <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="PPv2URPConverters">
+     <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Library/ScriptAssemblies/PPv2URPConverters.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Timeline">
      <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
@@ -719,6 +725,9 @@
      </Reference>
      <Reference Include="Unity.Burst.Editor">
      <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Searcher.Editor">
+     <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Library/ScriptAssemblies/Unity.Searcher.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.IK.Editor">
      <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Library/ScriptAssemblies/Unity.2D.IK.Editor.dll</HintPath>
@@ -732,8 +741,8 @@
      <Reference Include="Unity.2D.Path.Editor">
      <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Library/ScriptAssemblies/Unity.2D.Path.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.InternalAPIEditorBridge.001">
-     <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
+     <Reference Include="Unity.RenderPipelines.Core.Runtime">
+     <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.UI">
      <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
@@ -744,17 +753,26 @@
      <Reference Include="Unity.Rider.Editor">
      <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
+     <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+     </Reference>
      <Reference Include="UnityEngine.UI">
      <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Tilemap.Extras.Editor">
      <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Library/ScriptAssemblies/Unity.2D.Tilemap.Extras.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.InternalAPIEditorBridge.001">
+     <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.Mathematics">
      <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.IK.Runtime">
      <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Library/ScriptAssemblies/Unity.2D.IK.Runtime.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.ShaderGraph.Editor">
+     <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Cinemachine">
      <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
@@ -765,14 +783,23 @@
      <Reference Include="com.unity.cinemachine.editor">
      <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.RenderPipelines.Universal.Editor">
+     <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.2D.Animation.Runtime">
      <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.PixelPerfect.Editor">
      <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
+     <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.Timeline.Editor">
      <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
+     <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Mathematics.Editor">
      <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
@@ -785,6 +812,9 @@
      </Reference>
      <Reference Include="Unity.2D.Common.Editor">
      <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipelines.Core.Editor">
+     <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.SpriteShape.Runtime">
      <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Library/ScriptAssemblies/Unity.2D.SpriteShape.Runtime.dll</HintPath>
