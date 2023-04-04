@@ -194,6 +194,14 @@ namespace Utility
         {
             ShowDialogueEvent?.Invoke(dialoguePiece);
         }
+        /// <summary>
+        /// 灯关切换
+        /// </summary>
+        public static event Action<Season,LightShift,float> LightShiftChangeEvent;
+        public static void CallLightShiftChangeEvent(Season season,LightShift lightShift,float during)
+        {
+            LightShiftChangeEvent?.Invoke(season,lightShift,during);
+        }
         
     }
 }

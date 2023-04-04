@@ -31,6 +31,11 @@ public class TimeManager : Singleton<TimeManager>
             return new TimeSpan(gameHour, gameMinute, gameSecond);
         }
     }
+
+    /// <summary>
+    /// 灯光时间差
+    /// </summary>
+    private float _timeDifference;
     private void OnEnable()
     {
         MyEventHandler.AfterSceneLoadEvent += OnAfterSceneLoadEvent;
@@ -64,6 +69,8 @@ public class TimeManager : Singleton<TimeManager>
         // 第一次登陆的时候需要初始化一下时间
         MyEventHandler.CallGameDateEvent(gameHour,gameDay,gameMonth,gameYear,gameSeason);
         MyEventHandler.CallGameMinuteEvent(gameMinute,gameHour,gameDay,gameSeason);
+        
+        MyEventHandler.CallLightShiftChangeEvent(gameSeason,getCurrentLightShift(),_timeDifference);
     }
 
     private void Update()
@@ -163,9 +170,10 @@ public class TimeManager : Singleton<TimeManager>
             }
             MyEventHandler.CallGameMinuteEvent(gameMinute,gameHour,gameDay,gameSeason);
             //else
-            {
+            //{
                 //MyEvnetHandler.CallGameMinuteEvent(gameMinute,gameHour);
-            }
+            //}
+            MyEventHandler.CallLightShiftChangeEvent(gameSeason,getCurrentLightShift(),_timeDifference);
         }
         
         //Debug.Log($"{gameSecond} : {gameMinute}");
@@ -183,5 +191,23 @@ public class TimeManager : Singleton<TimeManager>
         gameMonth = 1;
         gameYear = 2023;
         gameSeason = Season.Spring;
+    }
+
+    private LightShift getCurrentLightShift()
+    {
+        if (GameTime >= Settings.morningTime && GameTime < Settings.nightTime)
+        {
+            // 白天这个时间段
+            // 距离早上5点过去了多少分
+            _timeDifference = (float)(GameTime - Settings.morningTime).TotalMinutes;
+            return LightShift.Morning;
+        }
+        else if (GameTime < Settings.morningTime || GameTime >= Settings.nightTime )
+        {
+            // 黎明
+            _timeDifference = Mathf.Abs((float)(GameTime - Settings.morningTime).TotalMinutes);
+            return LightShift.Night;
+        }
+        return LightShift.Morning;
     }
 }

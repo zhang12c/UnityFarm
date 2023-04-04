@@ -1,3 +1,4 @@
+using System;
 namespace Utility
 {
     public abstract class Settings
@@ -58,5 +59,20 @@ namespace Utility
         public const int MAX_GRID_SIZE = 9999;
         
         public const string USER_NAME = "JetKeey";
+
+        /// <summary>
+        /// 切换关照所需要的时间差
+        /// 如果大于这个值，就慢慢切换
+        /// 小于这个值，就马上切换
+        /// </summary>
+        public const float lightChangeDuration = 25f;
+        /// <summary>
+        /// 早晨的时间戳
+        /// </summary>
+        public static readonly TimeSpan morningTime = new TimeSpan(5, 0, 0);
+        /// <summary>
+        /// 晚上的时间戳
+        /// </summary>
+        public static readonly TimeSpan nightTime = new TimeSpan(19, 0, 0);
     }
 }

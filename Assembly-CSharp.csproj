@@ -41,6 +41,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets/Scripts/Light/Logic/LightManager.cs" />
      <Compile Include="Assets/Scripts/Utility/SwitchBounds.cs" />
      <Compile Include="Assets/Scripts/AStar/MovementStep.cs" />
      <Compile Include="Assets/Scripts/Transition/TransitionManager.cs" />
@@ -59,6 +60,7 @@
      <Compile Include="Assets/Scripts/Inventory/Logic/ItemManager.cs" />
      <Compile Include="Assets/Scripts/Inventory/Data_SO/InventoryBag_SO.cs" />
      <Compile Include="Assets/Scripts/Utility/Enums.cs" />
+     <Compile Include="Assets/Scripts/Light/Logic/LightController.cs" />
      <Compile Include="Assets/Scripts/Utility/Singleton.cs" />
      <Compile Include="Assets/Scripts/Crop/Logic/CropGenerator.cs" />
      <Compile Include="Assets/Scripts/NPC/Logic/NPCMovement.cs" />
@@ -80,6 +82,7 @@
      <Compile Include="Assets/Scripts/Player/AnimatorOveride.cs" />
      <Compile Include="Assets/Scripts/NPC/Logic/NPCManager.cs" />
      <Compile Include="Assets/Scripts/Transition/Teleport.cs" />
+     <Compile Include="Assets/Scripts/Light/Data/LightPattenList_SO.cs" />
      <Compile Include="Assets/Scripts/Dialogue/UI/DialogueUI.cs" />
      <Compile Include="Assets/Scripts/Inventory/UI/SlotToolTip.cs" />
      <Compile Include="Assets/Scripts/AStar/AStarTest.cs" />
@@ -95,9 +98,6 @@
      <Compile Include="Assets/Scripts/Crop/Data/CropDetails.cs" />
      <Compile Include="Assets/Scripts/Inventory/Item/ItemShadow.cs" />
      <Compile Include="Assets/Scripts/Crop/Logic/ReapItem.cs" />
-     <Compile Include="Assets/Scripts/Light/Data/LightPattenList_SO.cs" />
-     <Compile Include="Assets/Scripts/Light/Logic/LightController.cs" />
-     <Compile Include="Assets/Scripts/Light/Logic/LightManager.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/Scripts/Cursor" />
      <Folder Include="Assets/GameARTRes/Art/Intro/Sign" />

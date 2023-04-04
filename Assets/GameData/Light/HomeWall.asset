@@ -15,9 +15,9 @@ MonoBehaviour:
   lightPattenList:
   - season: 0
     LightShift: 0
-    lightColor: {r: 1, g: 1, b: 1, a: 1}
-    lightAmount: 1
+    lightColor: {r: 0.90588236, g: 0.8117647, b: 0.32156864, a: 1}
+    lightAmount: 0
   - season: 0
     LightShift: 1
-    lightColor: {r: 0.2943663, g: 0.41378942, b: 0.990566, a: 1}
-    lightAmount: 0.7
+    lightColor: {r: 0.90588236, g: 0.8117647, b: 0.32156864, a: 1}
+    lightAmount: 1.5
