@@ -1,6 +1,7 @@
 using System.Collections;
 using Audio.Data;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 using Utility;
 namespace Audio.Logic
@@ -22,6 +23,18 @@ namespace Audio.Logic
         /// 音乐的协程
         /// </summary>
         private Coroutine soundRoutine;
+
+        [Header("Snapshots")]
+        public AudioMixerSnapshot normalSnapShot;
+        public AudioMixerSnapshot ambientSnapShot;
+        public AudioMixerSnapshot muteSnapShot;
+        [Header("Audio Mixer")]
+        public AudioMixer audioMixer;
+
+        /// <summary>
+        /// 音量快照切换的事件间隔
+        /// </summary>
+        private float musicTransitionSecond = 8f;
 
         private void OnEnable()
         {
@@ -58,36 +71,51 @@ namespace Audio.Logic
         /// 播放背景音乐
         /// </summary>
         /// <param name="soundDetails"></param>
-        private void PlaySoundClip(SoundDetails soundDetails)
+        private void PlaySoundClip(SoundDetails soundDetails,float transitionTime)
         {
+            audioMixer.SetFloat("MusicVolume",ConvertSoundVolume(soundDetails.soundVolume));
             gameBgAudioSource.clip = soundDetails.soundClip;
             if (gameBgAudioSource.isActiveAndEnabled)
             {
                 gameBgAudioSource.Play();
             }
+            
+            normalSnapShot.TransitionTo(transitionTime);
         }
         
         /// <summary>
         /// 播放环境音乐
         /// </summary>
         /// <param name="soundDetails"></param>
-        private void PlayAmbientlip(SoundDetails soundDetails)
+        private void PlayAmbientlip(SoundDetails soundDetails,float transitionTime)
         {
+            audioMixer.SetFloat("AmbientVolume",ConvertSoundVolume(soundDetails.soundVolume));
             ambientAudioSource.clip = soundDetails.soundClip;
             if (ambientAudioSource.isActiveAndEnabled)
             {
                 ambientAudioSource.Play();
             }
+            normalSnapShot.TransitionTo(transitionTime);
         }
 
         private IEnumerator PlaySoundRoutine(SoundDetails music, SoundDetails ambient)
         {
             if (music != null && ambient != null)
             {
-                PlayAmbientlip(ambient);
+                PlayAmbientlip(ambient,musicTransitionSecond);
                 yield return new WaitForSeconds(musicStartSecond);
-                PlaySoundClip(music);
+                PlaySoundClip(music,musicTransitionSecond);
             }
+        }
+
+        /// <summary>
+        /// 将音量0 - 1.5f 转化 到 比特
+        /// </summary>
+        /// <param name="amount"></param>
+        /// <returns></returns>
+        private float ConvertSoundVolume(float amount)
+        {
+            return (amount * 100 - 80);
         }
 
     }

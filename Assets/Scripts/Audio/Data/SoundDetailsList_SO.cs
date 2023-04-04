@@ -22,14 +22,14 @@ namespace Audio.Data
         /// <summary>
         /// 音调
         /// </summary>
-        [Range(0,2)]
+        [Range(0.1f,1.5f)]
         public float soundPitchMin = 0.8f;
-        [Range(0,2)]
+        [Range(0.1f,1.5f)]
         public float soundPitchMax = 1.2f;
         /// <summary>
         /// 音量大小
         /// </summary>
-        [Range(0,2)]
+        [Range(0.1f,1.5f)]
         public float soundVolume = 0.2f;
     }
 }
