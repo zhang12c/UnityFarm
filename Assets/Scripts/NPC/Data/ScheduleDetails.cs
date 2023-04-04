@@ -24,7 +24,7 @@ namespace NPC.Data
         /// <summary>
         /// 去哪个场景
         /// </summary>
-        public string targetScene;
+        [SceneName]public string targetScene;
         public Vector2Int targetGridPosition;
         /// <summary>
         /// 播放什么动画

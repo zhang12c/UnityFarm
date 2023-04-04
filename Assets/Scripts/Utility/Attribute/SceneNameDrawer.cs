@@ -1,85 +1,86 @@
-using System;
 using UnityEditor;
 using UnityEngine;
+using System.IO;
 
 #if UNITY_EDITOR
 [CustomPropertyDrawer(typeof(SceneNameAttribute))]
 public class SceneNameDrawer : PropertyDrawer
 {
+    /// <summary>
+    /// 序列化属性的场景索引.
+    /// </summary>
     private int sceneIndex = -1;
+    /// <summary>
+    /// 所有场景名的GUIContent实例.
+    /// 注意:场景索引就是EditorBuildSettings.scenes索引,因此这里的索引和场景名一一对应.
+    /// </summary>
     private GUIContent[] sceneNames;
-    private readonly string[] scenePathSplit =
-    {
-        "/", ".unity"
-    };
-    // 属性的怎么展示，你来确定
+    //private readonly string[] scenePathSplit = { "/", ".unity" };
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
     {
-        if (EditorBuildSettings.scenes.Length == 0)
+        GetSceneNameArray(property);
+        //base.OnGUI(position, property, label);
+        if (EditorBuildSettings.scenes.Length==0)
         {
-            Debug.Log("检查一下File>BuildSetting>Scene没添加");
             return;
         }
-        if (sceneIndex == -1)  // 没有初始化
+
+        if (sceneIndex==-1)
         {
             GetSceneNameArray(property);
         }
 
         int oldIndex = sceneIndex;
-        // 弹出框需要展示什么内容
-        // 返回我选中List 中的哪一个
-        sceneIndex = EditorGUI.Popup(position, label, sceneIndex, sceneNames);
-        if (sceneIndex != oldIndex)
+        sceneIndex=EditorGUI.Popup(position, label,sceneIndex, sceneNames);
+        if (oldIndex!=sceneIndex)
         {
             property.stringValue = sceneNames[sceneIndex].text;
         }
+
     }
+
+    /// <summary>
+    /// 填充sceneNames,根据property.stringvalue设置sceneIndex.
+    /// </summary>
+    /// <param name="property"></param>
     private void GetSceneNameArray(SerializedProperty property)
     {
-        var scenes = EditorBuildSettings.scenes;
+        EditorBuildSettingsScene[] scenes = EditorBuildSettings.scenes;
         sceneNames = new GUIContent[scenes.Length];
         for (int i = 0; i < sceneNames.Length; i++)
         {
-            
             string path = scenes[i].path;
-            // 返回结果数组中不包含空字符串
-            var slitPath = path.Split(scenePathSplit, System.StringSplitOptions.RemoveEmptyEntries);
-            string sceneName = "";
+            string sceneName = Path.GetFileNameWithoutExtension(path);
+            if (string.IsNullOrEmpty(sceneName))
+            {
+                sceneName = "(DeletedScene)";
+            }
 
-            if (slitPath.Length > 0)
-            {
-                // C# 8.0 新特性 获得list 中的最后一个元素
-                sceneName = slitPath[^1];
-            }
-            else
-            {
-                sceneName = "(Deleted Scene)";
-            }
             sceneNames[i] = new GUIContent(sceneName);
         }
-        if (sceneNames.Length == 0)
+
+        if (EditorBuildSettings.scenes.Length==0)
         {
-            sceneNames = new[]
+            sceneNames=new GUIContent[]
             {
-                new GUIContent("检查一下File>BuildSetting>Scene没添加")
+                new GUIContent("Check your Build Settings!"),
             };
         }
 
-        /// 添加一个默认的
-        /// 如果默认是空的时候
-        if (!String.IsNullOrEmpty(property.stringValue))
+        if (!string.IsNullOrEmpty(property.stringValue))
         {
             bool nameFound = false;
             for (int i = 0; i < sceneNames.Length; i++)
             {
-                if (sceneNames[i].text == property.stringValue)
+                if (sceneNames[i].text==property.stringValue)
                 {
                     sceneIndex = i;
                     nameFound = true;
                     break;
                 }
             }
-            if (!nameFound)
+
+            if (!nameFound)//输入的名字与场景名不匹配
             {
                 sceneIndex = 0;
             }
@@ -88,7 +89,7 @@ public class SceneNameDrawer : PropertyDrawer
         {
             sceneIndex = 0;
         }
-        
+
         property.stringValue = sceneNames[sceneIndex].text;
     }
 }

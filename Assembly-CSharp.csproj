@@ -60,6 +60,7 @@
      <Compile Include="Assets/Scripts/Inventory/Logic/ItemManager.cs" />
      <Compile Include="Assets/Scripts/Inventory/Data_SO/InventoryBag_SO.cs" />
      <Compile Include="Assets/Scripts/Utility/Enums.cs" />
+     <Compile Include="Assets/Scripts/Audio/Logic/AudioManager.cs" />
      <Compile Include="Assets/Scripts/Light/Logic/LightController.cs" />
      <Compile Include="Assets/Scripts/Utility/Singleton.cs" />
      <Compile Include="Assets/Scripts/Crop/Logic/CropGenerator.cs" />
@@ -67,11 +68,13 @@
      <Compile Include="Assets/Scripts/Inventory/UI/SlotUI.cs" />
      <Compile Include="Assets/Scripts/Inventory/UI/InventoryUI.cs" />
      <Compile Include="Assets/Scripts/Crop/Data/CropDataListSo.cs" />
+     <Compile Include="Assets/Scripts/Audio/Data/SoundDetailsList_SO.cs" />
      <Compile Include="Assets/Scripts/Inventory/Item/ItemInteractive.cs" />
      <Compile Include="Assets/Scripts/Inventory/UI/ItemToolTip.cs" />
      <Compile Include="Assets/Scripts/Map/Logic/GridMap.cs" />
      <Compile Include="Assets/Scripts/Dialogue/Data/DialoguePiece.cs" />
      <Compile Include="Assets/Scripts/Inventory/Logic/InventoryManager.cs" />
+     <Compile Include="Assets/Scripts/Audio/Data/SceneSoundList_SO.cs" />
      <Compile Include="Assets/Scripts/ObjectPool/ObjectPoolManager.cs" />
      <Compile Include="Assets/Scripts/Crop/Logic/CropManager.cs" />
      <Compile Include="Assets/Scripts/Inventory/Data_SO/ItemDataList_SO.cs" />
@@ -102,7 +105,9 @@
      <Folder Include="Assets/Scripts/Cursor" />
      <Folder Include="Assets/GameARTRes/Art/Intro/Sign" />
      <Folder Include="Assets/GameARTRes/Tilemap/Tiles/Base" />
+     <None Include="Assets/GameARTRes/Sound/Music/INFO.txt" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
+     <Folder Include="Assets/GameARTRes/Sound/Footstep" />
      <Folder Include="Assets/GameARTRes/Animations/Player/Hair" />
      <Folder Include="Assets/GameARTRes/Art/Lights" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
@@ -122,6 +127,7 @@
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader" />
      <Folder Include="Assets/Fantasy Cursor Pack" />
      <Folder Include="Assets/GameARTRes/Art/Items/Woods" />
+     <Folder Include="Assets/GameARTRes/Sound/Music" />
      <Folder Include="Assets/GameARTRes/Animations/Item" />
      <Folder Include="Assets/GameARTRes/Animations/Player" />
      <Folder Include="Assets/GameARTRes/Animations/Player/Arm" />
@@ -140,6 +146,7 @@
      <Folder Include="Assets/Scripts/Light" />
      <Folder Include="Assets/GameARTRes/Art/Items/Furnitrue01" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc" />
+     <Folder Include="Assets/GameData/Audio" />
      <Folder Include="Assets/GameARTRes/Art/Items/Furniture02" />
      <Folder Include="Assets/GameData/Light" />
      <Folder Include="Assets/GameARTRes/Art/Characters/Girl01" />
@@ -152,6 +159,7 @@
      <Folder Include="Assets/GameARTRes/Art/Characters/Girl03" />
      <Folder Include="Assets/GameARTRes/Art/Characters/BlacksWing" />
      <Folder Include="Assets/GameARTRes/Animations/NPC/Gril02" />
+     <Folder Include="Assets/GameARTRes/Sound/Tools" />
      <Folder Include="Assets/Animator/Animation" />
      <Folder Include="Assets/Scripts" />
      <Folder Include="Assets/Scripts/Dialogue/UI" />
@@ -172,6 +180,7 @@
      <Folder Include="Assets/Perfab/UI" />
      <Folder Include="Assets/GameARTRes/Art" />
      <Folder Include="Assets/GameARTRes/Animations/NPC/OldMan" />
+     <Folder Include="Assets/Scripts/Audio/Logic" />
      <Folder Include="Assets/GameARTRes/Art/Buildings/House03" />
      <Folder Include="Assets/GameARTRes/Animators" />
      <Folder Include="Assets/GameARTRes/Art/Items/Rocks" />
@@ -202,12 +211,14 @@
      <Folder Include="Assets/GameARTRes/Art/Intro" />
      <Folder Include="Assets/Perfab/Trees" />
      <Folder Include="Assets/Scripts/Inventory" />
+     <Folder Include="Assets/GameARTRes/Sound/AmbientSounds" />
      <Folder Include="Assets/GameARTRes/Art/Characters/Player/Arm" />
      <Folder Include="Assets/GameARTRes/Art/Intro/Character" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc" />
      <Folder Include="Assets/GameARTRes/Fonts" />
      <Folder Include="Assets/TextMesh Pro/Shaders" />
      <Folder Include="Assets/GameARTRes/Art/Items/Bushes" />
+     <Folder Include="Assets/GameARTRes/Sound/Crops" />
      <Folder Include="Assets/TileMaps/Tiles" />
      <Folder Include="Assets/GameARTRes/Animators/NPC" />
      <Folder Include="Assets/Scripts/NPC/Data" />
@@ -225,6 +236,7 @@
      <Folder Include="Assets/Resources" />
      <Folder Include="Assets/Scripts/Inventory/Data_SO" />
      <Folder Include="Assets/GameARTRes/Art/Characters/UI Animation" />
+     <Folder Include="Assets/GameARTRes/Sound/Pickup" />
      <Folder Include="Assets/GameARTRes/Art/Characters/Girl04" />
      <Folder Include="Assets/GameARTRes/Art/Characters/Player/Tools/Axe" />
      <Folder Include="Assets/Scripts/Dialogue" />
@@ -237,6 +249,8 @@
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader" />
      <Folder Include="Assets/GameARTRes/Art/Trees" />
      <Folder Include="Assets/Scripts/Crop" />
+     <Folder Include="Assets/Scripts/Audio" />
+     <Folder Include="Assets/GameARTRes/Sound" />
      <Folder Include="Assets/GameARTRes/Art/Characters/Girl06" />
      <Folder Include="Assets/GameARTRes/Art/Characters/Player/Tools/Reap" />
      <Folder Include="Assets/GameData" />
@@ -246,6 +260,7 @@
      <Folder Include="Assets/GameARTRes/Animations/Tree" />
      <Folder Include="Assets/GameARTRes/Art/Characters/Boy01" />
      <Folder Include="Assets/GameARTRes/Art/Items" />
+     <Folder Include="Assets/Scripts/Audio/Data" />
      <Folder Include="Assets/GameARTRes/Animations/NPC" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader" />
      <Folder Include="Assets/GameARTRes" />
@@ -271,7 +286,7 @@
      <Folder Include="Assets/TileMaps/RuleTile" />
      <Folder Include="Assets/GameARTRes/Animations/Item/Fire" />
      <Folder Include="Assets/Scripts/Player" />
-     <Folder Include="Assets/Setting" />
+     <Folder Include="Assets/MyURPSetting" />
      <None Include="Assets/TextMesh Pro/Sprites/EmojiOne.json" />
      <Folder Include="Assets/GameData/Map" />
      <Folder Include="Assets/GameARTRes/Animators/Tree" />

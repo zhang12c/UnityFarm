@@ -122,4 +122,50 @@ namespace Utility
     {
         Morning,Night
     }
+
+    public enum SoundName
+    {
+        None,
+        /// <summary>
+        /// 走路
+        /// </summary>
+        FootStepSoft,
+        FootStepHard,
+#region 工具
+        Axe,
+        Pickaxe,
+        Hoe,
+        Reap,
+        Water,
+        Basket,
+        Chop,
+#endregion
+        /// <summary>
+        /// 采摘
+        /// </summary>
+        Pickup,
+        /// <summary>
+        /// 种植
+        /// </summary>
+        Plant,
+        /// <summary>
+        /// 树倒下
+        /// </summary>
+        TreeFalling,
+        /// <summary>
+        /// 割草
+        /// </summary>
+        Rustle,
+        /// <summary>
+        /// 环境音乐
+        /// </summary>
+        AmbientCountryside1,
+        AmbientCountryside2,
+        /// <summary>
+        /// 背景音乐
+        /// </summary>
+        MusicCalm1,
+        MusicCalm3,
+        AmbientIndoor1,
+    }
 }
