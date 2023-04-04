@@ -81,25 +81,25 @@ MonoBehaviour:
   - soundName: 14
     soundClip: {fileID: 8300000, guid: 62804550c22b04c92a5640b56458455f, type: 3}
     soundPitchMin: 1
-    soundPitchMax: 1.2
+    soundPitchMax: 1
     soundVolume: 0.2
   - soundName: 15
     soundClip: {fileID: 8300000, guid: 88827ab0278fb4d72bd97df4a3b772ac, type: 3}
     soundPitchMin: 1
-    soundPitchMax: 1.2
+    soundPitchMax: 1
     soundVolume: 0.2
   - soundName: 16
     soundClip: {fileID: 8300000, guid: b75d69072b6784b18903af195904a696, type: 3}
     soundPitchMin: 1
-    soundPitchMax: 1.2
+    soundPitchMax: 1
     soundVolume: 0.2
   - soundName: 17
     soundClip: {fileID: 8300000, guid: 9e612beb46870451ea055dfbe1f7e92a, type: 3}
     soundPitchMin: 1
-    soundPitchMax: 1.2
+    soundPitchMax: 1
     soundVolume: 0.2
   - soundName: 18
     soundClip: {fileID: 8300000, guid: c19aa0ef32549498786ed894aaf0f987, type: 3}
     soundPitchMin: 1
-    soundPitchMax: 1.2
+    soundPitchMax: 1
     soundVolume: 0.2

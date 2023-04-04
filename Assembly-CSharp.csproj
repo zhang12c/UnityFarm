@@ -286,7 +286,7 @@
      <Folder Include="Assets/TileMaps/RuleTile" />
      <Folder Include="Assets/GameARTRes/Animations/Item/Fire" />
      <Folder Include="Assets/Scripts/Player" />
-     <Folder Include="Assets/MyURPSetting" />
+     <Folder Include="Assets/Setting" />
      <None Include="Assets/TextMesh Pro/Sprites/EmojiOne.json" />
      <Folder Include="Assets/GameData/Map" />
      <Folder Include="Assets/GameARTRes/Animators/Tree" />

@@ -1,4 +1,4 @@
-using System;
+using System.Collections;
 using Audio.Data;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -12,6 +12,16 @@ namespace Audio.Logic
 
         public AudioSource gameBgAudioSource;
         public AudioSource ambientAudioSource;
+
+        /// <summary>
+        /// 音乐随机多久后播放
+        /// </summary>
+        private float musicStartSecond => Random.Range(3f, 5f);
+
+        /// <summary>
+        /// 音乐的协程
+        /// </summary>
+        private Coroutine soundRoutine;
 
         private void OnEnable()
         {
@@ -33,9 +43,15 @@ namespace Audio.Logic
 
             SoundDetails ambient = soundDetailsData.GetSoundDetail(sceneSound.ambient);
             SoundDetails music = soundDetailsData.GetSoundDetail(sceneSound.Music);
-            
-            PlaySoundClip(music);
-            PlayAmbientlip(ambient);
+
+            if (soundRoutine != null)
+            {
+                StopCoroutine(soundRoutine);
+            }
+            else
+            {
+                soundRoutine = StartCoroutine(PlaySoundRoutine(music, ambient));
+            }
         }
 
         /// <summary>
@@ -61,6 +77,16 @@ namespace Audio.Logic
             if (ambientAudioSource.isActiveAndEnabled)
             {
                 ambientAudioSource.Play();
+            }
+        }
+
+        private IEnumerator PlaySoundRoutine(SoundDetails music, SoundDetails ambient)
+        {
+            if (music != null && ambient != null)
+            {
+                PlayAmbientlip(ambient);
+                yield return new WaitForSeconds(musicStartSecond);
+                PlaySoundClip(music);
             }
         }
 
