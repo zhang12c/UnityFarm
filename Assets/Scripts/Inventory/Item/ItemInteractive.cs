@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using Utility;
 namespace Inventory.Item
 {
     /// <summary>
@@ -23,6 +24,8 @@ namespace Inventory.Item
                 {
                     StartCoroutine(RotateLeft());
                 }
+            
+            MyEventHandler.CallPlaySoundEvent(SoundName.Rustle);
         }
 
         private void OnTriggerExit2D(Collider2D other)
@@ -37,6 +40,8 @@ namespace Inventory.Item
                 {
                     StartCoroutine(RotateLeft());
                 }
+            
+            MyEventHandler.CallPlaySoundEvent(SoundName.Rustle);
         }
 
         private IEnumerator RotateLeft()
