@@ -77,6 +77,11 @@ namespace Crop.Data
         public Vector3 effectPos;
 
         /// <summary>
+        /// 音效的名称
+        /// </summary>
+        public SoundName soundName;
+
+        /// <summary>
         /// 检验tool是否可以当收割道具用
         /// </summary>
         /// <param name="toolID">道具ID</param>

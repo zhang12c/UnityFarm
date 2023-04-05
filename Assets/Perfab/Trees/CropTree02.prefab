@@ -138,7 +138,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5430344845085893569
 Transform:
   m_ObjectHideFlags: 0
@@ -225,6 +225,7 @@ MonoBehaviour:
     hasParticleEffect: 0
     particleEffectType: 0
     effectPos: {x: 0, y: 0, z: 0}
+    soundName: 0
   tileDetails:
     pos: {x: 0, y: 0}
     canDig: 0

@@ -27,7 +27,7 @@ namespace AStar
         /// <summary>
         /// 找到终点的路径
         /// </summary>
-        private bool _pathFound;
+        //private bool _pathFound;
         /// <summary>
         /// 主要的寻路逻辑
         /// </summary>
@@ -36,7 +36,7 @@ namespace AStar
         /// <param name="endPos"></param>
         public void BuildPath(string sceneName, Vector2Int startPos, Vector2Int endPos,Stack<MovementStep> npcMovementStack)
         {
-            _pathFound = false;
+            //_pathFound = false;
             if (GenerateGridNodes(sceneName,startPos,endPos))
             {
                 // 构建地图node成功
@@ -128,7 +128,7 @@ namespace AStar
                 if (closeNode == _endNode)
                 {
                     // 到了终点了
-                    _pathFound = true;
+                    //_pathFound = true;
                     // Debug.Log("到了");
                     break;
                 }

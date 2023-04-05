@@ -226,6 +226,7 @@ namespace Map.Logic
                     case ItemType.seed:
                         MyEventHandler.CallPlantSeedEvent(itemdetails.itemID, currentTile);
                         MyEventHandler.CallDropItemEvent(itemdetails.itemID,mouseWorldPos,itemdetails.itemType);
+                        MyEventHandler.CallPlaySoundEvent(SoundName.Plant);
                         break;
                     case ItemType.Commodity:
                         MyEventHandler.CallDropItemEvent(itemdetails.itemID,mouseWorldPos,itemdetails.itemType);
@@ -236,11 +237,15 @@ namespace Map.Logic
                         currentTile.canDig = false;
                         currentTile.canDropItem = false;
                         // TODO: 翻土音效
+                        MyEventHandler.CallPlaySoundEvent(SoundName.Hoe);
+
                         break;
                     case ItemType.WaterTool:
                         SetWaterGround(currentTile);
                         currentTile.daySinceWatered = 0;
                         // TODO: 浇水音效
+                        MyEventHandler.CallPlaySoundEvent(SoundName.Water);
+
                         break;
                     case ItemType.BreakTool:
                     case ItemType.ChopTool: // 斧头 收割

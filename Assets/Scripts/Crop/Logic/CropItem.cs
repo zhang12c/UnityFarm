@@ -1,8 +1,7 @@
-using System;
-using System.Collections;
+using Audio.Data;
+using Audio.Logic;
 using Crop.Data;
 using UnityEngine;
-using UnityEngine.Serialization;
 using Utility;
 using Random = UnityEngine.Random;
 namespace Crop.Logic
@@ -83,6 +82,12 @@ namespace Crop.Logic
                 {
                     MyEventHandler.CallParticleEffectEvent(cropDetails.particleEffectType,transform.position + cropDetails.effectPos);
                 }
+                
+                // 播放音效
+                if (cropDetails.soundName != SoundName.None)
+                {
+                    MyEventHandler.CallPlaySoundEvent(cropDetails.soundName);
+                }
             }
             else
             {
@@ -103,6 +108,19 @@ namespace Crop.Logic
                     }
                     
                     // 动画播放完了之后，就得去生成掉落物品了
+                    
+                    // 播放音效
+                    if (cropDetails.soundName != SoundName.None)
+                    {
+                        MyEventHandler.CallPlaySoundEvent(SoundName.TreeFalling);
+                    }
+                }
+                
+                // 播放音效
+                if (cropDetails.soundName != SoundName.None)
+                {
+                    SoundDetails soundDetails = AudioManager.Instance.soundDetailsData.GetSoundDetail(cropDetails.soundName);
+                    MyEventHandler.CallInitSoundEffect(soundDetails);
                 }
             }
 

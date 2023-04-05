@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 using Utility;
 namespace Audio.Logic
 {
-    public class AudioManager : MonoBehaviour
+    public class AudioManager : Singleton<AudioManager>
     {
         public SoundDetailsList_SO soundDetailsData;
         public SceneSoundList_SO sceneSoundData;
@@ -39,12 +39,22 @@ namespace Audio.Logic
         private void OnEnable()
         {
             MyEventHandler.AfterSceneLoadEvent += OnAfterSceneLoadEvent;
+            MyEventHandler.PlaySoundEvent += OnPlaySoundEvent;
         }
 
         private void OnDisable()
         {
             MyEventHandler.AfterSceneLoadEvent -= OnAfterSceneLoadEvent;
+            MyEventHandler.PlaySoundEvent -= OnPlaySoundEvent;
 
+        }
+        private void OnPlaySoundEvent(SoundName obj)
+        {
+            var soundDetails = soundDetailsData.GetSoundDetail(obj);
+            if (soundDetails != null)
+            {
+                MyEventHandler.CallInitSoundEffect(soundDetails);
+            }
         }
         private void OnAfterSceneLoadEvent()
         {

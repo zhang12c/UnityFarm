@@ -101,6 +101,8 @@
      <Compile Include="Assets/Scripts/Crop/Data/CropDetails.cs" />
      <Compile Include="Assets/Scripts/Inventory/Item/ItemShadow.cs" />
      <Compile Include="Assets/Scripts/Crop/Logic/ReapItem.cs" />
+     <Compile Include="Assets/Scripts/Audio/Logic/Sound.cs" />
+     <Compile Include="Assets/Scripts/Player/AnimationEvent.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/Scripts/Cursor" />
      <Folder Include="Assets/GameARTRes/Art/Intro/Sign" />
@@ -221,6 +223,7 @@
      <Folder Include="Assets/GameARTRes/Art/Items/Bushes" />
      <Folder Include="Assets/GameARTRes/Sound/Crops" />
      <Folder Include="Assets/TileMaps/Tiles" />
+     <Folder Include="Assets/Perfab/Player" />
      <Folder Include="Assets/GameARTRes/Animators/NPC" />
      <Folder Include="Assets/Scripts/NPC/Data" />
      <Folder Include="Assets/GameARTRes/Art/Characters/Player" />
@@ -287,6 +290,7 @@
      <Folder Include="Assets/TileMaps/RuleTile" />
      <Folder Include="Assets/GameARTRes/Animations/Item/Fire" />
      <Folder Include="Assets/Scripts/Player" />
+     <Folder Include="Assets/Perfab/Sound" />
      <Folder Include="Assets/Setting" />
      <None Include="Assets/TextMesh Pro/Sprites/EmojiOne.json" />
      <Folder Include="Assets/GameData/Map" />
