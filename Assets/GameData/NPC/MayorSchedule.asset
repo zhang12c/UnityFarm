@@ -13,30 +13,21 @@ MonoBehaviour:
   m_Name: MayorSchedule
   m_EditorClassIdentifier: 
   scheduleDetailsList:
-  - hour: 8
-    minute: 0
-    day: 0
-    priority: 0
-    season: 0
-    targetScene: 01_Field
-    targetGridPosition: {x: 20, y: 20}
-    clipAtStop: {fileID: 7400000, guid: db32c3897ab64466f86a8993b8e48f9e, type: 2}
-    interactable: 1
-  - hour: 9
-    minute: 0
-    day: 0
-    priority: 0
-    season: 0
-    targetScene: 01_Field
-    targetGridPosition: {x: 2, y: 4}
-    clipAtStop: {fileID: 7400000, guid: 54d560542c0284c169c56cddc7145ac6, type: 2}
-    interactable: 0
   - hour: 10
     minute: 0
     day: 0
     priority: 0
     season: 0
-    targetScene: 01_Field
+    targetScene: 02_Home
     targetGridPosition: {x: 20, y: 20}
+    clipAtStop: {fileID: 7400000, guid: db32c3897ab64466f86a8993b8e48f9e, type: 2}
+    interactable: 1
+  - hour: 18
+    minute: 0
+    day: 0
+    priority: 0
+    season: 0
+    targetScene: 02_Home
+    targetGridPosition: {x: 2, y: 4}
     clipAtStop: {fileID: 7400000, guid: 54d560542c0284c169c56cddc7145ac6, type: 2}
-    interactable: 0
+    interactable: 1

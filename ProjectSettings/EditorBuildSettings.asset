@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/03_Stall.unity
     guid: 1e06d3a878d634c57ba7ee7c5f3b51e6
+  - enabled: 1
+    path: Assets/Scenes/04_Sea.unity
+    guid: af07949b1277e4951957cf0ff5a83fc8
   m_configObjects: {}

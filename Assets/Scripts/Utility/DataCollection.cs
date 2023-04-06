@@ -192,7 +192,7 @@ public class ScenePath
     /// <summary>
     /// 这个场景的名称
     /// </summary>
-    public string sceneName;
+    [SceneName]public string sceneName;
     /// <summary>
     /// 9999 就是离开
     /// 小于 9999 就是进入
@@ -215,7 +215,7 @@ public class ScenePath
 [System.Serializable]
 public class SceneRoute
 {
-    public string fromSceneName;
-    public string toSceneName;
+    [SceneName]public string fromSceneName;
+    [SceneName]public string toSceneName;
     public List<ScenePath> scenePathList;
 }

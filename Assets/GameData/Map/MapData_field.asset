@@ -3290,7 +3290,7 @@ MonoBehaviour:
   - titleCoordinate: {x: 41, y: 36}
     gridType: 2
     BoolTypeValue: 1
-  gridWidth: 98
-  gridHeight: 73
-  originX: -37
-  originY: -35
+  gridWidth: 42
+  gridHeight: 29
+  originX: 0
+  originY: 8

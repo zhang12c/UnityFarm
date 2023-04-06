@@ -235,6 +235,7 @@
      <Folder Include="Assets/TextMesh Pro/Fonts" />
      <Folder Include="Assets/Scripts/NPC/Logic" />
      <Folder Include="Assets/Scripts/Light/Logic" />
+     <Folder Include="Assets/GameData/TimeLine" />
      <Folder Include="Assets/GameData/NPC" />
      <None Include="Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt" />
      <Folder Include="Assets/Resources" />

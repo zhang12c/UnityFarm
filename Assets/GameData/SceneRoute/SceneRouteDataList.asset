@@ -49,3 +49,21 @@ MonoBehaviour:
     - sceneName: 03_Stall
       fromGridCell: {x: 9999, y: 9999}
       toGridCell: {x: 1, y: 9}
+  - fromSceneName: 04_Sea
+    toSceneName: 01_Field
+    scenePathList:
+    - sceneName: 01_Field
+      fromGridCell: {x: 16, y: 10}
+      toGridCell: {x: 9999, y: 9999}
+    - sceneName: 04_Sea
+      fromGridCell: {x: 9999, y: 9999}
+      toGridCell: {x: 1, y: 12}
+  - fromSceneName: 01_Field
+    toSceneName: 04_Sea
+    scenePathList:
+    - sceneName: 04_Sea
+      fromGridCell: {x: 1, y: 12}
+      toGridCell: {x: 9999, y: 9999}
+    - sceneName: 01_Field
+      fromGridCell: {x: 9999, y: 9999}
+      toGridCell: {x: 16, y: 10}
