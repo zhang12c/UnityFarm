@@ -49,6 +49,7 @@
      <Compile Include="Assets/Scripts/Player/Player.cs" />
      <Compile Include="Assets/Scripts/Utility/MyEventHandler.cs" />
      <Compile Include="Assets/Scripts/Dialogue/Logic/DialogueController.cs" />
+     <Compile Include="Assets/Scripts/Player/AnimationEvent.cs" />
      <Compile Include="Assets/Scripts/Utility/Attribute/SceneNameAttribute.cs" />
      <Compile Include="Assets/Scripts/Time/Logic/TimeManager.cs" />
      <Compile Include="Assets/Scripts/AStar/Node.cs" />
@@ -94,6 +95,7 @@
      <Compile Include="Assets/Scripts/NPC/Data/ScheduleDetails.cs" />
      <Compile Include="Assets/Scripts/Map/Data/MapData_SO.cs" />
      <Compile Include="Assets/Scripts/Inventory/Item/ItemOnWorld.cs" />
+     <Compile Include="Assets/Scripts/Audio/Logic/Sound.cs" />
      <Compile Include="Assets/Scripts/Cursor/CursorManager.cs" />
      <Compile Include="Assets/Scripts/Inventory/Item/ItemBounce.cs" />
      <Compile Include="Assets/Scripts/NPC/Data/ScheduleDataList_SO.cs" />
@@ -101,8 +103,6 @@
      <Compile Include="Assets/Scripts/Crop/Data/CropDetails.cs" />
      <Compile Include="Assets/Scripts/Inventory/Item/ItemShadow.cs" />
      <Compile Include="Assets/Scripts/Crop/Logic/ReapItem.cs" />
-     <Compile Include="Assets/Scripts/Audio/Logic/Sound.cs" />
-     <Compile Include="Assets/Scripts/Player/AnimationEvent.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/Scripts/Cursor" />
      <Folder Include="Assets/GameARTRes/Art/Intro/Sign" />
