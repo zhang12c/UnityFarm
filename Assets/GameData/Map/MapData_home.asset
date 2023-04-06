@@ -155,9 +155,6 @@ MonoBehaviour:
   - titleCoordinate: {x: -8, y: -8}
     gridType: 3
     BoolTypeValue: 1
-  - titleCoordinate: {x: -8, y: 6}
-    gridType: 3
-    BoolTypeValue: 1
   - titleCoordinate: {x: -8, y: 7}
     gridType: 3
     BoolTypeValue: 1
@@ -171,18 +168,6 @@ MonoBehaviour:
     gridType: 3
     BoolTypeValue: 1
   - titleCoordinate: {x: -7, y: -8}
-    gridType: 3
-    BoolTypeValue: 1
-  - titleCoordinate: {x: -7, y: 0}
-    gridType: 3
-    BoolTypeValue: 1
-  - titleCoordinate: {x: -7, y: 1}
-    gridType: 3
-    BoolTypeValue: 1
-  - titleCoordinate: {x: -7, y: 2}
-    gridType: 3
-    BoolTypeValue: 1
-  - titleCoordinate: {x: -7, y: 3}
     gridType: 3
     BoolTypeValue: 1
   - titleCoordinate: {x: -7, y: 7}
@@ -200,18 +185,6 @@ MonoBehaviour:
   - titleCoordinate: {x: -6, y: -8}
     gridType: 3
     BoolTypeValue: 1
-  - titleCoordinate: {x: -6, y: -1}
-    gridType: 3
-    BoolTypeValue: 1
-  - titleCoordinate: {x: -6, y: 4}
-    gridType: 3
-    BoolTypeValue: 1
-  - titleCoordinate: {x: -6, y: 5}
-    gridType: 3
-    BoolTypeValue: 1
-  - titleCoordinate: {x: -6, y: 6}
-    gridType: 3
-    BoolTypeValue: 1
   - titleCoordinate: {x: -6, y: 8}
     gridType: 3
     BoolTypeValue: 1
@@ -222,9 +195,6 @@ MonoBehaviour:
     gridType: 3
     BoolTypeValue: 1
   - titleCoordinate: {x: -5, y: -8}
-    gridType: 3
-    BoolTypeValue: 1
-  - titleCoordinate: {x: -5, y: 4}
     gridType: 3
     BoolTypeValue: 1
   - titleCoordinate: {x: -5, y: 8}
@@ -239,9 +209,6 @@ MonoBehaviour:
   - titleCoordinate: {x: -4, y: -8}
     gridType: 3
     BoolTypeValue: 1
-  - titleCoordinate: {x: -4, y: 4}
-    gridType: 3
-    BoolTypeValue: 1
   - titleCoordinate: {x: -4, y: 8}
     gridType: 3
     BoolTypeValue: 1
@@ -254,9 +221,6 @@ MonoBehaviour:
   - titleCoordinate: {x: -3, y: -8}
     gridType: 3
     BoolTypeValue: 1
-  - titleCoordinate: {x: -3, y: 4}
-    gridType: 3
-    BoolTypeValue: 1
   - titleCoordinate: {x: -3, y: 8}
     gridType: 3
     BoolTypeValue: 1
@@ -267,21 +231,6 @@ MonoBehaviour:
     gridType: 3
     BoolTypeValue: 1
   - titleCoordinate: {x: -2, y: -8}
-    gridType: 3
-    BoolTypeValue: 1
-  - titleCoordinate: {x: -2, y: 2}
-    gridType: 3
-    BoolTypeValue: 1
-  - titleCoordinate: {x: -2, y: 3}
-    gridType: 3
-    BoolTypeValue: 1
-  - titleCoordinate: {x: -2, y: 4}
-    gridType: 3
-    BoolTypeValue: 1
-  - titleCoordinate: {x: -2, y: 5}
-    gridType: 3
-    BoolTypeValue: 1
-  - titleCoordinate: {x: -2, y: 6}
     gridType: 3
     BoolTypeValue: 1
   - titleCoordinate: {x: -2, y: 9}
@@ -356,18 +305,6 @@ MonoBehaviour:
   - titleCoordinate: {x: 7, y: -8}
     gridType: 3
     BoolTypeValue: 1
-  - titleCoordinate: {x: 7, y: -4}
-    gridType: 3
-    BoolTypeValue: 1
-  - titleCoordinate: {x: 7, y: -3}
-    gridType: 3
-    BoolTypeValue: 1
-  - titleCoordinate: {x: 7, y: -2}
-    gridType: 3
-    BoolTypeValue: 1
-  - titleCoordinate: {x: 7, y: -1}
-    gridType: 3
-    BoolTypeValue: 1
   - titleCoordinate: {x: 7, y: 8}
     gridType: 3
     BoolTypeValue: 1
@@ -375,15 +312,6 @@ MonoBehaviour:
     gridType: 3
     BoolTypeValue: 1
   - titleCoordinate: {x: 8, y: -8}
-    gridType: 3
-    BoolTypeValue: 1
-  - titleCoordinate: {x: 8, y: -4}
-    gridType: 3
-    BoolTypeValue: 1
-  - titleCoordinate: {x: 8, y: -1}
-    gridType: 3
-    BoolTypeValue: 1
-  - titleCoordinate: {x: 8, y: 2}
     gridType: 3
     BoolTypeValue: 1
   - titleCoordinate: {x: 8, y: 8}
@@ -395,15 +323,6 @@ MonoBehaviour:
   - titleCoordinate: {x: 9, y: -8}
     gridType: 3
     BoolTypeValue: 1
-  - titleCoordinate: {x: 9, y: -4}
-    gridType: 3
-    BoolTypeValue: 1
-  - titleCoordinate: {x: 9, y: -1}
-    gridType: 3
-    BoolTypeValue: 1
-  - titleCoordinate: {x: 9, y: 2}
-    gridType: 3
-    BoolTypeValue: 1
   - titleCoordinate: {x: 9, y: 8}
     gridType: 3
     BoolTypeValue: 1
@@ -411,15 +330,6 @@ MonoBehaviour:
     gridType: 3
     BoolTypeValue: 1
   - titleCoordinate: {x: 10, y: -8}
-    gridType: 3
-    BoolTypeValue: 1
-  - titleCoordinate: {x: 10, y: -4}
-    gridType: 3
-    BoolTypeValue: 1
-  - titleCoordinate: {x: 10, y: -1}
-    gridType: 3
-    BoolTypeValue: 1
-  - titleCoordinate: {x: 10, y: 2}
     gridType: 3
     BoolTypeValue: 1
   - titleCoordinate: {x: 10, y: 8}
@@ -431,18 +341,6 @@ MonoBehaviour:
   - titleCoordinate: {x: 11, y: -8}
     gridType: 3
     BoolTypeValue: 1
-  - titleCoordinate: {x: 11, y: -4}
-    gridType: 3
-    BoolTypeValue: 1
-  - titleCoordinate: {x: 11, y: -3}
-    gridType: 3
-    BoolTypeValue: 1
-  - titleCoordinate: {x: 11, y: -2}
-    gridType: 3
-    BoolTypeValue: 1
-  - titleCoordinate: {x: 11, y: -1}
-    gridType: 3
-    BoolTypeValue: 1
   - titleCoordinate: {x: 11, y: 8}
     gridType: 3
     BoolTypeValue: 1
@@ -450,12 +348,6 @@ MonoBehaviour:
     gridType: 3
     BoolTypeValue: 1
   - titleCoordinate: {x: 12, y: -8}
-    gridType: 3
-    BoolTypeValue: 1
-  - titleCoordinate: {x: 12, y: -2}
-    gridType: 3
-    BoolTypeValue: 1
-  - titleCoordinate: {x: 12, y: -1}
     gridType: 3
     BoolTypeValue: 1
   - titleCoordinate: {x: 12, y: 8}
