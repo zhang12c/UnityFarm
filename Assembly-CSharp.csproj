@@ -107,6 +107,7 @@
      <Compile Include="Assets/Scripts/TimeLine/DialogueClip.cs" />
      <Compile Include="Assets/Scripts/TimeLine/DialogueTrack.cs" />
      <Compile Include="Assets/Scripts/TimeLine/TimeLineManager.cs" />
+     <Compile Include="Assets/Scripts/Menu/MenuUI.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/Scripts/Cursor" />
      <Folder Include="Assets/GameARTRes/Art/Intro/Sign" />
@@ -207,6 +208,7 @@
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader" />
      <Folder Include="Assets/GameARTRes/Animations/Tool/Water" />
      <Folder Include="Assets/Scripts/Map" />
+     <Folder Include="Assets/Scripts/Menu" />
      <None Include="Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt" />
      <Folder Include="Assets/GameARTRes/Art/Buildings/House01" />
      <Folder Include="Assets/GameARTRes/Animations" />
