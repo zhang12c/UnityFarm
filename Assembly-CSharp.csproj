@@ -103,6 +103,7 @@
      <Compile Include="Assets/Scripts/Crop/Data/CropDetails.cs" />
      <Compile Include="Assets/Scripts/Inventory/Item/ItemShadow.cs" />
      <Compile Include="Assets/Scripts/Crop/Logic/ReapItem.cs" />
+     <Compile Include="Assets/Scripts/TimeLine/DialogueBehaviour.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/Scripts/Cursor" />
      <Folder Include="Assets/GameARTRes/Art/Intro/Sign" />
@@ -215,6 +216,7 @@
      <Folder Include="Assets/Perfab/Trees" />
      <Folder Include="Assets/Scripts/Inventory" />
      <Folder Include="Assets/GameARTRes/Sound/AmbientSounds" />
+     <Folder Include="Assets/Scripts/TimeLine" />
      <Folder Include="Assets/GameARTRes/Art/Characters/Player/Arm" />
      <Folder Include="Assets/GameARTRes/Art/Intro/Character" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc" />
