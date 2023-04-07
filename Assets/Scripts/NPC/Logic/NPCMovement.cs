@@ -16,10 +16,12 @@ namespace NPC
         /// <summary>
         /// 当前的场景名称
         /// </summary>
+        [SceneName]
         [SerializeField]private string _currentScene;
         /// <summary>
         /// 目标场景名称
         /// </summary>
+        [SceneName]
         private string _targetScene;
         /// <summary>
         /// 起始点

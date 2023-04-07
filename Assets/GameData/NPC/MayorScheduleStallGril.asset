@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: MayorScheduleStallGril
   m_EditorClassIdentifier: 
   scheduleDetailsList:
-  - hour: 9
-    minute: 0
+  - hour: 7
+    minute: 1
     day: 0
     priority: 0
     season: 0
     targetScene: 01_Field
-    targetGridPosition: {x: 25, y: 20}
+    targetGridPosition: {x: 18, y: 18}
     clipAtStop: {fileID: 0}
     interactable: 1
   - hour: 13

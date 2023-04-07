@@ -216,8 +216,14 @@ namespace Utility
         public static void CallPlaySoundEvent(SoundName soundName){
             PlaySoundEvent?.Invoke(soundName);
         }
-        
-        
 
-}
+        /// <summary>
+        /// 控制事件运行与否
+        /// </summary>
+        public static event Action<GameState> UpdateGameStateEvent;
+        public static void CallUpdateGameStateEvent(GameState obj)
+        {
+            UpdateGameStateEvent?.Invoke(obj);
+        }
+    }
 }

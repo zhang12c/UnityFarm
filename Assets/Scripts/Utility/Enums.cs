@@ -168,4 +168,10 @@ namespace Utility
         MusicCalm3,
         AmbientIndoor1,
     }
+
+    public enum GameState
+    {
+        Pause,
+        Play,
+    }
 }

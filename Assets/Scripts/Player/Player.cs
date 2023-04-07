@@ -64,6 +64,7 @@ public class Player : MonoBehaviour
         MyEventHandler.BeforeSceneUnloadEvent += OnBeforeSceneUnload;
         MyEventHandler.MoveToPos += OnMoveToPos;
         MyEventHandler.MouseClickedEvent += OnMouseClickedEvent;
+        MyEventHandler.UpdateGameStateEvent += OnUpdateGameStateEvent;
     }
     private void OnDisable()
     {
@@ -71,9 +72,9 @@ public class Player : MonoBehaviour
         MyEventHandler.BeforeSceneUnloadEvent -= OnBeforeSceneUnload;
         MyEventHandler.MoveToPos -= OnMoveToPos;
         MyEventHandler.MouseClickedEvent -= OnMouseClickedEvent;
+        MyEventHandler.UpdateGameStateEvent -= OnUpdateGameStateEvent;
 
     }
-    
     private void OnMoveToPos(Vector3 obj)
     {
         transform.position = obj;
@@ -186,7 +187,10 @@ public class Player : MonoBehaviour
         // 动画结束之后
         //_useTool = false;
         inputDisable = false;
-
     }
-
+    
+    private void OnUpdateGameStateEvent(GameState obj)
+    {
+        inputDisable = GameState.Pause == obj;
+    }
 }
