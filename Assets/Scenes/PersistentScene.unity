@@ -252,32 +252,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &40235726 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5929390439740452392, guid: 9e71e43cab29941b593c22e956abc7f6, type: 3}
-  m_PrefabInstance: {fileID: 5929390440892590395}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &40235729
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 40235726}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &62795938
 GameObject:
   m_ObjectHideFlags: 0
@@ -1914,16 +1888,10 @@ MonoBehaviour:
     dialogueText: "\u4F60\u597D\uFF01\u6211\u662F\u6751\u957F\u5218\u6613\u65AF!"
     hasToPause: 1
     isDone: 0
-  - faceImage: {fileID: 21300000, guid: 7951faae60d314030a0981ea02e3c592, type: 3}
+  - faceImage: {fileID: 21300000, guid: 63a5eb4156cc3417896789f322630021, type: 3}
     name: 
     onLeft: 1
     dialogueText: "\u4F60\u7684\u7956\u7236\u7ED9\u4F60\u7559\u4E0B\u4E86\u519C\u573A,\u4F60\u597D\u50CF\u5F88\u987A\u5229\u7684\u6837\u5B50\uFF01"
-    hasToPause: 1
-    isDone: 0
-  - faceImage: {fileID: 21300000, guid: 602815581e11949c69342f9e76c868f4, type: 3}
-    name: 
-    onLeft: 1
-    dialogueText: "\u4F60\u4E3A\u5565\u8981\u9891\u7E41\u8981\u548C\u6211\u5BF9\u8BDD\u554A\uFF1F"
     hasToPause: 1
     isDone: 0
 --- !u!1 &761468277
@@ -2659,8 +2627,6 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: -1798762013967505784, guid: fc6f57c51949e4fada3ee0b993ac1a8b, type: 2}
     value: {fileID: 481281475}
-  - key: {fileID: 2861201558909694310, guid: fc6f57c51949e4fada3ee0b993ac1a8b, type: 2}
-    value: {fileID: 40235729}
   - key: {fileID: 5645742587823411862, guid: fc6f57c51949e4fada3ee0b993ac1a8b, type: 2}
     value: {fileID: 2119154336}
   - key: {fileID: -7200382985669331004, guid: fc6f57c51949e4fada3ee0b993ac1a8b, type: 2}

@@ -70,6 +70,7 @@
      <Compile Include="Assets/Scripts/Inventory/UI/InventoryUI.cs" />
      <Compile Include="Assets/Scripts/Crop/Data/CropDataListSo.cs" />
      <Compile Include="Assets/Scripts/Audio/Data/SoundDetailsList_SO.cs" />
+     <Compile Include="Assets/Scripts/Menu/MenuUI.cs" />
      <Compile Include="Assets/Scripts/Inventory/Item/ItemInteractive.cs" />
      <Compile Include="Assets/Scripts/Inventory/UI/ItemToolTip.cs" />
      <Compile Include="Assets/Scripts/Map/Logic/GridMap.cs" />
@@ -78,6 +79,7 @@
      <Compile Include="Assets/Scripts/Audio/Data/SceneSoundList_SO.cs" />
      <Compile Include="Assets/Scripts/ObjectPool/ObjectPoolManager.cs" />
      <Compile Include="Assets/Scripts/Crop/Logic/CropManager.cs" />
+     <Compile Include="Assets/Scripts/TimeLine/TimeLineManager.cs" />
      <Compile Include="Assets/Scripts/Inventory/Data_SO/ItemDataList_SO.cs" />
      <Compile Include="Assets/Scripts/Player/TiggerItemFader.cs" />
      <Compile Include="Assets/Scripts/Utility/Attribute/SceneNameDrawer.cs" />
@@ -87,12 +89,15 @@
      <Compile Include="Assets/Scripts/NPC/Logic/NPCManager.cs" />
      <Compile Include="Assets/Scripts/Transition/Teleport.cs" />
      <Compile Include="Assets/Scripts/Light/Data/LightPattenList_SO.cs" />
+     <Compile Include="Assets/Scripts/TimeLine/DialogueClip.cs" />
      <Compile Include="Assets/Scripts/Dialogue/UI/DialogueUI.cs" />
      <Compile Include="Assets/Scripts/Inventory/UI/SlotToolTip.cs" />
      <Compile Include="Assets/Scripts/AStar/AStarTest.cs" />
+     <Compile Include="Assets/Scripts/Menu/SaveSlotUI.cs" />
      <Compile Include="Assets/Scripts/Inventory/Item/ItemFader.cs" />
      <Compile Include="Assets/Scripts/AStar/GridNodes.cs" />
      <Compile Include="Assets/Scripts/NPC/Data/ScheduleDetails.cs" />
+     <Compile Include="Assets/Scripts/TimeLine/DialogueTrack.cs" />
      <Compile Include="Assets/Scripts/TimeLine/DialogueBehaviour.cs" />
      <Compile Include="Assets/Scripts/Map/Data/MapData_SO.cs" />
      <Compile Include="Assets/Scripts/Inventory/Item/ItemOnWorld.cs" />
@@ -104,10 +109,6 @@
      <Compile Include="Assets/Scripts/Crop/Data/CropDetails.cs" />
      <Compile Include="Assets/Scripts/Inventory/Item/ItemShadow.cs" />
      <Compile Include="Assets/Scripts/Crop/Logic/ReapItem.cs" />
-     <Compile Include="Assets/Scripts/TimeLine/DialogueClip.cs" />
-     <Compile Include="Assets/Scripts/TimeLine/DialogueTrack.cs" />
-     <Compile Include="Assets/Scripts/TimeLine/TimeLineManager.cs" />
-     <Compile Include="Assets/Scripts/Menu/MenuUI.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/Scripts/Cursor" />
      <Folder Include="Assets/GameARTRes/Art/Intro/Sign" />
