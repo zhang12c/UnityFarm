@@ -54,6 +54,9 @@ namespace Map.Logic
 
         private void Start()
         {
+            ISaveAble saveAble = this;
+            saveAble.RegisterSaveAble();
+            
             // 构建一下数据
             foreach (var mapData in mapDataList)
             {

@@ -3,6 +3,7 @@ using Inventory.Data_SO;
 using Inventory.Item;
 using SaveLoad.Data;
 using SaveLoad.Logic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Utility;
@@ -35,6 +36,9 @@ namespace Inventory.Logic
         }
         private void Start()
         {
+            ISaveAble saveAble = this;
+            saveAble.RegisterSaveAble();
+            
             MyEventHandler.CallUpdateInventoryUI(InventoryLocation.Player,playerBag.itemInventoryItems);
         }
         // itemID => itemDetails
@@ -230,11 +234,11 @@ namespace Inventory.Logic
             
             MyEventHandler.CallUpdateInventoryUI(InventoryLocation.Player,playerBag.itemInventoryItems);
         }
-        string ISaveAble.GUID
+        public string GUID
         {
             get
             {
-                return GetComponent<DataGUID>()?.guid;
+                return GetComponent<DataGUID>().guid;
             }
         }
     }

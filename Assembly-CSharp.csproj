@@ -113,6 +113,7 @@
      <Compile Include="Assets/Scripts/Inventory/Item/ItemShadow.cs" />
      <Compile Include="Assets/Scripts/Crop/Logic/ReapItem.cs" />
      <Compile Include="Assets/Scripts/SaveLoad/Logic/DataGUID.cs" />
+     <Compile Include="Assets/Scripts/SaveLoad/Data/DataSlot.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/Scripts/Cursor" />
      <Folder Include="Assets/GameARTRes/Art/Intro/Sign" />

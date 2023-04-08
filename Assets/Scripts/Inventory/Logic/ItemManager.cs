@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Inventory.Item;
 using SaveLoad.Data;
@@ -51,7 +52,12 @@ namespace Inventory.Logic
             MyEventHandler.DropItemEvent += OnDropItemEvent;
             MyEventHandler.AfterSceneLoadEvent -= OnSceneLoad;
             MyEventHandler.BeforeSceneUnloadEvent -= OnBeforeSceneUnloadEvent;
+        }
 
+        private void Start()
+        {
+            ISaveAble saveAble = this;
+            saveAble.RegisterSaveAble();
         }
         private void CloneSlotByItemPerfab(int itemID, Vector3 Pos)
         {

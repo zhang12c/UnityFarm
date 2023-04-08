@@ -22,6 +22,6 @@ namespace SaveLoad.Logic
             SaveLoadManager.Instance.RegisterSaveAble(this);
         }
 
-        protected string GUID { get; }
+        string GUID { get; }
     }
 }

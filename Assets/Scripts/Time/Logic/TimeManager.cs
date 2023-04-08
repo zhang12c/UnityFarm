@@ -57,24 +57,6 @@ namespace Time.Logic
             MyEventHandler.UpdateGameStateEvent -= OnUpdateGameStateEvent;
 
         }
-        private void OnUpdateGameStateEvent(GameState obj)
-        {
-            _gameClockPause = obj == GameState.Pause;
-        }
-        private void OnAfterSceneLoadEvent()
-        {
-            _gameClockPause = false;
-            
-            MyEventHandler.CallGameDateEvent(_gameHour,_gameDay,_gameMonth,_gameYear,_gameSeason);
-            MyEventHandler.CallGameMinuteEvent(_gameMinute,_gameHour,_gameDay,_gameSeason);
-            
-            MyEventHandler.CallLightShiftChangeEvent(_gameSeason,getCurrentLightShift(),_timeDifference);
-        }
-        private void OnBeforeSceneUnloadEvent()
-        {
-            _gameClockPause = true;
-        }
-
 
         protected override void Awake()
         {
@@ -84,6 +66,9 @@ namespace Time.Logic
   
         private void Start()
         {
+            ISaveAble saveAble = this;
+            saveAble.RegisterSaveAble();
+            
             // 第一次登陆的时候需要初始化一下时间
             MyEventHandler.CallGameDateEvent(_gameHour,_gameDay,_gameMonth,_gameYear,_gameSeason);
             MyEventHandler.CallGameMinuteEvent(_gameMinute,_gameHour,_gameDay,_gameSeason);
@@ -210,6 +195,24 @@ namespace Time.Logic
             _gameYear = 2023;
             _gameSeason = Season.Spring;
         }
+        
+        private void OnUpdateGameStateEvent(GameState obj)
+        {
+            _gameClockPause = obj == GameState.Pause;
+        }
+        private void OnAfterSceneLoadEvent()
+        {
+            _gameClockPause = false;
+            
+            MyEventHandler.CallGameDateEvent(_gameHour,_gameDay,_gameMonth,_gameYear,_gameSeason);
+            MyEventHandler.CallGameMinuteEvent(_gameMinute,_gameHour,_gameDay,_gameSeason);
+            
+            MyEventHandler.CallLightShiftChangeEvent(_gameSeason,getCurrentLightShift(),_timeDifference);
+        }
+        private void OnBeforeSceneUnloadEvent()
+        {
+            _gameClockPause = true;
+        }
 
         private LightShift getCurrentLightShift()
         {
@@ -260,7 +263,7 @@ namespace Time.Logic
         public void RestoreData(GameSaveData saveData)
         {
             _gameSecond = saveData.timeDict["Second"];
-            _gameMinute = saveData.timeDict["_gameMinute"];
+            _gameMinute = saveData.timeDict["Minute"];
             _gameHour = saveData.timeDict["Hour"];
             _gameDay = saveData.timeDict["Day"];
             _gameMonth = saveData.timeDict["Month"];

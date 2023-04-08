@@ -3,16 +3,19 @@ using System.Collections;
 using System.Collections.Generic;
 using AStar;
 using NPC.Data;
+using SaveLoad.Data;
+using SaveLoad.Logic;
 using Time.Logic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 using Utility;
+using Vector2Int = UnityEngine.Vector2Int;
 namespace NPC.Logic
 {
     [RequireComponent(typeof(Rigidbody2D))]
     [RequireComponent(typeof(Animator))]
-    public class NPCMovement : MonoBehaviour
+    public class NPCMovement : MonoBehaviour,ISaveAble
     {
         /// <summary>
         /// 当前的场景名称
@@ -130,7 +133,6 @@ namespace NPC.Logic
         /// </summary>
         internal bool interactable;
 
-
         private void OnEnable()
         {
             MyEventHandler.AfterSceneLoadEvent += OnAfterSceneLoadEvent;
@@ -157,7 +159,11 @@ namespace NPC.Logic
                 _scheduleData.Add(scheduleData);
             }
         }
-        
+        private void Start()
+        {
+            ISaveAble saveAble = this;
+            saveAble.RegisterSaveAble();
+        }
         private void Update()
         {
             if (_sceneIsLoaded)
@@ -559,6 +565,47 @@ namespace NPC.Logic
             }
             return false;
         }
-        
+
+        public GameSaveData GenerateSaveData()
+        {
+            GameSaveData saveData = new GameSaveData();
+            saveData.characterPosDict = new Dictionary<string, SerializableVector3>();
+            saveData.characterPosDict.Add("targetGridPosition",new SerializableVector3(_targetGridPosition));
+            saveData.characterPosDict.Add("currentPosition",new SerializableVector3(transform.position));
+            saveData.dataSceneName = this._currentScene;
+            saveData.targetScene = this._targetScene;
+            if (_stopAnimationClip != null)
+            {
+                saveData.animationInstanceID = _stopAnimationClip.GetInstanceID();
+            }
+            saveData.interactable = interactable;
+            return saveData;
+        }
+        public void RestoreData(GameSaveData saveData)
+        {
+            // 只要是读取的npc的存档信息，那么就是已经加载过了
+            _isLoaded = true;
+            
+            _currentScene = saveData.dataSceneName;
+            _targetScene = saveData.targetScene;
+            Vector3 pos = saveData.characterPosDict["currentPosition"].ToVector3();
+            transform.position = pos;
+            Vector3Int tilePos = (Vector3Int)saveData.characterPosDict["targetGridPosition"].ToVector2Int();
+            _targetGridPosition = tilePos;
+            if (saveData.animationInstanceID != 0)
+            {
+                _stopAnimationClip = Resources.InstanceIDToObject(saveData.animationInstanceID) as AnimationClip;
+            }
+
+            interactable = saveData.interactable;
+
+        }
+        string ISaveAble.GUID
+        {
+            get
+            {
+                return GetComponent<DataGUID>().guid;
+            }
+        }
     }
 }

@@ -799,6 +799,7 @@ GameObject:
   - component: {fileID: 323976107}
   - component: {fileID: 323976106}
   - component: {fileID: 323976111}
+  - component: {fileID: 323976112}
   m_Layer: 0
   m_Name: NPC_StallGril
   m_TagString: Untagged
@@ -988,6 +989,19 @@ MonoBehaviour:
     dialogueText: "\u6211\u753B\u4E86\u8FD9\u4E24\u5E45\u753B\u3002\u4F60\u600E\u4E48\u60F3\uFF1F"
     hasToPause: 1
     isDone: 0
+--- !u!114 &323976112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323976104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f296c8ef8554644a1f7ec380e4a7dde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  guid: 1cf5dfc3-9b3a-4b16-813d-a15c94939100
 --- !u!1 &342669378
 GameObject:
   m_ObjectHideFlags: 0
@@ -1329,7 +1343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f296c8ef8554644a1f7ec380e4a7dde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  guid: 
+  guid: bbc0addc-2678-4ef4-87a3-399171922402
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1725,6 +1739,7 @@ GameObject:
   - component: {fileID: 742965138}
   - component: {fileID: 742965142}
   - component: {fileID: 742965143}
+  - component: {fileID: 742965144}
   m_Layer: 0
   m_Name: NPC_Mayor
   m_TagString: Untagged
@@ -1881,7 +1896,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 921196934d764eac84213d8ca4296472, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentScene: 01_Field
+  _currentScene: 04_Sea
   normalSpeed: 1
   isMoving: 0
   scheduleDataSO: {fileID: 11400000, guid: 4e0c6003f3f7041a1a11b91339c5b321, type: 2}
@@ -1926,6 +1941,19 @@ MonoBehaviour:
     dialogueText: "\u4F60\u7684\u7956\u7236\u7ED9\u4F60\u7559\u4E0B\u4E86\u519C\u573A,\u4F60\u597D\u50CF\u5F88\u987A\u5229\u7684\u6837\u5B50\uFF01"
     hasToPause: 1
     isDone: 0
+--- !u!114 &742965144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742965136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f296c8ef8554644a1f7ec380e4a7dde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  guid: 37118547-9b49-4446-b6bc-bb0eb1a73870
 --- !u!1 &761468277
 GameObject:
   m_ObjectHideFlags: 0
@@ -2194,7 +2222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f296c8ef8554644a1f7ec380e4a7dde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  guid: 
+  guid: bc934e0f-3aae-4224-a971-b98f69b71ad3
 --- !u!1 &875728172
 GameObject:
   m_ObjectHideFlags: 0
@@ -3248,7 +3276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f296c8ef8554644a1f7ec380e4a7dde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  guid: 
+  guid: b99c54eb-33e4-45f8-8b90-aef5d43b4e90
 --- !u!1 &1520689923
 GameObject:
   m_ObjectHideFlags: 0
@@ -3354,6 +3382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b722fc714b64460b1bfc13513aa8812, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jsonFolder: 
 --- !u!4 &1530360981
 Transform:
   m_ObjectHideFlags: 0
@@ -4193,7 +4222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f296c8ef8554644a1f7ec380e4a7dde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  guid: 
+  guid: e58d3e3e-8f24-4607-9c27-208ccc08dc10
 --- !u!1 &1843461395
 GameObject:
   m_ObjectHideFlags: 0

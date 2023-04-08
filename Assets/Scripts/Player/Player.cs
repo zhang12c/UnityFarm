@@ -44,6 +44,12 @@ namespace Player
             _animators = GetComponentsInChildren<Animator>();
         }
 
+        private void Start()
+        {
+            ISaveAble saveAble = this;
+            saveAble.RegisterSaveAble();
+        }
+
         private void Update()
         {
             if (!_inputDisable)
