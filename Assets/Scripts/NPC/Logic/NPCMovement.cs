@@ -66,6 +66,9 @@ namespace NPC.Logic
         /// 用于判断场景是否已经加载过了的
         /// </summary>
         private bool _isLoaded;
+
+        private bool _npcIsFirstLoad = true;
+        private Season _season;
         /// <summary>
         /// npc 是否在移动过程中
         /// 可能是一个冗余参数
@@ -197,6 +200,8 @@ namespace NPC.Logic
         }
         private void OnGameMinuteEvent(int m, int h,int day, Season season)
         {
+            _season = season;
+            
             int time = h * 100 + m;
             ScheduleDetails matchScheduleDetails = null;
             foreach (ScheduleDetails schedule in _scheduleData)
@@ -240,6 +245,14 @@ namespace NPC.Logic
                 _isLoaded = true;
             }
             _sceneIsLoaded = true;
+
+            if (!_npcIsFirstLoad)
+            {
+                _currentGridPosition = _grid.WorldToCell(transform.position);
+                ScheduleDetails schedule = new ScheduleDetails(0,0,0,0,_season,_targetScene,(Vector2Int)_targetGridPosition,_stopAnimationClip,interactable);
+                BuildPath(schedule);
+                _npcIsFirstLoad = true;
+            }
         }
         /// <summary>
         /// 判断npc显影逻辑
@@ -579,17 +592,28 @@ namespace NPC.Logic
                 saveData.animationInstanceID = _stopAnimationClip.GetInstanceID();
             }
             saveData.interactable = interactable;
+
+            saveData.timeDict = new Dictionary<string, int>();
+            var seasonName = this.transform.name + "currentSeason";
+            saveData.timeDict.Add(seasonName,(int)_season);
+            
             return saveData;
         }
         public void RestoreData(GameSaveData saveData)
         {
             // 只要是读取的npc的存档信息，那么就是已经加载过了
             _isLoaded = true;
+            _npcIsFirstLoad = false;
             
             _currentScene = saveData.dataSceneName;
             _targetScene = saveData.targetScene;
+            
+            var seasonName = this.transform.name + "currentSeason";
+            _season = (Season)saveData.timeDict[seasonName];
+            
             Vector3 pos = saveData.characterPosDict["currentPosition"].ToVector3();
             transform.position = pos;
+            
             Vector3Int tilePos = (Vector3Int)saveData.characterPosDict["targetGridPosition"].ToVector2Int();
             _targetGridPosition = tilePos;
             if (saveData.animationInstanceID != 0)

@@ -4,6 +4,7 @@ using System.IO;
 using SaveLoad.Data;
 using Newtonsoft.Json;
 using UnityEngine;
+using Utility;
 namespace SaveLoad.Logic
 {
     public class SaveLoadManager : Singleton<SaveLoadManager>
@@ -19,12 +20,26 @@ namespace SaveLoad.Logic
         {
             base.Awake();
             jsonFolder = Application.persistentDataPath + "/savedata/";
+            ReadSaveData();
+        }
+
+        private void OnEnable()
+        {
+            MyEventHandler.StartNewGameEvent += OnStartNewGameEvent;
+
+        }
+
+        private void OnDisable()
+        {
+            MyEventHandler.StartNewGameEvent -= OnStartNewGameEvent;
+
         }
 
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.I))
             {
+                Debug.Log("保存了" + _currentDataIndex + "进度");
                 Save(_currentDataIndex);
             }
 
@@ -65,7 +80,7 @@ namespace SaveLoad.Logic
             File.WriteAllText(resultPath,jsonData);
         }
 
-        private void Load(int index)
+        public void Load(int index)
         {
             _currentDataIndex = index;
             
@@ -77,6 +92,31 @@ namespace SaveLoad.Logic
             {
                 saveAble.RestoreData(jsonData.dataDict[saveAble.GUID]);
             }
+        }
+
+        /// <summary>
+        /// 游戏开始的时候，去读取一下游戏已有的数据进度
+        /// </summary>
+        private void ReadSaveData()
+        {
+            if (Directory.Exists(jsonFolder))
+            {
+                for (int i = 0; i < dataSlots.Count; i++)
+                {
+                    string resultPath = jsonFolder + "data" + i + ".json";
+                    if (File.Exists(resultPath))
+                    {
+                        string stringData = File.ReadAllText(resultPath);
+                        DataSlot jsonData = JsonConvert.DeserializeObject<DataSlot>(stringData);
+                        dataSlots[i] = jsonData;
+                    }
+                }
+            }
+        }
+        
+        private void OnStartNewGameEvent(int obj)
+        {
+            _currentDataIndex = obj;
         }
         
     }

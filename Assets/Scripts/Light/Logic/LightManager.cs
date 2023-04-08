@@ -5,9 +5,9 @@ namespace Light.Logic
 {
     public class LightManager : MonoBehaviour
     {
-        private LightController[] sceneLights;
+        private LightController[] _sceneLights;
 
-        private LightShift currentLightShift;
+        private LightShift _currentLightShift;
 
         private Season _season;
 
@@ -17,37 +17,45 @@ namespace Light.Logic
         {
             MyEventHandler.AfterSceneLoadEvent += OnAfterSceneLoadEvent;
             MyEventHandler.LightShiftChangeEvent += OnLightShiftChangeEvent;
+            MyEventHandler.StartNewGameEvent += OnStartNewGameEvent;
+
         }
         private void OnDisable()
         { 
             MyEventHandler.AfterSceneLoadEvent -= OnAfterSceneLoadEvent;
             MyEventHandler.LightShiftChangeEvent -= OnLightShiftChangeEvent;
+            MyEventHandler.StartNewGameEvent -= OnStartNewGameEvent;
+
+        }
+        private void OnStartNewGameEvent(int obj)
+        {
+            _currentLightShift = LightShift.Morning;
         }
         private void OnLightShiftChangeEvent(Season s, LightShift l, float t)
         {
             _season = s;
             _timeDifference = t;
-            if (currentLightShift != l)
+            if (_currentLightShift != l)
             {
                 // 需要切换灯
-                currentLightShift = l;
+                _currentLightShift = l;
 
-                if (sceneLights.Length > 0)
-                    foreach (LightController light in sceneLights)
+                if (_sceneLights.Length > 0)
+                    foreach (LightController controller in _sceneLights)
                     {
                         // 改变
-                        light.ChangeLight(s,l,t);
+                        controller.ChangeLight(s,l,t);
                     }
             }
             
         }
         private void OnAfterSceneLoadEvent()
         {
-            sceneLights = FindObjectsOfType<LightController>();
-            foreach (LightController light in sceneLights)
+            _sceneLights = FindObjectsOfType<LightController>();
+            foreach (LightController controller in _sceneLights)
             {
                 // 改变时间
-                light.ChangeLight(_season,currentLightShift,_timeDifference);
+                controller.ChangeLight(_season,_currentLightShift,_timeDifference);
             }
         }
 

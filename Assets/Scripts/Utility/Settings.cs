@@ -74,5 +74,12 @@ namespace Utility
         /// 晚上的时间戳
         /// </summary>
         public static readonly TimeSpan nightTime = new TimeSpan(19, 0, 0);
+
+        /// <summary>
+        /// 玩家的启使位置
+        /// </summary>
+        public static UnityEngine.Vector3 PLAYER_START_POS = new UnityEngine.Vector3(2.34f, -2.86f, 0);
+
+        public static int START_MONEY = 100;
     }
 }

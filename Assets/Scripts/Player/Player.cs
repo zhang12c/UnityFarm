@@ -28,6 +28,7 @@ namespace Player
 
         /// <summary>
         /// 切换场景的时候，不允许移动
+        /// false 可以动 true 不能动
         /// </summary>
         private bool _inputDisable;
         private string Guid => GetComponent<DataGUID>()?.guid;
@@ -81,6 +82,7 @@ namespace Player
             MyEventHandler.MoveToPos += OnMoveToPos;
             MyEventHandler.MouseClickedEvent += OnMouseClickedEvent;
             MyEventHandler.UpdateGameStateEvent += OnUpdateGameStateEvent;
+            MyEventHandler.StartNewGameEvent += OnStartNewGameEvent;
         }
         private void OnDisable()
         {
@@ -89,7 +91,12 @@ namespace Player
             MyEventHandler.MoveToPos -= OnMoveToPos;
             MyEventHandler.MouseClickedEvent -= OnMouseClickedEvent;
             MyEventHandler.UpdateGameStateEvent -= OnUpdateGameStateEvent;
-
+            MyEventHandler.StartNewGameEvent -= OnStartNewGameEvent;
+        }
+        private void OnStartNewGameEvent(int obj)
+        {
+            _inputDisable = false;
+            transform.position = Settings.PLAYER_START_POS;
         }
         private void OnMoveToPos(Vector3 obj)
         {

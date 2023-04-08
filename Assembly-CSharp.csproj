@@ -73,6 +73,7 @@
      <Compile Include="Assets/Scripts/Menu/MenuUI.cs" />
      <Compile Include="Assets/Scripts/Inventory/Item/ItemInteractive.cs" />
      <Compile Include="Assets/Scripts/Inventory/UI/ItemToolTip.cs" />
+     <Compile Include="Assets/Scripts/SaveLoad/Logic/DataGUID.cs" />
      <Compile Include="Assets/Scripts/SaveLoad/Data/GameSaveData.cs" />
      <Compile Include="Assets/Scripts/Map/Logic/GridMap.cs" />
      <Compile Include="Assets/Scripts/Dialogue/Data/DialoguePiece.cs" />
@@ -101,6 +102,7 @@
      <Compile Include="Assets/Scripts/NPC/Data/ScheduleDetails.cs" />
      <Compile Include="Assets/Scripts/TimeLine/DialogueTrack.cs" />
      <Compile Include="Assets/Scripts/SaveLoad/Logic/SaveLoadManager.cs" />
+     <Compile Include="Assets/Scripts/SaveLoad/Data/DataSlot.cs" />
      <Compile Include="Assets/Scripts/TimeLine/DialogueBehaviour.cs" />
      <Compile Include="Assets/Scripts/Map/Data/MapData_SO.cs" />
      <Compile Include="Assets/Scripts/Inventory/Item/ItemOnWorld.cs" />
@@ -112,8 +114,6 @@
      <Compile Include="Assets/Scripts/Crop/Data/CropDetails.cs" />
      <Compile Include="Assets/Scripts/Inventory/Item/ItemShadow.cs" />
      <Compile Include="Assets/Scripts/Crop/Logic/ReapItem.cs" />
-     <Compile Include="Assets/Scripts/SaveLoad/Logic/DataGUID.cs" />
-     <Compile Include="Assets/Scripts/SaveLoad/Data/DataSlot.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/Scripts/Cursor" />
      <Folder Include="Assets/GameARTRes/Art/Intro/Sign" />

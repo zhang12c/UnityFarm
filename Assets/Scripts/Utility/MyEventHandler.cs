@@ -225,5 +225,15 @@ namespace Utility
         {
             UpdateGameStateEvent?.Invoke(obj);
         }
+
+        /// <summary>
+        /// 这是一个新的游戏存档
+        /// </summary>
+        public static event Action<int> StartNewGameEvent;
+
+        public static void OnStartNewGameEvent(int index)
+        {
+            StartNewGameEvent?.Invoke(index);
+        }
     }
 }

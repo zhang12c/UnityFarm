@@ -20,25 +20,33 @@ namespace Inventory.Logic
         [FormerlySerializedAs("_PlayerBag")]
         [Header("背包的数据")]
         public InventoryBag_SO playerBag;
+        
+        public InventoryBag_SO playerBagTemp;
         private string _guid;
 
         private void OnEnable()
         {
             MyEventHandler.DropItemEvent += OnDropItemEvent;
             MyEventHandler.NewAtPlayerPositionEvent += OnNewAtPlayerPositionEvent;
+            MyEventHandler.StartNewGameEvent += OnStartNewGameEvent;
+
         }
 
         private void OnDisable()
         {
             MyEventHandler.DropItemEvent += OnDropItemEvent;
             MyEventHandler.NewAtPlayerPositionEvent -= OnNewAtPlayerPositionEvent;
-
+            MyEventHandler.StartNewGameEvent -= OnStartNewGameEvent;
         }
         private void Start()
         {
             ISaveAble saveAble = this;
             saveAble.RegisterSaveAble();
-            
+        }
+        
+        private void OnStartNewGameEvent(int obj)
+        {
+            playerBag = Instantiate(playerBagTemp);
             MyEventHandler.CallUpdateInventoryUI(InventoryLocation.Player,playerBag.itemInventoryItems);
         }
         // itemID => itemDetails
@@ -227,6 +235,7 @@ namespace Inventory.Logic
         }
         public void RestoreData(GameSaveData saveData)
         {
+            playerBag = Instantiate(playerBagTemp);
             if (saveData.inventoryDict.TryGetValue(playerBag.name,out List<InventoryItem> value))
             {
                 playerBag.itemInventoryItems = value;

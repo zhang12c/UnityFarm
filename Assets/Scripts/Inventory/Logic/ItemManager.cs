@@ -44,6 +44,7 @@ namespace Inventory.Logic
             MyEventHandler.DropItemEvent += OnDropItemEvent;
             MyEventHandler.AfterSceneLoadEvent += OnSceneLoad;
             MyEventHandler.BeforeSceneUnloadEvent += OnBeforeSceneUnloadEvent;
+            MyEventHandler.StartNewGameEvent -= OnStartNewGameEvent;
 
         }
         private void OnDisable()
@@ -52,6 +53,11 @@ namespace Inventory.Logic
             MyEventHandler.DropItemEvent += OnDropItemEvent;
             MyEventHandler.AfterSceneLoadEvent -= OnSceneLoad;
             MyEventHandler.BeforeSceneUnloadEvent -= OnBeforeSceneUnloadEvent;
+            MyEventHandler.StartNewGameEvent -= OnStartNewGameEvent;
+        }
+        private void OnStartNewGameEvent(int obj)
+        {
+            _sceneItemDict.Clear();
         }
 
         private void Start()

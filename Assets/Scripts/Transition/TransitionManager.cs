@@ -10,7 +10,7 @@ namespace Transition
     /// <summary>
     /// 控制场景的切换
     /// </summary>
-    public class TransitionManager : MonoBehaviour,ISaveAble
+    public class TransitionManager : Singleton<TransitionManager>,ISaveAble
     {
         [SceneName]
         public string startSceneName = String.Empty;
@@ -22,31 +22,38 @@ namespace Transition
 
         private bool _isFading = false;
 
-        private void Awake()
+        protected override void Awake()
         {
             // 打包的之后只会显示第一个场景，在这里先load出来UI
             SceneManager.LoadScene("UI", LoadSceneMode.Additive);
         }
-        private IEnumerator Start()
+        private void Start()
         {
             ISaveAble saveAble = this;
             saveAble.RegisterSaveAble();
             
             _fadeCanvasGroup = FindObjectOfType<CanvasGroup>();
-            yield return LoadSceneSetActive(startSceneName);
-            MyEventHandler.CallAfterSceneUnloadEvent();
         }
 
         private void OnEnable()
         {
             MyEventHandler.SceneTransitionEvent += SceneTransitionEven;
+            MyEventHandler.StartNewGameEvent += OnStartNewGameEvent;
+
         }
 
         private void OnDisable()
         {
             MyEventHandler.SceneTransitionEvent -= SceneTransitionEven;
+            MyEventHandler.StartNewGameEvent -= OnStartNewGameEvent;
+
         }
-    
+        private void OnStartNewGameEvent(int obj)
+        {
+            StartCoroutine(LoadSaveDataScene(startSceneName));
+            
+        }
+
         private IEnumerator LoadSceneSetActive(string sceneName)
         {
             /// load sceneName 的场景进入当前的场景

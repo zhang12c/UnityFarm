@@ -179,7 +179,7 @@ public class TileDetails
 public class NPCPosition
 {
     public Transform npc;
-    public string startScene;
+    [SceneName]public string startScene;
     public Vector3 position;
 }
 

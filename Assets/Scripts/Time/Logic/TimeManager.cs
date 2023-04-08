@@ -48,6 +48,8 @@ namespace Time.Logic
             MyEventHandler.AfterSceneLoadEvent += OnAfterSceneLoadEvent;
             MyEventHandler.BeforeSceneUnloadEvent += OnBeforeSceneUnloadEvent;
             MyEventHandler.UpdateGameStateEvent += OnUpdateGameStateEvent;
+            MyEventHandler.StartNewGameEvent += OnStartNewGameEvent;
+
         }
 
         private void OnDisable()
@@ -55,25 +57,19 @@ namespace Time.Logic
             MyEventHandler.AfterSceneLoadEvent -= OnAfterSceneLoadEvent;
             MyEventHandler.BeforeSceneUnloadEvent -= OnBeforeSceneUnloadEvent;
             MyEventHandler.UpdateGameStateEvent -= OnUpdateGameStateEvent;
-
+            MyEventHandler.StartNewGameEvent -= OnStartNewGameEvent;
         }
-
-        protected override void Awake()
-        {
-            base.Awake();
-            InitGameTime();
-        }
-  
         private void Start()
         {
             ISaveAble saveAble = this;
             saveAble.RegisterSaveAble();
-            
+            _gameClockPause = true;
+
             // 第一次登陆的时候需要初始化一下时间
-            MyEventHandler.CallGameDateEvent(_gameHour,_gameDay,_gameMonth,_gameYear,_gameSeason);
-            MyEventHandler.CallGameMinuteEvent(_gameMinute,_gameHour,_gameDay,_gameSeason);
-        
-            MyEventHandler.CallLightShiftChangeEvent(_gameSeason,getCurrentLightShift(),_timeDifference);
+            // MyEventHandler.CallGameDateEvent(_gameHour,_gameDay,_gameMonth,_gameYear,_gameSeason);
+            // MyEventHandler.CallGameMinuteEvent(_gameMinute,_gameHour,_gameDay,_gameSeason);
+            //
+            // MyEventHandler.CallLightShiftChangeEvent(_gameSeason,getCurrentLightShift(),_timeDifference);
         }
 
         private void Update()
@@ -276,6 +272,12 @@ namespace Time.Logic
             {
                 return GetComponent<DataGUID>()?.guid;
             }
+        }
+        
+        private void OnStartNewGameEvent(int obj)
+        {
+            InitGameTime();
+            _gameClockPause = false;
         }
     }
 }

@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 using NPC.Data;
+using NPC.Logic;
+using Utility;
 namespace NPC
 {
     public class NPCManager : Singleton<NPCManager>
@@ -15,6 +17,25 @@ namespace NPC
         {
             base.Awake();
             InitSceneRouteDic();
+        }
+
+        private void OnEnable()
+        {
+            MyEventHandler.StartNewGameEvent += OnStartNewGameEvent;
+        }
+
+        private void OnDisable()
+        {
+            MyEventHandler.StartNewGameEvent -= OnStartNewGameEvent;
+
+        }
+        private void OnStartNewGameEvent(int obj)
+        {
+            foreach (NPCPosition cNpc in npcList)
+            {
+                cNpc.npc.position = cNpc.position;
+                cNpc.npc.GetComponent<NPCMovement>().StartScene = cNpc.startScene;
+            }
         }
 
         private void InitSceneRouteDic()
