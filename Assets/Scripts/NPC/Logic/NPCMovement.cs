@@ -67,7 +67,7 @@ namespace NPC.Logic
         /// </summary>
         private bool _isLoaded;
 
-        private bool _npcIsFirstLoad = true;
+        private bool _npcIsFirstLoad;
         private Season _season;
         /// <summary>
         /// npc 是否在移动过程中
@@ -146,6 +146,8 @@ namespace NPC.Logic
             MyEventHandler.BeforeSceneUnloadEvent += OnBeforeSceneUnloadEvent;
             MyEventHandler.GameMinuteEvent += OnGameMinuteEvent;
             MyEventHandler.EndGameEvent += OnEndGameEvent;
+            MyEventHandler.StartNewGameEvent += OnStartNewGameEvent;
+
 
         }
         private void Awake()
@@ -204,6 +206,7 @@ namespace NPC.Logic
             MyEventHandler.BeforeSceneUnloadEvent -= OnBeforeSceneUnloadEvent;
             MyEventHandler.GameMinuteEvent -= OnGameMinuteEvent;
             MyEventHandler.EndGameEvent -= OnEndGameEvent;
+            MyEventHandler.StartNewGameEvent -= OnStartNewGameEvent;
 
         }
         private void OnEndGameEvent()
@@ -651,6 +654,12 @@ namespace NPC.Logic
             {
                 return GetComponent<DataGUID>().guid;
             }
+        }
+        
+        private void OnStartNewGameEvent(int obj)
+        {
+            _npcIsFirstLoad = true;
+            _isLoaded = false;
         }
     }
 }
