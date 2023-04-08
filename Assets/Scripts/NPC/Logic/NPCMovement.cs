@@ -135,12 +135,18 @@ namespace NPC.Logic
         /// 是否是可以互动的
         /// </summary>
         internal bool interactable;
+        /// <summary>
+        /// 控制协程
+        /// </summary>
+        private Coroutine npcMoveRoutine;
 
         private void OnEnable()
         {
             MyEventHandler.AfterSceneLoadEvent += OnAfterSceneLoadEvent;
             MyEventHandler.BeforeSceneUnloadEvent += OnBeforeSceneUnloadEvent;
             MyEventHandler.GameMinuteEvent += OnGameMinuteEvent;
+            MyEventHandler.EndGameEvent += OnEndGameEvent;
+
         }
         private void Awake()
         {
@@ -197,6 +203,17 @@ namespace NPC.Logic
             MyEventHandler.AfterSceneLoadEvent -= OnAfterSceneLoadEvent;
             MyEventHandler.BeforeSceneUnloadEvent -= OnBeforeSceneUnloadEvent;
             MyEventHandler.GameMinuteEvent -= OnGameMinuteEvent;
+            MyEventHandler.EndGameEvent -= OnEndGameEvent;
+
+        }
+        private void OnEndGameEvent()
+        {
+            _isLoaded = false;
+            _npcIsMoving = false;
+            if (npcMoveRoutine != null)
+            {
+                StopCoroutine(npcMoveRoutine);
+            }
         }
         private void OnGameMinuteEvent(int m, int h,int day, Season season)
         {
@@ -233,6 +250,10 @@ namespace NPC.Logic
         private void OnBeforeSceneUnloadEvent()
         {
             _sceneIsLoaded = false;
+            // if (npcMoveRoutine != null)
+            // {
+            //     StopCoroutine(npcMoveRoutine);
+            // }
         }
         
         private void OnAfterSceneLoadEvent()
@@ -343,7 +364,7 @@ namespace NPC.Logic
         /// <param name="stepTimes"></param>
         private void MoveToGridPosition(Vector3Int gridPos, TimeSpan stepTimes)
         {
-            StartCoroutine(MoveRoutine(gridPos, stepTimes));
+            npcMoveRoutine = StartCoroutine(MoveRoutine(gridPos, stepTimes));
         } 
 
         /// <summary>

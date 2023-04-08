@@ -235,5 +235,11 @@ namespace Utility
         {
             StartNewGameEvent?.Invoke(index);
         }
+        public static event Action EndGameEvent;
+
+        public static void CallEndGameEvent()
+        {
+            EndGameEvent?.Invoke();
+        }
     }
 }

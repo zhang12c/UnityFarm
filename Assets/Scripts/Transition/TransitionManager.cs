@@ -22,6 +22,8 @@ namespace Transition
 
         private bool _isFading = false;
 
+        private Coroutine _unLoadScene;
+
         protected override void Awake()
         {
             // 打包的之后只会显示第一个场景，在这里先load出来UI
@@ -39,19 +41,18 @@ namespace Transition
         {
             MyEventHandler.SceneTransitionEvent += SceneTransitionEven;
             MyEventHandler.StartNewGameEvent += OnStartNewGameEvent;
-
+            MyEventHandler.EndGameEvent += OnEndGameEvent;
         }
 
         private void OnDisable()
         {
             MyEventHandler.SceneTransitionEvent -= SceneTransitionEven;
             MyEventHandler.StartNewGameEvent -= OnStartNewGameEvent;
-
+            MyEventHandler.EndGameEvent -= OnEndGameEvent;
         }
         private void OnStartNewGameEvent(int obj)
         {
             StartCoroutine(LoadSaveDataScene(startSceneName));
-            
         }
 
         private IEnumerator LoadSceneSetActive(string sceneName)
@@ -159,6 +160,23 @@ namespace Transition
             yield return LoadSceneSetActive(sceneName);
             MyEventHandler.CallAfterSceneUnloadEvent();
             yield return DoFade(0);
+        }
+
+        private IEnumerator UnloadScene()
+        {
+            MyEventHandler.CallBeforeSceneUnloadEvent();
+            yield return DoFade(1f);
+            yield return SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+            yield return DoFade(0);
+        }
+        
+        private void OnEndGameEvent()
+        {
+            // if (_unLoadScene != null)
+            // {
+            //     StopCoroutine(_unLoadScene);
+            // }
+            _unLoadScene = StartCoroutine(UnloadScene());
         }
     }
 }

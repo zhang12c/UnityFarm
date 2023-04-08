@@ -49,6 +49,8 @@ namespace Time.Logic
             MyEventHandler.BeforeSceneUnloadEvent += OnBeforeSceneUnloadEvent;
             MyEventHandler.UpdateGameStateEvent += OnUpdateGameStateEvent;
             MyEventHandler.StartNewGameEvent += OnStartNewGameEvent;
+            MyEventHandler.EndGameEvent += OnEndGameEvent;
+
 
         }
 
@@ -58,6 +60,8 @@ namespace Time.Logic
             MyEventHandler.BeforeSceneUnloadEvent -= OnBeforeSceneUnloadEvent;
             MyEventHandler.UpdateGameStateEvent -= OnUpdateGameStateEvent;
             MyEventHandler.StartNewGameEvent -= OnStartNewGameEvent;
+            MyEventHandler.EndGameEvent -= OnEndGameEvent;
+
         }
         private void Start()
         {
@@ -278,6 +282,11 @@ namespace Time.Logic
         {
             InitGameTime();
             _gameClockPause = false;
+        }
+        
+        private void OnEndGameEvent()
+        {
+            _gameClockPause = true;
         }
     }
 }

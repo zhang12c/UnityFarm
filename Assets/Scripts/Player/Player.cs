@@ -43,6 +43,7 @@ namespace Player
         {
             _rb = GetComponent<Rigidbody2D>();
             _animators = GetComponentsInChildren<Animator>();
+            _inputDisable = true;
         }
 
         private void Start()
@@ -83,6 +84,7 @@ namespace Player
             MyEventHandler.MouseClickedEvent += OnMouseClickedEvent;
             MyEventHandler.UpdateGameStateEvent += OnUpdateGameStateEvent;
             MyEventHandler.StartNewGameEvent += OnStartNewGameEvent;
+            MyEventHandler.EndGameEvent += OnEndGameEvent;
         }
         private void OnDisable()
         {
@@ -92,6 +94,12 @@ namespace Player
             MyEventHandler.MouseClickedEvent -= OnMouseClickedEvent;
             MyEventHandler.UpdateGameStateEvent -= OnUpdateGameStateEvent;
             MyEventHandler.StartNewGameEvent -= OnStartNewGameEvent;
+            MyEventHandler.EndGameEvent -= OnEndGameEvent;
+
+        }
+        private void OnEndGameEvent()
+        {
+            _inputDisable = true;
         }
         private void OnStartNewGameEvent(int obj)
         {

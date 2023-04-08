@@ -40,13 +40,23 @@ namespace Audio.Logic
         {
             MyEventHandler.AfterSceneLoadEvent += OnAfterSceneLoadEvent;
             MyEventHandler.PlaySoundEvent += OnPlaySoundEvent;
+            MyEventHandler.EndGameEvent += OnEndGameEvent;
+
         }
 
         private void OnDisable()
         {
             MyEventHandler.AfterSceneLoadEvent -= OnAfterSceneLoadEvent;
             MyEventHandler.PlaySoundEvent -= OnPlaySoundEvent;
-
+            MyEventHandler.EndGameEvent -= OnEndGameEvent;
+        }
+        private void OnEndGameEvent()
+        {
+            if (soundRoutine != null)
+            {
+                StopCoroutine(soundRoutine);
+            }
+            muteSnapShot.TransitionTo(1);
         }
         private void OnPlaySoundEvent(SoundName obj)
         {

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using NPC.Data;
 using NPC.Logic;
+using UnityEngine;
 using Utility;
 namespace NPC
 {

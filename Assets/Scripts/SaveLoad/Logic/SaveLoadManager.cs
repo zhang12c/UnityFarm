@@ -26,14 +26,19 @@ namespace SaveLoad.Logic
         private void OnEnable()
         {
             MyEventHandler.StartNewGameEvent += OnStartNewGameEvent;
+            MyEventHandler.EndGameEvent += OnEndGameEvent;
+
 
         }
 
         private void OnDisable()
         {
             MyEventHandler.StartNewGameEvent -= OnStartNewGameEvent;
+            MyEventHandler.EndGameEvent -= OnEndGameEvent;
+
 
         }
+        
 
         private void Update()
         {
@@ -117,6 +122,11 @@ namespace SaveLoad.Logic
         private void OnStartNewGameEvent(int obj)
         {
             _currentDataIndex = obj;
+        }
+        
+        private void OnEndGameEvent()
+        {
+            Save(_currentDataIndex);
         }
         
     }

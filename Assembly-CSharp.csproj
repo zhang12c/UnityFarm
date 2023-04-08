@@ -111,6 +111,7 @@
      <Compile Include="Assets/Scripts/Inventory/Item/ItemBounce.cs" />
      <Compile Include="Assets/Scripts/NPC/Data/ScheduleDataList_SO.cs" />
      <Compile Include="Assets/Scripts/Inventory/UI/ActionBarButton.cs" />
+     <Compile Include="Assets/Scripts/Menu/UIManager.cs" />
      <Compile Include="Assets/Scripts/Crop/Data/CropDetails.cs" />
      <Compile Include="Assets/Scripts/Inventory/Item/ItemShadow.cs" />
      <Compile Include="Assets/Scripts/Crop/Logic/ReapItem.cs" />
@@ -222,6 +223,7 @@
      <Folder Include="Assets/GameARTRes/Art/Buildings/House01" />
      <Folder Include="Assets/GameARTRes/Animations" />
      <Folder Include="Assets/GameARTRes/Art/Characters/Player/Body" />
+     <Folder Include="Assets/Perfab/UI/Menu" />
      <Folder Include="Assets/GameARTRes/Art/Items/New Plant" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc" />
      <Folder Include="Assets/GameARTRes/Art/Items/Plants" />
