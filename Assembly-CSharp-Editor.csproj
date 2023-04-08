@@ -341,6 +341,9 @@
      <Reference Include="Unity.Burst.Cecil.Rocks">
      <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Library/PackageCache/com.unity.burst@1.8.2/Unity.Burst.CodeGen/Unity.Burst.Cecil.Rocks.dll</HintPath>
      </Reference>
+     <Reference Include="Newtonsoft.Json">
+     <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.1.0/Runtime/Newtonsoft.Json.dll</HintPath>
+     </Reference>
      <Reference Include="nunit.framework">
      <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
      </Reference>

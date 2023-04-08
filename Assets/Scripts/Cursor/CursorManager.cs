@@ -42,7 +42,7 @@ namespace Cursor
         {
             get
             {
-                return FindObjectOfType<Player>().transform;
+                return FindObjectOfType<Player.Player>().transform;
             }
         }
         private void OnEnable()

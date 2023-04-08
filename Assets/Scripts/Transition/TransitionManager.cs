@@ -102,7 +102,7 @@ public class TransitionManager : MonoBehaviour
         float speed = Mathf.Abs(fadeCanvasGroup.alpha - targetAlpha) / Settings.FADE_DURATION;
         while (!Mathf.Approximately(targetAlpha,fadeCanvasGroup.alpha))
         {
-            fadeCanvasGroup.alpha = Mathf.MoveTowards(fadeCanvasGroup.alpha, targetAlpha, speed * Time.deltaTime);
+            fadeCanvasGroup.alpha = Mathf.MoveTowards(fadeCanvasGroup.alpha, targetAlpha, speed * UnityEngine.Time.deltaTime);
             yield return null;
         }
 

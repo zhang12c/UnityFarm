@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Crop.Logic;
+using SaveLoad.Data;
+using SaveLoad.Logic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
@@ -11,7 +13,7 @@ using Random = UnityEngine.Random;
 
 namespace Map.Logic
 {
-    public class GridMapManager :  Singleton<GridMapManager>
+    public class GridMapManager :  Singleton<GridMapManager> ,ISaveAble
     {
         [Header("种地瓦片")]
         public RuleTile digTile;
@@ -47,7 +49,8 @@ namespace Map.Logic
         /// <summary>
         /// 杂草的list
         /// </summary>
-        private List<ReapItem> _reapItems; 
+        private List<ReapItem> _reapItems;
+        private string _guid;
 
         private void Start()
         {
@@ -435,6 +438,27 @@ namespace Map.Logic
             }
             Debug.LogError($"{sceneName} 没有找到哦！");
             return false;
+        }
+        public GameSaveData GenerateSaveData()
+        {
+            GameSaveData saveData = new GameSaveData()
+            {
+                tileDetailsDict = _tileDetailsMap,
+                firstLoadDict = _firstLoadDict,
+            };
+            return saveData;
+        }
+        public void RestoreData(GameSaveData saveData)
+        {
+            _firstLoadDict = saveData.firstLoadDict;
+            _tileDetailsMap = saveData.tileDetailsDict;
+        }
+        string ISaveAble.GUID
+        {
+            get
+            {
+                return GetComponent<DataGUID>().guid;
+            }
         }
     }
 }

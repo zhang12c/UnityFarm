@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 namespace Inventory.Item
 {
@@ -66,13 +65,13 @@ namespace Inventory.Item
             _isGround = _spriteTrans.position.y <= transform.position.y;
             if (Vector3.Distance(transform.position, _targetPos) > 0.1f)
             {
-                transform.position += (Vector3)_direction * _distance * -gravity * Time.deltaTime;
+                transform.position += (Vector3)_direction * _distance * -gravity * UnityEngine.Time.deltaTime;
             }
 
             if (!_isGround)
             {
                 // 只在做上抛运动 Y方向的移动
-                _spriteTrans.position += Vector3.up * gravity * Time.deltaTime;
+                _spriteTrans.position += Vector3.up * gravity * UnityEngine.Time.deltaTime;
             }
             else
             {

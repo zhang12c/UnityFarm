@@ -321,6 +321,9 @@
      <Reference Include="Unity.Burst.Cecil.Rocks">
      <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Library/PackageCache/com.unity.burst@1.8.2/Unity.Burst.CodeGen/Unity.Burst.Cecil.Rocks.dll</HintPath>
      </Reference>
+     <Reference Include="Newtonsoft.Json">
+     <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.1.0/Runtime/Newtonsoft.Json.dll</HintPath>
+     </Reference>
      <Reference Include="netstandard">
      <HintPath>/Applications/Unity/Hub/Editor/2021.3.20f1c1/Unity.app/Contents/NetStandard/ref/2.1.0/netstandard.dll</HintPath>
      </Reference>

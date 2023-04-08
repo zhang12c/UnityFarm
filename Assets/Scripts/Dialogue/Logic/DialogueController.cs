@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Dialogue.Data;
 using NPC;
+using NPC.Logic;
 using UnityEngine;
 using UnityEngine.Events;
 using Utility;

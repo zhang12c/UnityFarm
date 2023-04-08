@@ -18,7 +18,7 @@ namespace Menu
                 return transform.GetSiblingIndex();
             }
         }
-
+ 
         private void Awake()
         {
             _currentBtn = GetComponent<Button>();

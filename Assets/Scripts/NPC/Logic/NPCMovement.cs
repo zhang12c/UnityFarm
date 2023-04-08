@@ -3,11 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using AStar;
 using NPC.Data;
+using Time.Logic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 using Utility;
-namespace NPC
+namespace NPC.Logic
 {
     [RequireComponent(typeof(Rigidbody2D))]
     [RequireComponent(typeof(Animator))]
@@ -164,7 +165,7 @@ namespace NPC
                 SwitchAnimation();
             }
 
-            _animationBreakTime -= Time.deltaTime;
+            _animationBreakTime -= UnityEngine.Time.deltaTime;
             if (_animationBreakTime <= 0)
             {
                 _canPlayStopAnimation = true;
@@ -352,7 +353,7 @@ namespace NPC
                         // 移动的方向
                         dir = (_nextstepWorldPosition - transform.position).normalized;
                         // 移动的距离
-                        Vector2 posOffset = new Vector2(dir.x * speed * Time.fixedDeltaTime, dir.y * speed * Time.fixedDeltaTime);
+                        Vector2 posOffset = new Vector2(dir.x * speed * UnityEngine.Time.fixedDeltaTime, dir.y * speed * UnityEngine.Time.fixedDeltaTime);
                         _rigidbody2D.MovePosition(_rigidbody2D.position + posOffset);
                         // 下一次fixed update 再移动一点距离咯
                         yield return new WaitForFixedUpdate();

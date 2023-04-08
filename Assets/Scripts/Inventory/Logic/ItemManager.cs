@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 using Inventory.Item;
+using SaveLoad.Data;
+using SaveLoad.Logic;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -7,7 +9,7 @@ using UnityEngine.Serialization;
 using Utility;
 namespace Inventory.Logic
 {
-    public class ItemManager : MonoBehaviour
+    public class ItemManager : MonoBehaviour,ISaveAble
     {
         [FormerlySerializedAs("itemPrefab")]
         public GameObject prefab;
@@ -19,7 +21,7 @@ namespace Inventory.Logic
         {
             get
             {
-                return FindObjectOfType<Player>().transform;
+                return FindObjectOfType<Player.Player>().transform;
             }
         }
 
@@ -32,7 +34,8 @@ namespace Inventory.Logic
         /// string 场景名
         /// List 物品列表
         /// </summary>
-        private Dictionary<string, List<SceneItemSave>> sceneItemDict = new Dictionary<string, List<SceneItemSave>>();
+        private Dictionary<string, List<SceneItemSave>> _sceneItemDict = new Dictionary<string, List<SceneItemSave>>();
+        private string _guid;
 
         private void OnEnable()
         {
@@ -104,13 +107,13 @@ namespace Inventory.Logic
             // 当前激活着的界面
             var currentScene = SceneManager.GetActiveScene();
             
-            if (sceneItemDict.ContainsKey(currentScene.name))
+            if (_sceneItemDict.ContainsKey(currentScene.name))
             {
-                sceneItemDict[currentScene.name] = currentSceneItemSaves;
+                _sceneItemDict[currentScene.name] = currentSceneItemSaves;
             }
             else
             {
-                sceneItemDict.Add(currentScene.name,currentSceneItemSaves);
+                _sceneItemDict.Add(currentScene.name,currentSceneItemSaves);
             }
         }
         /// <summary>
@@ -123,7 +126,7 @@ namespace Inventory.Logic
             // 当前激活着的界面
             var currentScene = SceneManager.GetActiveScene();
 
-            if (sceneItemDict.TryGetValue(currentScene.name,out currentSceneItemSaves))
+            if (_sceneItemDict.TryGetValue(currentScene.name,out currentSceneItemSaves))
             {
                 if (currentSceneItemSaves != null)
                 {
@@ -140,6 +143,35 @@ namespace Inventory.Logic
                     }
                 }
                 
+            }
+        }
+        public GameSaveData GenerateSaveData()
+        {
+            // 获得所有的item之后
+            GetAllSceneItems();
+            
+            GameSaveData saveData = new GameSaveData
+            {
+                sceneItemDict = new Dictionary<string, List<SceneItemSave>>()
+            };
+            saveData.sceneItemDict = _sceneItemDict;
+            return saveData;
+        }
+        public void RestoreData(GameSaveData saveData)
+        {
+            if (saveData.sceneItemDict.Count > 0)
+            {
+                _sceneItemDict = saveData.sceneItemDict;
+            }
+            
+            // 刷新一下数据
+            RecreateAllItems();
+        }
+        string ISaveAble.GUID
+        {
+            get
+            {
+                return GetComponent<DataGUID>().guid;
             }
         }
     }

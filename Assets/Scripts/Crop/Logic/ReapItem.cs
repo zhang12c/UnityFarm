@@ -15,7 +15,7 @@ namespace Crop.Logic
         {
             get
             {
-                return FindObjectOfType<Player>().transform;
+                return FindObjectOfType<Player.Player>().transform;
             }
         }
 

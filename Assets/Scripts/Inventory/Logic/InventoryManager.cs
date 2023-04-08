@@ -1,19 +1,25 @@
+using System.Collections.Generic;
 using Inventory.Data_SO;
 using Inventory.Item;
+using SaveLoad.Data;
+using SaveLoad.Logic;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Utility;
 
 namespace Inventory.Logic
 {
-    public class InventoryManager : Singleton<InventoryManager>
+    public class InventoryManager : Singleton<InventoryManager>,ISaveAble
     {
+        [FormerlySerializedAs("_ItemDataListSo")]
         [Header("所有的存储的数据")]
-        public ItemDataList_SO _ItemDataListSo;
+        public ItemDataList_SO itemDataListSo;
 
+        [FormerlySerializedAs("_playerBag")]
         [FormerlySerializedAs("_PlayerBag")]
         [Header("背包的数据")]
-        public InventoryBag_SO _playerBag;
+        public InventoryBag_SO playerBag;
+        private string _guid;
 
         private void OnEnable()
         {
@@ -29,12 +35,12 @@ namespace Inventory.Logic
         }
         private void Start()
         {
-            MyEventHandler.CallUpdateInventoryUI(InventoryLocation.Player,_playerBag.itemInventoryItems);
+            MyEventHandler.CallUpdateInventoryUI(InventoryLocation.Player,playerBag.itemInventoryItems);
         }
         // itemID => itemDetails
         public ItemDetails GetItemDetails(int ID)
         {
-            return _ItemDataListSo?.itemDetailsList?.Find(i => i.itemID == ID);
+            return itemDataListSo?.itemDetailsList?.Find(i => i.itemID == ID);
         }
 
         public void AddItem(ItemOnWorld item, bool DoDestory)
@@ -57,7 +63,7 @@ namespace Inventory.Logic
             }
             
             // 更新UI 数据变化了
-            MyEventHandler.CallUpdateInventoryUI(InventoryLocation.Player,_playerBag.itemInventoryItems);
+            MyEventHandler.CallUpdateInventoryUI(InventoryLocation.Player,playerBag.itemInventoryItems);
         }
 
         public void AddItem(int id)
@@ -75,7 +81,7 @@ namespace Inventory.Logic
             AddItemAtIndex(id, hasInBagIndex, 1);
             
             // 更新UI 数据变化了
-            MyEventHandler.CallUpdateInventoryUI(InventoryLocation.Player,_playerBag.itemInventoryItems);
+            MyEventHandler.CallUpdateInventoryUI(InventoryLocation.Player,playerBag.itemInventoryItems);
         }
 
         /// <summary>
@@ -84,7 +90,7 @@ namespace Inventory.Logic
         /// <returns></returns>
         private bool CheckBagCapacity()
         {
-            foreach (InventoryItem item in _playerBag.itemInventoryItems)
+            foreach (InventoryItem item in playerBag.itemInventoryItems)
             {
                 if (item.itemID == 0)
                 {
@@ -101,9 +107,9 @@ namespace Inventory.Logic
         /// <returns></returns>
         private int CheckItemInBag(int id)
         {
-            for (int i = 0; i < _playerBag.itemInventoryItems.Count; i++)
+            for (int i = 0; i < playerBag.itemInventoryItems.Count; i++)
             {
-                if (_playerBag.itemInventoryItems[i].itemID == id)
+                if (playerBag.itemInventoryItems[i].itemID == id)
                 {
                     return i;
                 }
@@ -121,7 +127,7 @@ namespace Inventory.Logic
             
             if (index >= 0)
             {
-                InventoryItem inventoryItem = _playerBag.itemInventoryItems[index];
+                InventoryItem inventoryItem = playerBag.itemInventoryItems[index];
                 itemOnWorld.itemAmount += inventoryItem.itemAmount;
             }
             else
@@ -131,9 +137,9 @@ namespace Inventory.Logic
                 // 需要遍历寻找空位住下
                 
                 //index = _playerBag.itemInventoryItems.Count + 1;
-                for (int i = 0; i < _playerBag.itemInventoryItems.Count; i++)
+                for (int i = 0; i < playerBag.itemInventoryItems.Count; i++)
                 {
-                    if (_playerBag.itemInventoryItems[i].itemID == 0)
+                    if (playerBag.itemInventoryItems[i].itemID == 0)
                     {
                         index = i;
                         break;
@@ -141,45 +147,45 @@ namespace Inventory.Logic
                 }
             }
             
-            _playerBag.itemInventoryItems[index] = itemOnWorld;
+            playerBag.itemInventoryItems[index] = itemOnWorld;
         }
 
         public void SwapItem(int from, int to)
         {
-            var currentItem = _playerBag.itemInventoryItems[from];
-            var targetItem = _playerBag.itemInventoryItems[to];
+            var currentItem = playerBag.itemInventoryItems[from];
+            var targetItem = playerBag.itemInventoryItems[to];
             if (targetItem.itemID != 0)
             {
-                (_playerBag.itemInventoryItems[from], _playerBag.itemInventoryItems[to]) = (targetItem, currentItem);
+                (playerBag.itemInventoryItems[from], playerBag.itemInventoryItems[to]) = (targetItem, currentItem);
             }
             else
             {
-                _playerBag.itemInventoryItems[to] = currentItem;
-                _playerBag.itemInventoryItems[from] = new InventoryItem();
+                playerBag.itemInventoryItems[to] = currentItem;
+                playerBag.itemInventoryItems[from] = new InventoryItem();
             }
             
-            MyEventHandler.CallUpdateInventoryUI(InventoryLocation.Player,_playerBag.itemInventoryItems);
+            MyEventHandler.CallUpdateInventoryUI(InventoryLocation.Player,playerBag.itemInventoryItems);
         }
 
         private void RemoveItem(int ID, int removeAmount)
         {
             var index = CheckItemInBag(ID);
-            if (_playerBag.itemInventoryItems[index].itemAmount > removeAmount)
+            if (playerBag.itemInventoryItems[index].itemAmount > removeAmount)
             {
-                var amount = _playerBag.itemInventoryItems[index].itemAmount - removeAmount;
+                var amount = playerBag.itemInventoryItems[index].itemAmount - removeAmount;
                 var item = new InventoryItem()
                 {
                     itemID = ID,
                     itemAmount = amount
                 };
-                _playerBag.itemInventoryItems[index] = item;
-            }else if (_playerBag.itemInventoryItems[index].itemAmount == removeAmount)
+                playerBag.itemInventoryItems[index] = item;
+            }else if (playerBag.itemInventoryItems[index].itemAmount == removeAmount)
             {
-                _playerBag.itemInventoryItems[index] = new InventoryItem();
+                playerBag.itemInventoryItems[index] = new InventoryItem();
             }
             
             // 刷新一下界面
-            MyEventHandler.CallUpdateInventoryUI(InventoryLocation.Player,_playerBag.itemInventoryItems);
+            MyEventHandler.CallUpdateInventoryUI(InventoryLocation.Player,playerBag.itemInventoryItems);
         }
         /// <summary>
         /// 道具丢弃出去，就需要在数据库中 -= 这个道具
@@ -199,6 +205,37 @@ namespace Inventory.Logic
         {
             AddItem(itemID);
         }
-
+        
+        // 保存数据相关
+        public GameSaveData GenerateSaveData()
+        {
+            var key = playerBag.name;
+            {
+                GameSaveData saveData = new GameSaveData
+                {
+                    inventoryDict = new Dictionary<string, List<InventoryItem>>
+                    {
+                        [key] = playerBag.itemInventoryItems
+                    }
+                };
+                return saveData;
+            }
+        }
+        public void RestoreData(GameSaveData saveData)
+        {
+            if (saveData.inventoryDict.TryGetValue(playerBag.name,out List<InventoryItem> value))
+            {
+                playerBag.itemInventoryItems = value;
+            }
+            
+            MyEventHandler.CallUpdateInventoryUI(InventoryLocation.Player,playerBag.itemInventoryItems);
+        }
+        string ISaveAble.GUID
+        {
+            get
+            {
+                return GetComponent<DataGUID>()?.guid;
+            }
+        }
     }
 }

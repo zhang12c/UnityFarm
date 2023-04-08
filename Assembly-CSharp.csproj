@@ -73,9 +73,11 @@
      <Compile Include="Assets/Scripts/Menu/MenuUI.cs" />
      <Compile Include="Assets/Scripts/Inventory/Item/ItemInteractive.cs" />
      <Compile Include="Assets/Scripts/Inventory/UI/ItemToolTip.cs" />
+     <Compile Include="Assets/Scripts/SaveLoad/Data/GameSaveData.cs" />
      <Compile Include="Assets/Scripts/Map/Logic/GridMap.cs" />
      <Compile Include="Assets/Scripts/Dialogue/Data/DialoguePiece.cs" />
      <Compile Include="Assets/Scripts/Inventory/Logic/InventoryManager.cs" />
+     <Compile Include="Assets/Scripts/SaveLoad/Logic/ISaveable.cs" />
      <Compile Include="Assets/Scripts/Audio/Data/SceneSoundList_SO.cs" />
      <Compile Include="Assets/Scripts/ObjectPool/ObjectPoolManager.cs" />
      <Compile Include="Assets/Scripts/Crop/Logic/CropManager.cs" />
@@ -98,6 +100,7 @@
      <Compile Include="Assets/Scripts/AStar/GridNodes.cs" />
      <Compile Include="Assets/Scripts/NPC/Data/ScheduleDetails.cs" />
      <Compile Include="Assets/Scripts/TimeLine/DialogueTrack.cs" />
+     <Compile Include="Assets/Scripts/SaveLoad/Logic/SaveLoadManager.cs" />
      <Compile Include="Assets/Scripts/TimeLine/DialogueBehaviour.cs" />
      <Compile Include="Assets/Scripts/Map/Data/MapData_SO.cs" />
      <Compile Include="Assets/Scripts/Inventory/Item/ItemOnWorld.cs" />
@@ -109,6 +112,7 @@
      <Compile Include="Assets/Scripts/Crop/Data/CropDetails.cs" />
      <Compile Include="Assets/Scripts/Inventory/Item/ItemShadow.cs" />
      <Compile Include="Assets/Scripts/Crop/Logic/ReapItem.cs" />
+     <Compile Include="Assets/Scripts/SaveLoad/Logic/DataGUID.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/Scripts/Cursor" />
      <Folder Include="Assets/GameARTRes/Art/Intro/Sign" />
@@ -119,6 +123,7 @@
      <Folder Include="Assets/GameARTRes/Animations/Player/Hair" />
      <Folder Include="Assets/GameARTRes/Art/Lights" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
+     <Folder Include="Assets/Scripts/SaveLoad" />
      <Folder Include="Assets/GameARTRes/Animations/SceneryTrees" />
      <Folder Include="Assets/GameARTRes/Art/Intro/Sea" />
      <Folder Include="Assets/GameARTRes/Art/Buildings" />
@@ -177,6 +182,8 @@
      <Folder Include="Assets/Scripts/Dialogue/Logic" />
      <Folder Include="Assets/GameARTRes/Tilemap/Palettes" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" />
+     <Folder Include="Assets/Scripts/SaveLoad/Logic" />
+     <Folder Include="Assets/Scripts/SaveLoad/Data" />
      <Folder Include="Assets/GameARTRes/Art/Characters/Girl02" />
      <Folder Include="Assets/GameARTRes/Art/Items/Environments" />
      <Folder Include="Assets/TextMesh Pro" />
@@ -577,6 +584,9 @@
      </Reference>
      <Reference Include="Unity.Burst.Cecil.Rocks">
      <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Library/PackageCache/com.unity.burst@1.8.2/Unity.Burst.CodeGen/Unity.Burst.Cecil.Rocks.dll</HintPath>
+     </Reference>
+     <Reference Include="Newtonsoft.Json">
+     <HintPath>/Users/beile/Documents/RiderProjects/HappyProject/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.1.0/Runtime/Newtonsoft.Json.dll</HintPath>
      </Reference>
      <Reference Include="netstandard">
      <HintPath>/Applications/Unity/Hub/Editor/2021.3.20f1c1/Unity.app/Contents/NetStandard/ref/2.1.0/netstandard.dll</HintPath>

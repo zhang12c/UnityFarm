@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
-using NPC;
 using NPC.Data;
+using NPC.Logic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
