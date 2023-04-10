@@ -16,7 +16,7 @@ namespace ObjectPool
         //
         private readonly List<ObjectPool<GameObject>> _poolEffectList = new List<ObjectPool<GameObject>>();
 
-        private Queue<GameObject> soundQueue = new Queue<GameObject>();
+        private Queue<GameObject> _soundQueue = new Queue<GameObject>();
 
         private void OnEnable()
         {
@@ -138,17 +138,17 @@ namespace ObjectPool
             {
                 GameObject obj = Instantiate(poolPrefabs[4], parent);
                 obj.SetActive(false);
-                soundQueue.Enqueue(obj);
+                _soundQueue.Enqueue(obj);
             }
         }
 
         private GameObject GetPoolObject()
         {
-            if (soundQueue.Count < 2)
+            if (_soundQueue.Count < 2)
             {
                 CreateSoundPool();
             }
-            return soundQueue.Dequeue();
+            return _soundQueue.Dequeue();
         }
 
         private void InitSoundEffect(SoundDetails soundDetails)
@@ -164,7 +164,7 @@ namespace ObjectPool
         {
             yield return new WaitForSeconds(duration);
             obj.SetActive(false);
-            soundQueue.Enqueue(obj);
+            _soundQueue.Enqueue(obj);
         }
     }
 }

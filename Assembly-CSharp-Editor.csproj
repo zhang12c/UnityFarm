@@ -42,11 +42,15 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets/Editor/UI Builder/ItemEditor.cs" />
+     <Compile Include="Assets/Editor/Test/Test.cs" />
      <None Include="Assets/Editor/UI Builder/ItemEditor.uxml" />
      <None Include="Assets/Editor/UI Builder/ItemEditor.uss" />
      <None Include="Assets/Editor/UI Builder/ItemRowTemplate.uxml" />
      <Folder Include="Assets/Editor" />
      <Folder Include="Assets/Editor/UI Builder" />
+     <None Include="Assets/Editor/Test/Test.uxml" />
+     <None Include="Assets/Editor/Test/Test.uss" />
+     <Folder Include="Assets/Editor/Test" />
      <Reference Include="UnityEngine">
      <HintPath>/Applications/Unity/Hub/Editor/2021.3.20f1c1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>

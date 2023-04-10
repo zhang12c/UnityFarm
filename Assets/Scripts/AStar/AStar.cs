@@ -24,9 +24,6 @@ namespace AStar
         /// 附近被选中的点
         /// </summary>
         private HashSet<Node> _closeNodeList;
-        /// <summary>
-        /// 找到终点的路径
-        /// </summary>
         //private bool _pathFound;
         /// <summary>
         /// 主要的寻路逻辑

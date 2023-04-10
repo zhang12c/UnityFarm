@@ -48,8 +48,8 @@ public class ItemEditor : EditorWindow
 
         // Import UXML
         var visualTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>(Settings.ITEM_EDITOR_PATH);
-        VisualElement labelFromUXML = visualTree.Instantiate();
-        root.Add(labelFromUXML);
+        VisualElement labelFromUxml = visualTree.Instantiate();
+        root.Add(labelFromUxml);
         
         // 获取ListView
         var root2 = root.Q<VisualElement>("ItemList");

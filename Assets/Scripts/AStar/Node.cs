@@ -45,7 +45,7 @@ namespace AStar
         }
         /// <summary>
         /// node 节点之间的比较
-        /// 比较 gCost 和 hCost
+        /// 比较 Fcost
         /// </summary>
         /// <param name="other"></param>
         /// <returns>小于返回-1，等于返回0，大于则返回1</returns>
