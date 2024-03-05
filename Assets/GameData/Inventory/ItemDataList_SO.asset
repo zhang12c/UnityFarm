@@ -185,7 +185,7 @@ MonoBehaviour:
     itemName: "\u6D47\u6C34\u6876"
     itemType: 7
     itemIcon: {fileID: 21300000, guid: 5b98b5b289f8549f9bbd017e5f0aa5c7, type: 3}
-    itemOnWorldSprite: {fileID: 0}
+    itemOnWorldSprite: {fileID: 21300000, guid: 64d6efac46c1d450bbcb0f49d098bea2, type: 3}
     itemDescription: 
     itemUseRadius: 1
     canPickedup: 0
