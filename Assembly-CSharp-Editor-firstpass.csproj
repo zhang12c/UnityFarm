@@ -12,7 +12,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{46c8231d-7b25-1bb2-86a1-3028e33196dc}</ProjectGuid>
+    <ProjectGuid>{368bbdf0-dd14-e26a-f283-5c1a8f41e0b2}</ProjectGuid>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -44,13 +44,13 @@
      <Folder Include="Assets/Plugins/Demigiant/DOTween/Editor/Imgs" />
      <Folder Include="Assets/Plugins/Demigiant/DOTween/Editor" />
      <Reference Include="UnityEngine">
-     <HintPath>/Applications/Unity/Hub/Editor/2021.3.20f1c1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
+     <HintPath>/Applications/Unity/Hub/Editor/2022.3.8f1c1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>
      <Reference Include="UnityEngine.CoreModule">
-     <HintPath>/Applications/Unity/Hub/Editor/2021.3.20f1c1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
+     <HintPath>/Applications/Unity/Hub/Editor/2022.3.8f1c1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor">
-     <HintPath>/Applications/Unity/Hub/Editor/2021.3.20f1c1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.dll</HintPath>
+     <HintPath>/Applications/Unity/Hub/Editor/2022.3.8f1c1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.dll</HintPath>
      </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -130,7 +130,7 @@ public class ItemEditor : EditorWindow
         // 初次默认不可见
         _scrollView.visible = false;
         // 添加一个item Click 的方法回调
-        _listView.onSelectionChange += OnListSectionChange;
+        _listView.selectionChanged += OnListSectionChange;
 
     }
     private void OnListSectionChange(IEnumerable<object> obj)
