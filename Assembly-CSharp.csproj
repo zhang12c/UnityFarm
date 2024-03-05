@@ -136,13 +136,13 @@
     <None Include="Library/PackageCache/com.unity.connect.share@4.2.3/UI/NotLoggedIn.uxml" />
     <None Include="Library/PackageCache/com.unity.connect.share@4.2.3/UI/Error.uxml" />
     <None Include="Library/PackageCache/com.unity.burst@1.8.8/ValidationConfig.json" />
-    <None Include="Library/PackageCache/com.unity.timeline@1.7.5/package.json" />
+    <None Include="Library/PackageCache/com.unity.timeline@1.7.6/package.json" />
     <None Include="Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc" />
     <None Include="Library/PackageCache/com.unity.mathematics@1.2.6/package.json" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader" />
     <None Include="Library/PackageCache/com.unity.connect.share@4.2.3/UI/Success.uss" />
     <None Include="Library/PackageCache/com.unity.editorcoroutines@1.0.0/package.json" />
-    <None Include="Library/PackageCache/com.unity.timeline@1.7.5/ValidationExceptions.json" />
+    <None Include="Library/PackageCache/com.unity.timeline@1.7.6/ValidationExceptions.json" />
     <None Include="Library/PackageCache/com.unity.collab-proxy@2.0.7/package.json" />
     <None Include="Library/PackageCache/com.unity.connect.share@4.2.3/UI/Success_Dark.uss" />
     <None Include="Library/PackageCache/com.unity.textmeshpro@3.0.8/PackageConversionData.json" />
