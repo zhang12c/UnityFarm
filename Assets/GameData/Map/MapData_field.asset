@@ -14,6 +14,213 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: 01_Field
   titleProperties:
+  - titleCoordinate: {x: 4, y: 27}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 4, y: 28}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 4, y: 29}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 4, y: 30}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 5, y: 27}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 5, y: 28}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 5, y: 29}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 5, y: 30}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 6, y: 13}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 6, y: 14}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 6, y: 15}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 6, y: 16}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 6, y: 17}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 6, y: 18}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 6, y: 19}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 6, y: 20}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 6, y: 21}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 6, y: 22}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 6, y: 23}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 6, y: 24}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 6, y: 27}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 6, y: 28}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 6, y: 29}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 6, y: 30}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 7, y: 15}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 7, y: 16}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 7, y: 17}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 7, y: 18}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 7, y: 19}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 7, y: 20}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 7, y: 21}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 7, y: 22}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 7, y: 23}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 7, y: 24}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 8, y: 16}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 8, y: 17}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 8, y: 18}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 8, y: 19}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 8, y: 20}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 8, y: 21}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 8, y: 22}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 8, y: 23}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 8, y: 24}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 9, y: 17}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 9, y: 18}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 9, y: 19}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 10, y: 13}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 10, y: 14}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 10, y: 17}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 10, y: 18}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 11, y: 13}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 11, y: 15}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 11, y: 16}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 11, y: 17}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 11, y: 18}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 12, y: 13}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 12, y: 14}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 12, y: 15}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 12, y: 16}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 12, y: 17}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 12, y: 18}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 13, y: 14}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 13, y: 15}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 13, y: 16}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 13, y: 17}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 13, y: 18}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 14, y: 14}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 14, y: 15}
+    gridType: 0
+    BoolTypeValue: 1
+  - titleCoordinate: {x: 14, y: 16}
+    gridType: 0
+    BoolTypeValue: 1
   - titleCoordinate: {x: 18, y: 12}
     gridType: 0
     BoolTypeValue: 1
@@ -89,9 +296,6 @@ MonoBehaviour:
   - titleCoordinate: {x: 22, y: 16}
     gridType: 0
     BoolTypeValue: 1
-  - titleCoordinate: {x: 22, y: 17}
-    gridType: 0
-    BoolTypeValue: 1
   - titleCoordinate: {x: 23, y: 12}
     gridType: 0
     BoolTypeValue: 1
@@ -105,9 +309,6 @@ MonoBehaviour:
     gridType: 0
     BoolTypeValue: 1
   - titleCoordinate: {x: 23, y: 16}
-    gridType: 0
-    BoolTypeValue: 1
-  - titleCoordinate: {x: 23, y: 17}
     gridType: 0
     BoolTypeValue: 1
   - titleCoordinate: {x: 24, y: 12}
@@ -177,9 +378,6 @@ MonoBehaviour:
     gridType: 0
     BoolTypeValue: 1
   - titleCoordinate: {x: 27, y: 16}
-    gridType: 0
-    BoolTypeValue: 1
-  - titleCoordinate: {x: 27, y: 17}
     gridType: 0
     BoolTypeValue: 1
   - titleCoordinate: {x: 28, y: 12}
