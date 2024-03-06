@@ -241,5 +241,12 @@ namespace Utility
         {
             EndGameEvent?.Invoke();
         }
+
+        public static event Action AfterDoFadeDoneEvent;
+
+        public static void CallAfterDoFadeDoneEvent()
+        {
+            AfterDoFadeDoneEvent?.Invoke();
+        }
     }
 }

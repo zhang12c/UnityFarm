@@ -30,7 +30,7 @@ namespace Player
         /// 切换场景的时候，不允许移动
         /// false 可以动 true 不能动
         /// </summary>
-        private bool _inputDisable;
+        public bool _inputDisable;
         private string Guid => GetComponent<DataGUID>()?.guid;
         private static readonly int IsMoving = Animator.StringToHash("isMoving");
         private static readonly int InputX = Animator.StringToHash("InputX");
@@ -43,11 +43,11 @@ namespace Player
         {
             _rb = GetComponent<Rigidbody2D>();
             _animators = GetComponentsInChildren<Animator>();
-            _inputDisable = true;
         }
 
         private void Start()
         {
+            _inputDisable = true;
             ISaveAble saveAble = this;
             saveAble.RegisterSaveAble();
         }
@@ -78,23 +78,31 @@ namespace Player
         }
         private void OnEnable()
         {
-            MyEventHandler.AfterSceneLoadEvent += OnSceneLoad;
+            //MyEventHandler.AfterSceneLoadEvent += OnSceneLoad;
             MyEventHandler.BeforeSceneUnloadEvent += OnBeforeSceneUnload;
             MyEventHandler.MoveToPos += OnMoveToPos;
             MyEventHandler.MouseClickedEvent += OnMouseClickedEvent;
             MyEventHandler.UpdateGameStateEvent += OnUpdateGameStateEvent;
             MyEventHandler.StartNewGameEvent += OnStartNewGameEvent;
             MyEventHandler.EndGameEvent += OnEndGameEvent;
+            MyEventHandler.AfterDoFadeDoneEvent += OnAfterDoFadeDoneEvent;
         }
+
+        private void OnAfterDoFadeDoneEvent()
+        {
+            _inputDisable = false;
+        }
+
         private void OnDisable()
         {
-            MyEventHandler.AfterSceneLoadEvent -= OnSceneLoad;
+            //MyEventHandler.AfterSceneLoadEvent -= OnSceneLoad;
             MyEventHandler.BeforeSceneUnloadEvent -= OnBeforeSceneUnload;
             MyEventHandler.MoveToPos -= OnMoveToPos;
             MyEventHandler.MouseClickedEvent -= OnMouseClickedEvent;
             MyEventHandler.UpdateGameStateEvent -= OnUpdateGameStateEvent;
             MyEventHandler.StartNewGameEvent -= OnStartNewGameEvent;
             MyEventHandler.EndGameEvent -= OnEndGameEvent;
+            MyEventHandler.AfterDoFadeDoneEvent -= OnAfterDoFadeDoneEvent;
 
         }
         private void OnEndGameEvent()

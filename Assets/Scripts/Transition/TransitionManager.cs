@@ -98,6 +98,7 @@ namespace Transition
             MyEventHandler.CallAfterSceneUnloadEvent();
             // 退出渐入
             yield return DoFade(0);
+            MyEventHandler.CallAfterDoFadeDoneEvent();
 
         }
         private void SceneTransitionEven(string sceneName, Vector3 toPos)

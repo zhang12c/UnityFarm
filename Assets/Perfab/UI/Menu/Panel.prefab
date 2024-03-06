@@ -97,7 +97,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4955349864737612048
 RectTransform:
   m_ObjectHideFlags: 0
@@ -105,9 +105,9 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4058524048145556919}
-  m_LocalRotation: {x: 0, y: 0, z: -0.112596326, w: 0.99364084}
+  m_LocalRotation: {x: -0, y: -0, z: -0.112596326, w: 0.99364084}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 0.49999994, y: 0.49999994, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2880953601604602425}
@@ -115,7 +115,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -12.93}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 112.4, y: -49.8}
+  m_AnchoredPosition: {x: 112.400024, y: 58.7}
   m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2826963236901967963
@@ -396,8 +396,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6174130317999804723}
   - {fileID: 6174130317152827471}
+  - {fileID: 6174130317999804723}
   m_Father: {fileID: 6174130317046101036}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1076,8 +1076,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3.6067, y: -2.2541}
-  m_SizeDelta: {x: 212.2964, y: 103.0348}
+  m_AnchoredPosition: {x: -11.4057, y: -2.2541}
+  m_SizeDelta: {x: 196.6983, y: 103.0348}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6174130317152827469
 CanvasRenderer:
@@ -1108,7 +1108,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
+    m_Font: {fileID: 12800000, guid: fed360963c940455f81d8582e5460efa, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
@@ -2095,8 +2095,8 @@ RectTransform:
   m_Children:
   - {fileID: 6174130318218369765}
   - {fileID: 6174130318008765493}
-  - {fileID: 8071460376273434333}
   - {fileID: 4955349864737612048}
+  - {fileID: 8071460376273434333}
   m_Father: {fileID: 6174130317046101036}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

@@ -80,6 +80,8 @@ namespace Dialogue.UI
                 {
                     continueBox.SetActive(false);
                 }
+                yield return new WaitForSeconds(2f);
+                continueBox.SetActive(false);
             }
             else
             {
